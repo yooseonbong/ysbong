@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1.0,width=device-width">
+<title>주민등록 데이터개방 관리자 시스템</title>
+<script src="./js/jquery-1.12.4.js"></script>
+<script src="./js/jquery-ui.min.js"></script>
+<script src="./js/datepicker-ko.js"></script>
+<script src="./js/layout.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="./css/common.css">
+<link rel="stylesheet" type="text/css" href="./css/layout.css">
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+			<div class="top">
+				<h1><a href="#"><img src="./images/h1_logo.png" alt="주민등록 데이터개방 관리자 시스템"></a></h1>
+				<div class="top_log">
+					<ul>
+						<li class="log_state"><a href="#">사용자관리</a></li>
+						<li class="log_btn"><a href="#">로그아웃</a></li>
+					</ul>
+				</div>
+			</div><!-- top -->
+			<div id="lnb">
+				<ul>
+					<li class="on"><a href="#">서비스 목록 관리</a></li>
+					<li><a href="#">서비스 활용이력 조회</a></li>
+					<li><a href="#">서비스별 활용 통계</a></li>
+					<li><a href="#">이용자별 활용 통계</a></li>
+				</ul>
+			</div>
+		</div><!-- header -->
+		<div id="container">
+			<div class="contents">
+				<div class="article">
+					<h2 class="page_title">오픈API 서비스 상세</h2>
+					<div class="bbs_write">
+						<table>
+							<caption>오픈API 서비스의 서비스명, 서비스설명, 서비스 기간, 사용여부를 확인하는 상세 표</caption>
+							<colgroup>
+								<col style="25%;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row"><label for="id">서비스명</label></th>
+									<td><input type="text" id="id" name="id" class="w100per" title="서비스명 입력"></td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="name">서비스명2</label></th>
+									<td><input type="text" id="name" name="name" class="w20per" title="서비스명2 입력"> <input type="text" id="name2" name="name2" class="w60per" title="서비스명2 입력"></td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="etc">서비스설명</label></th>
+									<td>
+										<textarea name="etc" id="etc" cols="30" rows="10" class="w100per" title="서비스설명 입력"></textarea>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="date1">서비스 기간</label></th>
+									<td>
+										<span class="dateBox"><input type="text" name="date1" id="date1" class="w120px datepicker" title="서비스 시작 기간 선택"></span> 부터
+										<span class="dateBox"><input type="text" name="date2" id="date2" class="w120px datepicker" title="서비스 종료 기간 선택"></span> 까지
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="li1">사용여부</label></th>
+									<td>
+										<select name="li1" id="li1" class="w10per" title="사용여부 선택">
+											<option value="Y">Y</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="groupID">사용자 그룹아이디</label></th>
+									<td>
+										<label for="groupID"><input type="radio" id="groupID" name="groupID1" title="공유재산 관리 조례 개정 선택"> 공유재산 관리 조례 개정</label>
+										<label for="groupID2"><input type="radio" id="groupID2" name="groupID1" title="주민조례청구 및 대표자 증명서 선택"> 주민조례청구 및 대표자 증명서</label>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="groupName">사용자 그룹명</label></th>
+									<td>
+										<label for="groupName"><input type="checkbox" id="groupName" name="groupName1" title="선택선택1 선택"> 선택선택1</label>
+										<label for="groupName2"><input type="checkbox" id="groupName2" name="groupName1" title="선택선택2 선택"> 선택선택2</label>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="filename">등록자 아이디</label></th>
+									<td>
+										<span id="filebox" class="writeFile"> 
+											<input type="text" class="upload-name w30per" value="파일검색" disabled="disabled" title="기관로고 입력"> 
+											<label for="filename" class="btn bd_file">파일찾기</label> 
+											<input type="file" id="filename" name="filename" class="upload-hidden"> 
+										</span>
+									</td>
+								</tr>
+								
+								<tr>
+									<th scope="row"><label for="password">비밀번호</label></th>
+									<td>
+										<input type="password" id="password" class="w20per" name="registration" title="비밀번호 입력">
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="etc">청구제목</label></th>
+									<td>
+										오픈API 서비스 상세
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="btn-box">
+						<button class="btn bd-black" onClick="location.href='ppt.8.html'">취소</button>
+						<button class="btn bd-blue" onClick="location.href='ppt.7.html'">등록</button>
+					</div>
+				</div><!-- article -->
+			</div><!-- contents -->
+			
+			
+		</div><!-- container -->
+	</div>
+
+</body>
+</html>

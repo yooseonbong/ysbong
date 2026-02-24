@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>철도경찰형사사법업무시스템</title>
+<script src="./js/jquery-1.12.4.js"></script>
+<script src="./js/jquery-ui.min.js"></script>
+<script src="./js/datepicker-ko.js"></script>
+<script src="./js/layout.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/common.css">
+<link rel="stylesheet" type="text/css" href="./css/layout.css">
+<link rel="stylesheet" type="text/css" href="./css/jquery-ui.min.css">
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+			<div class="top">
+				<h1><a href="#"><img src="./images/h1_logo.jpg" alt="철도경찰형사사법업무시스템"></a></h1>
+				<div class="top_log">
+					<ul>
+						<li class="log_state">철도경찰대 수사과 수사관 <b>홍길동</b></li>
+						<li><a href="#">정보수정</a></li>
+						<li><a href="#">로그아웃</a></li>
+						<li><a href="#">SMS</a></li>
+						<li class="fz_box">
+							<button class="plus_txt" onclick="#"><span>글자크게</span></button> 
+							<span id="txt_size">100%</span> 
+							<button class="minus_txt" onclick="#"><span>글자작게</span></button> 
+						</li>
+					</ul>
+				</div>
+			</div><!-- top -->
+			<div id="lnb">
+				<ul>
+					<li class="on"><a href="#"><span>내사건</span></a></li>
+					<li>
+						<a href="#"><span>접수/배당</span></a>
+						<div class="depth2">
+							<ul>
+								<li><a href="#">임시사건 접수</a></li>
+								<li><a href="#">이송 접수</a></li>
+								<li><a href="#">지휘/재기사건 접수</a></li>
+								<li><a href="#">사건배당</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><span>입건/조사</span></a>
+						<div class="depth2">
+							<ul>
+								<li><a href="#">수사보고</a></li>
+								<li><a href="#">출석요구</a></li>
+								<li><a href="#">수사서식</a></li>
+								<li><a href="#">범죄인지보고</a></li>
+								<li><a href="#">지휘건의</a></li>
+								<li class="dep3_box">
+									<a href="#">체포및영장</a>
+									<div class="depth3">
+										<ul>
+											<li><a href="#">긴급체포/현행범인체포관리</a></li>
+											<li><a href="#">체포및구속영장 신청</a></li>
+											<li><a href="#">압수수색검증영장 신청</a></li>
+											<li><a href="#">영장반환</a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="dep3_box">
+									<a href="#">통신사실확인</a>
+									<div class="depth3">
+										<ul>
+											<li><a href="#">긴급체포/현행범인체포관리</a></li>
+											<li><a href="#">체포및구속영장 신청</a></li>
+											<li><a href="#">압수수색검증영장 신청</a></li>
+											<li><a href="#">영장반환</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><span>송치/종결</span></a>
+						<div class="depth2">
+							<ul>
+								<li><a href="#">송치관리</a></li>
+								<li><a href="#">이송</a></li>
+								<li><a href="#">사건종결</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><span>대장/통계</span></a>
+						<div class="depth2">
+							<ul>
+								<li><a href="#">범죄사건부</a></li>
+								<li><a href="#">내사사건부</a></li>
+								<li><a href="#">현행범인체포원부</a></li>
+								<li><a href="#">현행범인체포 집행원부</a></li>
+								<li><a href="#">긴급체포원부</a></li>
+								<li><a href="#">체포영장신청부</a></li>
+								<li><a href="#">구속영장신청부</a></li>
+								<li><a href="#">체포/구속영장 집행원부</a></li>
+								<li><a href="#">암수/수색/검증영장 신청부</a></li>
+								<li><a href="#">사건송치부</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><span>증명서</span></a>
+						<div class="depth2">
+							<ul>
+								<li><a href="#">접수증 발급</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="#"><span>운영관리</span></a></li>
+					<li><a href="#"><span>운영관리</span></a></li>
+				</ul>
+			</div>
+		</div><!-- header -->
+		<div id="container">
+			<div class="page_title">
+				<h2>내 사건</h2>
+				<div class="breadcrumb">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li>내 사건</li>
+					</ul>
+				</div><!-- breadcrumb -->
+			</div><!-- page_title -->
+			<div class="contents">
+				<div class="article">
+					<div class="searchBox">
+						<form name="" method="" action="">
+							<div class="inputList">
+								<ul>
+									<li class="w32per">
+										<label for="type1" class="w20per">상태</label> 
+										<select name="type1" id="type1" class="w70per" title="상태 선택">
+											<option value="전체">처리중</option>
+										</select>
+									</li>
+									<li class="w32per">
+										<label for="type3" class="w20per">대상자</label> 
+										<select name="type4" id="type1" class="w35per" title="대상자 선택">
+											<option value="전체">피의자</option>
+										</select>
+										<input type="text" name="num2" id="num2" class="w35per" title="대상자 입력">
+									</li>
+									<li class="w32per">
+										<label for="type2" class="w20per">사건번호</label> 
+										<select name="type2" id="type2" class="w25per" title="사건 선택">
+											<option value="전체">선택</option>
+										</select>
+										<input type="text" name="num3" id="num3" class="w20per" title="번호 앞자리 입력"> ~ <input type="text" name="num3" id="num3" class="w20per" title="번호 뒷자리 입력">
+									</li>
+									<li class="w32per">
+										<label for="type3" class="w20per">처리단계</label> 
+										<select name="type3" id="type3" class="w70per" title="처리단계 선택">
+											<option value="전체">전체</option>
+										</select>
+									</li>
+									
+									<li class="w32per">
+										<label for="num1" class="w20per">수사단서</label> 
+										<select name="num1" id="num1" class="w35per" title="수사단서 선택">
+											<option value="전체">전체</option>
+										</select>
+									</li>
+									<li class="w32per">
+										<label for="date1" class="w20per">접수일자</label> 
+										<input type="text" name="date1" id="date1" class="w20per" title="접수기간 시작일 선택"/> ~ <input type="text" name="date2" id="date2" class="w20per" title="접수기간 마감일 선택">
+									</li>
+								</ul>
+							</div>
+							<button class="btn_join" title="조회">조회</button>
+						</form>
+					</div>
+					<div class="handling_step">
+						<h3>사건처리 단계</h3>
+						<div class="step_list">
+							<ul>
+								<li>사건등록</li>
+								<li>내사</li>
+								<li>입건/범죄인지</li>
+								<li class="on">수사</li>
+								<li>송치</li>
+								<li>종결</li>
+							</ul>
+						</div><!-- step_list -->
+					</div><!-- handling_step -->
+					<div class="resultBox">
+						<div class="result_top">
+							<p class="total">총 <b>4,560</b>건</p>
+							<div class="result_btn">
+								<button class="r_btn b_bluegreen">버튼</button> 
+								<button class="r_btn b_green">버튼</button>
+								<button class="r_btn b_orange">버튼</button>
+								<button class="r_btn b_cyan">버튼</button>
+								<button class="r_btn b_skyblue">임시사건접수</button> 
+								<button class="r_btn b_blue">사건병합</button>
+								<button class="r_btn b_pink">사건병합해제</button>
+							</div>
+						</div><!-- result_top -->
+						<div class="bbs_list">
+							<form name="srhForm" method="" action="">
+							<table style="width:1900px;">
+								<caption>"내사건" 검색 결과입니다.</caption>
+								<colgroup>
+									<col style="width10%;">
+									<col style="width:10%;">
+									<col style="width:10%;">
+									<col style="width:10%;">
+									<col style="width:10%;">
+									<col style="width:10%;">
+									<col style="width:10%;">
+									<col style="width:10%;">
+									<col style="width:10%;">
+									<col style="width:10%;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" rowspan="3" class="arr_view">관서</th>
+										<th scope="col" rowspan="3" class="arr_view up">업종구분</th>
+										<th scope="col" rowspan="3" class="arr_view">대상 업체수</th>
+										<th scope="col" rowspan="3" class="arr_view">실시 업체수</th>
+										<th scope="col" colspan="4">위반</th>
+										<th scope="col" colspan="2">시정완료</th>
+									</tr>
+									<tr>
+										<th scope="col" rowspan="2" class="arr_view down">위반업체수</th>
+										<th scope="col" rowspan="2">업체비율</th>
+										<th scope="col" rowspan="2">위반건수</th>
+										<th scope="col" rowspan="2">위반 업체당 건수</th>
+										<th scope="col" rowspan="2">업체수</th>
+										<th scope="col" rowspan="2">건수</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+									</tr>
+								</tbody>
+							</table>
+							</form>
+						</div>
+						<div class="pagination">
+							<a href="#" title="첫페이지로" class="first">첫페이지</a>
+							<a href="#" title="이전페이지로" class="prev">이전</a>
+							<a href="#" class="on">1</a>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a> 
+							<a href="#">6</a>
+							<a href="#">7</a>
+							<a href="#">8</a>
+							<a href="#">9</a>
+							<a href="#">10</a> 
+							<a href="#" title="다음페이지로" class="next">다음</a> 
+							<a href="#" title="마지막페이지로" class="last">마지막페이지</a>
+						</div>
+					</div>
+					<div class="sum_box">
+						<p>총건수 미처리 : <b>15</b> (입건 : <b>7</b>, 미입건 : <b>8</b> ) </p>
+					</div>
+				</div><!-- article -->
+				<div class="snb">
+					<h4>상세처리 메뉴</h4>
+					<div class="details_list">
+						<ul>
+							<li><a href="#">사건접수수정</a></li>
+							<li><a href="#">사건상세내역조회</a></li>
+							<li><a href="#">수사서식</a></li>
+							<li><a href="#">비저장문서등록</a></li>
+							<li class="active"><a href="#">SMS메시지</a></li>
+							<li class="on"><a href="#">입건</a></li>
+							<li class="on"><a href="#">추가입건</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">이송</a></li>
+							<li class="on"><a href="#">송치</a></li>
+						</ul>
+						<ul>
+							<li class="on"><a href="#">수사종결/취소</a></li>
+						</ul>
+						<ul>
+							<li class="on"><a href="#">발생원표</a></li>
+							<li><a href="#">검거원표</a></li>
+							<li class="on"><a href="#">피의자원표</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">긴급체포, 현행범체포</a></li>
+							<li class="on"><a href="#">체포, 구속영장</a></li>
+							<li class="on"><a href="#">압수수색검증영장</a></li>
+							<li><a href="#">영장반환</a></li>
+							<li><a href="#">지휘건의</a></li>
+							<li><a href="#">압수물지휘건의</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">통신사실확인 신청</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">사건접수수정</a></li>
+							<li><a href="#">사건상세내역조회</a></li>
+							<li><a href="#">수사서식</a></li>
+							<li><a href="#">비저장문서등록</a></li>
+							<li><a href="#">SMS메시지</a></li>
+							<li><a href="#">입건</a></li>
+							<li><a href="#">추가입건</a></li>
+						</ul>
+					</div><!-- details_list -->
+				</div><!-- snb -->
+			</div><!-- contents -->
+			
+			
+		</div><!-- container -->
+	</div>
+
+</body>
+</html>

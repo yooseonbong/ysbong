@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+/* ==========================================================================
+guide style
+========================================================================== */
+html,body {height:100%; background-color:#FBF8F4;}
+
+#guide_wrap{padding:20px;}
+
+.contGuide{position: relative; margin-bottom: 50px; }
+.contGuide:after{display: block; clear:both; content: "";}
+
+.innerGiude{margin-left:278px;}
+
+h2.titGuide {float:left; font-size: 36px; font-weight: 700; color:#000; }
+h3.titGuide {font-size: 16px; font-weight: 600; color:#000; border-bottom:1px solid #000; padding-bottom:15px;} 
+h4.titGuide {font-size: 16px; font-weight: 600; color:#000; }
+
+
+.pcGroup{position: relative; padding-top:15px; margin-bottom: 25px;}
+.pcGroup:after{display: block; clear:both; content: "";}
+.pcGroup > *{float:left;}
+.pcGroup.col-1 > *{width:100%;}
+.pcGroup.col-2 > *{width:50%;}
+.pcGroup.col-3 > *{width:33.3333%;}
+.pcGroup.col-4 > *{width:25%;}
+.pcGroup.col-5 > *{width:20%;}
+.pcGroup.col-6 > *{width:16.6666%;}
+
+
+.tab1.col-2{width:100%; margin-bottom: 0;}
+.tab1.col-2 ul li{width:50%; margin-right: 0; float:left;}
+
+
+/* 요청 버튼 */
+.requestBtn ul{display: flex;}
+.requestBtn li{padding: 8px 12px; border: 1px solid #CBC8C2; font-size: 16px; border-right: none;}
+.requestBtn li:first-child{border-radius: 5px 0 0 5px;}
+.requestBtn li:last-child{border-radius: 0 5px 5px 0; border-right: 1px solid #CBC8C2;}
+.requestBtn li.active{background-color: #E6E1D6; font-weight: 600;}
+.requestBtn li.active2{background-color: #fff; font-weight: 600;}

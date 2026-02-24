@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+@font-face {
+     font-family: 'Smart UI Light';
+     font-style: normal;
+     font-weight: 300;
+     src: url(../fonts/LGEITextTTF-Light.ttf) format('truetype');
+}
+    
+@font-face {
+     font-family: 'Smart UI Regular';
+     font-style: normal;
+     font-weight: 400;
+     src: url(../fonts/LGEITextTTF-Regular.ttf) format('truetype');
+}
+
+@font-face {
+     font-family: 'Smart UI SemiBold';
+     font-style: normal;
+     font-weight: 600;
+     src: url(../fonts/LGEITextTTF-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+     font-family: 'Smart UI Bold';
+     font-style: normal;
+     font-weight: 700;
+     src: url(../fonts/LGEITextTTF-Bold.ttf) format('truetype');
+}

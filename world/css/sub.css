@@ -1,0 +1,867 @@
+@media print {
+	
+	body * {visibility: hidden;}
+	.sbcenter{width:100%;margin:0;padding:0;}
+	#contents *{visibility: visible;}
+  	#contents { width:90% !important; margin:0 10px 0 0;float:left !important;}
+
+  	.sbcenter_left,
+  	.sbcenter_left *{position:absolute;top:0;left:0;display:none !important; width:0; padding:0; margin:0;}
+
+}
+
+.sub-bg{display:none;background:url('http://world.moleg.go.kr/web/images/common/sub_bg.jpg') no-repeat center top;background-size: cover;height:148px;padding-top:52px;text-align:center;}
+.sub-bg span{display:inline-block;height:98px;line-height:98px;padding:0 10px;border-top:1px solid #7797c1;border-bottom:1px solid #7797c1;font-size:47px;font-weight:bold;color:#ffffff;}
+/*
+.sub-location{height:60px;border-bottom:1px solid #e2e2e2;} 
+.sub-location-cont{width:1200px;margin:0 auto;position:relative;}
+.sub-location-cont > ul{}
+.sub-location-cont .print{position:absolute;top:);right:0;}
+.sub-location-cont > ul > li{position:relative;display:table;float:left;height:60px;width:190px;padding:0 20px 0 30px;border-right:1px solid #e2e2e2;}
+.sub-location-cont > ul > li:first-child{width:60px;text-align:center;border-left:1px solid #e2e2e2;padding:0;}
+.sub-location-cont > ul > li:first-child > span{display:table-cell;vertical-align:middle;}
+.sub-location-cont > ul > li > a{background:url('http://world.moleg.go.kr/web/images/common/sub_bg01.gif') no-repeat right center;display:table-cell;vertical-align:middle;font-size:15px;color:#656565;}
+.sub-location-cont > ul > li > a.on{background:url('http://world.moleg.go.kr/web/images/common/sub_bg02.gif') no-repeat right center;}
+.sub-location-cont > ul > li > a > strong{font-size:15px;color:#333;}
+*/
+
+.sub-contents{}
+.sub-location{}
+.sub-location-cont{position:absolute; top:0; right:0; }
+.sub-location-cont > ul{}
+.sub-location-cont .print{position:absolute;top:42px;right:0;}
+.sub-location-cont > ul > li{position:relative;display:table;float:left;height:50px;background:url('http://world.moleg.go.kr/web/images/sub/location_arr.png') no-repeat left center; padding:0 15px;}
+.sub-location-cont > ul > li:first-child{text-align:center;padding:0;margin-right:20px;}
+.sub-location-cont > ul > li:first-child > span{display:table-cell;vertical-align:middle;}
+.sub-location-cont > ul > li:last-child{padding-right:0;}
+.sub-location-cont > ul > li > a{width:140px; background:url('http://world.moleg.go.kr/web/images/common/sub_bg01.gif') no-repeat right center; display:table-cell;vertical-align:middle;font-size:15px;color:#656565;}
+.sub-location-cont > ul > li > a.on{background:url('http://world.moleg.go.kr/web/images/common/sub_bg02.gif') no-repeat right center;}
+.sub-location-cont > ul > li > a > strong{font-size:15px;color:#333;}
+.sbtwo_muen{display:none;position:absolute;left:-1px;top:60px;z-index:99;background:#fff;border:1px solid #e2e2e2;width:100%;padding:10px 0;}
+.sbtwo_muen > li{padding:5px 20px;}
+.sbtwo_muen > li > a{font-size:15px;}
+.sbtwo_muen > li > a:hover{color:#0b46b1;}
+
+/*sub01*/
+.sbcenter{width:1200px;margin:0 auto;padding:20px 0 60px 0;overflow:hidden;}
+.sbcenter_left{float:left;width:283px;}
+.sbcenter_right{float:right;width:897px;padding-top:33px; position: relative;}
+.sbcenter_right>h3 {font-size:30px; font-weight:bold; padding-bottom:26px; border-bottom:2px solid #ddd; margin-bottom:20px;}
+h3.srch_detail_tit {font-size:30px; font-weight:bold; padding-bottom:26px; padding-top:40px; border-bottom:2px solid #ddd; margin-bottom:20px;}
+.detail_notice {text-align:center; background:#f5fbff; border-top:1px solid #939393; border-bottom:1px solid #939393; padding:10px 0; margin:10px 0 20px;}
+.detail_notice strong {font-size:15px;}
+.left_menu{float:left;width:243px;}
+.left_menu > p{font-size:30px;font-weight:bold;color:#3f3f3f;padding:30px 0 30px 12px;border-bottom:2px solid #777;}
+.left_menu > ul > li{border-bottom:1px solid #ddd;}
+.left_menu > ul > li > a{display:block;font-size:16px;color:#3f3f3f;padding-left:12px;height:46px;line-height:46px;}
+.left_menu > ul > li > a.blue{color:#0b46b1;}
+.left_menu > ul > li > a.on,
+.left_menu > ul > li > a:hover{background:#f8f8f8;color:#0b46b1;}
+.sbthree_muen{display:none;}
+.sbthree_muen > ul > li{background:#e7ecf9;border-top:1px solid #fff;height:45px;line-height:45px;padding-left:20px;}
+.sbthree_muen > ul > li:first-child{border-top:1px solid #ddd;}
+.sbthree_muen > ul > li > a{color:#5a6175;font-size:15px;}
+.sbthree_muen > ul > li > a.on,
+.sbthree_muen > ul > li > a:hover{color:#252c43;font-weight:bold;}
+.left_menu_open{float:left;width:40px;}
+.left_menu_open > a{display:none;}
+.left_menu_open > a.on{display:block;}
+
+/* .a_search{display:inline-block;background:#a8a8a8;font-size:14px;font-weight:bold;color:#fff !important;padding:0 10px; min-width:38px;height:35px;line-height:35px;text-align:center;border-radius:3px;} */
+.a_search{display:inline-block;background:#1b477e url('http://world.moleg.go.kr/web/images/sub/srch_ico.png') no-repeat 10px center;font-size:14px;font-weight:bold;color:#fff !important;padding:0 10px; height:35px;line-height:35px;text-align:center;border-radius:3px; padding-left:30px; padding-right:15px;}
+.a_search2{height:30px;line-height:30px;padding:0 15px;}
+.a_search3 a{display:inline-block;background:#ececec; font-size:14px;font-weight:bold;color:#777 !important;padding:0 10px; height:35px;line-height:35px;text-align:center;border-radius:3px;}
+.a_search3 a.on{display:inline-block;background:#5590cc; font-size:14px;font-weight:bold;color:#fff !important;padding:0 10px; height:35px;line-height:35px;text-align:center;border-radius:3px;}
+.a_search4 {background:#1b477e; display: inline-block; font-size: 14px; font-weight: bold; color: #fff !important; padding: 0 10px; height: 35px; line-height: 35px; text-align: center; border-radius: 3px;}
+.searchList-area{position: relative;}
+.srch_more {display: inline-block; padding: 0 15px; height: 22px; line-height: 22px; border: 1px solid #d7d7d7; border-radius: 19px; font-size: 14px; color: #3470bb; background: #fff; position: absolute; right: 0; top: 2px;}
+
+/*2020.04.10 검색css*/
+.example_list{padding-top:2px; margin-right:110px; }
+/*2020.04.10 검색css*/
+
+.sub01_input{background:#f7f7f7;border:1px solid #dddddd;padding:15px 22px;border-radius:4px;margin-bottom:15px;}
+.sub01_input > span{float:left;display:inline-block;padding-right:4px;}
+.sub01_input > .input_wrap {display:block; width:370px; margin:0 auto;}
+.sub01_input > .input_wrap > span{float:left;display:inline-block;padding-right:4px;}
+.sub01_input label{font-size:14px;font-weight:bold;color:#333;vertical-align:middle;}
+.sub01_input select{font-size:15px;color:#575757;padding-left:4px;width:75px;height:35px;border:1px solid #c9c9c9;}
+.sub01_input input[type="text"]{width:186px;height:33px;border:1px solid #c9c9c9;}
+
+/*2020.04.10 검색css*/
+.sub01_input .wid_145{width:145px;}
+/*2020.04.10 검색css*/
+
+.sub01_input .wid_115{width:115px;}
+.sub01_input .wid_105{width:105px;}
+.sub01_input .span_label{padding-right:20px;}
+.sub01_input .span_label > label{background:url('http://world.moleg.go.kr/web/images/sub/sub01_18.gif') no-repeat left center;padding:0 18px 0 10px;}
+.sub01_input .span_last{float:right;height:35px;line-height:35px; vertical-align: middle;}
+.sub01_input .span_last > label{padding:0 10px;}
+
+.sub01_input.sub01_input3 .span_last{float:none;}
+
+.sub_number{float:left;padding-top:10px;}
+.sub_number > a{display:inline-block;margin-top:10px;}
+.sub_number > a.fts{font-size:14px;color:#939393;    vertical-align:-2px;border:1px solid #939393;width:29px;height:25px;line-height:25px;text-align:center;}
+.sub_number > select{font-size:14px;color:#555;border:1px solid #939393;width:110px;height:27px;margin-left:20px;}
+.sub_page{float:right;padding-top:20px;}
+.sub_page > ul > li{float:left;height:27px;line-height:27px;font-size:15px;color:#7a7a7a;}
+.sub_page > ul > li.li_ft1{padding:0 8px 0 4px;}
+.sub_page > ul > li.li_ft2{font-weight:bold;padding-left:30px;}
+.sub_page label{float:left;display:inline-block;font-size:14px;color:#404040;padding-right:6px;}
+.sub_page input{float:left;width:38px;height:25px;border:1px solid #939393;text-align:center;}
+
+.pagenation  a{display:inline-block; color:#575757;  text-align:center; width:45px; height:34px; line-height:34px; box-sizing:initial; vertical-align:top;}
+.pagenation .pg_wrap{display:block; margin:30px auto 100px auto; text-align:center;}
+.pagenation .pg_slct{display:block; margin:30px 0 100px 0; width:215px; }
+.pagenation .pg_slct.another_slct{width:150px;}
+.pagenation .pg_slct select{width:150px; font-size:15px; border:1px solid #e7e7e7; padding:7px 5px;}
+.pagenation .pg{text-indent:-999em;}
+.pagenation .pg_first{background:url('http://world.moleg.go.kr/web/images/sub/pg1.png') no-repeat center center; width: 0px; padding: 0px 15px;}
+.pagenation .pg_pre{background:url('http://world.moleg.go.kr/web/images/sub/pg2.png') no-repeat center center; width: 0px; padding: 0px 15px;}
+.pagenation .pg_next{background:url('http://world.moleg.go.kr/web/images/sub/pg3.png') no-repeat center center; width: 0px; padding: 0px 15px;}
+.pagenation .pg_last{background:url('http://world.moleg.go.kr/web/images/sub/pg4.png') no-repeat center center; width: 0px; padding: 0px 15px;}
+.pagenation .pg_on{font-weight:bold; color:#3470bb;} 
+
+/* mobile용 페이징 */
+.pagenation .pg_wrap_mobile {text-align: center; margin:10px 0 30px 0; position: relative; display:none; margin-top: 30px;}
+.pagenation .pg_wrap_mobile > *{display: inline-block; }
+.pagenation .pg_wrap_mobile a {display:inline-block;  border-radius:20px;}
+.pagenation .pg_wrap_mobile a.first{background: url('http://world.moleg.go.kr/web/images/sub/pg1.png') no-repeat center center;} 
+.pagenation .pg_wrap_mobile a.prev{background: url('http://world.moleg.go.kr/web/images/sub/pg2.png') no-repeat center center; margin-right: 15px;} 
+.pagenation .pg_wrap_mobile a.next{background: url('web/images/sub/pg3.png') no-repeat center center; margin-left: 10px;} 
+.pagenation .pg_wrap_mobile a.last{background: url('http://world.moleg.go.kr/web/images/sub/pg4.png') no-repeat center center;}
+.pagenation .pg_wrap_mobile b{font-weight: 600; color: #4876ef; margin-right: 5px; font-size: 14px;}
+.pagenation .pg_wrap_mobile span{margin-right: 5px; font-size: 14px; color:#555;}
+.pagenation .pg_wrap_mobile .pageNone{display:none; border:none;}
+.pagenation .pg_wrap_mobile .pg{display: inline-block;  content: "/"; width:20px; }
+.pagenation .pg_wrap_mobile .pageTotal{width:3.5rem; margin-right: 0.5rem;}
+.pagenation .pg_wrap_mobile .pageTotal::before{display: inline-block; margin-right: 0.8rem; content: "/";}
+.btn_wrap {}
+.btn_inner {margin:30px auto; width:400px;}
+.btn_inner a { padding:15px 20px 15px 30px; border-radius:5px;}
+.btn_inner a span {color:#000000; font-size:16px; background:url('http://world.moleg.go.kr/web/images/sub/btn_arr.png') no-repeat center right; padding-right:20px;}
+.btn_green {background:url('http://world.moleg.go.kr/web/images/sub/btn_pttn_g.png');}
+.btn_blue {background:url('http://world.moleg.go.kr/web/images/sub/btn_pttn_b.png');}
+
+
+
+#sub_pop_bg{display:none;position:fixed;top:0;left:0;z-index:112;width:100%;height:100%;background:#fff;}
+#sub_pop_bgPr{top:0;left:0;z-index:112;width:100%;height:100%;background:#fff;}
+#sub_pop{display:none;position:absolute;top:200px;left:0;z-index:9200;background:#fff;width:100%;border-bottom:1px solid #dbdddf;}
+.sub_pop{width:1200px;margin:0 auto;position:relative;padding:35px 0;}
+#pop_title{background:#4798e4;}
+.pop_title{width:1200px;margin:0 auto;font-size:20px;color:#fff;text-align:left;height:50px;line-height:50px;}
+.pop_close{position:absolute;top:-34px;right:0;}
+.sub_table2 td a.pop_open{display:inline-block;background:#888888;height:23px;line-height:23px;font-size:14px;color:#fefdfd;width:120px;text-align:center;}
+
+.sub01_flag{background:url('http://world.moleg.go.kr/web/images/sub/sub01_19.gif') no-repeat;background-size:100% 100%;display:table; 
+padding:15px 25px;width:calc(100% - 50px);margin-bottom:25px;}
+.sub01_flag > div{display:inline-block;vertical-align:middle;}
+.flag_img{white-space:nowrap;width:56px;}
+.flag_font{font-size:15px;color:#555;letter-spacing:-1px;}
+.flag_font > strong{font-size:15px;}
+.flag_div {display:block !important; margin-top:10px; padding-top:10px; border-top:1px solid #e4e4e4;}
+.flag_div a{display:inline-block; font-size: 15px; color: #9b9b9b; border: 1px solid #c9c9c9; width:calc(17% - 8px); color:#555; background:#f7f7f7 url("http://world.moleg.go.kr/web/images/sub/location_arr.png") no-repeat 95% center; padding:5px 10px; border-radius:5px;  box-sizing:border-box; vertical-align:top;}
+.sub_tatk{padding-bottom:10px;}
+.sub_tatk > ul{height:37px;border-bottom:1px solid #ddd;}
+.sub_tatk > ul > li{float:left;width:130px;text-align:center;}
+.sub_tatk > ul > li:first-child{}
+.sub_tatk > ul > li > a{display:block;background:#f7f7f7;font-size:14px;font-weight:bold;color:#777;height:36px;line-height:36px;border:1px solid #dddddd;}
+.sub_tatk > ul > li > a.on,
+.sub_tatk > ul > li > a:hover{background:#fff;color:#2c569a; border:1px solid #2c569a;}
+.sub_tatk > ul > li .pop_open{display:block;background:#fff;font-size:14px;color:#656565;height:36px;line-height:35px;border:1px solid #939393;}
+.sub_bgbor{background:#f9f9f9;border:1px solid #e1e1e1;padding:16px 16px 16px 22px;margin:20px 0; border-radius:3px;}
+.sub_bgbor2{background:#f9f9f9;border-top:1px solid #939393;border-bottom:1px solid #e1e1e1;text-align:center;padding:40px 0;margin-bottom:40px;}
+
+/* 수정 0906 */
+.sub_catalog{}
+.sub_catalog > ul > li{float:left;width:calc(82% - 2px);margin-left:2%;height:480px;}
+.sub_catalog > ul > li:first-child{width:calc(16% - 2px);margin-left:0;}
+
+/* .sub_catalog > ul > li > p{background:#f9f9f9;border-bottom:1px solid #e5e5e5;font-size:15px;color:#3f3f3f;height:41px;line-height:41px;text-align:center;} */
+
+.sub_catalog > p{background:#f9f9f9;border:1px solid #e5e5e5;font-size:15px;color:#3f3f3f; text-align:center; padding:20px 0px;}
+
+
+.catalog_menu{padding:20px;text-align:left;}
+.catalog_menu > ul > li{border-bottom:1px solid #e0e0e0;padding-bottom:10px;margin-bottom:15px;}
+.catalog_menu > ul > li > a{display:block;background:url('http://world.moleg.go.kr/web/images/sub/sub01_29of.gif') no-repeat right center;font-size:14px;color:#7a7a7a;}
+.catalog_menu > ul > li > a.on,
+.catalog_menu > ul > li > a:hover{color:#4798e4;background:url('http://world.moleg.go.kr/web/images/sub/sub01_29on.gif') no-repeat right center;}
+/*.catalog_cent{text-align:left;padding:20px 20px 0 20px;height:700px;overflow-y:scroll;}
+.catalog_cent > dl{padding-bottom:35px; min-height:170px;}
+.catalog_cent > dl > dt{font-size:14px;font-weight:bold;color:#7a7a7a;padding-bottom:18px;}
+.catalog_cent > dl > dd{font-size:14px;color:#7a7a7a;padding-bottom:8px;}
+.catalog_cent {text-align:left;padding:0px 20px 0 20px;   } */
+
+.scroll_table1 table {border-collapse: separate;border-spacing: 0; width:100%;}
+.scroll_table1 tr td:first-child {border-left:solid 1px #e5e5e5; }
+.scroll_table1 tr td {border-right:solid 1px #e5e5e5; vertical-align:top;}
+.scroll_table1 tr:last-child td {border-bottom:solid 1px #e5e5e5}
+.scroll_table1 tr:last-child td.db_none {border-bottom:0px;}
+
+.catalog_cent {text-align:left;padding:5px 20px 5px 20px; }
+.catalog_cent > dl{}
+.catalog_cent > dl > dt{font-size:14px;font-weight:bold;color:#7a7a7a;padding-bottom:18px;}
+.catalog_cent > dl > dd{font-size:14px;color:#7a7a7a;padding-bottom:8px;}
+
+.sub_register{display:none;margin-bottom:40px;}
+.sub_result{display:none;border-top:1px solid #939393;border-bottom:1px solid #e1e1e1;padding:20px;margin-bottom:40px;}
+.sub_result > strong{display:inline-block;}
+
+.sub_national{width:calc(100% - 52px);background:#f7f7f7;border:1px solid #dddddd;padding:25px;border-radius:4px;margin-bottom:15px;}
+.sub_national > div{display:table-cell;vertical-align:middle;}
+.sub_national > div.images{width:150px;white-space:nowrap;}
+.sub_national > div.images > img{margin-right:15px;}
+.sub_national > div.fonts{width:82%;}
+.sub_national > div.fonts > p{font-size:16px;color:#333;padding-bottom:12px;}
+.sub_national > div.fonts > p > strong{font-size:16px;color:#333;}
+.sub_national > div.fonts > div{padding-top:10px;}
+.sub_national .fonts_cents{float:left;width:50%;}
+.sub_national .fonts_cents > span{font-size:14px;color:#333;}
+.sub_national .fonts_cents > span:first-child{display:inline-block;width:40px;color:#666;}
+
+.sech2_title{background:url('http://world.moleg.go.kr/web/images/sub/sub01_46.gif') no-repeat left 10px;font-size:18px;font-weight:bold;color:#444;padding-left:28px;}
+.sech2_title > span{font-size:14px;color:#5d5d5d;}
+.sub_title{background:url('http://world.moleg.go.kr/web/images/sub/sub01_21.gif') no-repeat left 1px;padding:1px 1px 15px 30px;font-size:19px;font-weight:bold;color:#333;}
+.sub_title_type2{padding:15px 20px; font-size:19px; font-weight:bold; color:#333; background:#f4f4f4; border-top:2px solid #000;}
+.info_point>span{display:inline-block; color:#fff; background:#505050; padding:7px 10px; margin-bottom:10px;}
+.nationInfo h5{background:url('http://world.moleg.go.kr/web/images/sub/sub01_21.gif') no-repeat left 4px;padding:0 0 10px 30px;font-size:19px;font-weight:bold;color:#333;border-bottom:1px solid #d3d3d3;margin-bottom:20px;margin-top: 20px;}
+.nationInfo p,.nationInfo div, .nationInfo li, .nationInfo a{font-size: 14px;}
+
+.sron_bg{background:url('http://world.moleg.go.kr/web/images/sub/sub01_18.gif') no-repeat left center;font-size:16px;/*font-weight:bold;*/color:#333;padding:0 18px 0 10px;}
+.sb_select{border:1px solid #c9c9c9;font-size:15px;color:#575757;width:95px;height:28px;}
+.abg_blue{background:#3170be;}
+.te_un{text-decoration:underline;}
+.posi_span{position:relative;padding-left:15px;}
+.posi_span > span{position:absolute;left:0;top:0;}
+.a_button{display:inline-block;background:#575757;font-size:17px;font-weight:bold;color:#fff;text-align:center;padding:0 16px;height:45px;line-height:45px;min-width:56px;margin-left:4px;}
+.a_button2{display:inline-block;background:#4798e4;font-size:20px;font-weight:bold;color:#fff;text-align:center;height:55px;line-height:55px;width:250px;}
+.a_button3{display:inline-block;background:url('http://world.moleg.go.kr/web/images/sub/sub01_32.gif') no-repeat 95% center #1fb2c1;
+font-size:15px;font-weight:bold;color:#000000;text-align:center;height:40px;line-height:40px;width:350px;padding-right:15px;margin-bottom:10px;}
+.a_button4{display:inline-block;background:#fff;border:1px solid #c9c9c9;padding:0 20px;height:28px;line-height:28px;border-radius:20px;
+font-size:15px;color:#656565;margin-left:1px;}
+.sub01_rigab > a.on,
+.sub01_rigab > a:hover{background:#555 url('http://world.moleg.go.kr/web/images/sub/srch_ico.png') no-repeat 10px center;}
+.a_green{background:#139ba9;}
+.a_red{background:#ea4853}
+.ft16_cor6{font-size:16px;color:#666;}
+.ft16_cor5{font-size:16px;color:#5d5d5d;}
+.ft15_cor6{font-size:15px;color:#666;}
+.ft14_cor3{font-size:14px;color:#333;}
+.ft15_cor65 > li{font-size:15px;color:#656565;line-height:22px;margin-top:10px;margin-bottom:10px;}
+.ft15_cor66 > li{font-size:15px;color:#656565;line-height:22px;}
+.ft15_cor65{font-size:15px;color:#656565;}
+.ft14_cor65{font-size:14px;color:#656565;}
+.ft14_cor3 > li{font-size:14px;color:#333;}
+.line_hei22{line-height:22px;}
+.line_hei22 > li{line-height:22px;}
+.ft14{font-size:14px;}
+.ft15{font-size:15px;}
+.ft16{font-size:16px;}
+.no_bold{font-weight:normal;}
+.big_wid{min-width:85px;}
+
+.search-btn{padding: 0px !important;}
+.search_top{background:#eeeeee;font-size:22px;color:#656565;text-align:center;padding:24px 0;margin-bottom:20px;}
+.search_top span{font-size:30px;color:#656565;}
+.search_top strong{font-size:30px;color:#fa7000;}
+.search_top2{font-size:18px;color:#656565;padding:5px 0;margin-bottom:20px;}
+.search_top2 span{font-size:18px;color:#656565;}
+.search_top2 strong{font-size:18px;color:#000;}
+.search_tab {padding-bottom:10px;}
+.search_tab:after {display:block; content:""; clear:both;} 
+.search_tab a {display:inline-block; padding:7px 20px 7px 15px; font-weight:bold; background:#ececec; border-radius:2px; }
+.search_tab a span {color:#777; font-size:15px; background:url(http://world.moleg.go.kr/web/images/sub/chck1.png) no-repeat left center; padding-left:20px;}
+.search_tab a.on {background:#5590cc; }
+.search_tab a.on span {color:#fff; background:url(http://world.moleg.go.kr/web/images/sub/chck2.png) no-repeat left center;}
+/* .search_menu{border-left:1px solid #dbdddf;margin-bottom:35px;}
+.search_menu > ul > li{float:left;display:table;width:16.6%;text-align:center;height:46px;}
+.search_menu > ul > li > a{display:table-cell;vertical-align:middle;font-size:15px;color:#656565;border-bottom:1px solid #dbdddf;border-top:1px solid #dbdddf;border-right:1px solid #dbdddf;}
+.search_menu > ul > li > a.on,
+.search_menu > ul > li > a:hover{background:#4798e4;color:#fff;}
+.search_menu > ul > li:first-child{width:17%;} */
+.search_menu{border-left:1px solid #dbdddf;margin-bottom:15px;}
+
+.search_menu > ul > li{float:left;display:table;text-align:center;height:46px;width:calc(100% / 8 - 1px);} /* width:16.6%; 전체 탭 삽입전*/
+
+/*2020.04.10 검색css*/
+.search_menu *{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.search_menu > ul{width:100%;}
+.search_menu > ul:after {display: block; clear: both; content: "";}
+.search_menu > ul > li{float:left;display:table;text-align:center; height:46px; width:12.5%;} /* width:16.6%; 전체 탭 삽입전
+/*2020.04.10 검색css*/
+
+/*검색 CSS 변경 후*/
+.search_menu > ul > li:last-child{width:12.5%;}
+
+
+.search_menu > ul > li > a{display:table-cell; background: #f7f7f7; font-weight: bold; color: #777; border: 1px solid #dddddd;vertical-align:middle;font-size:15px;border-right:0;}
+.search_menu > ul > li:last-child > a{border-right: 1px solid #dddddd;}
+.search_menu > ul > li > a.on,
+.search_menu > ul > li > a:hover{background: #fff; color: #2c569a; border: 1px solid #2c569a;}
+/* .search_menu > ul > li:first-child{width:17%;} */
+.search_menu .srch_br {font-size:12px;}
+
+.search_cent{border-top:1px solid #939393;margin-bottom:30px;}
+.search_cent > ul > li{padding:20px 0;border-bottom:1px solid #e1e1e1;}
+.search_font{}
+
+/*2020.04.10 검색css*/
+.search_font em{display:inline-block; color:#fff; font-size: 12px; font-weight: 600; font-style: normal; padding:2px 5px; border-radius:5px; margin-right:5px; background-color: #48c9c4;}
+/*2020.04.10 검색css*/
+.search_font > dt{font-size:14px;font-weight:bold;color:#333333;margin-top:6px;}
+.search_font > dt:first-child{margin-top:0;}
+.search_font > dt > a{text-decoration:underline;font-weight:normal;}
+.search_font > dt > a,
+
+.search_font > dt > a > span{color:#656565;font-size:14px;}
+/*2020.04.10 검색css*/
+.search_font > dt > a > span{color:#2b559a;font-size:14px;font-weight: 600;}
+/*2020.04.10 검색css*/
+
+.search_font > dt > a > span > b{color:#fa7000;font-size:16px;font-weight:bold;}
+.search_font > dd b{color:#fa7000;font-size:16px;font-weight:bold;}
+/* .search_font > dt > a > span{font-size:12px;} */
+.search_font > dt > a > img{margin-right:10px;vertical-align:-3px;}
+.search_font a.a_two{color:#333;text-decoration:none;margin:0 2px;}
+.search_font > dd{padding-top:6px;font-size:15px;color:#656565;}
+.search_font > li{font-size:14px;font-weight:bold;color:#333333;margin-top:6px;}
+.search_font > li:first-child{margin-top:0;}
+.search_font > li > a{text-decoration:underline;font-weight:normal;}
+.search_font > li > a,
+.search_font > li > a > span{color:#2b559a;font-size:14px; font-weight: 600;}
+.search_font > li > a > span > b{color:#fa7000;font-size:16px;font-weight:bold;}
+.search_font > li > a > img{margin-right:10px;vertical-align:-3px;}
+.flag_stg{float:left;position:relative;width:110px;font-size:14px;font-weight:bold;color:#656565;padding-left:34px;}
+.flag_stg > img{position:absolute;top:0px;left:0; }
+.flag_stg_bao{float:left;}
+.flag_stg_bao > div.flag_stg{float:none;margin-top:8px;}
+.flag_stg_bao > div:first-child{margin-top:0;}
+
+/*.many_things{float:right;width: calc( 100% - 20% );}
+/*2020.04.10 검색css*/
+.many_things{margin-left:200px;}
+/*2020.04.10 검색css*/
+
+/* 첨부파일 예외 css */
+.search_cent.attach-file .search_font li {overflow:hidden;}
+.search_cent.attach-file .search_font li > b{float: left; position: relative; width: 120px; }
+.search_cent.attach-file .search_font li a{display:block; margin-left: 200px;  text-decoration:none; }
+.search_cent.attach-file .search_font li a span{text-decoration: underline;}
+
+
+.title_bor{border-bottom:1px solid #d3d3d3;margin-bottom:20px;}
+.sub01_fonts{padding-bottom:20px;}
+.sub01_fonts > li{font-size:14px;color:#333;padding-bottom:10px;line-height:22px;}
+.sub01_fonts > li > span{font-size:14px;color:#333;}
+.sub01_fonts > li.li_two{color:#666;margin-left:30px;padding-left:20px;}
+.sub01_fonts > li.li_two > span{color:#666;top:-2px;}
+.sub01_bgblue{}
+.sub01_bgblue > li{background:url('http://world.moleg.go.kr/web/images/sub/sub01_39.gif') no-repeat left center;font-size:14px;padding-left:15px;margin-bottom:15px;}
+.sub01_bgblue > li > span{font-size:14px;}
+.sub01_bgblue > li > a{font-size:14px; color:#123e90; text-decoration:underline;}
+/* .sub01_counlist{float:right;background:#a8a8a8;width:308px;border:1px solid #5e5e5e;}
+.sub01_counlist > ul > li{float:left;width:22px;text-align:center;}
+.sub01_counlist > ul > li > a{display:block;font-size:13px;color:#fff;border-left:1px solid #919191;height:28px;line-height:28px;}
+.sub01_counlist > ul > li:first-child > a{border-left:0;}
+.sub01_counlist > ul > li > a.on,
+.sub01_counlist > ul > li > a:hover{background:#5e5e5e;color:#00e4ff;} 171012*/
+.sub01_counlist{background:#f7f7f7;width:100%;border:1px solid #ddd; box-sizing:border-box; border-radius:5px;}
+.sub01_counlist > ul {display:block; width:550px; margin:5px auto; overflow:hidden;}
+.sub01_counlist > ul > li{float:left;text-align:center; padding:10px 0; height:30px;}
+.sub01_counlist > ul > li > a{display:block;font-size:13px;color:#fff;background:#888888; padding:10px;margin-right:2px;border-radius:3px; margin-bottom:10px;height:13px; line-height:13px;}
+.sub01_counlist > ul > li:first-child > a{border-left:0;}
+.sub01_counlist > ul > li > a.on,
+.sub01_counlist > ul > li > a:hover{background:#5490ce url('http://world.moleg.go.kr/web/images/sub/country_tab_arr.png') no-repeat center bottom; color:#fff; font-weight:bold;}
+.sub01_counlist > ul > li:hover{background:url('http://world.moleg.go.kr/web/images/sub/country_tab_arr.png') no-repeat center bottom; color:#fff;}
+
+/* 개인정보처리방침 */
+.sub01_counlist.privacy-area{padding:30px; margin-bottom: 30px;}
+.sub01_counlist.privacy-area em{display: block; text-align: center; font-style: normal; font-weight: 600; font-size: 17px; margin-bottom: 25px;}
+.sub01_counlist.privacy-area p{font-size: 14px; margin-top: 10px;}
+.sub01_counlist.privacy-area p:first-child{margin-top: 0; }
+.sub01_counlist.privacy-area p b{font-weight: 600;}
+
+.sub_tatk02 > ul > li{width:50%;}
+.sub01_akey{}
+.sub01_akey_title{background:url('http://world.moleg.go.kr/web/images/sub/sub01_40.gif') no-repeat left 9px;font-size:14px;font-weight:bold;color:#333;padding:0 0 20px 12px;}
+.sub01_akey_cent{border-bottom:1px solid #d3d3d3;margin-bottom:20px;padding-bottom:5px;}
+.sub01_akey_cent > ul > li{float:left;width:18%;text-align:center;padding: 10px 8px;} 
+/* .sub01_akey_cent > ul > li{float:left;width:22%;text-align:center;}  */
+/* .sub01_akey_cent > ul > li:first-child{text-align:left;width:calc(12% - 10px);padding-left:10px;} */
+/* .sub01_akey_cent > ul > li:nth-child(5n+1){text-align:left;width:calc(12% - 10px);padding-left:10px;} */
+.sub01_akey_cent > ul > li > a{display:inline-block;text-align:center;font-size:14px;color:#666; height:90px;}
+/* .sub01_akey_cent > ul > li > a > img{padding-bottom:10px;} */
+
+.flag{width: 58px; height:40px; border: 1px solid #a1a1a2;}
+
+.sub0102{position:relative;overflow:hidden;border-top:1px solid #939393;border-bottom:1px solid #d3d3d3;margin-bottom:30px;}
+.sub0102 > ul{float:left;overflow:hidden;}
+.sub0102 > ul:last-child{float:right;}
+.sub0102 > ul > li{float:left;}
+.sub0102 > ul > li:first-child {margin-left:20px;}
+.sub0102 > ul > li.ml0 {margin-left:0;}
+.sub0102 > ul > li strong{display:inline-block;font-size:15px;color: #333;height:45px;line-height:45px;text-align:center;}
+.sub0102 > ul > li span{display:inline-block;font-size:14px;color:#656565;min-width:25px;padding:0 15px 0 10px;text-align:center;}
+.sub0102 > ul > li span.last_span{padding:0 0 0 6px; line-height: 45px;}
+.sub0102 > ul > li span.last_span > a{margin-right:5px;}
+.sub0102 > a{position:absolute;top:12px;right:0;}
+
+.sub010203{border-bottom: 1px solid #070707; margin-bottom: 10px;}
+.sub010203 > ul {margin-left:20px; margin-top: 10px; margin-bottom: 10px; text-align: left;}
+.sub010203 > ul > li strong{display:inline-block;font-size:15px;color: #333;height:30px;line-height:30px;text-align:center;}
+.sub010203 > ul > li > span {margin-left: 5px; margin-right: 5px; color: #656565;}
+
+.mark {display:inline-block; padding:7px 12px !important; border-radius:5px; color:#fff !important; font-weight:bold; margin-top:8px;}
+.mark_shi {background:#139ba9;}
+.mark_no {background:#7790c8;}
+
+/*table*/
+.sub_table{border-collapse:separate;border-collapse:collapse;border-top:1px solid #939393;}
+.sub_table caption.pc_no{display:none;}
+/* .sub_table tr:hover{background:#eef4ff;} */
+.sub_table th{background:#f4f4f4;font-size:15px;color:#333;padding:14px 0;border-bottom:1px solid #d3d3d3;}
+.sub_table td{font-size:14px;color:#656565;text-align:center;padding:12px 0;border-bottom:1px solid #d3d3d3;}
+.sub_table td.td_left{text-align:left;padding-left:20px;}
+.sub_table tr.color1{background:#eef4ff;}
+.sub_table td.bg_blue{background:#eef4ff;}
+.sub_table td.no_bor{border-bottom:0;}
+.sub_table td a{font-size:14px;}
+.sub_table td p{font-size:14px;color:#656565;line-height:20px;}
+.sub_table td label{font-size:14px;color:#333;}
+.sub_table td strong{font-size:14px;}
+.sub_table td a.a_bg{display:inline-block;background:#888888;font-size:14px;color:#fff;min-width:28px;padding:0 6px;height:20px;text-align:center;border-radius:3px;}
+.sub_table td a.a_bg.blue{background:#4798e4;}
+.sub_table td a.a_bg.red{background:#de2910;}
+.sub_table td a.a_bg.green{background:#69a669;}
+/* 설문조사 이벤트 CSS */
+.sub_table td.impact{font-size: 16.8px;}
+.marginLeft{margin-left:10px; margin-right: 10px;}
+#nm {width:10%;}
+#tel_no{width:25%;}
+#email {width: 30%;}
+.survey.a_button{width: 40%;}
+.inputInfo {font-size:14px; color:#656565;}
+#alink {font-weight: bold;}
+.surveyEvtBtn{display:inline-block;background:rgb(31,178,193);font-size:25px;font-weight:bold;color:#fff;text-align:center;height:40px;border-radius: 5px;}
+.surveyBody{background-color: rgb(220,242,255); padding: 15px 15px 15px 15px;}
+.questions {color : #3470bb;}
+/* 맞춤형 법령정보 에디터를 사용자 표출 */
+.sub_table tbody tr td pre {padding:0 40px;}
+.sub_table tbody tr td pre *{
+	font-size:inherit;
+}
+
+.fontBoard{font-weight: bold;}
+
+.sub_table2{border-collapse:separate;border-collapse:collapse;}
+.sub_table2 th{background:#f4f4f4;font-size:15px;color:#333;padding:10px 0;border-bottom:1px solid #d3d3d3;}
+.sub_table2 td{font-size:14px;color:#656565;padding:12px 10px;border-bottom:1px solid #d3d3d3;}
+.sub_table2 th label{font-size:15px;color:#333;}
+.sub_table2 td label{font-size:15px;color:#333;}
+.sub_table2 th span{font-size:15px;}
+.sub_table2 td a{font-size:14px;color:#333;}
+.sub_table2 th.td_left{text-align:left;padding-left:10px;}
+.sub_table2 th.td_left2{text-align:left;padding-left:20px;}
+.sub_table2 td.td_cent{text-align:center;padding: 6px 0;}
+.sub_table2 th.td_left > label{font-size:14px;}
+
+.tbl_type3 {margin:20px 0 30px 0;}
+.tbl_type3 th{padding:10px 0; text-align:left; font-size:14px; vertical-align:top;}
+.tbl_type3 th img {display:inline-block; margin-right:10%; margin-left:20%;}
+.tbl_type3 td {padding:10px 0; font-size:14px; vertical-align:top;}
+.tbl_type3 td strong {display:inline-block; font-size:16px; margin:5px 0;}
+.tbl_type3 td strong span {font-size:16px;}
+.tbl_type3 td li {margin:5px 0; text-indent:10px;}
+.tbl_type3 td li:before {content:"⊙ "}
+
+.tbl_tit_wrap .fl_l{padding-top:10px;padding-bottom:22px;}
+.tbl_tit_wrap:after{display:block; content:""; clear:both;}
+.tbl_tit_wrap *{font-size:15px;}
+
+.ctt_tit h4{font-size:15px; font-weight:bold; background:#5693e6 url('http://world.moleg.go.kr/web/images/sub/ctt_tit.png') no-repeat right top; padding:7px 40px 7px 10px; color:#fff; display:inline-block;}
+
+.write_top td input[type="text"]{font-size:14px;color:#656565;height:26px;width:calc(100% - 12px);padding-left:10px;border:1px solid #c9c9c9;}
+.write_top td input[type="password"]{font-size:14px;color:#656565;height:26px;width:calc(100% - 12px);padding-left:10px;border:1px solid #c9c9c9;}
+.write_top td select{font-size:14px;color:#656565;height:28px;width:105px;border:1px solid #c9c9c9;}
+.write_top td textarea{width:calc(100% - 22px);padding:10px;border:1px solid #c9c9c9;font-size:14px;}
+.write_top td .wid_222{width:219px;}
+.write_top td.text_top{vertical-align:top;padding-top:10px;}
+
+.ltbor_tabel th{border-left:1px solid #d3d3d3;}
+.ltbor_tabel td{border-left:1px solid #d3d3d3;}
+.ltbor_tabel2 td{border-left:0;}
+.ltbor_tabel th:first-child{border-left:0;}
+.ltbor_tabel td:first-child{border-left:0;}
+
+.pop_table th{text-align:left;padding-left:10px;}
+.pop_table th label{font-weight:normal;}
+.pop_table td label{display:inline-block;vertical-align: middle;padding-left:2px;font-size:14px;color:#656565;}
+.pop_table td input{display:inline-block;}
+.pop_table td span{display:inline-block;width:165px;}
+.pop_table .text_cent{text-align:center;padding-left:0;padding-right:0;}
+
+.span_115 td span{display:inline-block;width:115px;font-size:14px;color:#656565;}
+.span_130 td span{display:inline-block;width:130px;font-size:14px;color:#656565;}
+.div_input{display:inline-block;position:relative;width:140px;height:26px;border:1px solid #c9c9c9;padding-right:23px;}
+.div_input > input{border:0;width:calc(100% - 5px);height:26px;padding-left:5px;font-size:14px;color:#656565;}
+.div_input > a{position:absolute;right:6px;top:3px;}
+
+.span_pad40 td > span{display:inline-block;font-size:14px;color:#656565;padding:5px 0; padding-right:22px;}
+
+.no_top{border-top:0;}
+.top_bor{border-top:1px solid #939393;}
+/*table*/
+
+
+/*sub01*/
+
+/*sub04*/
+.sub04_img100{padding-bottom:40px;}
+
+.sub04_bgfont{padding-bottom:20px;}
+.sub04_bgfont > li{background:url('http://world.moleg.go.kr/web/images/sub/sub01_40.gif') no-repeat left 9px;font-size:14px;color:#333;padding:0 0 10px 10px;}
+.sub04_bgfont > li li {margin:7px 0;}
+.sub04_title{font-size:24px;font-weight:bold;color:#333;padding:25px 0;}
+.sub04_question{border-top:1px solid #d3d3d3;}
+
+/* 자주찾는 질문 에디터 */
+.question_title{display:table;height:39px;width:100%;border-bottom:1px solid #d3d3d3;}
+.question_title > span{display:table-cell;vertical-align:middle;width:152px;text-align:center;font-size:15px;color:#656565;border-right:1px solid #d3d3d3;}
+.question_title > a{display:table-cell;vertical-align:middle;padding-left:24px;font-size:15px;color:#656565; font-weight:bold; height: 55px;}
+.question_title > a > img {display:inline-block; margin-right:16px;}
+.question_cent{display:none;border-bottom:1px solid #d3d3d3;font-size:15px;color:#656565;padding:14px 70px; background:#f0fbff no-repeat 24px 9px; line-height:23px;}
+.question_cent > * {font-size:inherit !important; text-decoration:inherit !important;}
+.question_cent > * > *  {font-size:inherit !important;  text-decoration:inherit !important;}
+.question_cent > * > * > * {font-size:inherit !important; }
+.sblue{font-size:15px;color:#4798e4;}
+
+/* 맞춤형 법령정보 에디터 */
+.sub_table2 pre > * {text-decoration:inherit !important;}
+.sub_table2 pre > * > * {text-decoration:inherit !important;}
+/*sub04*/
+
+.sub0103-v{border-top:1px solid #939393;border-bottom:1px solid #d3d3d3;padding:15px 0;}
+.sub0103-v > ul > li{padding-left:25px;background:url('http://world.moleg.go.kr/web/images/sub/sub0103_off.gif') no-repeat left 6px;line-height:30px;}
+.sub0103-v > ul > li > a{font-size:20px;color:#3e3e3e;}
+.sub0103-v > ul > li.on{background:url('http://world.moleg.go.kr/web/images/sub/sub0103_on.gif') no-repeat left 6px;}
+.sub0103-v > ul > li > ul{}
+.sub0103-v > ul > li > ul > li{line-height:100%;background:url('http://world.moleg.go.kr/web/images/sub/sub0103_icon2.gif') repeat-y left 0px;}
+.sub0103-v > ul > li > ul > li.last{background:none;}
+.sub0103-v > ul > li > ul > li > a{display:inline-block;font-size:17px;color:#3e3e3e;background:url('http://world.moleg.go.kr/web/images/sub/sub0103_i2_off.gif') no-repeat left 0px;height:15px;padding-top:17px;padding-left:53px;}
+.sub0103-v > ul > li > ul > li.on > a{background:url('http://world.moleg.go.kr/web/images/sub/sub0103_i2_on.gif') no-repeat left 0px;}
+.sub0103-v > ul > li > ul > li > ul{padding: 10px 0 0 68px;}
+.sub0103-v > ul > li > ul > li > ul > li{/*background:url('http://world.moleg.go.kr/web/images/sub/sub0103_icon3.gif') repeat-y left 0;padding-top:10px;*/}
+.sub0103-v > ul > li > ul > li > ul > li > a{display:inline-block;font-size:15px;color:#3e3e3e;background:url('http://world.moleg.go.kr/web/images/sub/sub0103_icon.gif') no-repeat left 0;padding-left:20px;padding-top:6px;line-height:20px;}
+
+.go-btn{display:inline-block;padding:0 10px;height: 28px;line-height: 28px;background:#a8a8a8;font-size: 14px;font-weight: bold;color: #fff;border-radius:3px;margin-left:3px;}
+
+.sub0402-p{font-size:14px;}
+.sub0402-v1{background:#f7f7f7;border:1px solid #dddddd;border-radius:6px;margin-top:20px;padding:40px 38px;}
+.main_bz_tit{text-align:center; padding-top:30px;}
+.sub0402-v1-cont1{overflow:hidden;margin-top:20px;width:819px;height:152px;}
+.sub0402-v1 .bg1{background:url('http://world.moleg.go.kr/web/images/sub/sub0402_bg1.jpg') no-repeat left top;}
+.sub0402-v1 .bg2{background:url('http://world.moleg.go.kr/web/images/sub/sub0402_bg2.jpg') no-repeat left top;}
+.sub0402-v1 .bg3{background:url('http://world.moleg.go.kr/web/images/sub/sub0402_bg3.jpg') no-repeat left top;}
+.sub0402-v1 .bg4{background:url('http://world.moleg.go.kr/web/images/sub/sub0402_bg4.jpg') no-repeat left top;}
+.sub0402-v1 .bg5{background:url('http://world.moleg.go.kr/web/images/sub/sub0402_bg5.jpg') no-repeat left top;}
+.sub0402-v1-cont1:first-child{margin-top:0;}
+.sub0402-v1-cont1 > div{display:table;}
+.sub0402-v1-cont1 > div > span{display:table-cell;vertical-align:top;}
+.sub0402-v1-cont1-lf{float:left;width:260px;height:152px;}
+.sub0402-v1-cont1-lf span{font-size:14px;text-align:center;}
+.sub0402-v1-cont1-rt{float:right;width:380px;height:152px;margin-right:20px}
+.sub0402-v1-cont1-rt span{font-size:14px;color:#ffffff;}
+
+/* 171012 도표 수정 s */
+.sub0402-v1{background:url('http://world.moleg.go.kr/web/images/sub/main_bz_graph.gif') no-repeat left top; border:0; position:relative;}
+.sub0402-v1 .bg1{background:none;}
+.sub0402-v1 .bg2{background:none;}
+.sub0402-v1 .bg3{background:none;}
+.sub0402-v1 .bg4{background:none;}
+.sub0402-v1 .bg5{background:none;}
+.sub0402-v1-cont1{height:100px;}
+.sub0402-v1-cont1-rt span{color:#313131; font-weight:bold;}
+.sub0402-v1 .sub0402-v1-cont1-rt{position:absolute; float:none;}
+.sub0402-v1 .bg1 .sub0402-v1-cont1-rt{top:0; right:0;}
+.sub0402-v1 .bg2 .sub0402-v1-cont1-rt{top:295px; right:0; width:255px;}
+.sub0402-v1 .bg3 .sub0402-v1-cont1-rt{bottom:10px; right:290px; width:330px;}
+.sub0402-v1 .bg3 .sub0402-v1-cont1-rt span{vertical-align:bottom;}
+.sub0402-v1 .bg4 .sub0402-v1-cont1-rt{bottom:70px; left:0; width:160px;}
+.sub0402-v1 .bg5 .sub0402-v1-cont1-rt{top:52px; left:0; width:180px;}
+.sub0402-v1-cont1 > .sub0402-v1-cont1-lf {display:none;}
+/* 171012 도표 수정 e */
+
+.file-v{overflow:hidden;padding-bottom:30px;border-bottom:1px solid #d3d3d3;}
+.file-v > ul{margin-left:-28px;}
+.file-v > ul > li{float:left;margin-left:28px;margin-top:20px;position:relative;width:278px;height:240px;border:1px solid #dedede;text-align:center;}
+.file-v > ul > li > a{display:block;}
+.file-v > ul > li span{display:block;}
+.file-v > ul > li span.img{}
+.file-v > ul > li span.font{font-size:16px;height:48px;line-height:48px;border-top:1px solid #dedede;}
+.file-pos{position:absolute;top:0;left:0;}
+#sub_pop.video_pop{position:fixed;width:894px;top:50%;left:50%;margin:-275px -447px;}
+#sub_pop.video_pop .pop_title{width:96%;}
+#sub_pop.video_pop .sub_pop{width:96%;text-align:center;}
+#sub_pop.pw_pop{position:fixed;width:400px;top:50%;left:50%;margin-left:-200px; margin-top:-70px;}
+#sub_pop.pw_pop .pop_title{width:96%;}
+#sub_pop.pw_pop .sub_pop{width:96%;text-align:center;}
+.sub04_video > img{width:100%;max-width:764px;}
+#sub_pop.video_popPr{width:894px;top:50%;left:50%;margin:-275px -447px; border:solid 1px #dedede;}
+#sub_pop.video_popPr .pop_title{width:96%;}
+#sub_pop.video_popPr .sub_pop{width:96%;text-align:center;}
+#sub_pop.video_popPr .videoBox {position: relative; height:0; padding-bottom: 40%; width:75%; margin:0 auto;}
+#sub_pop.video_popPr iframe{position: absolute; width:100%; height:100%; left: 0; top: 0; right:0; bottom:0;}
+
+/*padding*/
+.sb_red{color:#de2910 !important;}
+.sb_blue{color:#2278c9 !important;}
+.sb_orgn{color:#F06005!important;}
+.sb_blue2{color:#123e90 !important;}
+.noResult{font-size: 1.125rem;}
+
+.flat_left{float:left;}
+.flat_right{float:right;}
+.flat_none{float:none;}
+.text_left{text-align:left;}
+.text_cent{text-align:center;}
+.text_right{text-align:right;}
+
+.pt0{padding-top:0 !important;}
+.pt15{padding-top:15px !important;}
+.pt2{padding-top:20px !important;}
+.pb0{padding-bottom:0 !important;}
+.pb05{padding-bottom:5px !important;}
+.pb1{padding-bottom:10px !important;}
+.pb2{padding-bottom:20px !important;}
+.pb3{padding-bottom:30px !important;}
+.pl0{padding-left:0 !important;}
+.pl2{padding-left:20px !important;}
+.pl3{padding-left:30px !important;}
+.pl7{padding-left:70px !important;}
+.pl0{padding-left:0 !important;}
+.pr0{padding-right:0 !important;}
+.pr1{padding-right:10px !important;}
+.mt05{margin-top:5px !important;}
+.mt08{margin-top:8px !important;}
+.mt1{margin-top:10px !important;}
+.mt2{margin-top:20px !important;}
+.mt3{margin-top:30px !important;}
+.mt4{margin-top:40px !important;}
+.mb1{margin-bottom:10px !important;}
+.mb05{margin-bottom:5px !important;}
+.mb15{margin-bottom:15px !important;}
+.mb2{margin-bottom:20px !important;}
+.mb3{margin-bottom:30px !important;}
+.mb4{margin-bottom:40px !important;}
+.ml1{margin-left:10px !important;}
+.ml15{margin-left:15px !important;}
+.ml2{margin-left:20px !important;}
+.ml3{margin-left:30px !important;}
+.mr1{margin-right:10px !important;}
+.mr2{margin-right:20px !important;}
+.mr3{margin-right:30px !important;}
+/*padding*/
+
+#sub_pop.sub02_pop{top:0;height:100%; min-height:950px;}
+#sub_pop.sub02_pop .sub_pop{width:98%;padding:35px 0;}
+#sub_pop.sub02_pop .pop_title{width:98%;}
+#sub_pop.sub02_pop .sub_pop .sub_catalog > ul > li{height:auto;}
+.sub_catalog{position:relative;}
+.catalog_posi01{position:absolute;top:0;left:16%;}
+.catalog_posi02{position:absolute;top:0;right:0;}
+
+.sub_search{position: absolute; left:50%; top: 17px; margin-left:-225px; height:48px;width:450px;}
+.sub_search > a{float:right;}
+.sub_search_ct{float:left;position:relative;height:28px;border:2px solid #345aa0;border-radius:50px;width:300px;padding:8px 40px 8px 10px;}
+.sub_search_ct > a{position:absolute;top:6px;right:8px; width:30px; height:30px; text-align: center; padding-top:5px;}
+.sub_search_ct > input{font-size:15px;color:#888888;height:28px;width:100%;border:0;}
+.sub_search .search_Hbtn{display: block; background-color: #345aa0; color: #fff; font-size: 15px; font-weight: 600; text-align: center; line-height: 48px; width:90px;;border-radius:50px; }
+.sub_search .rebrowsing{position:absolute;top:5px;right:-100px;}
+
+.sb_search_bg{display:none;position:absolute;top:100px;left:0;z-index:665;width:100%;height:100%;background:url("http://world.moleg.go.kr/web/images/sub/sub01_16.png") repeat;}
+.sb_search{display:none;position:absolute;top:100px;left:0;z-index:666;width:100%;}
+.sb_search > .search{background:#b1b1b1;}
+.search-key{border: 1px solid #bec8d8;position: absolute;top: 44px;left: 19px;z-index: 102;width: 310px;background: #ffffff;padding: 5px 0;}
+.search-key > li{height: 27px;line-height: 29px;}
+.search-key > li > a {display: block;overflow: hidden;font-size: 14px;padding: 0 15px;}
+.search-key > li > a strong {color: red;}
+
+
+
+.sb_search_bg{display:none;position:absolute;top:100px;left:0;z-index:665;width:100%;height:100%;background:url("http://world.moleg.go.kr/web/images/sub/sub01_16.png") repeat;}
+.sb_search{display:none;position:absolute;top:100px;left:0;z-index:666;width:100%;}
+.sb_search > .search{background:#fff;}
+
+
+.lock_pop{display:none;position:absolute;top:50%;left:50%;margin-top:-77px;margin-left:-257px;background:#ffffff;width:514px;height:154px;}
+.lock_pop .tit{background:#3470bb;font-size:16px;font-weight:bold;color:#ffffff;height:38px;line-height:38px;padding-left:20px;}
+.lock_pop .cont{padding-top:30px;text-align:center;}
+.lock_pop .cont input[type="password"]{width:175px;height:33px;border:1px solid #c9c9c9;margin-right:2px;padding-left:10px;font-size:16px;}
+.lock_pop .cont .a_search{vertical-align:middle;}
+.lock_pop_close{position:absolute;top:7px;right:7px;}
+
+.sbcenter_abroad{position:relative;padding-right:262px;min-height:590px;}
+.abroad_posi{position:absolute;top:0;right:0;width:228px;}
+.abroad_cent{border:1px solid #e5e5e5;margin-bottom:20px;}
+.abroad_cent > p{background:#eee;font-size:15px;color:#222;height:45px;line-height:45px;padding-left:20px;}
+.abroad_cent > ul{padding:15px;}
+.abroad_cent > ul > li{margin-top:10px;position:relative;}
+.abroad_cent > ul > li:first-child{margin-top:0;}
+.abroad_cent > ul > li > span{position:absolute;top:2px;right:0;color:#fa7002;}
+.abroad_cent > ul > li > a{font-size:13px;color:#222;font-family:"ë§‘ì€ ê³ ë”•";}
+.abroad_cent > ul > li > a > span{display:inline-block;border:1px solid #dadada;color:#666;margin-right:10px;width:16px;height:16px;line-height:16px;text-align:center;}
+.abroad_cent > ul > li > a > span.on{background:#4798e4;color:#fff;}
+.abroad_topbg{background:#fff;border:1px solid #dfdfdf;padding:33px 0 37px;margin:30px 40px 0;text-align:left;}
+.abroad_topbg > ul{background:url('http://world.moleg.go.kr/web/images/sub/date21_bg3.gif') no-repeat;padding-left:87px;margin-left:46px;}
+.abroad_topbg > ul > li{background:url('http://world.moleg.go.kr/web/images/sub/date21_bg4.gif') no-repeat left 8px;font-size:14px;color:#555;padding-left:12px;margin-top:8px;}
+.abroad_topbg > ul > li:first-child{margin-top:0;}
+
+
+
+/* íŒì—… */
+.pop2{margin:0 auto;max-width:518px;border:5px solid #4295c9;padding:35px 35px 30px;}
+.pop2-tit{font-size:24px;font-weight:bold;color:#3170be;border-bottom:2px solid #3170be;}
+.pop2-tb{margin-top:30px;border-top:1px solid #939393;}
+.pop2-tb table{border-collapse:collapse;width:100%;}
+.pop2-tb table th,.pop2-tb table td{border-bottom:1px solid #d3d3d3;}
+.pop2-tb table th{background:#f4f4f4;text-align:left;padding:15px 17px;}
+.pop2-tb table td{padding:15px 10px;}
+.pop2-tb table td input[type="text"]{height:123px;height:26px;border:1px solid #c9c9c9;}
+.pop2-tb table td select{height:123px;height:28px;border:1px solid #c9c9c9;}
+.pop2-tb .sub_title{padding-bottom:0;font-size:16px;background-position:left center;}
+.pop2-btn{padding:30px 0 35px;text-align:center;border-bottom:1px solid #d3d3d3;}
+.pop2-btn a{display:inline-block;font-size:16px;font-weight:bold;color:#ffffff;height:35px;line-height:35px;padding:0 33px;}
+.pop2-btn a.send{background:#1fb2c1;}
+.pop2-btn a.cancel{background:#656565;}
+.pop2-close{margin-top:10px;text-align:right;}
+
+
+.init {
+	font-size:inherit;
+	color:inherit;
+}
+
+/* 맞춤형법령정보 공지사항 테이블 관련 추가 */
+.tx_bx_area{border:1px solid #3c78b9;white-space:normal}
+.tx_bx_area .s_tit{padding:13px 10px;background:#719fd1;color:#fff;font-size:20px;text-align:center;line-height:22px}
+.tx_bx_area dt,.tx_bx_area dd{padding:13px 10px;font-size:15px;border-top:1px solid #a3c6d3;line-height:23px}
+.tx_bx_area dt{color:#0d6aa5;background:#e0f1f9;font-weight:bold}
+.tx_bx_area dt:first-child{border-color:#3c78b9}
+.tx_bx_area dd{color:#656565}
+.tx_type01{display:block;position:relative;padding-left:18px;font-size:15px;line-height:24px;white-space:normal}
+.tx_type01 .bu{position:absolute;top:0;left:0;}
+.tx_type01+.tx_type01{margin-top:20px}
+ul.list_type01{white-space:normal}
+ul.list_type01 li{margin-top:20px}
+ul.list_type01 li:first-child{margin-top:0}
+ul.list_type01 ul{margin-top:20px;padding-left:18px}
+#tabBody_1{padding-left:22px;}
+
+.youtubeWarning{
+    color:#2500ff;font-size:14px;font-weight:500;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.scroll_contents{
+	overflow: scroll;
+	height: 250px;
+	text-align: left;
+}
+
+
+
+/*clmserLgslInfoChkPage.jsp */
+/* .ccheck input[type="checkbox"] {
+    position: absolute;
+    overflow: hidden;
+    left: -10000px;
+}
+ */
+.ccheck input[type="checkbox"] {
+    width : 20px;
+    height : 20px;
+}
+ 
+.ccheck label{
+    width: 100%;
+    height: 30px;
+}
+
+.ccheck input[type="checkbox"] + label .chk_img {
+    padding: 0 0 0 30px;
+    height: 30px;
+    background: url("http://world.moleg.go.kr/web/images/common/chk_btn_off.png")no-repeat;
+    cursor: pointer;
+}
+.ccheck input[type="checkbox"]:checked + label .chk_img {
+    background: url("http://world.moleg.go.kr/web/images/common/chk_btn_on.png")no-repeat;
+}
+div.topbx {
+    margin: 30px auto;
+}
+div.midbx {
+    padding: 12px;
+}
+div.midbx-item {
+    display: inline-block;
+}
+div.midbx-item.t1 {
+    width: 750px;
+    text-align: left;
+}
+
+div.midbx-item.t2 {
+    width: 100px;
+    text-align: right;
+}
+
+div.intxbx {
+    border-top: 1px solid #d3d3d3;
+    padding: 15px 22px 0;
+    color: #8f8f8f;
+    overflow: auto;
+    background: #fff;
+    line-height: 160%;
+}
+
+div.intxbx.b1 {
+    height: 250px;
+}
+
+div.intxbx.b2 {
+    height: 150px;
+}
+
+.intxbx.b1::-webkit-scrollbar{background-color: #ffffff; width:7px;}
+.intxbx.b1::-webkit-scrollbar-thumb{background-color: #d3d3d3; height: 30px; border-radius: 5px;}
+.intxbx.b2::-webkit-scrollbar{background-color: #ffffff; width:7px;}
+.intxbx.b2::-webkit-scrollbar-thumb{background-color: #d3d3d3; height: 30px; border-radius: 5px;}
+
+.clmserTable{width:100%; border:1px solid gray; border-spacing: 0;}
+.clmserTable tr td {vertical-align: middle; border:1px solid gray;}
+.clmserTable th {vertical-align: middle; border:1px solid gray;}
+
+.clmserTable2{border-spacing: 0; width:96%;}
+#searchPageRowCnt1{width:150px; font-size:15px; border:1px solid #e7e7e7; padding:7px 5px;}
+
+.sBox.noData {padding: 7.5rem 0 5rem; text-align: center;}
+.sBox.noData > span {display: inline-block;}
+.sBox.noData > p {margin-bottom: 1rem; padding: 2rem 0; font-size: 1.5rem; border-bottom: 1px solid #ddd;}
+.type01-2 > li {position: relative; margin-top: 0.5rem; padding-left: 1rem;  text-align: left; font-size: 1.125rem;}
+.type01-2 > li:after {position: absolute; top: 0.5rem; left: 0.2rem; width: 3px; height: 3px; background: #888; content: "";}
+.type01-2 > li + li {margin-top: 0.5rem;}
+
+.rsrchIframeDiv > table {width: 100% !important;word-break : initial !important;}
+.rsrchIframeDiv  a {color : -webkit-link;cursor: pointer;text-decoration: underline;}
+.lgslTrendTable  a {color : -webkit-link;cursor: pointer;text-decoration: underline;}
+
+#us_state {display: none;}
+.kogl_type{margin-right: 2%;}
+
+/* 맞춤형 법령정보 답변 링크 스타일 */
+.mgtCtsBox a {color:#2980b9;font-weight:bold;cursor:pointer;text-decoration:underline;}

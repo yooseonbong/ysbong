@@ -1,0 +1,427 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="apple-touch-icon" sizes="57x57" href="../images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+<link rel="manifest" href="../images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="../images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<title>이통사 신원확인 시스템 관리자</title>
+<script src="../js/jquery-3.7.1.min.js"></script>
+<script src="../js/jquery-ui.js"></script>
+<script src="../js/jquery.ui.monthpicker.js"></script>
+<script src="../js/ui.js"></script>
+
+
+<link rel="stylesheet" href="../css/jquery-ui.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/style.css"> 
+
+</head>
+<body>
+<div id="mis-wrap">
+	<header class="mis-header">
+		<h1><a href="#" title="메인으로"><b>MIS Admin Portal</b><span>Mobile Identification System</span></a></h1>
+		<div class="min-head">
+			<h2 class="mis-m10">알림 대상자 설정</h2>
+			<div class="mis-utill">
+				<ul>
+					<li><b>홍길동 (user01@email.com)</b> 님</li>
+					<li>Orange Mobile</li>
+					<li class="mis-utill-btn">
+						<a href="#">권한01 (+4)</a>
+						<div class="mis-utill-box">
+							<em>보유권한</em>
+							<ul>
+								<li>- 권한01</li>
+								<li>- 권한02</li>
+								<li>- 권한03</li>
+								<li>- 권한04</li>
+							</ul>
+						</div>
+					</li>
+					<li>승인권자</li>
+					<li class="mis-utill-btn mis-utill-more">
+						<a>더보기</a>
+						<div class="mis-utill-box">
+							<a href="#"><em>로그아웃</em></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div class="mis-container">
+		<div class="mis-aside">
+			<ul>
+				<li class="mis-a1"><a href="#" title="신원 확인 이력 페이지 이동"><span>신원 확인 이력</span></a></li>
+				<li class="mis-a2"><a href="#" title="정산 페이지 이동"><span>정산</span></a></li>
+				<li class="mis-a3"><a href="#" title="통계 페이지 이동"><span>통계</span></a></li>
+				<li class="mis-a4 dep2">
+					<a href="#" title="고객 지원 페이지 이동"><span>고객 지원</span></a>
+					<ul>
+						<li><a href="#"><span>1:1 문의</span></a></li>
+						<li><a href="#"><span>FAQ 관리</span></a></li>
+					</ul>
+				</li>
+				<li class="mis-a5 dep2">
+					<a href="#" title="사업 관리 페이지 이동"><span>사업 관리</span></a>
+					<ul>
+						<li><a href="#"><span>사업자 관리</span></a></li>
+						<li><a href="#"><span>사용자 관리</span></a></li>
+						<li><a href="#"><span>Custom UI 관리</span></a></li>
+					</ul>
+				</li>
+				<li class="mis-a6 dep2">
+					<a href="#" title="환경 관리 페이지 이동"><span>환경 관리</span></a>
+					<ul>
+						<li><a href="#"><span>관리자 관리</span></a></li>
+						<li><a href="#"><span>권한 관리</span></a></li>
+						<li><a href="#"><span>감사 로그</span></a></li>
+					</ul>
+				</li>
+				<li class="mis-a7 dep2 active">
+					<a href="#" title="시스템 운영 관리 페이지 이동"><span>시스템 운영 관리</span></a>
+					<ul>
+						<li><a href="#"><span>코드관리</span></a></li>
+						<li><a href="#"><span>작업관리</span></a></li>
+						<li><a href="#"><span>스케줄 관리</span></a></li>
+						<li class="active"><a href="#"><span>알림 대상자 설정</span></a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<section class="mis-content">
+			<div class="aticle">
+				<div class="mis-search-box">
+					<div class="mis-search-inner">
+						<label for="search1">
+							<span class="w120">
+								<div class="select">
+									<div class="selected">
+										<button class="selected-value" title="사용자명">사용자명</button>
+										<div class="arrow"></div>
+									</div>
+									<ul>
+										<li><a href="#" class="option" title="사용자명1">사용자명1</a></li>
+										<li><a href="#" class="option" title="사용자명2">사용자명2</a></li>
+									</ul>
+								</div>
+							</span>
+							<span class="jm-input list-search w433">
+								<input type="text" class="jm-input-inner mis-input2" id="inp1" name="inp1" placeholder="사용자명으로 검색" title="사용자명으로 검색">
+								<button class="jm-input-btn" title="사용자명 삭제" tabindex="-1">삭제</button>
+								<button class="jm-input-search" title="입력한 내용 검색" aria-haspopup="dialog" data-popup="popup1">검색</button>
+							</span>
+						</label>
+					</div>
+					<div class="mis-search-inner"> 
+						<label for="date1">
+							<span class="w120">
+								<div class="select">
+									<div class="selected">
+										<button class="selected-value" title="알림 구분">알림 구분</button>
+										<div class="arrow"></div>
+									</div>
+									<ul>
+										<li><a href="#" class="option" title="알림 구분1">알림 구분1</a></li>
+										<li><a href="#" class="option" title="알림 구분2">알림 구분2</a></li>
+									</ul>
+								</div>
+							</span>
+							<span class="w120">
+								<div class="select">
+									<div class="selected">
+										<button class="selected-value" title="사업자">사업자</button>
+										<div class="arrow"></div>
+									</div>
+									<ul>
+										<li><a href="#" class="option" title="사업자1">사업자1</a></li>
+										<li><a href="#" class="option" title="사업자2">사업자2</a></li>
+									</ul>
+								</div>
+							</span>
+						</label>
+						<label for="sel4">
+							<div class="mis-search-btn">
+								<button class="btn-primary btn-refresh"><span>필터 지우기</span></button>
+							</div>
+						</label>
+						<label for="sel5" class="mis-align-right">
+							<div class="mis-search-btn">
+								<button class="btn-save">등록</button>
+							</div>
+						</label>
+					</div>
+				</div>
+				<div class="mis-bbs mis-bbs-input2">
+					<table>
+						<caption>알림 대상자 설정</caption>
+						<colgroup>
+							<col style="width:5%">
+							<col style="width:18%">
+							<col style="width:12%">
+							<col >
+							<col style="width:13%">
+							<col style="width:10%">
+							<col style="width:13%">
+							<col style="width:8%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="row">NO</th>
+								<th scope="row">알림 구분</th>
+								<th scope="row">사업자</th>
+								<th scope="row">사용자명</th>
+								<th scope="row">사용자ID(Entra ID)</th>
+								<th scope="row">사용 상태</th>
+								<th scope="row"><button class="mis-thead-btn down"><span>등록일시</span></button></th>
+								<th scope="row"></th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+				<div class="mis-bbs mis-bbs-input2">
+					<table>
+						<caption>알림 대상자 설정</caption>
+						<colgroup>
+							<col style="width:5%">
+							<col style="width:18%">
+							<col style="width:12%">
+							<col >
+							<col style="width:13%">
+							<col style="width:10%">
+							<col style="width:13%">
+							<col style="width:8%">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td class="mis-padding-td">1</td>
+								<td>
+									<div class="select">
+										<div class="selected">
+											<button class="selected-value" title="스케줄 구동 현황 리포트">스케줄 구동 현황 리포트</button>
+											<div class="arrow"></div>
+										</div>
+										<ul>
+											<li><a href="#" class="option" title="스케줄 구동 현황 리포트1">스케줄 구동 현황 리포트1</a></li>
+											<li><a href="#" class="option" title="스케줄 구동 현황 리포트2">스케줄 구동 현황 리포트2</a></li>
+										</ul>
+									</div>
+								</td>
+								<td>
+									<div class="select">
+										<div class="selected">
+											<button class="selected-value" title="사업자">사업자</button>
+											<div class="arrow"></div>
+										</div>
+										<ul>
+											<li><a href="#" class="option" title="사업자1">사업자1</a></li>
+											<li><a href="#" class="option" title="사업자2">사업자2</a></li>
+										</ul>
+									</div>
+								</td>
+								<td>김한*</td>
+								<td></td>
+								<td>미사용</td>
+								<td class="mis-padding-td"></td>
+								<td class="mis-padding-td">
+									<div class="mis-list-btn">
+										<button class="btn-del"><img src="../images/Icon_trash.svg" alt="삭제"></button>
+										<button class="btn-cancel"><img src="../images/ico_bbs_del.svg" alt="취소"></button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>
+									<div class="select">
+										<div class="selected">
+											<button class="selected-value" title="스케줄 구동 현황 리포트">스케줄 구동 현황 리포트</button>
+											<div class="arrow"></div>
+										</div>
+										<ul>
+											<li><a href="#" class="option" title="스케줄 구동 현황 리포트1">스케줄 구동 현황 리포트1</a></li>
+											<li><a href="#" class="option" title="스케줄 구동 현황 리포트2">스케줄 구동 현황 리포트2</a></li>
+										</ul>
+									</div>
+								</td>
+								<td>
+									<div class="select">
+										<div class="selected">
+											<button class="selected-value" title="사업자">사업자</button>
+											<div class="arrow"></div>
+										</div>
+										<ul>
+											<li><a href="#" class="option" title="사업자1">사업자1</a></li>
+											<li><a href="#" class="option" title="사업자2">사업자2</a></li>
+										</ul>
+									</div>
+								</td>
+								<td>
+									<div class="mis-search-key">
+										<div class="jm-input list-search">
+											<input type="text" class="jm-input-inner search-key" id="inp2" name="inp2" placeholder="사용자명으로 검색" title="사용자명으로 검색">
+											<button class="jm-input-btn" title="사용자명 삭제" tabindex="-1">삭제</button>
+											<button class="jm-input-search" title="입력한 내용 검색">검색</button>
+										</div>
+										<div class="search-key-list">
+											<ul id="myList">
+												<li><a src="#">김환* (알뜰폰AA / 이통사A)</a></li>
+												<li><a src="#">김화* (알뜰폰BB / 이통사B)</a></li>
+												<li><a src="#">김황* (알뜰폰CC / 이통사C)</a></li>
+												<li><a src="#">김홍* (알뜰폰DD / 이통사D)</a></li>
+												<li><a src="#">김효* (알뜰폰EE / 이통사E)</a></li>
+												<li><a src="#">김환* (알뜰폰FF / 이통사F)</a></li>
+												<li><a src="#">김화* (알뜰폰GG / 이통사G)</a></li>
+												<li><a src="#">김황* (알뜰폰AA / 이통사A)</a></li>
+												<li><a src="#">김홍* (알뜰폰AA / 이통사A)</a></li>
+												<li><a src="#">김효* (알뜰폰AA / 이통사A)</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="mis-authority-list">
+										<ul>
+											<li>김환준 <button><img src="../images/Icon_delete.svg" alt="삭제"></button></li>
+											<li>김효정 <button><img src="../images/Icon_delete.svg" alt="삭제"></button></li>
+										</ul>
+									</div>
+								</td>
+								<td>Use***@email.com</td>
+								<td>
+									<div class="select">
+										<div class="selected">
+											<button class="selected-value" title="사용">사용</button>
+											<div class="arrow"></div>
+										</div>
+										<ul>
+											<li><a href="#" class="option" title="사용1">사용1</a></li>
+											<li><a href="#" class="option" title="사용2">사용2</a></li>
+										</ul>
+									</div>
+								</td>
+								<td class="mis-padding-td">2025.08.29 09:34</td>
+								<td class="mis-padding-td">
+									<div class="mis-list-btn">
+										<button class="btn-save2">저장</button>
+										<button class="btn-cancel"><img src="../images/ico_bbs_del.svg" alt="취소"></button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>
+									<div class="select">
+										<div class="selected">
+											<button class="selected-value" title="스케줄 구동 현황 리포트">스케줄 구동 현황 리포트</button>
+											<div class="arrow"></div>
+										</div>
+										<ul>
+											<li><a href="#" class="option" title="스케줄 구동 현황 리포트1">스케줄 구동 현황 리포트1</a></li>
+											<li><a href="#" class="option" title="스케줄 구동 현황 리포트2">스케줄 구동 현황 리포트2</a></li>
+										</ul>
+									</div>
+								</td>
+								<td>
+									알뜰폰AAA
+								</td>
+								<td>
+									<div class="mis-search-key">
+										<div class="jm-input list-search">
+											<input type="text" class="jm-input-inner search-key" id="inp2" name="inp2" placeholder="사용자명으로 검색" title="사용자명으로 검색">
+											<button class="jm-input-btn" title="사용자명 삭제" tabindex="-1">삭제</button>
+											<button class="jm-input-search" title="입력한 내용 검색">검색</button>
+										</div>
+										<div class="search-key-list">
+											<p>검색 결과가 없습니다</p>
+										</div>
+									</div>
+									<div class="mis-authority-list">
+										<ul>
+											<li>김환준 <button><img src="../images/Icon_delete.svg" alt="삭제"></button></li>
+											<li>김효정 <button><img src="../images/Icon_delete.svg" alt="삭제"></button></li>
+											<li>김준 <button><img src="../images/Icon_delete.svg" alt="삭제"></button></li>
+											<li>김효정 <button><img src="../images/Icon_delete.svg" alt="삭제"></button></li>
+											<li class="mis-fail">김환준 <button><img src="../images/Icon_delete.svg" alt="삭제"></button></li>
+											<li>김효효정 <button><img src="../images/Icon_delete.svg" alt="삭제"></button></li>
+										</ul>
+									</div>
+								</td>
+								<td></td>
+								<td>사용</td>
+								<td class="mis-padding-td"></td>
+								<td class="mis-padding-td">
+									<div class="mis-list-btn">
+										<button class="btn-save2">수정</button>
+										<button class="btn-del"><img src="../images/Icon_trash.svg" alt="삭제"></button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>
+									스케줄 구동 현황 리포트
+								</td>
+								<td>
+									<div class="select">
+										<div class="selected">
+											<button class="selected-value" title="사업자">사업자</button>
+											<div class="arrow"></div>
+										</div>
+										<ul>
+											<li><a href="#" class="option" title="사업자1">사업자1</a></li>
+											<li><a href="#" class="option" title="사업자2">사업자2</a></li>
+										</ul>
+									</div>
+								</td>
+								<td></td>
+								<td></td>
+								<td>사용</td>
+								<td class="mis-padding-td"></td>
+								<td class="mis-padding-td">
+									<div class="mis-list-btn">
+										<button class="btn-save2" disabled>저장</button>
+										<button class="btn-del" disabled><img src="../images/Icon_trash.svg" alt="삭제"></button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer class="mis-footer">
+		<p>MIS Admin Portal Ⓒ 2025 Dayside All Rights Reserved.</p>
+	</footer>
+	<div class="wrap-layer-popup" data-popup="popup1" role="dialog" aria-hidden="false">
+		<div class="inner-layer-popup">
+			<div class="wrap-layer-popup-title" tabindex="0">
+				<h2></h2>
+			</div>
+			<div class="layer-popup-contents">
+				<p class="layer-popup-info">검색어는 최소 2자리 이상 입력하세요.</p>
+			</div>
+			<div class="jm-bot-btn">
+				<button class="b-primary1 modal-close btn-layer-close" popup-close="popup1">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

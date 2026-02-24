@@ -1,0 +1,525 @@
+.main-contents{background:#e1ecf4;padding-bottom:30px;}
+.main-cont1{position:relative;background:url('https://world.moleg.go.kr/web/images/main/main_bg_20200623.jpg') no-repeat center top;background-size: cover;height:420px;}
+.main-cont1-v{width:1200px;margin:0 auto;padding-top:70px;}
+.main-cont1-v > p{text-align:center;}
+.main-cont1-v p.p1{font-size:40px;font-weight:bold;color:#204776; }
+.main-cont1-v p.p1 span{color:#4486D1;}
+.main-cont1-v p.p2{font-size:17px;color:#666666;margin:15px 0 30px;line-height:23px;}
+
+.search{position:relative;width:650px;height:55px;padding:12px 0 12px 13px;background:url('https://world.moleg.go.kr/web/images/main/search_bg.png') repeat;margin:0 auto;}
+.search div{float:left; display: inline;}
+.search input[type="text"]{width:398px;height:55px;line-height:55px;padding-left:20px;border:0;box-shadow: 0px 5px 6px #bdbdbd;font-size:17px;color:#5c5c5c;}
+.search-key2{display:none;border:1px solid #bec8d8;position:absolute;top:67px;left:13px;z-index:99;width:416px;background:#ffffff;padding:5px 0;}
+.search-key2 > li{height: 27px;line-height: 29px;}
+.search-key2 > li > a{display:block;overflow:hidden;font-size: 14px;padding:0 15px;}
+.search-key2 > li > a strong{color:red;}
+.search-key2 > li > a:hover{background:#f9fafc;}
+
+
+.main-cont1-v2{position:absolute;bottom:0;left:0;/*background:url('https://world.moleg.go.kr/web/images/main/main_bg2.png') repeat;*/ background-color:#174367; margin:0 auto;width:100%;min-height:44px;padding:18px 0;}
+.main-cont1-v2-cont{width:900px;margin:0 auto;}
+.main-cont1-v2-cont > p{float:left;margin-right:15px;padding-left:15px;font-size:17px;font-weight:bold;color:#ffffff;line-height:45px;}
+.main-cont1-v2-cont-rt{float:left;}
+.main-cont1-v2-cont-rt .map1{float:left; background:url('https://world.moleg.go.kr/web/images/main/area_box.png') no-repeat left top;}
+.main-cont1-v2-cont-rt .map2{float:left; background:url('https://world.moleg.go.kr/web/images/main/area_box.png') no-repeat left top;}
+.main-cont1-v2-cont-rt a.search-btn span{display:none;}
+.main-cont1-v2-cont-rt > div > a{display:inline-block;width:214px;height:45px;line-height:45px;background:url('https://world.moleg.go.kr/web/images/main/map_bg1.png') no-repeat 90% center;font-size:17px;font-weight:bold;color:#ffffff;padding-left:20px;}
+.main-cont1-v2-cont-rt > div.map2 > a{}
+
+.map1{position:relative;}
+.map1 > ul{display:none;position:absolute;top:45px;left:0;z-index:10;width:100%;border-top:1px solid #e1ecf4;}
+.map1 > ul > li > a{display:block;padding:5px 10px;background:#727272;border-bottom:1px solid #e1ecf4;font-size:15px;color:#ffffff;}
+.map1 > ul > li > a:hover{background:#4a4a4a;}
+.map1 > ul > li > a.on{background:#727272;}
+.map2{position:relative;}
+.map2-cont{display:none;position:absolute;top:45px;left:0;z-index:10;width:100%;}
+.map2-cont > ul{display:none;}
+.map2-cont > ul > li > a{display:block;padding:5px 10px;background:#727272;border-bottom:1px solid #e1ecf4;font-size:15px;color:#ffffff;}
+.map2-cont > ul > li > a:hover{background:#4a4a4a;}
+.map2-cont > ul > li > a.on{background:#5cd8e5;}
+
+/*
+map-bg = ë©”ì¸íŽ˜ì´ì§€ ì§€ë„ë³´ê¸° íŒì—…
+pop-bg = ë²•ë ¹ì˜¤ë¥˜ì‹ ê³ ,ë¬¸ì˜ íŒì—…
+*/
+.map-bg{display:none;background:url('https://world.moleg.go.kr/web/images/main/map_img.jpg') no-repeat left top;width:1200px;height:702px;position:absolute;top:55px;left:50%;margin-left:-600px;z-index:9200;}
+.pop-bg{display:none;background:#fff; width:945px;height:auto;position:absolute;top:55px;left:50%;margin-left:-473px;z-index:9200; box-sizing:border-box; }
+.popup_tit{background:#5177c7 url('https://world.moleg.go.kr/web/images/sub/popup_tit_bg.png') no-repeat left top;}
+.popup_tit h3{color:#fff; font-size:22px; text-align:center; padding:18px 0;}
+.map-bg .map-close{position:absolute;top:0;right:-54px;}
+.pop-bg .pop-close {position:absolute; top:14px; right:14px;}
+.map-bg > ul > li{position:absolute;cursor:pointer;}
+.pop-bg > ul {padding:15px 30px 0;}
+.pop-bg > ul > li{position:relative; line-height:20px;}
+.pop-bg .pb3 {text-align:center;}
+.pop-bg .pb3 a {border-radius:5px;}
+.pop-bg > .top_bor {margin:10px auto; width:calc(100% - 60px); box-sizing:border-box;}
+.map-bg > ul > li > a{height: 30px;display:block;}
+.map-bg > ul > li > a > span{font-size:0;}
+.map-bg > ul > li > .map-v{display:none;position:absolute;top:0;left:0;width:270px;background:#ffffff;}
+.map-bg > ul > li.li7 > .map-v{left:auto;right:0;}
+.map-bg > ul > li > .map-v > p{height:40px;line-height:40px;background:#2c5e9a;font-size:16px;font-weight:bold;color:#ffffff;padding-left:20px;}
+.map-bg > ul > li > .map-v > a.map_v_close{position:absolute;top:10px;right:15px;}
+.map-bg > ul > li > .map-v > ul{padding:10px 0;}
+.map-bg > ul > li > .map-v > ul > li{line-height:23px;padding-left:20px;}
+.map-bg > ul > li > .map-v > ul > li:hover{background:#fff9e1;}
+.map-bg > ul > li > .map-v > ul > li > a{font-size:14px;}
+.map-bg > ul > li.li1{top: 283px; left: 374px; width: 97px;}
+.map-bg > ul > li.li2{top: 350px; left: 330px; width: 105px;}
+.map-bg > ul > li.li3{top: 277px; left: 277px; width: 95px;}
+.map-bg > ul > li.li4{top: 196px; left: 302px; width: 76px;}
+.map-bg > ul > li.li5{top: 235px; left: 800px; width: 74px;}
+.map-bg > ul > li.li6{top: 360px; left: 141px; width: 130px;}
+.map-bg > ul > li.li7{top: 468px; left: 926px; width: 74px;}
+.map-bg > ul > li.li8{top: 22px; left: 11px; width: 97px; height:67px;}
+.map-bg > ul > li.li9{top: 522px; left: 480px; width: 110px;}
+
+
+.main-cont1-v3{height:70px;background:#ffffff;}
+
+.main-cont2{height:50px;background:#ffffff;box-shadow: 0px 3px 6px #d2dce4; padding:10px 0;}
+.main-cont2-cont{width:1200px;margin:0 auto;}
+.main-cont2-cont > div{width:50%;position:relative;}
+.main-cont2-cont-lf{float:left;}
+.main-cont2-cont-lf a.more{position:absolute;top:50%;margin-top:-6px;right:35px;}
+.main-cont2-cont-lf a img{vertical-align:top;}
+.main-cont2-cont-lf span{float:left;line-height:50px;}
+.main-cont2-cont-lf span.sp1{background:url('https://world.moleg.go.kr/web/images/main/main_cont2_icon1.gif') no-repeat left center;font-size:17px;font-weight:bold;color:#3e6fbf;padding-left:45px;width:122px;}
+.main-cont2-cont-lf span.sp2{background:url('https://world.moleg.go.kr/web/images/main/main_cont2_icon3.gif') no-repeat left center;font-size:15px;color:#5d5d5d;padding-left:12px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;width:98%;}
+
+.s-bx{
+	float:left;
+	position:relative;
+	overflow:hidden;
+	width:380px;
+	height:50px;
+}
+.s-bx2{
+	float:left;
+	position:relative;
+	overflow:hidden;
+	width:425px;
+	height:50px;
+}
+.bx-controls{display:none;}
+.bx-wrapper{height:50px;}
+#marquee li, #marquee2 li{height:50px;}
+
+
+
+
+.main-cont2-cont-rt{float:left;}
+.main-cont2-cont-rt a.more{position:absolute;top:50%;margin-top:-6px;right:0px;}
+.main-cont2-cont-rt a img{vertical-align:top;}
+.main-cont2-cont-rt span{float:left;line-height:50px;}
+.main-cont2-cont-rt span.sp1{background:url('https://world.moleg.go.kr/web/images/main/main_cont2_icon2.gif') no-repeat left center;font-size:17px;font-weight:bold;color:#2a2a2a;padding-left:45px;width:82px;}
+.main-cont2-cont-rt span.sp2{background:url('https://world.moleg.go.kr/web/images/main/main_cont2_icon3.gif') no-repeat left center;font-size:15px;color:#5d5d5d;padding-left:12px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;width:98%;}
+
+
+.main-cont3{width:1200px;margin:30px auto 0;overflow:hidden;padding-bottom:15px;}
+.main-cont3-lf{float:left;width:585px;padding-right:15px;}
+.main-cont3-lf-cont1{position:relative;height:250px;background:#ffffff;box-shadow: 0px 3px 6px #d2dce4;}
+.main-cont3-lf-cont1:first-child{margin-bottom:15px;}
+.main-cont3-lf-cont1 p.tit{font-size:19px;font-weight:bold;color:#2d2d2d;padding-left:25px;background:#fbfbfb;height:49px;line-height:49px;border-bottom:1px solid #e5e5e5;}
+.main-cont3-lf-cont1-v{padding:0 25px;margin-top:10px;}
+.main-cont3-lf-cont1-v > ul > li{overflow:hidden;border-top:1px dashed #e6e6e6;line-height:35px; position:relative;}
+.main-cont3-lf-cont1-v > ul > li:first-child{border-top:0;}
+.main-cont3-lf-cont1-v > ul > li > a{display:block; float:left;font-size:14px;color:#575757;width:85%;}/* 20171214 width ìˆ˜ì • width:80% --> width:85% */
+.main-cont3-lf-cont1-v > ul > li > a > .ttl{width:auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; max-width:70%;}/* 20171214 width ìˆ˜ì • width:75% --> width:73% */
+.main-cont3-lf-cont1-v > ul > li > span{font-size:13px;color:#5d5d5d;text-align:right; position:absolute; right:0; top:0;}/* 20171214 width ìˆ˜ì • width:20% --> width:15% */
+.main-cont3-lf-cont1-v > ul > li > a img.flag{margin-right:8px; vertical-align: middle;}
+.main-cont3-lf-cont1-v > ul > li > a img.flagSize{width: 23px; height: 16px;}
+.main-cont3-lf-cont1 a.msg-more{position:absolute;top:0;right:0;}
+.main-cont3-lf-cont1-v > ul > li > a > div.divFloat {float: left;}
+
+/* ì›¹ì ‘ê·¼ì„± ìˆ˜ì •ì„ ìœ„í•´ ìµœì‹  ë²•ë ¹ì •ë³´/ë²•ì œë™í–¥ ìˆ˜ì • css */
+.main-cont3-lf-cont1-v .new-law table{width:100%; table-layout:fixed;}
+.main-cont3-lf-cont1-v .new-law table tbody tr th{text-align: left; font-weight: 400; border-top:1px dashed #e6e6e6; padding:6px 0;}
+.main-cont3-lf-cont1-v .new-law table tbody tr td{font-size: 13px; color: #5d5d5d; text-align: right; border-top:1px dashed #e6e6e6; padding:6px 0; }
+.main-cont3-lf-cont1-v .new-law table tbody tr:first-child th, .main-cont3-lf-cont1-v .new-law table tbody tr:first-child td{border:none;}
+.main-cont3-lf-cont1-v .new-law table a{display: block; font-size: 14px; color: #575757; }
+.main-cont3-lf-cont1-v .new-law table a .nationalFlag {float: left; margin-right: 10px;}
+.main-cont3-lf-cont1-v .new-law table a .nationalFlag img.flagSize {width: 23px; height: 16px; }
+.main-cont3-lf-cont1-v .new-law table a .nationalTilte {float: left; width: auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 70%; padding-top: 2px; line-height: 1.3;}
+.main-cont3-lf-cont1-v .new-law table a .nationalTranslation{margin-left: 10px;}
+
+
+.main-cont3-rt{float:right;width:600px;}
+/* 2022-11-26 ë§žì¶¤í˜• ì„œë¹„ìŠ¤ ì¤‘ë‹¨ */
+.main-cont3-rt-cont1{position:relative;float:left;width:305px;height:390px;background:#ffffff;margin:0 15px 15px 0;box-shadow: 0px 3px 6px #d2dce4;}
+/*.main-cont3-rt-cont1{position:relative;float:left;width:305px;height:515px;background:#ffffff;margin:0 15px 15px 0;box-shadow: 0px 3px 6px #d2dce4;}*/
+.main-cont3-rt-cont1 p.tit{font-size:19px;font-weight:bold;color:#2d2d2d;padding-left:25px;background:#fbfbfb;height:49px;line-height:49px;border-bottom:1px solid #e5e5e5;}
+.main-cont3-rt-cont1 a.msg-more{position:absolute;top:0;right:0;}
+.main-cont3-rt-cont1-v{position:relative;margin:40px 0;height:257px;}
+.main-cont3-rt-cont1-v .tp-icon{position:absolute;top:-27px;left:50%;margin-left:-12px;}
+.main-cont3-rt-cont1-v .bt-icon{position:absolute;bottom:-27px;left:50%;margin-left:-12px;}
+/* 2022-11-26 ë§žì¶¤í˜• ì„œë¹„ìŠ¤ ì¤‘ë‹¨ */
+ .main-cont3-rt-cont1-v ul.banner > li{padding:8px 20px 8px 25px;width:260px;border-bottom:1px solid #e8e8e8;} 
+/*.main-cont3-rt-cont1-v ul.banner > li{padding:8px 20px 8px 25px;width:260px;border-bottom:1px solid #e8e8e8;margin-top:15px;}*/
+/* 2022-11-26 ë§žì¶¤í˜• ì„œë¹„ìŠ¤ ì¤‘ë‹¨ */
+.main-cont3-rt-cont1-v ul.banner > li:first-child{border-top:1px solid #e8e8e8;}
+/*.main-cont3-rt-cont1-v ul.banner > li:first-child{border-top:1px solid #e8e8e8;margin-top: 0px;}*/
+/* 2022-11-26 ë§žì¶¤í˜• ì„œë¹„ìŠ¤ ì¤‘ë‹¨ */
+.main-cont3-rt-cont1-v ul.banner > li > a{float:left;line-height:47px;font-size:14px;color:#2d2d2d;width:80%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+/* .main-cont3-rt-cont1-v ul.banner > li > a{float:left;line-height:47px;font-size:14px;color:#2d2d2d;width:80%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;margin-top: 15px;}*/
+.main-cont3-rt-cont1-v ul.banner > li > span{float:right;background:#adadad;border-radius:49px;font-size:12px;font-weight:bold;color:#ffffff;width:20%;max-width:49px;height:49px;line-height:49px;text-align:center;}
+.main-cont3-rt-cont1-v ul.banner > li > span.bg_purple{background:#8781BD;line-height:15px;padding:10px 0;height:29px;}
+.main-cont3-rt-cont1-v ul.banner > li > span.bg_green{background:#4F9D48;}
+.main-cont3-rt-cont1-v ul.banner > li > span.bg_red{background:#e35f70;}
+.main-cont3-rt-cont1-v ul.banner > li > span.bg_blue{background:#4A9AE1;}
+.main-cont3-rt-cont1-v ul.banner > li > span.on{background:#368fde;line-height:15px;padding:10px 0;height:29px;}
+
+.main-cont3-rt-cont2{float:left;width:280px;height:390px;background:#ffffff;box-shadow: 0px 3px 6px #d2dce4;}
+.main-cont3-rt-cont2 p.tit{font-size:19px;font-weight:bold;color:#2d2d2d;background:#fbfbfb;height:49px;line-height:49px;border-bottom:1px solid #e5e5e5;text-align:center;}
+.main-cont3-rt-cont2-v{text-align:center;padding-top:14px;}
+.main-cont3-rt-cont2-v a{display:inline-block;margin:7px 17px 0;}
+/* 2022-11-26 ë§žì¶¤í˜• ì„œë¹„ìŠ¤ ì¤‘ë‹¨ */
+.main-cont3-rt-cont3{float:left;width:287px;height:82px;background:url('https://world.moleg.go.kr/web/images/main/main2_rt_bg2.gif') repeat center top;margin-right:15px;padding:28px 0 0 18px;box-shadow: 0px 3px 6px #d2dce4;}
+.main-cont3-rt-cont3-v{background:url('https://world.moleg.go.kr/web/images/main/main2_rt_bg1.png') no-repeat 90% 90%;}
+.main-cont3-rt-cont3-v a,
+.main-cont3-rt-cont3-v span{display:block;}
+.main-cont3-rt-cont3-v span.p1{font-size:19px;color:#ffffff;}
+.main-cont3-rt-cont3-v span.p2{font-size:23px;font-weight:bold;color:#ffffff;}
+.main-cont3-rt-cont4{float:left;width:280px;height:110px;background:#ffffff;box-shadow: 0px 3px 6px #d2dce4;}
+#slider001.flexslider .flex-direction-nav a.flex-next{
+	font-size:0;
+	position:absolute;
+	right:5px;
+	top:-5px;
+	background-image:url("https://world.moleg.go.kr/web/images/main/pop_rt.png");
+	background-position:left top;
+	background-repeat:no-repeat;
+	width:20px;
+	height:20px;
+	display:block;
+	color:#FFF;
+	/* background-color:#000000; */
+}
+
+#slider001.flexslider  .flex-direction-nav a.flex-prev{
+	position:absolute;
+	right:43px;
+	top:-5px;
+	font-size:0;
+	background-image:url("https://world.moleg.go.kr/web/images/main/pop_lf.png");
+	background-position:left top;
+	background-repeat:no-repeat;
+	width:20px;
+	height:20px;
+	display:block;
+	color:#FFF;
+	/* background-color:#000000; */
+}
+#slider001.flexslider .flex-direction-nav .flex-pauseplay a{
+	position:absolute;	
+	right:24px;
+	top:-5px;
+	font-size:0;
+	background-image:url("https://world.moleg.go.kr/web/images/main/pop_stop.png");
+	background-position:left top;
+	background-repeat:no-repeat;
+	width:20px;
+	height:20px;
+	display:block;
+	cursor: pointer;
+	color:#FFF;
+	z-index:9001;
+	/* background-color:#000000; */
+}
+/*#slider001.flexslider .flex-direction-nav .flex-pauseplay .flex-play{
+	position:absolute;
+	left:-2px;
+	top:-17px;
+	font-size:0;
+	background-image:url("https://world.moleg.go.kr/web/images/main/slide_play.gif");
+	background-position:left top;
+	background-repeat:no-repeat;
+	width:18px;
+	height:19px;
+	display:block;
+	cursor: pointer;
+	color:#FFF;
+	z-index:9001;
+}*/
+
+#slider001.flexslider {
+	position:relative;
+	overflow:hidden;
+	width:280px;
+	height:110px;
+}
+#slider001 .flex-direction-nav{
+	position: absolute;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	height:20px;
+	/* background:url('https://world.moleg.go.kr/web/images/main/pop_bg.png') repeat; */
+	z-index: 9000;
+}
+#slider001 .flex-direction-nav li{
+	float:left;
+	margin:0 2px;
+}
+#slider001.flexslider .slides {
+	zoom:1;
+	float:left;
+	overflow:hidden;
+}
+#slider001.flexslider .slides li {
+	width:100%;
+}
+#slider001.flexslider .slides li img {
+	width:280px;
+	height:110px;
+	float:left;
+}
+#slider001.flexslider .flex-control-nav {
+	height: 9px;
+	position:absolute;
+	bottom: 13px;
+	left: 75px;
+	z-index:9000;
+}
+#slider001.flexslider .flex-control-nav li {
+	float:left;
+	margin:0 5px;
+}
+#slider001.flexslider .flex-control-nav li a {
+	cursor:pointer;
+	display:block;
+	width:13px;
+	height:13px;
+	font-size:0;
+	background:#000000;
+    border-radius:10px;
+	/*background:url("https://world.moleg.go.kr/web/images/main/pop_off.png") no-repeat;*/
+}
+#slider001.flexslider .flex-control-nav li a.flex-active {
+	width:13px;
+    height:13px;
+    /*background:#c8301b;*/
+    background: #e35f70
+	/*background:url("https://world.moleg.go.kr/web/images/main/pop_on.png") no-repeat;*/
+}
+#slider001 .flex-pauseplay a{
+	position:absolute;
+	top:0px;
+	right:0px;
+	height: 27px;
+	z-index: 9001;
+	width: 28px;
+}
+
+.main-cont4{width:1200px;margin:0 auto;background:#ffffff;box-shadow: 0px 3px 6px #d2dce4;}
+.main-cont4 p.tit{text-align:center;height:55px;line-height:55px;font-size:19px;font-weight:bold;color:#2d2d2d;}
+.main-cont4-v{position:relative;padding-top:56px;overflow:hidden;}
+.main-cont4-v > ul > li{float:left;width:133px;} 
+/* .main-cont4-v > ul > li{float:left;width:120px;}  */
+/* .main-cont4-v > ul > li{float:left;width:120px;} */
+.main-cont4-v > ul > li > a{position:absolute;top:0;height:48px;line-height:48px;border:1px solid #e5e5e5;background:#fbfbfb;font-size:16px;color:#666666;text-align:center;} 
+/* .main-cont4-v > ul > li > a{position:absolute;top:0;width:121px;height:48px;line-height:48px;border:1px solid #e5e5e5;background:#fbfbfb;font-size:16px;color:#666666;text-align:center;} */
+.main-cont4-v > ul > li.on > a{font-weight:bold;background:#ffffff;border-bottom:0;}
+/* .main-cont4-v > ul > li.area1 > a{left:1px;border-left:0;}
+.main-cont4-v > ul > li.area2 > a{left:120px;}
+.main-cont4-v > ul > li.area3 > a{left:240px;}
+.main-cont4-v > ul > li.area4 > a{left:360px;}
+.main-cont4-v > ul > li.area5 > a{left:480px;}
+.main-cont4-v > ul > li.area6 > a{left:600px;}
+.main-cont4-v > ul > li.area7 > a{left:720px;}
+.main-cont4-v > ul > li.area8 > a{left:840px;border-right:0;}
+.main-cont4-v > ul > li.area9 > a{left:960px;border-right:0;}
+.main-cont4-v > ul > li.area10 > a{left:1080px;border-right:0;} */
+.main-cont4-v > ul > li.area1 > a{left:0px;width: 133px;border-left:0;}
+.main-cont4-v > ul > li.area2 > a{left:133px;width: 142px;}
+.main-cont4-v > ul > li.area3 > a{left:276px;width: 120px;}
+.main-cont4-v > ul > li.area4 > a{left:397px;width: 123px;}
+.main-cont4-v > ul > li.area5 > a{left:521px;width: 173px;}
+.main-cont4-v > ul > li.area6 > a{left:695px;width: 120px;}
+.main-cont4-v > ul > li.area7 > a{left:816px;width: 120px;}
+.main-cont4-v > ul > li.area8 > a{left:937px;width: 131px;}
+.main-cont4-v > ul > li.area9 > a{left:1069px;width: 131px;border-right:0;}
+.main-cont4-v > ul > li .main-cont4-v-cont{display:none;margin-left:0;width:1110px;height:47px;margin:13px 0 13px;padding:0 45px;overflow:hidden;}
+.main-cont4-v > ul > li.area1 .main-cont4-v-cont{margin-left:0;display:block;}
+.main-cont4-v > ul > li.area1 .flag-cont{display:block;}
+/* .main-cont4-v-cont a{display:inline-block;margin-right:80px;margin-bottom:20px;font-size:14px;} */
+.main-cont4-v-cont a{display:inline-block;margin-bottom:20px;font-size:14px; width: 215px;}
+.main-cont4-v-cont a img{margin-right:12px;width:47px;height:47px;}
+.flag-cont{display:none;position:absolute;bottom:0;left:50%;margin-left:-55px;}
+
+.main-cont4-v-a{display:none;}
+
+
+
+.main-cont5{width:1155px;margin:15px auto 0;padding:20px 20px 20px 25px;background:#ffffff;box-shadow: 0px 3px 6px #d2dce4;}
+.bannerArea {position:relative; height:50px; width:985px;}
+.bannerArea:after {content:""; display:block; clear:both;}
+.bannerArea ul.controlArea {overflow:hidden; }
+.bannerArea ul.controlArea li {position:absolute; float:left;}
+.bannerArea ul.controlArea li.controlStop {top: 5px;right: -120px;}
+.bannerArea ul.controlArea li.controlPlay {top:150px; left:0px;}
+.bannerArea ul.controlArea li.controlPrev {top: 5px;right: -70px;}
+.bannerArea ul.controlArea li.controlNext {top: 5px;right: -170px;}
+.bannerArea ul.controlArea li a {display:block;width:40px;height:40px;}
+.bannerArea ul.banner {overflow:hidden;}
+.bannerArea ul.banner li {float:left; width:198px;text-align:center;}
+.bannerArea ul.banner li.last {margin-right:0;}
+.bannerArea .outerWrap { position:relative; overflow:hidden; width:985px;}
+.bannerArea .outerWrap ul.banner { position:relative; width:40000em;}
+.bannerArea .outerWrap ul.banner a{display:inline-block;height:50px;width:185px;}
+
+
+.bannerArea1 {position:relative; height:257px; width:305px;}
+.bannerArea1:after {content:""; display:block; clear:both;}
+.bannerArea1 ul.controlArea {overflow:hidden; }
+.bannerArea1 ul.controlArea li {position:absolute; float:left;}
+.bannerArea1 ul.controlArea li.controlStop {top: 5px;right: -120px;}
+.bannerArea1 ul.controlArea li.controlPlay {top:150px; left:0px;}
+.bannerArea1 ul.controlArea li.controlPrev {top:-27px;left:50%;margin-left:-12px;}
+.bannerArea1 ul.controlArea li.controlNext {bottom:-27px;left:50%;margin-left:-12px;}
+.bannerArea1 ul.controlArea li a {display:block;width:25px;height:14px;}
+.bannerArea1 ul.banner {overflow:hidden;}
+.bannerArea1 ul.banner li {float:left;}
+.bannerArea1 ul.banner li.last {margin-right:0;}
+.bannerArea1 .outerWrap { position:relative; overflow:hidden; width:305px;}
+.bannerArea1 .outerWrap ul.banner { position:relative;}
+.bannerArea1 .outerWrap ul.banner a{display:inline-block;}
+
+
+.pop{position:absolute;top:50px;left:50%;z-index:120;margin-left:-325px;padding:10px 20px;width:610px;background:#0b596f url('https://world.moleg.go.kr/web/images/main/pop_bg.gif') no-repeat right top;overflow:hidden;}
+.pop > p.p1{font-size:50px;color:#e1eff3;}
+.pop > p.p1 strong{font-size:50px;color:#f65401;}
+.pop > p.p2{float:left;font-size:17px;color:#ffffff;background:#240e01;padding:2px 8px;margin-bottom:10px;}
+.pop > p.p3{clear:both;font-size:15px;color:#ffffff;}
+.pop > p.p3 span{font-size:15px;color:#f6cb01;}
+.pop .pop_cont{background:#ffffff;padding:10px 20px 25px;margin:10px 0;}
+.pop_cont > p.p1{font-size:15px;text-indent:-15px;color:#666666;margin-left:15px;}
+.pop_cont > p.p2{text-align:center;background:url('https://world.moleg.go.kr/web/images/main/pop_tit.gif') no-repeat center top;margin:15px 0 20px;height:40px;line-height:40px;font-size:20px;font-weight:bold;color:#ffffff;letter-spacing:-1px;}
+
+.pop_cont_v{padding:12px 10px;margin-top:15px;}
+.pop_cont_v p.tit{font-size:16px;font-weight:bold;color:#000000;margin-bottom:10px;}
+.pop_cont_v div.cont{overflow:hidden;margin-left:-47px;}
+.pop_cont_v div.cont span{float:left;margin:1px;margin-left:47px;min-width:150px;}
+.pop_cont_v div.cont span label{font-size:12px;font-family:"NanumGothic", sans-serif;color:#000000;vertical-align:top;}
+.pop_cont_v div.cont span img,.pop_cont_v div.cont span input{float:left;}
+.pop_cont_v2 div.cont textarea{width:518px;height:44px;padding:5px;overflow-y:scroll;}
+.pop_cont_v2 div.cont{margin-left:0;}
+.pop_btn{text-align:center;margin-top:20px;}
+.pop_btn a{display:inline-block;width:196px;height:42px;line-height:42px;font-size:20px;font-weight:bold;color:#ffffff;background:#ff6000;}
+.pop .pop_lf{float:left;}
+.pop .pop_rt{float:right;}
+.pop .pop_rt input[type="checkbox"]{width:19px;height:19px;margin-right:2px;}
+.pop .pop_rt label{font-size:14px;font-family:"NanumGothic", sans-serif;color:#ffffff;}
+
+.error{width: 1030px; margin: 0 auto;}
+.error_txt{background: url(https://world.moleg.go.kr/web/images/common/ico_error.png) center top no-repeat; text-align: center; padding-top: 135px;}
+.error_txt h2{padding: 0; margin: 0 0 25px 0; font-size: 30px; color: #333; font-weight: 600;}
+.error_txt p {padding: 0; margin: 0 0 25px 0; font-size: 14px; color: #585858; line-height: 1.7;}
+.error_txt em {font-style: normal; font-size: 14px; color: #175ec9; font-weight: 600;}
+
+/* 2023 메인 리뉴얼 */
+#main_container{ background: #00b3b6; /* Old browsers */ background: -moz-linear-gradient(top,  #00b3b6 0%, #0076c0 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(top,  #00b3b6 0%,#0076c0 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(to bottom,  #00b3b6 0%,#0076c0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b3b6', endColorstr='#0076c0',GradientType=0 ); /* IE6-9 */ }
+#main_container *{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+#visual_map{max-width:1520px; margin: 0 auto; position: relative; padding:2% 0 1% 0;}
+#visual_map > img{width:100%;}
+
+.map_pin > ul > li > a{position: absolute; font-size: 17px; color: #000; text-align: center; display:inline-block; font-weight: 600; letter-spacing: -1px; line-height: 1; padding-top:35px; background-position:center top; background-repeat:no-repeat; z-index:0;}
+.map_pin > ul > li.mp1 > a{left: 11.3%; top: 30%; background-image:url('../images/main/bg_pin1.png');}
+.map_pin > ul > li.mp2 > a{left: 9%;top: 54%; background-image:url('../images/main/bg_pin2.png');}
+.map_pin > ul > li.mp3 > a{left: 20%;top: 38%; background-image:url('../images/main/bg_pin3.png');}
+.map_pin > ul > li.mp4 > a{left: 33%;top: 44%; background-image:url('../images/main/bg_pin4.png');}
+.map_pin > ul > li.mp5 > a{left: 39%;top: 30%; background-image:url('../images/main/bg_pin5.png');}
+.map_pin > ul > li.mp6 > a{left: 42%;top: 73%; background-image:url('../images/main/bg_pin6.png');}
+.map_pin > ul > li.mp7 > a{left: 68%;top: 73%; background-image:url('../images/main/bg_pin7.png');}
+.map_pin > ul > li.mp8 > a{left: 79%;top: 33%; background-image:url('../images/main/bg_pin8.png');}
+.map_pin > ul > li.mp9 > a{left: 91%;top: 67%; background-image:url('../images/main/bg_pin9.png')}
+.map_pin > ul > li .pin_pop{display:none; position: absolute; width:290px; background-color:#fff;  z-index:1; }
+.map_pin > ul > li.mp1 .pin_pop{left: 10%; top: 30%; }
+.map_pin > ul > li.mp2 .pin_pop{left: 8%;top: 52%; }
+.map_pin > ul > li.mp3 .pin_pop{left: 18%;top: 36%; }
+.map_pin > ul > li.mp4 .pin_pop{left: 31%;top: 41%; }
+.map_pin > ul > li.mp5 .pin_pop{left: 38%;top: 28%;}
+.map_pin > ul > li.mp6 .pin_pop{left: 39%;top: 54%; }
+.map_pin > ul > li.mp7 .pin_pop{left: 66%;top: 54%;  }
+.map_pin > ul > li.mp8 .pin_pop{left: 64%;top: 28%; }
+.map_pin > ul > li.mp9 .pin_pop{left: 70%;top: 47%; }
+.map_pin > ul > li .pin_pop p{font-size: 18px; color: #fff; font-weight: 600; line-height: 1; padding:15px 6%;}
+.map_pin > ul > li.mp1 .pin_pop p{background-color: #127562;}
+.map_pin > ul > li.mp2 .pin_pop p{background-color: #40802e;}
+.map_pin > ul > li.mp3 .pin_pop p{background-color: #976f0e;}
+.map_pin > ul > li.mp4 .pin_pop p{background-color: #6660ab;}
+.map_pin > ul > li.mp5 .pin_pop p{background-color: #2a7aad;}
+.map_pin > ul > li.mp6 .pin_pop p{background-color: #158546;}
+.map_pin > ul > li.mp7 .pin_pop p{background-color: #c74f02;}
+.map_pin > ul > li.mp8 .pin_pop p{background-color: #c34c4e;}
+.map_pin > ul > li.mp9 .pin_pop p{background-color: #1f629d;}
+.map_pin > ul > li .pin_pop ul {overflow-y:scroll; height:185px; padding:3% 0;}
+.map_pin > ul > li .pin_pop ul li a{display: block; font-size: 15px; color: #000; padding:1.5% 6%;}
+.map_pin > ul > li .pin_pop ul li a:hover{background: #fff9e1;}
+.map_pin > ul > li .pin_pop .map_p_close{position: absolute; right: 6%; top: 13px; }
+.map_pin > ul > li .pin_pop .map_p_close img{width:20px;}
+
+#notice_area{height:345px; padding-bottom:80px; background: url(../images/main/bg_notice1.png) center 60px no-repeat; position: relative; }
+#notice_area:after {position:absolute; left:0; bottom:0; width:187px; height:232px; background: url(../images/main/bg_notice2.png) center bottom no-repeat; content:""; }
+#notice_area:before {position:absolute; right:0; bottom:0; width:635px; height:188px; background: url(../images/main/bg_notice3.png) center bottom no-repeat; content:""; }
+
+.notice_inner{max-width:1520px; margin:0 auto; }
+.notice_inner:after, .notice_inner .nt_box1:after, .notice_inner .nt_box2:after{display:block; clear:both; content:"";}
+.notice_inner .nt_box1 {float:left;}
+.notice_inner .nt_box2 {float:right;}
+.main_notice{border-radius:15px; overflow:hidden; width:288px; float:left; position: relative; height:265px; -webkit-box-shadow: 0px 4px 11px 2px rgba(0,0,0,0.2); 
+box-shadow: 0px 4px 11px 2px rgba(0,0,0,0.2); margin-left:20px; text-align:left;}
+.nt_box1 .main_notice:first-child{margin-left: 0;}
+.main_notice.mn5{width:287px; vertical-align: top; border:5px solid #fff; background-color:#fff;}
+.main_notice h2{font-weight: 600; color: #fff; font-size: 20px; line-height: 30px; padding:14px 20px; border-radius:11px 11px 0 0; overflow:hidden;}
+.main_notice.mn1 h2{background-color: #1d4774; }
+.main_notice.mn2 h2{background-color: #256795; }
+.main_notice.mn3 h2{background-color: #27747c; }
+.main_notice.mn4 h2{background-color: #09818a; }
+.main_notice h2 .btn_app{display:inline-block; color:#fffcb8; font-weight: 600; font-size: 16px; line-height: 30px; background-color:#1f5459; padding:0 13px; margin-left: 5px; position: relative; top: -1px;}
+.main_notice .mn_list{padding:8px 18px; background-color:#fff; height:208px;}
+.main_notice .mn_list li{border-top: 1px dashed #e6e6e6; padding:9px 0;}
+.main_notice .mn_list li:first-child{border-top:none;}
+.main_notice .mn_list li a {display: block; font-size: 15px; color: #666; }
+.main_notice .mn_list li a:after{display:block; clear:both; content:"";}
+.main_notice .mn_list li a .mn_flag{float: left; }
+.main_notice .mn_list li a .mn_flag img {width: 23px; height: 16px; border: 1px solid #a1a1a2;}
+.main_notice .mn_list li a .mn_icon{float: left; font-size: 11px; color: #fff; padding:2px 2px; margin-top:2px; letter-spacing: -1px; min-width:41px; text-align: center;}
+.main_notice .mn_list li a .mn_icon.bg_gray{background-color: #666;}
+.main_notice .mn_list li a .mn_icon.bg_green{background-color: #567f2e;}
+.main_notice .mn_list li a .mn_icon.bg_blue{background-color: #1d70bb;}
+.main_notice .mn_list li a .mn_icon.bg_purple{background:#6d66ae;}
+.main_notice .mn_list li a .mn_icon.bg_red{background:#cc3e4f;}
+
+
+
+.main_notice .mn_list li a .mn_title {display:block; width: auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%; margin-left:33px; line-height: 1.3; }
+.main_notice.mn3 .mn_list li a .mn_title{margin-left:48px; }
+.main_notice.mn4 .mn_list li a .mn_title{margin-left:0; }
+.main_notice .btn_more{position: absolute; right: 15px; top: 18px; width:25px; height:25px; background: url(../images/main/btn_notice_more.png) center center no-repeat; text-indent:-9999px; font-size: 1px; }
+
+/* 롤링 알림판 네비게이션 */ 
+.main_notice .mn_gallery .flex-direction-nav{position: absolute; bottom:0px; left:0px; width:100%; height:20px; z-index: 9000; }
+.main_notice .mn_gallery .flex-direction-nav li{float:left; margin:0 2px; }
+.main_notice .mn_gallery .flex-direction-nav a{font-size:0; position:absolute; top:-2px; background-position:left top;  background-repeat:no-repeat; width:20px; height:20px; display:block; color:#FFF; }
+.main_notice .mn_gallery .flex-direction-nav a.flex-next{right:5px; background-image:url("https://world.moleg.go.kr/web/images/main/pop_rt.png"); }
+.main_notice .mn_gallery .flex-direction-nav a.flex-prev{right:43px; background-image:url("https://world.moleg.go.kr/web/images/main/pop_lf.png"); }
+.main_notice .mn_gallery .flex-direction-nav .flex-pauseplay a{position:absolute; right:24px; top:-2px; font-size:0; background-position:left top; background-repeat:no-repeat; width:20px; height:20px; display:block; cursor: pointer; color:#FFF; z-index:9001; }
+.main_notice .mn_gallery .flex-direction-nav .flex-pauseplay a.flex-play{background-image:url("https://world.moleg.go.kr/web/images/main/pop_play.png"); }
+.main_notice .mn_gallery .flex-direction-nav .flex-pauseplay a.flex-pause{background-image:url("https://world.moleg.go.kr/web/images/main/pop_stop.png"); }
+.main_notice .mn_gallery .flex-control-nav {height: 9px; position:absolute; bottom: 11px; right: 72px; z-index:9000; }
+.main_notice .mn_gallery .flex-control-nav li {float:left; margin:0 3px; }
+.main_notice .mn_gallery .flex-control-nav li a {cursor:pointer; display:block; width:16px; height:16px; font-size:0; background-color:#4a506b; border-radius:10px; }
+.main_notice .mn_gallery .flex-control-nav li a.flex-active {background-color: #f15e61 }
+
+/* 롤링 알림판 리스트 */ 
+.main_notice .mn_gallery .slides li{}
+.main_notice .mn_gallery .slides li a {display: block; height: 0px; padding-bottom: 225px; overflow: hidden; position: relative; border: 1px solid #ddd; background-color:#ddd;}
+.main_notice .mn_gallery .slides li a img {max-height: 100%; max-width: 100%; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; }
+
+
+.footer.main_footer .footer-tp-cont {max-width: 1520px;}
+.footer.main_footer .footer-bt {max-width: 1520px; width: 1520px;}
+
+
+

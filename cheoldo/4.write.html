@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>철도경찰형사사법업무시스템</title>
+<script src="./js/jquery-1.12.4.js"></script>
+<script src="./js/jquery-ui.min.js"></script>
+<script src="./js/datepicker-ko.js"></script>
+<script src="./js/layout.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/common.css">
+<link rel="stylesheet" type="text/css" href="./css/layout.css">
+<link rel="stylesheet" type="text/css" href="./css/jquery-ui.min.css">
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+			<div class="top">
+				<h1><a href="#"><img src="./images/h1_logo.jpg" alt="철도경찰형사사법업무시스템"></a></h1>
+				<div class="top_log">
+					<ul>
+						<li class="log_state">철도경찰대 수사과 수사관 <b>홍길동</b></li>
+						<li><a href="#">정보수정</a></li>
+						<li><a href="#">로그아웃</a></li>
+						<li><a href="#">SMS</a></li>
+						<li class="fz_box">
+							<button class="plus_txt" onclick="#"><span>글자크게</span></button> 
+							<span id="txt_size">100%</span> 
+							<button class="minus_txt" onclick="#"><span>글자작게</span></button> 
+						</li>
+					</ul>
+				</div>
+			</div><!-- top -->
+			<div id="lnb">
+				<ul>
+					<li><a href="#"><span>내사건</span></a></li>
+					<li>
+						<a href="#"><span>접수/배당</span></a>
+						<div class="depth2">
+							<ul>
+								<li><a href="#">임시사건 접수</a></li>
+								<li><a href="#">이송 접수</a></li>
+								<li><a href="#">지휘/재기사건 접수</a></li>
+								<li><a href="#">사건배당</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><span>입건/조사</span></a>
+						<div class="depth2">
+							<ul>
+								<li><a href="#">수사보고</a></li>
+								<li><a href="#">출석요구</a></li>
+								<li><a href="#">수사서식</a></li>
+								<li><a href="#">범죄인지보고</a></li>
+								<li><a href="#">지휘건의</a></li>
+								<li class="dep3_box">
+									<a href="#">체포및영장</a>
+									<div class="depth3">
+										<ul>
+											<li><a href="#">긴급체포/현행범인체포관리</a></li>
+											<li><a href="#">체포및구속영장 신청</a></li>
+											<li><a href="#">압수수색검증영장 신청</a></li>
+											<li><a href="#">영장반환</a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="dep3_box">
+									<a href="#"><span>통신사실확인</span></a>
+									<div class="depth3">
+										<ul>
+											<li><a href="#">긴급체포/현행범인체포관리</a></li>
+											<li><a href="#">체포및구속영장 신청</a></li>
+											<li><a href="#">압수수색검증영장 신청</a></li>
+											<li><a href="#">영장반환</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><span>송치/종결</span></a>
+						<div class="depth2">
+							<ul>
+								<li><a href="#">송치관리</a></li>
+								<li><a href="#">이송</a></li>
+								<li><a href="#">사건종결</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><span>대장/통계</span></a>
+						<div class="depth2">
+							<ul>
+								<li><a href="#">범죄사건부</a></li>
+								<li><a href="#">내사사건부</a></li>
+								<li><a href="#">현행범인체포원부</a></li>
+								<li><a href="#">현행범인체포 집행원부</a></li>
+								<li><a href="#">긴급체포원부</a></li>
+								<li><a href="#">체포영장신청부</a></li>
+								<li><a href="#">구속영장신청부</a></li>
+								<li><a href="#">체포/구속영장 집행원부</a></li>
+								<li><a href="#">암수/수색/검증영장 신청부</a></li>
+								<li><a href="#">사건송치부</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><span>증명서</span></a>
+						<div class="depth2">
+							<ul>
+								<li><a href="#">접수증 발급</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="#"><span>운영관리</span></a></li>
+				</ul>
+			</div>
+		</div><!-- header -->
+		<div id="container">
+			<div class="page_title">
+				<h2>출석요구</h2>
+				<div class="breadcrumb">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li>입건/조사</li>
+						<li>출석요구</li>
+					</ul>
+				</div><!-- breadcrumb -->
+			</div><!-- page_title -->
+			<div class="contents">
+				<div class="article">
+					<div class="searchBox write_input">
+						<form name="" method="" action="">
+							<div class="inputList">
+								<ul>
+									<li class="w35per">
+										<label for="type1" class="w20per">사건번호</label> 
+										<select name="type1" id="type1" class="w35per" title="사건 상태 선택">
+											<option value="전체">접수(임시)</option>
+										</select>
+										<input type="text" name="num1" id="num1" class="w35per" title="사건번호 입력">
+									</li>
+								</ul>
+							</div>
+							<button class="btn_join" title="조회">조회</button>
+						</form>
+					</div><!-- searchBox -->
+					<div class="tab_box">
+						<div class="tab_area">
+							<ul>
+								<li class="active on">
+									<a href="#">출석요구내역</a>
+									<div class="tab_article" class="tab_article"style="display: block;">
+										<div class="cont_box">
+											<div class="bbs_area w63per">
+												<h3 class="title-style1">
+													출석요구내역
+													<div class="title_lBtn">
+														<a href="#" id="rowChangeUpBtn"><img src="./images/arrow_up_1.png"></a> 
+														<a href="#" id="rowChangeDownBtn"><img src="./images/arrow_down_1.png"></a>
+													</div>
+												</h3>
+												<div class="bbs_write">
+													<table>
+														<caption>출석요구내역 입력 표</caption>
+														<colgroup>
+															<col style="width:20%;">
+															<col style="width:30%;">
+															<col style="width:20%;">
+															<col style="width:30%;">
+														</colgroup>
+														<tbody>
+															<tr>
+																<th scope="row"><label for="date1"><span class="str">*</span>통지일자</label></th>
+																<td><input type="text" name="date1" id="date1" class="w60per" title="통지일자 선택"></td>
+																<th scope="row"><label for="date2"><span class="str">*</span>출석요구일시</label></th>
+																<td>
+																	<input type="text" name="date2" id="date2" class="w55per" title="출석요구일시 선택">
+																	<input type="text" name="time1" id="time1" class="w20per" title="출석요구일시 시간 입력">
+																</td>
+															</tr>
+															<tr>
+																<th scope="row"><label for="notice"><span class="str">*</span>통지방법</label></th>
+																<td colspan="3">
+																	<select name="notice" id="notice" class="w30per" title="통지방법 선택">
+																		<option value="우편">우편</option>
+																		<option value="문자">문자</option>
+																		<option value="이메일">이메일</option>
+																	</select>
+																	<span class="info_txt1">두번째 역은 철도역 구간인 경우에만 입력하세요.</span>
+																</td>
+															</tr>
+															<tr>
+																<th scope="row">대상자구분</th>
+																<td>피의자</td>
+																<th scope="row">대상자명</th>
+																<td>김피의</td>
+															</tr>
+															<tr>
+																<th scope="row"><label for="address1"><span class="str">*</span>수신처 주소</label></th>
+																<td colspan="3">
+																	<div class="input_list1">
+																		<ul>
+																			<li><input type="text" name="address1" id="address1" class="w80per" title="수신처 주소 입력"> <button class="gray_btn">검색</button></li>
+																			<li><input type="text" name="address2" id="address2" class="w80per" title="수신처 주소 입력"> </li>
+																		</ul>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<th scope="row"><label for="file1">지참서류</label></th>
+																<td>
+																	<div class="input_list1">
+																		<ul>
+																			<li><span class="inp_txt">1.</span> <input type="text" name="file1" id="file1" class="w85per" title="지참서류 입력"> </li>
+																			<li><span class="inp_txt">2.</span> <input type="text" name="file2" id="file2" class="w85per" title="지참서류 입력"> </li>
+																			<li><span class="inp_txt">3.</span> <input type="text" name="file3" id="file3" class="w85per" title="지참서류 입력"> </li>
+																		</ul>
+																	</div>
+																</td>
+																<th scope="row"><label for="cont1">참고내용<br><span class="s_txt">(200자 이내)</span></label></th>
+																<td>
+																	<textarea name="cont1" id="cont1" class="w45per f-l" rows="5"></textarea>
+																	<div class="inp_btnBox"> <!-- 최대 6글자까지 감쌀수있습니다. -->
+																		<button class="gray_btn">검색</button>
+																	</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="bbs_area w35per">
+												<h3 class="title-style1">
+													출석결과
+													<div class="title_rBtn">
+														<a href="#" class="r_btn b_orange">신규</a>
+														<a href="#" class="r_btn b_blue">저장</a>
+														<a href="#" class="r_btn white_b">삭제</a>
+													</div>
+												</h3>
+												<div class="bbs_write">
+													<table>
+														<caption>출석결과 입력 표</caption>
+														<colgroup>
+															<col style="width:30%;">
+															<col >
+														</colgroup>
+														<tbody>
+															<tr>
+																<th scope="row"><label for="YN1">출석여부</label></th>
+																<td>
+																	<div class="input_list2">
+																		<ul>
+																			<li>
+																				<input type="radio" name="YN" id="YN1" title="출석 선택">
+																				<label for="YN1"><span class="inp_txt">출석</span></label>
+																			</li>
+																			<li>
+																				<input type="radio" name="YN" id="YN2" title="미출석 선택">
+																				<label for="YN2"><span class="inp_txt">미출석</span></label>
+																			</li>
+																		</ul>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<th scope="row"><label for="date3"><span class="str">*</span>출석일시</label></th>
+																<td>
+																	<input type="text" name="date3" id="date3" class="w40per" title="출석일시 선택">
+																	<input type="text" name="time2" id="time2" class="w20per" title="출석일시 시간 입력">
+																</td>
+															</tr>
+															<tr>
+																<th scope="row"><label for="cont2">비고</label></th>
+																<td>
+																	<textarea name="cont2" id="cont2" class="w100per" rows="12" title="비고 입력"></textarea>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										
+									</div>
+								</li>
+								<li>
+									<a href="#">대상자 목록</a>
+									<div class="tab_article" style="display: none;">
+										<div class="cont_box">
+											<div class="bbs_area f-n">
+												<h3 class="title-style1">출석요구내역</h3>
+												<div class="bbs_write">
+													<table>
+														<caption>출석요구내역 입력 표</caption>
+														<colgroup>
+															<col style="width:20%;">
+															<col style="width:30%;">
+															<col style="width:20%;">
+															<col style="width:30%;">
+														</colgroup>
+														<tbody>
+															<tr>
+																<th scope="row"><label for="date1"><span class="str">*</span>통지일자</label></th>
+																<td><input type="text" name="date1" id="date1" class="w60per" title="통지일자 선택"></td>
+																<th scope="row"><label for="date2"><span class="str">*</span>출석요구일시</label></th>
+																<td>
+																	<input type="text" name="date2" id="date2" class="w55per" title="출석요구일시 선택">
+																	<input type="text" name="time1" id="time1" class="w20per" title="출석요구일시 시간 입력">
+																</td>
+															</tr>
+															<tr>
+																<th scope="row"><label for="notice"><span class="str">*</span>통지방법</label></th>
+																<td colspan="3">
+																	<select name="notice" id="notice" class="w30per" title="통지방법 선택">
+																		<option value="우편">우편</option>
+																		<option value="문자">문자</option>
+																		<option value="이메일">이메일</option>
+																	</select>
+																</td>
+															</tr>
+															<tr>
+																<th scope="row">대상자구분</th>
+																<td>피의자</td>
+																<th scope="row">대상자명</th>
+																<td>김피의</td>
+															</tr>
+															<tr>
+																<th scope="row"><label for="address1"><span class="str">*</span>수신처 주소</label></th>
+																<td colspan="3">
+																	<div class="input_list1">
+																		<ul>
+																			<li><input type="text" name="address1" id="address1" class="w80per" title="수신처 주소 입력"> <button class="gray_btn">검색</button></li>
+																			<li><input type="text" name="address2" id="address2" class="w80per" title="수신처 주소 입력"> </li>
+																		</ul>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<th scope="row"><label for="file1">지참서류</label></th>
+																<td>
+																	<div class="input_list1">
+																		<ul>
+																			<li><span class="inp_txt">1.</span> <input type="text" name="file1" id="file1" class="w85per" title="지참서류 입력"> </li>
+																			<li><span class="inp_txt">2.</span> <input type="text" name="file2" id="file2" class="w85per" title="지참서류 입력"> </li>
+																			<li><span class="inp_txt">3.</span> <input type="text" name="file3" id="file3" class="w85per" title="지참서류 입력"> </li>
+																		</ul>
+																	</div>
+																</td>
+																<th scope="row"><label for="cont1">참고내용<br><span class="s_txt">(200자 이내)</span></label></th>
+																<td>
+																	<textarea name="cont1" id="cont1" class="w100per" rows="5" title="참고내용 입력"></textarea>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="#">출석결과신규</a>
+									<div class="tab_article" style="display: none;">
+										<div class="cont_box">
+											<div class="bbs_area w63per">
+												<h3 class="title-style1">
+													작성문서 목록
+													<div class="title_rBtn">
+														<a href="#" class="r_btn b_orange">KICS전송</a>
+														<a href="#" class="r_btn b_cyan">우편자동발송</a>
+														<a href="#" class="r_btn white_b">삭제</a>
+													</div>
+												</h3>
+												<div class="bbs_list write">
+													<form name="srhForm" method="" action="">
+													<table>
+														<caption>"작성문서 목록" 내용입니다.</caption>
+														<colgroup>
+															<col style="width16%;">
+															<col style="width:16%;">
+															<col style="width:16%;">
+															<col style="width:16%;">
+															<col style="width:16%;">
+															<col >
+														</colgroup>
+														<thead>
+															<tr>
+																<th scope="col">관서</th>
+																<th scope="col">업종구분</th>
+																<th scope="col">대상 업체수</th>
+																<th scope="col">실시 업체수</th>
+																<th scope="col">위반</th>
+																<th scope="col">시정완료</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>35,985</td>
+																<td>84.75</td>
+																<td>35,985</td>
+																<td>3.3</td>
+																<td>35,985</td>
+																<td>35,985</td>
+															</tr>
+															<tr>
+																<td>35,985</td>
+																<td>84.75</td>
+																<td>35,985</td>
+																<td>3.3</td>
+																<td>35,985</td>
+																<td>35,985</td>
+															</tr>
+															<tr>
+																<td>35,985</td>
+																<td>84.75</td>
+																<td>35,985</td>
+																<td>3.3</td>
+																<td>35,985</td>
+																<td>35,985</td>
+															</tr>
+															<tr>
+																<td>35,985</td>
+																<td>84.75</td>
+																<td>35,985</td>
+																<td>3.3</td>
+																<td>35,985</td>
+																<td>35,985</td>
+															</tr>
+															<tr>
+																<td>35,985</td>
+																<td>84.75</td>
+																<td>35,985</td>
+																<td>3.3</td>
+																<td>35,985</td>
+																<td>35,985</td>
+															</tr>
+															<tr>
+																<td>35,985</td>
+																<td>84.75</td>
+																<td>35,985</td>
+																<td>3.3</td>
+																<td>35,985</td>
+																<td>35,985</td>
+															</tr>
+															<tr>
+																<td>35,985</td>
+																<td>84.75</td>
+																<td>35,985</td>
+																<td>3.3</td>
+																<td>35,985</td>
+																<td>35,985</td>
+															</tr>
+															<tr>
+																<td>35,985</td>
+																<td>84.75</td>
+																<td>35,985</td>
+																<td>3.3</td>
+																<td>35,985</td>
+																<td>35,985</td>
+															</tr>
+															<tr>
+																<td>35,985</td>
+																<td>84.75</td>
+																<td>35,985</td>
+																<td>3.3</td>
+																<td>35,985</td>
+																<td>35,985</td>
+															</tr>
+															<tr>
+																<td>35,985</td>
+																<td>84.75</td>
+																<td>35,985</td>
+																<td>3.3</td>
+																<td>35,985</td>
+																<td>35,985</td>
+															</tr>
+															<tr>
+																<td>35,985</td>
+																<td>84.75</td>
+																<td>35,985</td>
+																<td>3.3</td>
+																<td>35,985</td>
+																<td>35,985</td>
+															</tr>
+														</tbody>
+													</table>
+													</form>
+												</div>
+											</div>
+											<div class="bbs_area w35per">
+												<h3 class="title-style1">신규작성 서식</h3>
+												<div class="bt-box">
+													<div class="form_list1">
+														<ul>
+															<li class="on"><a href="#">긴급체포서</a></li>
+															<li><a href="#">긴급체포승인건의</a></li>
+															<li class="on"><a href="#">현행법인체포서</a></li>
+															<li class="on"><a href="#">현행범인인수서</a></li>
+															<li class="on"><a href="#">확인서</a></li>
+															<li><a href="#">피의자석방보고</a></li>
+															<li><a href="#">체포통지서</a></li>
+															<li class="on"><a href="#">피긴급자석방보고</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div><!-- cont_box -->
+									</div>
+								</li>
+								<li>
+									<a href="#">신규작성 출석요구 서식</a>
+									<div class="tab_article" style="display: none;">
+										<div class="cont_box">
+											<div class="bbs_area w63per">
+												<h3 class="title-style1">출석요구내역</h3>
+												<div class="bbs_write">
+													<table>
+														<caption>출석요구내역 입력 표</caption>
+														<colgroup>
+															<col style="width:20%;">
+															<col style="width:30%;">
+															<col style="width:20%;">
+															<col style="width:30%;">
+														</colgroup>
+														<tbody>
+															<tr>
+																<th scope="row"><label for="date1"><span class="str">*</span>통지일자</label></th>
+																<td><input type="text" name="date1" id="date1" class="w60per" title="통지일자 선택"></td>
+																<th scope="row"><label for="date2"><span class="str">*</span>출석요구일시</label></th>
+																<td>
+																	<input type="text" name="date2" id="date2" class="w55per" title="출석요구일시 선택">
+																	<input type="text" name="time1" id="time1" class="w20per" title="출석요구일시 시간 입력">
+																</td>
+															</tr>
+															<tr>
+																<th scope="row"><label for="notice"><span class="str">*</span>통지방법</label></th>
+																<td colspan="3">
+																	<select name="notice" id="notice" class="w30per" title="통지방법 선택">
+																		<option value="우편">우편</option>
+																		<option value="문자">문자</option>
+																		<option value="이메일">이메일</option>
+																	</select>
+																</td>
+															</tr>
+															<tr>
+																<th scope="row">대상자구분</th>
+																<td>피의자</td>
+																<th scope="row">대상자명</th>
+																<td>김피의</td>
+															</tr>
+															<tr>
+																<th scope="row"><label for="address1"><span class="str">*</span>수신처 주소</label></th>
+																<td colspan="3">
+																	<div class="input_list1">
+																		<ul>
+																			<li><input type="text" name="address1" id="address1" class="w80per" title="수신처 주소 입력"> <button class="gray_btn">검색</button></li>
+																			<li><input type="text" name="address2" id="address2" class="w80per" title="수신처 주소 입력"> </li>
+																		</ul>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<th scope="row"><label for="file1">지참서류</label></th>
+																<td>
+																	<div class="input_list1">
+																		<ul>
+																			<li><span class="inp_txt">1.</span> <input type="text" name="file1" id="file1" class="w85per" title="지참서류 입력"> </li>
+																			<li><span class="inp_txt">2.</span> <input type="text" name="file2" id="file2" class="w85per" title="지참서류 입력"> </li>
+																			<li><span class="inp_txt">3.</span> <input type="text" name="file3" id="file3" class="w85per" title="지참서류 입력"> </li>
+																		</ul>
+																	</div>
+																</td>
+																<th scope="row"><label for="cont1">참고내용<br><span class="s_txt">(200자 이내)</span></label></th>
+																<td>
+																	<textarea name="cont1" id="cont1" class="w100per" rows="5" title="참고내용 입력"></textarea>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="bbs_area w35per">
+												<h3 class="title-style1">
+													출석결과
+													<div class="title_rBtn">
+														<a href="#" class="r_btn b_bluegreen">신규</a>
+														<a href="#" class="r_btn b_green">저장</a>
+														<a href="#" class="r_btn white_b">삭제</a>
+													</div>
+												</h3>
+												<div class="bbs_write">
+													<table>
+														<caption>출석결과 입력 표</caption>
+														<colgroup>
+															<col style="width:30%;">
+															<col >
+														</colgroup>
+														<tbody>
+															<tr>
+																<th scope="row"><label for="YN1">출석여부</label></th>
+																<td>
+																	<div class="input_list2">
+																		<ul>
+																			<li>
+																				<input type="radio" name="YN" id="YN1" title="출석 선택">
+																				<label for="YN1"><span class="inp_txt">출석</span></label>
+																			</li>
+																			<li>
+																				<input type="radio" name="YN" id="YN2" title="미출석 선택">
+																				<label for="YN2"><span class="inp_txt">미출석</span></label>
+																			</li>
+																		</ul>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<th scope="row"><label for="date3"><span class="str">*</span>출석일시</label></th>
+																<td>
+																	<input type="text" name="date3" id="date3" class="w40per" title="출석일시 선택">
+																	<input type="text" name="time2" id="time2" class="w20per" title="출석일시 시간 입력">
+																</td>
+															</tr>
+															<tr>
+																<th scope="row"><label for="cont2">비고</label></th>
+																<td>
+																	<textarea name="cont2" id="cont2" class="w100per" rows="12" title="비고 입력"></textarea>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<div class="cont_box">
+											<div class="bbs_area f-n">
+												<h3 class="title-style1">출석요구내역</h3>
+												<div class="bbs_write">
+													<table>
+														<caption>출석요구내역 입력 표</caption>
+														<colgroup>
+															<col style="width:20%;">
+															<col style="width:30%;">
+															<col style="width:20%;">
+															<col style="width:30%;">
+														</colgroup>
+														<tbody>
+															<tr>
+																<th scope="row"><label for="date1"><span class="str">*</span>통지일자</label></th>
+																<td><input type="text" name="date1" id="date1" class="w60per" title="통지일자 선택"></td>
+																<th scope="row"><label for="date2"><span class="str">*</span>출석요구일시</label></th>
+																<td>
+																	<input type="text" name="date2" id="date2" class="w55per" title="출석요구일시 선택">
+																	<input type="text" name="time1" id="time1" class="w20per" title="출석요구일시 시간 입력">
+																</td>
+															</tr>
+															<tr>
+																<th scope="row"><label for="notice"><span class="str">*</span>통지방법</label></th>
+																<td colspan="3">
+																	<select name="notice" id="notice" class="w30per" title="통지방법 선택">
+																		<option value="우편">우편</option>
+																		<option value="문자">문자</option>
+																		<option value="이메일">이메일</option>
+																	</select>
+																</td>
+															</tr>
+															<tr>
+																<th scope="row">대상자구분</th>
+																<td>피의자</td>
+																<th scope="row">대상자명</th>
+																<td>김피의</td>
+															</tr>
+															<tr>
+																<th scope="row"><label for="address1"><span class="str">*</span>수신처 주소</label></th>
+																<td colspan="3">
+																	<div class="input_list1">
+																		<ul>
+																			<li><input type="text" name="address1" id="address1" class="w80per" title="수신처 주소 입력"> <button class="gray_btn">검색</button></li>
+																			<li><input type="text" name="address2" id="address2" class="w80per" title="수신처 주소 입력"> </li>
+																		</ul>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<th scope="row"><label for="file1">지참서류</label></th>
+																<td>
+																	<div class="input_list1">
+																		<ul>
+																			<li><span class="inp_txt">1.</span> <input type="text" name="file1" id="file1" class="w85per" title="지참서류 입력"> </li>
+																			<li><span class="inp_txt">2.</span> <input type="text" name="file2" id="file2" class="w85per" title="지참서류 입력"> </li>
+																			<li><span class="inp_txt">3.</span> <input type="text" name="file3" id="file3" class="w85per" title="지참서류 입력"> </li>
+																		</ul>
+																	</div>
+																</td>
+																<th scope="row"><label for="cont1">참고내용<br><span class="s_txt">(200자 이내)</span></label></th>
+																<td>
+																	<textarea name="cont1" id="cont1" class="w100per" rows="5" title="참고내용 입력"></textarea>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="title_aBtn">
+								<button class="a_btn b_blue" type="button" id="caseFilePopBtn" title="사건 관련 파일을 첨부하는 화면 호출">파일첨부</button>
+								<button class="a_btn b_green" type="button" id="caseAcceptBtn" title="임시사건을 내사 또는 입건으로 처리하는 화면 호출 ">정식접수</button>
+								<button class="a_btn b_purple" type="button" id="caseReturnBtn" title="임시사건을 반려하기 위해 승인 요청하는 화면 호출">반려요청</button>
+							</div>
+							
+						</div>
+					</div><!-- tab_box -->
+					<div class="cont_box">
+						<div class="bbs_area w63per">
+							<h3 class="title-style1">
+								작성문서 목록
+								<div class="title_rBtn">
+									<a href="#" class="r_btn b_pink">KICS전송</a>
+									<a href="#" class="r_btn b_skyblue">우편자동발송</a>
+									<a href="#" class="r_btn white_b">삭제</a>
+								</div>
+							</h3>
+							<div class="bbs_list write">
+								<form name="srhForm" method="" action="">
+								<table>
+									<caption>"작성문서 목록" 내용입니다.</caption>
+									<colgroup>
+										<col style="width16%;">
+										<col style="width:16%;">
+										<col style="width:16%;">
+										<col style="width:16%;">
+										<col style="width:16%;">
+										<col >
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">관서</th>
+											<th scope="col">업종구분</th>
+											<th scope="col">대상 업체수</th>
+											<th scope="col">실시 업체수</th>
+											<th scope="col">위반</th>
+											<th scope="col">시정완료</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>35,985</td>
+											<td>84.75</td>
+											<td>35,985</td>
+											<td>3.3</td>
+											<td>35,985</td>
+											<td>35,985</td>
+										</tr>
+										<tr>
+											<td>35,985</td>
+											<td>84.75</td>
+											<td>35,985</td>
+											<td>3.3</td>
+											<td>35,985</td>
+											<td>35,985</td>
+										</tr>
+										<tr>
+											<td>35,985</td>
+											<td>84.75</td>
+											<td>35,985</td>
+											<td>3.3</td>
+											<td>35,985</td>
+											<td>35,985</td>
+										</tr>
+										<tr>
+											<td>35,985</td>
+											<td>84.75</td>
+											<td>35,985</td>
+											<td>3.3</td>
+											<td>35,985</td>
+											<td>35,985</td>
+										</tr>
+										<tr>
+											<td>35,985</td>
+											<td>84.75</td>
+											<td>35,985</td>
+											<td>3.3</td>
+											<td>35,985</td>
+											<td>35,985</td>
+										</tr>
+										<tr>
+											<td>35,985</td>
+											<td>84.75</td>
+											<td>35,985</td>
+											<td>3.3</td>
+											<td>35,985</td>
+											<td>35,985</td>
+										</tr>
+										<tr>
+											<td>35,985</td>
+											<td>84.75</td>
+											<td>35,985</td>
+											<td>3.3</td>
+											<td>35,985</td>
+											<td>35,985</td>
+										</tr>
+										<tr>
+											<td>35,985</td>
+											<td>84.75</td>
+											<td>35,985</td>
+											<td>3.3</td>
+											<td>35,985</td>
+											<td>35,985</td>
+										</tr>
+										<tr>
+											<td>35,985</td>
+											<td>84.75</td>
+											<td>35,985</td>
+											<td>3.3</td>
+											<td>35,985</td>
+											<td>35,985</td>
+										</tr>
+										<tr>
+											<td>35,985</td>
+											<td>84.75</td>
+											<td>35,985</td>
+											<td>3.3</td>
+											<td>35,985</td>
+											<td>35,985</td>
+										</tr>
+										<tr>
+											<td>35,985</td>
+											<td>84.75</td>
+											<td>35,985</td>
+											<td>3.3</td>
+											<td>35,985</td>
+											<td>35,985</td>
+										</tr>
+									</tbody>
+								</table>
+								</form>
+							</div>
+						</div>
+						<div class="bbs_area w35per">
+							<h3 class="title-style1">신규작성 서식</h3>
+							<div class="bt-box">
+								<div class="form_list1">
+									<ul>
+										<li class="on"><a href="#">긴급체포서</a></li>
+										<li><a href="#">긴급체포승인건의</a></li>
+										<li class="on"><a href="#">현행법인체포서</a></li>
+										<li class="on"><a href="#">현행범인인수서</a></li>
+										<li class="on"><a href="#">확인서</a></li>
+										<li><a href="#">피의자석방보고</a></li>
+										<li><a href="#">체포통지서</a></li>
+										<li class="on"><a href="#">피긴급자석방보고</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div><!-- cont_box -->
+				</div><!-- article -->
+			</div><!-- contents -->
+			
+			
+		</div><!-- container -->
+	</div>
+
+</body>
+</html>

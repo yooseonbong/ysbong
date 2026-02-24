@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>nosanuri</title>
+<script src="./js/jquery-1.12.4.js"></script>
+<script src="./js/jquery-ui.min.js"></script>
+<script src="./js/datepicker-ko.js"></script>
+<script src="./js/layout.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/common.css">
+<link rel="stylesheet" type="text/css" href="./css/layout.css">
+<link rel="stylesheet" type="text/css" href="./css/jquery-ui.min.css">
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+			<div class="top">
+				<h1><a href="#"><img src="./images/h1_logo.jpg" alt="고용노동부 노사누리 통계 시스템"></a></h1>
+				<div class="top_log">
+					<p><b><em>홍길동</em> 님</b>(산재예방지도과)</p>
+					<a href="#">로그아웃</a>
+				</div>
+			</div><!-- top -->
+			<div id="lnb">
+				<ul>
+					<li><a href="#"><span>근로감독</span></a></li>
+					<li><a href="#"><span>산업안전</span></a></li>
+					<li><a href="#"><span>성과관리</span></a></li>
+					<li class="lb"><a href="#"><span>근로감독(통계분석)</span></a></li>
+					<li class="lb"><a href="#"><span>산업안전(통계분석)</span></a></li>
+					<li class="lb"><a href="#"><span>성과관리(통계분석)</span></a></li>
+					<li class="lb"><a href="#"><span>신고사건(통계분석)</span></a></li>
+					<li><a href="#"><span>시스템관리</span></a></li>
+				</ul>
+			</div>
+		</div><!-- container -->
+		<div id="container">
+			<div id="snb">
+				<div class="inner">
+					<div class="snbTab">
+						<ul class="tab_list">
+							<li class="tm1 active">
+								<a href="#"><span>메뉴</span></a>
+								<div style="display: block;" class="tab_cont">
+									<div class="subMenu_box">
+										<h2>신고사건(통계분석)</h2>
+										<div class="snb_list">
+											<ul class="depth1">
+												<li>
+													<a href="#">사건처리실적보고</a>
+													<ul class="depth2">
+														<li>
+															<a href="#">가동상황별 현황</a>
+															<ul class="depth3">
+																<li><a href="#"><span>청별 관서별 시군구별 가동상황별 현황</span></a></li>
+																<li><a href="#"><span>청별 관서별 시군구별 규모별 현황</span></a></li>
+																<li><a href="#"><span>청별 관서별 시군구별 금품종류별 현황</span></a></li>
+																<li><a href="#"><span>청별 관서별 시군구별 법조항별 현황</span></a></li>
+															</ul>
+														</li>
+														<li class="nodepth">
+															<a href="#">규모별 현황</a>
+														</li>
+														<li>
+															<a href="#">금품종류별 현황</a>
+															<ul class="depth3">
+																<li><a href="#"><span>청별 관서별 시군구별 가동상황별 현황</span></a></li>
+																<li><a href="#"><span>청별 관서별 시군구별 규모별 현황</span></a></li>
+																<li><a href="#"><span>청별 관서별 시군구별 금품종류별 현황</span></a></li>
+																<li><a href="#"><span>청별 관서별 시군구별 법조항별 현황</span></a></li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href="#">임금체불현황</a>
+													<ul class="depth2">
+														<li>
+															<a href="#">가동상황별 현황</a>
+															<ul class="depth3">
+																<li><a href="#"><span>청별 관서별 시군구별 가동상황별 현황</span></a></li>
+																<li><a href="#"><span>청별 관서별 시군구별 규모별 현황</span></a></li>
+																<li><a href="#"><span>청별 관서별 시군구별 금품종류별 현황</span></a></li>
+																<li><a href="#"><span>청별 관서별 시군구별 법조항별 현황</span></a></li>
+															</ul>
+														</li>
+														<li class="nodepth">
+															<a href="#">규모별 현황</a>
+														</li>
+														<li>
+															<a href="#">금품종류별 현황</a>
+															<ul class="depth3">
+																<li><a href="#"><span>청별 관서별 시군구별 가동상황별 현황</span></a></li>
+																<li><a href="#"><span>청별 관서별 시군구별 규모별 현황</span></a></li>
+																<li><a href="#"><span>청별 관서별 시군구별 금품종류별 현황</span></a></li>
+																<li><a href="#"><span>청별 관서별 시군구별 법조항별 현황</span></a></li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href="#">체불현황</a>
+													<ul class="depth2">
+														<li>
+															<a href="#">가동상황별 현황</a>
+															<ul class="depth3">
+																<li><a href="#"><span>청별 관서별 시군구별 가동상황별 현황</span></a></li>
+																<li><a href="#"><span>청별 관서별 시군구별 규모별 현황</span></a></li>
+																<li><a href="#"><span>청별 관서별 시군구별 금품종류별 현황</span></a></li>
+																<li><a href="#"><span>청별 관서별 시군구별 법조항별 현황</span></a></li>
+															</ul>
+														</li>
+														<li class="nodepth">
+															<a href="#">규모별 현황</a>
+														</li>
+														<li>
+															<a href="#">금품종류별 현황</a>
+															<ul class="depth3">
+																<li><a href="#"><span>청별 관서별 시군구별 가동상황별 현황</span></a></li>
+																<li><a href="#"><span>청별 관서별 시군구별 규모별 현황</span></a></li>
+																<li><a href="#"><span>청별 관서별 시군구별 금품종류별 현황</span></a></li>
+																<li><a href="#"><span>청별 관서별 시군구별 법조항별 현황</span></a></li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href="#">체불현황 <span>(주간통계_매주수요일)</span></a>
+													<ul class="depth2">
+														<li>
+															<a href="#">가동상황별 현황</a>
+															<ul class="depth3">
+																<li><a href="#"><span>청별 관서별 시군구별 가동상황별 현황</span></a></li>
+																<li><a href="#"><span>청별 관서별 시군구별 규모별 현황</span></a></li>
+																<li><a href="#"><span>청별 관서별 시군구별 금품종류별 현황</span></a></li>
+																<li><a href="#"><span>청별 관서별 시군구별 법조항별 현황</span></a></li>
+															</ul>
+														</li>
+														<li class="nodepth">
+															<a href="#">규모별 현황</a>
+														</li>
+														<li>
+															<a href="#">금품종류별 현황</a>
+															<ul class="depth3">
+																<li><a href="#"><span>청별 관서별 시군구별 가동상황별 현황</span></a></li>
+																<li><a href="#"><span>청별 관서별 시군구별 규모별 현황</span></a></li>
+																<li><a href="#"><span>청별 관서별 시군구별 금품종류별 현황</span></a></li>
+																<li><a href="#"><span>청별 관서별 시군구별 법조항별 현황</span></a></li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</div><!-- subMenu-box -->
+								</div>
+							</li>
+							<li class="tm2">
+								<a href="#"><span>즐겨찾기</span></a>
+								<div style="display: none;" class="tab_cont">
+									<div class="bookMark_box">
+										<ul>
+											<li><a href="#"><span>사건처리실적보고</span></a></li>
+											<li><a href="#"><span>청별 관서별 규모별_위반법별_피해근로자별</span></a></li>
+											<li><a href="#"><span>해당년도의 누적으로 집계된 데이터</span></a></li>
+											<li><a href="#"><span>발생하는 이월 건수 차이를 보정하기 위한 항목</span></a></li>
+											<li><a href="#"><span>위반 건수에 포함하고 단일건수는 중복을 제거</span></a></li>
+											<li><a href="#"><span>사건처리실적보고</span></a></li>
+											<li><a href="#"><span>청별 관서별 규모별_위반법별_피해근로자별</span></a></li>
+											<li><a href="#"><span>해당년도의 누적으로 집계된 데이터</span></a></li>
+											<li><a href="#"><span>발생하는 이월 건수 차이를 보정하기 위한 항목</span></a></li>
+											<li><a href="#"><span>위반 건수에 포함하고 단일건수는 중복을 제거</span></a></li>
+										</ul>
+									</div><!-- bookMark_box -->
+								</div><!-- tab_cont -->
+							</li>
+							<li class="tm3">
+								<a href="#"><span>메뉴검색</span></a>
+								<div style="display: none;" class="tab_cont">
+									<div class="menuSearchbox">
+										<div class="name_srh">
+											<fieldset class="inner">
+												<legend>메뉴검색</legend>
+												<input type="text" name="menuSrh" id="menuSrh" placeholder="검색어를 입력하세요." title="메뉴 검색어 입력">
+												<button title="메뉴 검색어 조회">메뉴 검색어 조회</button>
+											</fieldset>
+										</div><!-- name_srh -->
+										<div class="name_result">
+											<p>“<b>사건</b>” 검색결과 총 <b>21</b>건</p>
+											<div class="name_list">
+												<ul>
+													<li><a href="#">신고<b>사건</b>-부당노동행위 신고<b>사건</b> 현황</a></li>
+													<li><a href="#">신고<b>사건</b>-체불통계</a></li>
+													<li><a href="#">신고<b>사건</b>-고액체불업체명단</a></li>
+													<li><a href="#">신고<b>사건</b>-개인별처리통계</a></li>
+													<li><a href="#">신고<b>사건</b>-관리자용(개인별처리통계)</a></li>
+													<li><a href="#">신고<b>사건</b>-본부용(개인별처리통계)</a></li>
+													<li><a href="#">신고<b>사건</b>-정기수감 자료</a></li>
+													<li><a href="#">신고<b>사건</b>-차별시정 신고현황</a></li>
+													<li><a href="#">신고<b>사건</b> 처리현황</a></li>
+													<li><a href="#">근로자파견사업 신고<b>사건</b>처리현황</a></li>
+													<li><a href="#">청별 관서별 규모별_위반법별_피해근로자별 <b>사건</b></a></li>
+													<li><a href="#">신고<b>사건</b>-부당노동행위 신고<b>사건</b> 현황</a></li>
+													<li><a href="#">신고<b>사건</b>-체불통계</a></li>
+													<li><a href="#">신고<b>사건</b>-고액체불업체명단</a></li>
+													<li><a href="#">신고<b>사건</b>-개인별처리통계</a></li>
+													<li><a href="#">신고<b>사건</b>-관리자용(개인별처리통계)</a></li>
+													<li><a href="#">신고<b>사건</b>-본부용(개인별처리통계)</a></li>
+													<li><a href="#">신고<b>사건</b>-정기수감 자료</a></li>
+													<li><a href="#">신고<b>사건</b>-차별시정 신고현황</a></li>
+													<li><a href="#">신고<b>사건</b> 처리현황</a></li>
+													<li><a href="#">근로자파견사업 신고<b>사건</b>처리현황</a></li>
+													<li><a href="#">청별 관서별 규모별_위반법별_피해근로자별 <b>사건</b></a></li>
+													<li><a href="#">신고<b>사건</b>-부당노동행위 신고<b>사건</b> 현황</a></li>
+													<li><a href="#">신고<b>사건</b>-체불통계</a></li>
+													<li><a href="#">신고<b>사건</b>-고액체불업체명단</a></li>
+													<li><a href="#">신고<b>사건</b>-개인별처리통계</a></li>
+													<li><a href="#">신고<b>사건</b>-관리자용(개인별처리통계)</a></li>
+													<li><a href="#">신고<b>사건</b>-본부용(개인별처리통계)</a></li>
+													<li><a href="#">신고<b>사건</b>-정기수감 자료</a></li>
+													<li><a href="#">신고<b>사건</b>-차별시정 신고현황</a></li>
+													<li><a href="#">신고<b>사건</b> 처리현황</a></li>
+													<li><a href="#">근로자파견사업 신고<b>사건</b>처리현황</a></li>
+													<li><a href="#">청별 관서별 규모별_위반법별_피해근로자별 <b>사건</b></a></li>
+												</ul>
+											</div>
+										</div><!-- name_result -->
+									</div><!-- menuSearchbox -->
+								</div><!-- tab_cont -->
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<button class="b-colse">메듀 닫기</button>
+			</div><!-- snb -->
+			
+			<div id="contents">
+				<div class="breadcrumb">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li>신고사건(통계분석)</li>
+						<li>사건처리실적보고 </li>
+						<li>접수처리현황</li>
+						<li><b>청별 관서별 규모별_위반법별_피해근로자별</b></li>
+					</ul>
+				</div><!-- breadcrumb -->
+				<h3 class="page_title"><button onclick="javascript:void(0);"><img src="./images/ico_bookmark_off.png" alt="즐겨찾기 추가"></button> 청별 관서별 규모별_위반법별_피해근로자별</h3>
+				<div class="article">
+					<div class="cont_tab">
+						<div class="inner">
+							<ul>
+								<li><a href="#">단체교섭 지도대상 통계</a></li>
+								<li><a href="#">단체협약 일반적 구속력 현황</a></li>
+								<li class="on"><a href="#">단체교섭 타결방식 현황</a></li>
+								<li><a href="#">단체교섭 타결방식 현황</a></li>
+								<li><a href="#">단체협약 일반적 구속력 현황</a></li>
+								<li><a href="#">단체협약 일반적 구속력 현황</a></li>
+								<li><a href="#">단체교섭 교섭일수 통계</a></li>
+							</ul>
+						</div>
+						<div class="tab_btn">
+							<a href="#" class="prev">이전</a>
+							<a href="#" class="next">다음</a>
+						</div>
+					</div><!-- cont_tab -->
+					<div class="searchBox">
+						<form name="" method="" action="">
+							<div class="inputList">
+								<ul>
+									<li class="w25per">
+										<label for="type1" class="w30per">업무구분</label> 
+										<select name="type1" id="type1" class="w60per" title="업무구분 선택">
+											<option value="전체">전체</option>
+										</select>
+									</li>
+									<li class="w50per">
+										<select name="name1" id="name1" class="w20per" title="검색어 선택">
+											<option value="업무명">업무명</option>
+										</select>
+										<input type="text" name="name2" id="name2" class="w60per" title="검색어 입력">
+									</li>
+									<li class="w25per">
+										<label for="type2" class="w30per">진행구분</label> 
+										<select name="type2" id="type2" class="w60per" title="진행구분 선택">
+											<option value="전체">접수&amp;처리중</option>
+										</select>
+									</li>
+									<li class="w25per">
+										<label for="type3" class="w30per">병합여부</label> 
+										<select name="type3" id="type3" class="w60per" title="병합여부 선택">
+											<option value="전체">전체</option>
+										</select>
+									</li>
+									<li class="w50per">
+										<label for="date1" class="w15per">접수기간</label> 
+										<input type="text" name="date1" id="date1" class="w20per" title="접수기간 시작일 선택"/> ~ <input type="text" name="date2" id="date2" class="w20per" title="접수기간 마감일 선택">
+										<select name="date3" id="date3" class="w20per" title="접수기간 선택">
+											<option value="전체">전체</option>
+										</select>
+									</li>
+									<li class="w25per">
+										<label for="num1" class="w30per">접수번호</label> 
+										<input type="text" name="num1" id="num1" class="w60per" title="접수번호 입력">
+									</li>
+								</ul>
+							</div>
+							<button class="btn_join" title="조회">조회</button>
+						</form>
+					</div><!-- search_box -->
+					<div class="referenceBox">
+						<ul>
+							<li><b>해당년도의 누적</b>으로 집계된 데이터 입니다</li>
+							<li>접수 및 처리 현황 통계 장표 중 <b>이월 조정항목은 민원시스템의 접수날짜와 노사누리 등록 시점이 달라 발생하는 이월 건수 차이</b>를 보정하기 위한 항목입니다.</li>
+							<li>중복건수는 동일사건에 대해 위반법이 같더라도 위반 건수에 포함하고 단일건수는 중복을 제거한 것입니다.</li>
+						</ul>
+						<button><span>참고사항 닫기</span></button>
+					</div><!-- referenceBox -->
+					<div class="resultBox">
+						<div class="result_top">
+							<p class="total">총 <b>4,560</b>건 <span>|</span>  현재페이지 : <b>1</b>/20</p>
+							<div class="result_btn"><button class="btn_reference"><span>참고사항</span></button> <button class="btn_excel"><span>엑셀다운로드</span></button></div>
+						</div><!-- result_top -->
+						<div class="bbs_list">
+							<form name="srhForm" method="" action="" >
+							<table style="width:1900px;">
+								<caption>"청별 관서별 규모별_위반법별_피해근로자별" 내용 및 검색 결과입니다.</caption>
+								<colgroup>
+									<col style="width:7.142857142857143%;">
+									<col style="width:7.142857142857143%;">
+									<col style="width:7.142857142857143%;">
+									<col style="width:7.142857142857143%;">
+									<col style="width:7.142857142857143%;">
+									<col style="width:7.142857142857143%;">
+									<col style="width:7.142857142857143%;">
+									<col style="width:7.142857142857143%;">
+									<col style="width:7.142857142857143%;">
+									<col style="width:7.142857142857143%;">
+									<col style="width:7.142857142857143%;">
+									<col style="width:7.142857142857143%;">
+									<col style="width:7.142857142857143%;">
+									<col style="width:7.142857142857143%;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" rowspan="3" class="arr_view">관서</th>
+										<th scope="col" rowspan="3" class="arr_view up">업종구분</th>
+										<th scope="col" rowspan="3" class="arr_view">대상 업체수</th>
+										<th scope="col" rowspan="3" class="arr_view">실시 업체수</th>
+										<th scope="col" colspan="4">위반</th>
+										<th scope="col" colspan="2">시정완료</th>
+										<th scope="col" colspan="4">미지정</th>
+									</tr>
+									<tr>
+										<th scope="col" rowspan="2"  class="arr_view down">위반업체수</th>
+										<th scope="col" rowspan="2">업체비율</th>
+										<th scope="col" rowspan="2">위반건수</th>
+										<th scope="col" rowspan="2">위반 업체당 건수</th>
+										<th scope="col" rowspan="2">업체수</th>
+										<th scope="col" rowspan="2">건수</th>
+										<th scope="col" colspan="2">사법처리</th>
+										<th scope="col" colspan="2">과태료</th>
+									</tr>
+									<tr>
+										<th scope="col">업체수</th>
+										<th scope="col">건수</th>
+										<th scope="col">업체수</th>
+										<th scope="col">건수</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+									</tr>
+									<tr>
+										<td class="ta-l">총 계</td>
+										<td class="ta-l">계</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+										<td>35,985</td>
+										<td>84.75</td>
+										<td>35,985</td>
+										<td>3.3</td>
+										<td>35,985</td>
+									</tr>
+								</tbody>
+							</table>
+							</form>
+						</div>
+						<div class="pagination">
+							<a href="#" title="이전페이지로" class="prev">이전</a>
+							<a href="#" class="on">1</a>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a> 
+							<a href="#">6</a>
+							<a href="#">7</a>
+							<a href="#">8</a>
+							<a href="#">9</a>
+							<a href="#">10</a> 
+							<a href="#" title="다음페이지로" class="next">다음</a> 
+							<div class="tableLineSelect">
+								<select name="page" id="page" title="테이블의 라인 갯수 선택">
+									<option value="20개">20개씩</option>
+									<option value="30개">30개씩</option>
+									<option value="40개">40개씩</option>
+									<option value="50개">50개씩</option>
+									<option value="60개">60개씩</option>
+									<option value="70개">70개씩</option>
+								</select>
+							</div>
+						</div><!-- pagination -->
+						
+					</div><!-- resultBox -->
+				</div><!-- article -->
+			</div><!-- contents -->
+		</div><!-- container -->
+		
+		<div id="footer">
+			<p class="address">(우 30117) 세종특별자치시 한누리대로 422 정부세종청사 11동 3층, 4층 대표전화: 044)202-8226 (부서별 전화번호)</p>
+			<p class="copyright">Copyright 2014. National Labor Relations Commission. All right reserved</p>
+		</div>
+	</div>
+</body>
+</html>

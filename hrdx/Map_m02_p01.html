@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRDX</title>
+    
+    <!-- css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/network.css"> <!--단비꺼야-->
+    <link rel="stylesheet" href="./css/style.css"> <!--선봉꺼야-->
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
+    
+    <!-- js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <!-- header start -->
+    <header id="header">
+      <div class="headerArea">
+        <!-- header contents -->
+        <h1 class="logoArea">
+          <a href="M10_m01_t01.html"><img src="./img/Group 63399748.png" alt="IC360" title="CAREER ADVISOR"></a>
+        </h1>
+        <!-- GNB start -->
+        <nav class="gnbArea">
+          <ul class="gnbList">
+            <li class="menuList"><span><a href="M2_m01_2.html">매칭검색</a></span></li>
+            <li class="menuList"><span><a href="M3_m03.html">경력개발</a></span></li>
+            <li class="menuList"><span><a href="#">육성프로그램</a></span></li>
+            <li class="menuList"><span><a href="M5_m01.html">조직자관리</a></span></li>
+            <li class="menuList"><span><a href="M6_m01.html">인사지원</a></span></li>
+          </ul>
+        </nav>
+        <!-- info start-->
+        <div class="infoWrap">
+          <ul>
+            <li class="analyze"><a href="Map_m01_p01.html"><img src="./img/ic_map_red.png" alt="업무경험아이콘" title="업무경험 바로가기"><span>업무경험 Map</span></a></li>
+            <li class="info"><a href="javascript:openModal('alramPopup');"><img src="./img/ic_alarm.png" alt="알람아이콘" title="알림"><i>999</i></a></li>
+          </ul>
+        </div>
+      </div>     
+      <!-- GNB end -->
+    </header>
+    <!-- header end -->
+    <!-- section start -->
+    <section>
+      <article>
+        <div class="middleContents">
+          <div class="networkTab">
+            <ul>
+              <li class="active">
+                <button>
+                  <span>
+                    <img src="./img/user_on.png" alt="조직">
+                  </span> 
+                  <em>조직</em>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span>
+                    <img src="./img/work_off.png" alt="업무경험">
+                  </span> 
+                  <em>업무경험</em>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span>
+                    <img src="./img/users_off.png" alt="개인">
+                  </span> 
+                  <em>개인</em>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="tabFoldArea scroll active">
+            <button class="foldBtn" ></button>
+            <div class="detailContents active">
+              <div class="historySection mb30">
+                <p class="titleDot">DX과제/전사Task과제 수행 DX과제/전사Task과제 수행 DX과제/전사Task과제 수행</p>
+              </div>
+              <div class="historySection mb30">
+                <p>숙련도 Top5</p>
+                <button type="button" class="requestBtn">지원요청</button>
+                <div class="proficiencyTable">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th style="width: 44px;"></th>
+                        <th style="width: 44px;"></th>
+                        <th>조직</th>
+                        <th style="width: 90px;">이름</th>
+                      </tr>
+                    </thead>
+                    <tbody class="mapFirstTable">
+                      <tr>
+                        <td>
+                          <label class="checkType" title="선택"><input type="checkbox" id="test7" name="test2" title="테스트를 위한 선택박스"><span class="checkmark"></span>
+                          </label>
+                        </td>
+                        <td>1</td>
+                        <td>HE본부 > 구매전략팀</td>
+                        <td>가나다 책임</td>
+                      </tr>
+                      <tr class="even">
+                        <td>
+                          <label class="checkType" title="선택"><input type="checkbox" id="test7" name="test2" title="테스트를 위한 선택박스"><span class="checkmark"></span>
+                          </label>
+                        </td>
+                        <td>2</td>
+                        <td>글로벌오퍼레이션센터 > DX Task팀</td>
+                        <td>가나다 책임</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="checkType" title="선택"><input type="checkbox" id="test7" name="test2" title="테스트를 위한 선택박스"><span class="checkmark"></span>
+                          </label>
+                        </td>
+                        <td>3</td>
+                        <td>-</td>
+                        <td>가나다 책임</td>
+                      </tr>
+                      <tr class="even">
+                        <td>
+                          <label class="checkType" title="선택"><input type="checkbox" id="test7" name="test2" title="테스트를 위한 선택박스"><span class="checkmark"></span>
+                          </label>
+                        </td>
+                        <td>4</td>
+                        <td>-</td>
+                        <td>가나다 책임</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="checkType" title="선택"><input type="checkbox" id="test7" name="test2" title="테스트를 위한 선택박스"><span class="checkmark"></span>
+                          </label>
+                        </td>
+                        <td>5</td>
+                        <td>-</td>
+                        <td>가나다 책임</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="historySection mb30">
+                <p>올해 업무 Positioning</p>
+                <div class="taskPositioning">
+                  <p class="innerTitle">운영유지 (Run)</p>
+                  <ul>
+                    <li class="active">DX 과제 / 전사 Task 과제 수행</li>
+                    <li>부품 재료비 관리 Tool</li>
+                    <li>부품 재료비 설정 Target Costing 강화</li>
+                    <li>DX 과제 / 전사 Task 과제 수행</li>
+                    <li>부품 재료비 관리 Tool</li>
+                    <li>부품 재료비 설정 Target Costing 강화</li>
+                    <li>DX 과제 / 전사 Task 과제 수행</li>
+                    <li>부품 재료비 관리 Tool</li>
+                    <li>부품 재료비 설정 Target Costing 강화</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>   
+    <!-- alramPopup -->
+  <div class="modalContents alramPopup w420px">
+    <div class="alramPopupContents stickyTbody bodyScroll scroll ofy border3">
+      <div class="alramContentSPart">
+        <div class="contentsSection active">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀 [Call sign] HE 반도체 구매팀 [Call sign] HE 반도체 구매팀 [Call sign] HE 반도체 구매팀 [Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+      <div class="alramContentSPart">
+        <div class="contentsSection">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+      <div class="alramContentSPart">
+        <div class="contentsSection">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+      <div class="alramContentSPart">
+        <div class="contentsSection">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+      <div class="alramContentSPart">
+        <div class="contentsSection active">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+      <div class="alramContentSPart">
+        <div class="contentsSection active">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="alramContentSBottom">
+      <button>더보기 <span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
+        <path d="M0.577148 6H12.5771" stroke="black"/>
+        <path d="M6.57715 0L6.57715 12" stroke="black"/>
+        </svg></span></button>
+    </div>
+  </div>  
+  <!-- alramPopup -->
+<script type="text/javascript" src="./js/main.js"></script> 
+<script type="text/javascript" src="./js/style.js"></script> 
+<!-- <script type="text/javascript" src="/js/sample.js"></script>  -->
+</body>
+</html>

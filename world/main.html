@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=yes">
+<meta property="og:type" content="website">
+<meta property="og:title" content="세계법제정보센터">
+<meta property="og:url" content="http://world.moleg.go.kr">
+<meta property="og:description" content="세계 각국의 주요 법률, 법제동향 등 법령정보를 수집·가공하여 국가·지역·기구별로 제공.">
+<meta property="og:image" content="http://world.moleg.go.kr/web/images/common/logo.gif">
+<meta property="og:image:width" content="180">
+<meta property="og:image:height" content="34">
+<meta name="author" content="세계법제정보센터">
+<meta name="copyright" content="세계법제정보센터">
+<meta name="keyword" content="세계법제정보센터,세계법제정보,법령정보,주제별법제,법제동향">
+<meta name="description" content="세계 각국의 주요 법령, 연구보고서, 최신 입법동향 등 해외법령정보를 수집·가공하여 제공하는 웹사이트">
+<meta name="Yeti" content="All">
+<meta name="Yeti" content="index,follow">
+<meta name="NaverBot" content="All">
+<meta name="NaverBot" content="index,follow">
+<meta name="robots" content="index,follow">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>세계법제정보센터</title>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/sub.css">
+<link rel="stylesheet" href="css/respon.css">
+<link rel="stylesheet" href="http://world.moleg.go.kr/web/css/print.css" media="print">
+<link rel="shortcut icon" href="http://world.moleg.go.krhttp://world.moleg.go.kr/oweb/images/favicon.ico">
+<style>
+.mylgsinfo {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis
+}
+</style>
+<script type="text/javascript" async="" src="http://world.moleg.go.krhttp://www.googleadservices.com/pagead/conversion_async.js"></script>
+<script async="" src="http://world.moleg.go.krhttp://www.google-analytics.com/analytics.js"></script>
+<script src="https://world.moleg.go.kr/web/js/jquery-1.11.1.min.js"></script>
+<script src="http://world.moleg.go.kr/web/js/jquery.migrate.1.2.1.js"></script>
+<script src="http://world.moleg.go.kr/web/js/flexslider.js"></script>
+<script src="http://world.moleg.go.kr/web/js/bx_slider.js"></script>
+<script src="js/common.js"></script>
+<script src="http://world.moleg.go.kr/cms/js/ajax.mapping.js"></script>
+<script src="http://world.moleg.go.kr/cms/js/cms.js"></script>
+<script src="http://world.moleg.go.kr/cms/js/comn.js"></script>
+<!-- <script src="http://world.moleg.go.kr/web/js/ark_main.js"></script>-->
+<script src="http://world.moleg.go.kr/web/js/search.js"></script>
+<script> 
+	$(function() {
+		$(".map-view").click(function() {
+			$(".map-bg").fadeIn('fast');
+			$(".m-back-gnb").fadeIn('fast');
+		});
+
+		$(".map-close").click(function() {
+			$(".map-bg").fadeOut('fast');
+			$(".m-back-gnb").fadeOut('fast');
+			$("#marquee").attr("tabindex",-1).focus();
+		});
+
+		/* 20220404 - 접근성 추가*/
+		$(".map-close").on("keydown",function(e) {
+            if(e.keyCode == 9){ // tab 키 눌렀을 때
+            	if(e.shiftKey){
+            		
+            	}else {
+            		setTimeout(function(){
+            		    $('.li1 > a').focus();
+            		}, 0);
+                }
+            }
+        });
+		
+		//$('#search-ipt').focus();
+
+		window.onload = function() {
+			openPollOpnBox();
+			openDemandPopUp();
+			//              openPopup();
+			//              openPopup2();
+			$(".main-cont4-v-cont").css("height", "auto");
+		}
+		
+		// 오늘의 법령 없을 시
+		if('1' == '0'){
+			$("#marquee > li.bx-clone").remove();
+		    $("#marquee > li").css("top", "50px");
+		}else if('1' == '1'){
+			$("#marquee > li.bx-clone").remove();
+            $("#marquee > li").css("top", "50px");
+		}
+		
+		// 공지사항 없을 시
+		if('1' == '0'){
+			$("#marquee2 > li.bx-clone").remove();
+            $("#marquee2 > li").css("top", "50px");
+		}else if('1' == '1'){
+			$("#marquee2 > li.bx-clone").remove();
+            $("#marquee2 > li").css("top", "50px");
+		}
+		
+	});
+
+	
+
+	// 오늘의 법령 새 탭 이동
+	function fncTodayLgsl(url) {
+		window.open(url, "_blank");
+	}
+
+	// 공지사항
+	function fncNoticeListPopup(NEWS_SEQ) {
+		// 공지사항 조회수 증가
+		var data = {};
+		data.NEWS_SEQ = NEWS_SEQ;
+		fncJson('http://world.moleg.go.kr/web/intrcn/updateVWcnt.do', data,
+				function() {
+
+				});
+
+		openWindow("http://world.moleg.go.kr/web/main/noticePopup.do?NEWS_SEQ=" + NEWS_SEQ,
+				"noticePopup", "600", "380");
+	}
+
+	//      // 법제정보 상세페이지 이동
+	//      function fncGoReadLgInfoPage(CTS_SEQ, AST_SEQ, ETC) {
+	//          var url = 'http://world.moleg.go.kr/web/wli/lgslInfoReadPage.do?' + "CTS_SEQ=" + CTS_SEQ + "&AST_SEQ=" + AST_SEQ + "&ETC="+ETC;
+	//          location.href = url;
+	//      }
+
+	// 법제 동향 상세페이지 이동
+	function fncGoReadLgTrendPage(CTS_SEQ, AST_SEQ, ETC) {
+		var url = 'http://world.moleg.go.kr/web/dta/lgslTrendReadPage.do?'
+				+ "CTS_SEQ=" + CTS_SEQ + "&AST_SEQ=" + AST_SEQ + "&ETC=" + ETC;
+		location.href = url;
+	}
+
+	// 맞춤형 법령정보 상세페이지 이동
+	// 구글봇 url크롤링을 위해 주석 처리 후 jstl로 href탈 수 있게 변경
+	/* 
+	function fncGoclmserLgslInfoReadPage(ID, OP_YN) {
+		if (OP_YN == "N") {
+			location.href = 'http://world.moleg.go.kr/web/wli/clmserLgslInfoListPage.do';
+		} else {
+			var url = 'http://world.moleg.go.kr/web/wli/clmserLgslInfoReadPage.do?CULSISRVBRD_SEQ='
+					+ ID;
+			location.href = url;
+		}
+	} 
+	*/
+
+	function fncGoListLglsInfoPage1(searchNtnlCls, searchNtnl) {
+		var url = 'http://world.moleg.go.kr/web/wli/lgslInfoListPage.do?searchNtnlCls='
+				+ searchNtnlCls + "&searchNtnl=" + searchNtnl;
+		location.href = url;
+	}
+
+	//상세검색
+	function fncGoMainTotalSearchDetail() {
+		var query = $('#search-ipt').val();
+
+		if (!query == 'undefined') {
+			query = encodeURI(encodeURIComponent(query));
+		} else {
+			query = '';
+		}
+		var url = 'http://world.moleg.go.kr/web/main/searchDetailXten.do?q=' + query;
+		location.href = url;
+	}
+
+	//통합검색
+	function fncGoTotalSearch() {
+		var query = $('#search-ipt2').val();
+		if (query == "") {
+			alert("검색어를 입력하세요.");
+			return false;
+		}
+
+		var url = '/sc/search.do?q=' + query
+				+ "&w=SE_WD&fsort=";
+		location.href = url;
+	}
+
+	// 법제정보 목록 페이지 이동
+	function fncGoListLglsInfoPage() {
+		var searchNtnlCls = $('#searchNtnlCls').val();
+		var searchNtnl = $('#searchNtnl').val();
+
+		if (searchNtnlCls == null || searchNtnlCls == "" || searchNtnl == null
+				|| searchNtnl == "") {
+			alert('지역 및 국가를 선택해주세요');
+			$('.AidA1').focus();
+			return false;
+		}
+		var url = 'http://world.moleg.go.kr/web/wli/lgslInfoListPage.do?searchNtnlCls='
+				+ searchNtnlCls + "&searchNtnl=" + searchNtnl;
+		location.href = url;
+	}
+
+	function fncSelectNtnl(ntnlNm, searchNtnlCls, searchNtnl) {
+		$('#searchNtnlCls').val(searchNtnlCls);
+		$('#searchNtnl').val(searchNtnl);
+		$('#UlIdNtnl').hide();
+		$('.map2-cont').hide();
+		$('#AidNtnlNm').html(ntnlNm);
+	}
+
+	//국가정보 조회
+	function fncChangeNtnlJsonList(NTNL_CLS_KO_NM, NTNL_CLS_SEQ) {
+		$('#AidNtnlClsNm').html(NTNL_CLS_KO_NM);
+		$('#UlIdNtnlCls').hide();
+		$('#UlIdNtnl').html('');
+		if (NTNL_CLS_SEQ != '') {
+			var html = "";
+			var data = {};
+			data.NTNL_CLS_SEQ = NTNL_CLS_SEQ;
+			data.MAIN_NTNL_AT = 'Y';
+			fncJson(
+					'http://world.moleg.go.kr/web/wli/ntnlJsonList.do',
+					data,
+					function(returnData) {
+						$
+								.each(
+										returnData,
+										function(key, item) {
+											var ISO_NTNL_CD = item.ISO_NTNL_CD;
+											var KO_NM = item.KO_NM;
+											html += "<li><a href=\"#\" onclick=\"fncSelectNtnl('"
+													+ KO_NM
+													+ "','"
+													+ NTNL_CLS_SEQ
+													+ "', '"
+													+ ISO_NTNL_CD
+													+ "');return false;\">"
+													+ KO_NM + "</a></li>";
+										});
+						$('#UlIdNtnl').html(html);
+					});
+		}
+	}
+
+	/* function fncShowNtnlCls(){
+	    $('#UlIdNtnlCls').toggle();
+	}
+	
+	function fncShowNtnl(){
+	    
+	    $('#UlIdNtnl').toggle();
+	    $('.map2-cont').toggle();
+	    
+	} */
+
+	//엔터검색
+	function fncEnterSearch(e) {
+		var key = e.keyCode || e.which;
+		if (key == '13') {
+			fncGoTotalSearch();
+		}
+	}
+</script>
+
+<!-- <script> window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config', 'AW-747256364'); </script>-->
+
+</head>
+<body>
+	<div class="skip-nav">
+		<a href="#search-ipt2" class="btn_skip">본문 바로가기</a>
+		<a href="#gnb">주메뉴 바로가기</a>
+	</div>
+
+<!-- Google Analytics -->
+<script> 
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-157976819-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+      
+
+	<script src="http://world.moleg.go.kr/web/js/makePCookie.js"></script>
+<script>
+$(document).ready(function(){
+	/*var today = new Date();
+    var sameday = new Date("2022-10-01");
+    if(today.getTime() > sameday.getTime()){
+        $(".srvEvt").remove();
+    }*/
+    $(".research_layer").click(function(){
+        window.open('http://world.moleg.go.kr/web/main/pollPopup.do', 'service_pollOpn20160602', "top=50, left=10, width=530, height=800");
+    });
+});
+function fncGoTotalSearchWord(query) {
+    query = encodeURI(encodeURIComponent(query));
+    var url = '/sc/search.do?q='+query+"&w=SE_WD&main=M&fsort=";
+    location.href = url;
+}
+
+//통합검색
+function fncGoTotalSearch() {
+    var query = $('#search-ipt2').val();
+    
+    if(query ==""){
+        alert("검색어를 입력하세요.");
+        return;
+    }
+    
+    query = encodeURI(encodeURIComponent(query));
+    var url = '/sc/search.do?q='+query+"&w=SE_WD&main=M&fsort=";
+    location.href = url;
+}
+
+//상세검색
+function fncGoTotalSearchDetail() {
+    var q = $('#search-ipt2').val();
+    q = encodeURI(q);
+    var Query = "";
+    if(true){
+        Query = "0";
+    }else{
+        Query = "1";
+    }
+    var url = 'http://world.moleg.go.kr/web/main/searchDetailXten.do?q='+q+"&Query="+Query;
+    location.href = url;
+}
+
+//모바일 통합검색
+function fncGoTotalSearchMobile() {
+    var queryMobile = $('#queryMobile').val();
+    if(queryMobile == ""){
+        alert("검색어를 입력하세요.");
+        return false;
+    }
+    queryMobile = encodeURI(encodeURIComponent(queryMobile));
+    var url = '/sc/search.do?q='+queryMobile+"&w=SE_WD&main=M&fsort=";
+    location.href = url;
+}
+
+//모바일 상세검색
+function fncGoTotalSearchDetailMobile() {
+    var queryMobile = $('#queryMobile').val();
+    queryMobile = encodeURI(encodeURIComponent(queryMobile));
+    var Query = "";
+    if(true){
+        Query = "0";
+    }else{
+        Query = "1";
+    }
+    var url = 'http://world.moleg.go.kr/web/main/searchDetailXten.do?q='+queryMobile+"&Query="+Query;
+    location.href = url;
+}
+
+//엔터검색
+function fncEnterSearchHeader(e) {
+    var key = e.keyCode || e.which;
+    if (key == '13') {
+        fncGoTotalSearch();
+    }
+}
+
+//법령 의견 보내기 
+function fncGoLgslOpinionWrite(){
+	
+	var ttl = $('#OP_TTL').val();
+	if(ttl == ""){
+	        alert("제목을 입력하세요.");
+	        return false;
+	}
+	
+	var cts = $('#OP_CTS').val();
+	if(cts == ""){
+	        alert("내용을 입력하세요.");
+	        return false;
+	}
+	
+	var form = $("#LAWORD_OPINION_Form");
+	form.attr("action", "http://world.moleg.go.kr/web/intrcn/LawordOpinionWrite.do");
+	form.submit();
+}
+//확장자
+function checkBasicExtNames(el){
+    
+    var src = getFileType(el.value);
+    var ext = src.toLowerCase();
+    var fileId = $(el).attr("id");
+    var file = $('#'+fileId).get(0).files[0];
+    
+    if(el.value == "") return true;
+
+    if(file.size > 100 * 1024 * 1024){
+        
+        //용량 초과시 alert(창)
+        alert("파일 사이즈는 100MB이하로 업로드해주세요");
+        $('#'+fileId).val("");
+        return false;
+    }
+    
+    if(ext == "pdf" || ext == "doc" || ext == "docx" || ext == "ppt"  || ext == "pptx" || ext == "hwp" || ext == "xls" ||ext == "xlsx" 
+        || ext == "jpg" || ext == "png" || ext == "jpeg" || ext == "gif" ) {
+        return true;
+    } else {
+       alert(" 파일은 pdf, doc, docx, ppt, pptx, hwp, xls, xlsx, jpg, png, PNG, JPG, jpeg, JPEG, GIF, gif 형식만 등록 가능합니다.");  
+       $('#'+fileId).val(""); 
+       return false;              
+    }
+    
+
+    if(file.size > 100 * 1024 * 1024){
+        
+        //용량 초과시 alert(창)
+        alert("파일 사이즈는 100MB이하로 업로드해주세요");
+        $('#'+fileId).val("");
+        return false;
+    }
+
+}
+function getFileType(filePath) {
+    var index = -1;
+    index = filePath.lastIndexOf('.');
+    var type = "";
+    if(index != -1) {
+          type = filePath.substring(index+1, filePath.len);
+    } else {
+     type = "";
+    }
+    return type;
+} 
+
+/* 페이징버튼 href="" 관련  */
+$(document).ready(function(){
+   var currentPath = $(location).attr('pathname');
+   if($(".pagenation").length > 0){
+	   if(currentPath.indexOf('themaLgslListPage.do') > -1){
+		   $(".pagenation > .pg_wrap > .ds_no").attr('href',currentPath+'?code=');
+		   $(".pg").attr('href',currentPath+'?code=');
+	   }else{
+		   $(".pagenation > .pg_wrap > .ds_no").attr('href',currentPath);
+		   $(".pg").attr('href',currentPath);
+	   }
+   }
+});
+</script>
+<div id="wrap">
+	<div class="header main_head" id="header">
+		<div class="header-tp">
+			<h1>
+				<a href="http://world.moleg.go.kr/web/main/index.do" title="메인페이지로 이동">
+					<img src="http://world.moleg.go.kr/web/images/common/logo.gif" alt="세계법제정보센터 World Laws Information Center 로고">
+				</a>
+			</h1>
+
+			<div class="sub_search">
+				<div class="sub_search_ct">
+					<label for="search-ipt2" class="blind">통합검색</label>
+					<input type="text" id="search-ipt2" name="query" placeholder="검색어를 입력하세요" onkeypress="fncEnterSearchHeader(event);" autocomplete="off" data-siid="si_input_0">
+					<ul class="search-key" id="autoBody" style="display: none;">
+						<li><a id="bg0" href="#" onclick="onClickKeyword(0);"><font style="color:#CC6633">대통령</font>에 관한 헌법적 법률<span id="f0" style="display:none;"><font style="color:#CC6633">대통령</font>에 관한 헌법적 법률</span></a></li>
+						<li><a id="bg1" href="#" onclick="onClickKeyword(1);"><font style="color:#CC6633">대통령</font>선거법<span id="f1" style="display:none;"><font style="color:#CC6633">대통령</font>선거법</span></a></li>
+						<li><a id="bg2" href="#" onclick="onClickKeyword(2);"><font style="color:#CC6633">대통령</font> 육상운송법 공포<span id="f2" style="display:none;"><font style="color:#CC6633">대통령</font> 육상운송법 공포</span></a></li>
+						<li><a id="bg3" href="#" onclick="onClickKeyword(3);"><font style="color:#CC6633">대통령</font>예우에 관한 법률<span id="f3" style="display:none;"><font style="color:#CC6633">대통령</font>예우에 관한 법률</span></a></li>
+						<li><a id="bg4" href="#" onclick="onClickKeyword(4);"><font style="color:#CC6633">대통령</font> 선거법<span id="f4" style="display:none;"><font style="color:#CC6633">대통령</font> 선거법</span></a></li>
+						<li><a id="bg5" href="#" onclick="onClickKeyword(5);"><font style="color:#CC6633">대통령</font>선거비용지급계좌법<span id="f5" style="display:none;"><font style="color:#CC6633">대통령</font>선거비용지급계좌법</span></a></li>
+						<li><a id="bg6" href="#" onclick="onClickKeyword(6);"><font style="color:#CC6633">대통령</font>선거자금법<span id="f6" style="display:none;"><font style="color:#CC6633">대통령</font>선거자금법</span></a></li>
+						<li><a id="bg7" href="#" onclick="onClickKeyword(7);"><font style="color:#CC6633">대통령</font>법<span id="f7" style="display:none;"><font style="color:#CC6633">대통령</font>법</span></a></li><li><a id="bg8" href="#" onclick="onClickKeyword(8);"><font style="color:#CC6633">대통령</font>선거법 <span id="f8" style="display:none;"><font style="color:#CC6633">대통령</font>선거법 </span></a></li>
+						<li><a id="bg9" href="#" onclick="onClickKeyword(9);"><font style="color:#CC6633">대통령</font>실<span id="f9" style="display:none;"><font style="color:#CC6633">대통령</font>실</span></a></li>
+					</ul>
+					<a href="javascript:fncGoTotalSearch();"><img src="images/common/sub_search2_new1.png" alt="검색"></a>
+				</div>
+				<a href="javascript:fncGoTotalSearchDetail();" class="search_Hbtn">상세검색</a>
+				<div class="clear"></div>
+			</div>
+			<div class="mo-search"><a href="javascript:void(0);"><img src="images/common/tp-search_new1.png" alt="검색"></a></div>
+			<div class="sb_search_bg" style="display: none;"></div>
+			<div class="sub_search mobile_search"  style="display: none;">
+				<div class="sub_search_ct">
+					<label for="queryMobile" class="blind">검색어를 입력하세요</label>
+					<input type="text" id="queryMobile" name="queryMobile" placeholder="검색어를 입력하세요" data-siid="si_input_1">
+					<a href="javascript:fncGoTotalSearchMobile();"><img src="images/common/sub_search2_new1.png" alt="검색"></a>
+				</div>
+				<a href="javascript:fncGoTotalSearchDetailMobile();" class="search_Hbtn">상세검색</a>
+				<div class="clear"></div>
+			</div>
+
+			<div class="header-tp-rt">
+				<ul class="ul2">
+					<li><a href="javascript:void(0)" class="pop1-view">법령 오류신고</a></li>
+					<li><a href="javascript:void(0)" title="새창" class="btn-faq research_layer">설문조사</a></li>
+				</ul>
+			</div>
+			<div class="btn-gnb"><a href="javascript:void(0)"><img src="images/common/m_menu_new1.png" alt="메뉴열기"></a></div>
+		</div>
+		<!-- 법령오류신고 팝업1 s -->
+		<form id="LAWORD_OPINION_Form" name="LAWORD_OPINION_Form" method="post" enctype="multipart/form-data">
+			<input type="hidden" name="egovframework.double.submit.preventer.parameter.name" value="5195C398-4431-49E4-B2B6-1BDB8449CDD3">
+			<input type="hidden" id="FILE_IDS" name="FILE_IDS" value="1">
+			<div class="pop-bg pop1-bg" style="display: none;">
+				<!-- <div class="sub_title title_bor">법령 내용 문의</div> -->
+				<div class="popup_tit">
+					<h3>법령 오류신고</h3>
+					<a href="javascript:void(0)" class="pop-close pop1-c"><img src="http://world.moleg.go.kr/web/images/sub/popup_close.png" alt="법령오류신고 닫기"></a>
+				</div>
+				<!-- <ul class="sub04_bgfont">
+					<li>법령정보관리원은 법령정보를 체계적으로 수집, 관리하고 이를 신속ㆍ정확하게 제공하며, 
+					법제정책에 관한 교육ㆍ홍보사업을 수행함으로써 법치행정 구현에 이바지함을 목적으로 하는 기관으로서, 
+					법제처로부터 세계법제사업을 수탁 받아 해당업무를 수행하고 있습니다. 
+					<br>법령관련 내용문의 전화 : 02-460-2838
+					</li>
+				</ul> -->
+				<!-- <div id="lgslErr" name="lgslErr" class="sub_title title_bor mt2">법령 의견 보내기</div> -->
+				<div class="top_bor mt3">
+					<script>
+						var fileNextId = 1;
+						var fileIds = [];
+						fileIds[0] = 1;
+						
+						function fncAddFileId(id){
+							fileIds.push(id);
+							$('#FILE_IDS').val(fncGetFileId());
+						}
+						$(function() {
+							$(".pop1-view").click(function(){
+								$(".pop1-bg").fadeIn('fast');
+								$(".m-back-gnb").fadeIn('fast');
+							});
+							$(".pop2-view").click(function(){
+								$(".pop2-bg").fadeIn('fast');
+								$(".m-back-gnb").fadeIn('fast');
+							});     
+							
+							/* 
+							$(".pop-close").click(function(){
+								$(".pop-bg").fadeOut('fast');
+								$(".m-back-gnb").fadeOut('fast');
+							}); 
+							*/
+							
+							$(".pop-close").click(function(){
+								if($(window).width() > 1024){
+									$(".pop-bg").fadeOut('fast');
+									$(".m-back-gnb").fadeOut('fast');
+								}else{
+									$(".pop-bg").fadeOut('fast');
+								}
+							});
+							
+							/* 20171215 - 접근성추가 */
+							$(".pop1-c").click(function(){
+								$(".btn-faq").focus();
+							});
+							
+							$(".all-menu-close").click(function(e){
+								//$("#search-ipt").focus(); /* 20171215 - 접근성추가 */
+								$(".all-menu").fadeOut('fast');
+								$(".m-back-gnb").fadeOut('fast');
+								$(".mp1 a").focus(); 
+								e.stopPropagation();
+							});
+
+							/* 20220404 - 접근성 추가*/
+							$(".all-menu-close").on("keydown",function(e) {
+								if(e.keyCode == 9){ // tab 키 눌렀을 때
+									if(e.shiftKey){
+										
+									 }else {
+										 setTimeout(function(){
+												$('.all-menu-cont > ul > li:first-child > ul > li:first-child > a').focus();
+											}, 0);
+										//$(".all-menu").fadeOut('fast');
+										//$(".m-back-gnb").fadeOut('fast');
+										//$(".sub-location-cont ul li:first a").focus(); /* 20171215 - 접근성추가 */
+											
+									}
+								}
+							});
+								
+							
+						});
+					</script>
+					<table class="sub_table2 write_top" style="width: 100%">
+						<caption>법령 오류신고 팝업으로 구분(콘텐츠오류, 기술오류, 기능제안, 기타불편사항), 제목, 첨부파일, 내용란을 제공.</caption>
+						<colgroup>
+							<col style="width:16%">
+							<col style="width:84%">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">구분</th>
+								<td>
+									<span class="pr1">
+										<input type="radio" name="NEWS_AST_CD" id="sub4_in1" value="520010" checked="checked">
+										<label for="sub4_in1">컨텐츠오류(현행화, 내용, 오탈자 등)</label>
+									</span>
+									<span class="pr1">
+										<input type="radio" name="NEWS_AST_CD" id="sub4_in2" value="520011">
+										<label for="sub4_in2">기술오류(페이지, 링크, 검색 등)</label>
+									</span>
+									<span class="pr1">
+										<input type="radio" name="NEWS_AST_CD" id="sub4_in3" value="520012">
+										<label for="sub4_in3">기능제안 </label>
+									</span>
+									<span>
+										<input type="radio" name="NEWS_AST_CD" id="sub4_in4" value="520013">
+										<label for="sub4_in4">기타 불편사항</label>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"><label for="OP_TTL">제목</label></th>
+								<td><input type="text" id="OP_TTL" name="TTL" value="" data-siid="si_input_0"></td>
+							</tr>
+							<tr>
+								<th scope="row"><label for="FIEL_1">첨부파일</label></th>
+								<td><input type="file" id="FIEL_1" name="FILE_1" onchange="checkBasicExtNames(this)"></td>
+							</tr>
+							<tr>
+								<th scope="row"><label for="OP_CTS">내용</label></th>
+								<td><textarea cols="30" rows="5" id="OP_CTS" name="CTS"></textarea></td>
+							</tr>
+						</tbody>
+					</table>    
+				</div>
+				<p class="pt15 pb3 text_right">
+					<a class="a_button a_green" href="javascript:void(0)" onclick="fncGoLgslOpinionWrite();">보내기</a>
+				</p>
+			</div>
+		</form>
+		<!-- 법령오류신고 팝업 e -->
+		<div class="header-bt">
+			<div class="header-bt-cont">
+				<div class="gnb-box">
+					<div class="h-cage">
+						<h2 class="gnb-tit"><a href="#"><img src="http://world.moleg.go.kr/web/images/common/logo.gif" alt="세계법제정보센터 World Laws Information Center 로고"></a></h2>
+						<a href="javascript:void(0)" class="btn-gnb-close"><img src="images/common/btn_gnb_close_new1.png" alt="메뉴닫기"></a>
+					</div>
+					<ul class="gnb" id="gnb" tabindex="0">
+						<li class="mn0">
+							<a href="javascript:void(0)" class="pop1-view">법령 오류신고</a>
+							<a href="javascript:void(0)" class="research_layer" title="새창">설문조사</a>
+						</li>
+						<li class="mn1">
+							<h2><a href="#">세계법제정보</a></h2>
+              <div class="sub-menu">
+                <div>
+                  <ul>
+                    <li><a href="#">통합 검색</a></li>    
+                    <li><a href="#">국가별</a></li>
+                    <li><a href="#">분야별</a></li>
+                    <li><a href="#">법령체계도</a></li>                                    
+                  </ul>
+                </div>
+              </div>
+						</li>
+						<li class="mn2">
+							<h2><a href="#">주제별 법제</a></h2>
+              <div class="sub-menu">
+                <div>
+                  <ul>
+                    <li><a href="#">법제동향</a></li>
+                    <li><a href="#">연구보고서</a></li>
+                    <li><a href="#">해외 출장보고서</a></li>
+                    <li><a href="#">세계법제 뉴스레터</a></li>                                    
+                  </ul>
+                </div>
+              </div>
+						</li>
+						<li class="mn3">
+							<h2><a href="#">자료실</a></h2>
+              <div class="sub-menu">
+                <div>
+                  <ul>
+                    <li><a href="#">맞춤형 법령정보</a></li>
+                    <li><a href="#">법령 번역 수요조사</a></li>
+                    <li><a href="#">이용자 설문조사</a></li>
+                    <li><a href="#">오류 신고</a></li>
+                    <li><a href="#">API 신청</a></li>
+                  </ul>
+                </div>
+              </div>
+						</li>
+						<li class="mn4">
+							<h2><a href="#">소개</a></h2>
+              <div class="sub-menu">
+                <div>
+                  <ul>
+                    <li><a href="#">이용 안내</a></li>
+                    <li><a href="#">자주하는 질문</a></li>
+                    <li><a href="#">협력 기관</a></li>
+                    <li><a href="#">해외 사이트</a></li>                                    
+                  </ul>
+                </div>
+              </div>
+						</li>
+						<li class="mn5">
+							<h2><a href="#">전체메뉴<img src="images/common/all_menu_new1.png" alt=""></a></h2>
+							<div class="all-menu">
+								<p>전체메뉴보기</p>
+								<div class="all-menu-cont">
+									<ul>
+										<li><span>세계법제정보</span>
+											<ul>
+												<li><a href="#">통합 검색</a></li>    
+                        <li><a href="#">국가별</a></li>
+                        <li><a href="#">분야별</a></li>
+                        <li><a href="#">법령체계도</a></li>   
+											</ul>
+										</li>
+										<li><span>주제별 법제</span>
+											<ul>
+												<li><a href="#">법제동향</a></li>
+                        <li><a href="#">연구보고서</a></li>
+                        <li><a href="#">해외 출장보고서</a></li>
+                        <li><a href="#">세계법제 뉴스레터</a></li>  
+											</ul>
+										</li>
+										<li><span>자료실</span>
+											<ul>
+												<li><a href="#">맞춤형 법령정보</a></li>
+                        <li><a href="#">법령 번역 수요조사</a></li>
+                        <li><a href="#">이용자 설문조사</a></li>
+                        <li><a href="#">오류 신고</a></li>
+                        <li><a href="#">API 신청</a></li>
+											</ul>
+										</li>
+										<li><span>소개</span>
+											<ul>
+												<li><a href="#">이용 안내</a></li>
+                        <li><a href="#">자주하는 질문</a></li>
+                        <li><a href="#">협력 기관</a></li>
+                        <li><a href="#">해외 사이트</a></li>  
+											</ul>
+										</li>
+									</ul>
+									<a href="#" class="all-menu-close"><img src="http://world.moleg.go.kr/web/images/common/all_menu_close.gif" alt="전체메뉴 닫기"></a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div> <!-- //gnb -->
+			</div>
+			<div class="back-gnb" style="display: none;"><span class="shadow"></span></div>
+			<div class="m-back-gnb" style="display: none;"><span class="shadow"></span></div>
+			<div class="mn5_bg" style="display: none;"><span class="shadow"></span></div>
+		</div>
+	</div>
+	<div id="main_container">
+		<div id="visual_map">
+			<img src="images/main/img_main_map.png" alt="세계지도">
+			<div class="map_pin">
+				<ul>
+					<li class="mp1">
+						<a href="#">유럽</a>
+						<div class="pin_pop">
+							<p>유럽 국가선택</p>
+							<ul>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(4, 'CH');return false;">스위스</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(4, 'DE');return false;">독일</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(4, 'LU');return false;">룩셈부르크</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(4, 'BE');return false;">벨기에</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(4, 'ES');return false;">스페인</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(4, 'UK');return false;">영국</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(4, 'FR');return false;">프랑스</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(5, 'RU');return false;">러시아</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(5, 'UA');return false;">우크라이나</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(5, 'BY');return false;">벨라루스</a></li>
+							</ul>
+							<a href="#" class="map_p_close"><img src="images/main/btn_map_pop.png" alt="유럽 닫기"></a>
+						</div>
+					</li>
+					<li class="mp2">
+						<a href="#">중동·아프리카</a>
+						<div class="pin_pop">
+							<p>중동·아프리카 국가선택</p>
+							<ul>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(10, 'SA');return false;">사우디아라비아</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(10, 'AE');return false;">아랍에미리트</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(10, 'OM');return false;">오만</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(10, 'JO');return false;">요르단</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(10, 'IQ');return false;">이라크</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(10, 'QA');return false;">카타르</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(10, 'KW');return false;">쿠웨이트</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(8, 'MA');return false;">모로코</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(8, 'DZ');return false;">알제리</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(8, 'KE');return false;">케냐</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(8, 'CD');return false;">콩고민주공화국</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(2, 'PK');return false;">파키스탄</a></li>
+							</ul>
+							<a href="#" class="map_p_close"><img src="images/main/btn_map_pop.png" alt="중동·아프리카 닫기"></a>
+						</div>
+					</li>
+					<li class="mp3">
+						<a href="#">중앙아시아</a>
+						<div class="pin_pop">
+							<p>중앙아시아 국가선택</p>
+							<ul>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(3, 'UZ');return false;">우즈베키스탄</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(3, 'KZ');return false;">카자흐스탄</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(3, 'KG');return false;">키르기스스탄</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(3, 'TM');return false;">투르크메니스탄</a></li>
+							</ul>
+							<a href="#" class="map_p_close"><img src="images/main/btn_map_pop.png" alt="중앙아시아 닫기"></a>
+						</div>
+					</li>
+					<li class="mp4">
+						<a href="#">동남아시아</a>
+						<div class="pin_pop">
+							<p>동남아시아 국가선택</p>
+							<ul>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(2, 'MY');return false;">말레이시아</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(2, 'MM');return false;">미얀마</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(2, 'VN');return false;">베트남</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(2, 'KH');return false;">캄보디아</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(2, 'PH');return false;">필리핀</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(2, 'LK');return false;">스리랑카</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(2, 'SG');return false;">싱가포르</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(2, 'IN');return false;">인도</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(2, 'ID');return false;">인도네시아</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(2, 'TH');return false;">태국</a></li>
+							</ul>
+							<a href="#" class="map_p_close"><img src="images/main/btn_map_pop.png" alt="동남아시아 닫기"></a>
+						</div>
+					</li>
+					<li class="mp5">
+						<a href="#">동아시아</a>
+						<div class="pin_pop">
+							<p>동아시아 국가선택</p>
+							<ul>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(1, 'CN');return false;">중국</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(1, 'TW');return false;">대만</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(1, 'HK');return false;">중국홍콩특별행정구</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(1, 'MO');return false;">중국마카오특별행정구</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(1, 'JP');return false;">일본</a></li>
+							</ul>
+							<a href="#" class="map_p_close"><img src="images/main/btn_map_pop.png" alt="동아시아 닫기"></a>
+						</div>
+					</li>
+					<li class="mp6">
+						<a href="#">오세아니아</a>
+						<div class="pin_pop">
+							<p>북미·오세아니아 국가선택</p>
+							<ul>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(9, 'AU');return false;">호주</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(9, 'NZ');return false;">뉴질랜드</a></li>
+							</ul>
+							<a href="#" class="map_p_close"><img src="images/main/btn_map_pop.png" alt="북미·오세아니아  닫기"></a>
+						</div>
+					</li>
+					<li class="mp7">
+						<a href="#">국제기구</a>
+						<div class="pin_pop">
+							<p>국제기구 국가선택</p>
+							<ul>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(11, 'UN');return false;">UN</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(11, 'EU');return false;">EU</a></li>
+							</ul>
+							<a href="#" class="map_p_close"><img src="images/main/btn_map_pop.png" alt="국제기구 닫기"></a>
+						</div>
+					</li>
+					<li class="mp8">
+						<a href="#">북미</a>
+						<div class="pin_pop">
+							<p>북미·오세아니아 국가선택</p>
+							<ul>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(6, 'US');return false;">미국</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(3, 'CA');return false;">캐나다</a></li>
+							</ul>
+							<a href="#" class="map_p_close"><img src="images/main/btn_map_pop.png" alt="북미·오세아니아 닫기"></a>
+						</div>
+					</li>
+					<li class="mp9">
+						<a href="#">중남미</a>
+						<div class="pin_pop">
+							<p>중남미 국가선택</p>
+							<ul>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(7, 'MX');return false;">멕시코</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(7, 'DM');return false;">도미니카공화국</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(7, 'AR');return false;">아르헨티나</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(7, 'CL');return false;">칠레</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(7, 'CD');return false;">콜롬비아</a></li>
+								<li><a href="#" onclick="fncGoListLglsInfoPage1(7, 'PE');return false;">페루</a></li>
+							</ul>
+							<a href="#" class="map_p_close"><img src="images/main/btn_map_pop.png" alt="중남미  닫기"></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="notice_area">
+			<div class="notice_inner">
+				<div class="nt_box1">
+					<div class="main_notice mn1">
+						<h2>최신 법령정보</h2>
+						<ul class="mn_list">
+							<li>
+								<a href="#">
+									<span class="mn_flag"><img src="https://world.moleg.go.kr/oweb/images/countryFlag/WD_L.png" alt="World 국기"></span>
+									<span class="mn_title">경쟁법(Law on Competition)</span>
+								</a>
+								<li>
+								<a href="#">
+									<span class="mn_flag"><img src="https://world.moleg.go.kr/oweb/images/countryFlag/TW_L.png" alt="대만 국기"></span>
+									<span class="mn_title">근로자 산업재해보험 및 보호에 관한 법(勞工職業災害保險及保護法)</span>
+								</a>
+								<li>
+								<a href="#">
+									<span class="mn_flag"><img src="https://world.moleg.go.kr/oweb/images/countryFlag/RU_L.png" alt="러시아 국기"></span>
+									<span class="mn_title">국가 및 지자체의 감독 수행시 법인 및 개인사업자의 권리 보호에 관한 법(О защите прав юридических лиц и индивидуальных предпринимателей при осуществлении государственного контроля (надзора) и муниципального контроля)</span>
+								</a>
+								<li>
+								<a href="#">
+									<span class="mn_flag"><img src="https://world.moleg.go.kr/oweb/images/countryFlag/PH_L.png" alt="필리핀 국기"></span>
+									<span class="mn_title">경쟁법(Law on Competition)</span>
+								</a>
+								<li>
+								<a href="#">
+									<span class="mn_flag"><img src="https://world.moleg.go.kr/oweb/images/countryFlag/HK_L.png" alt="중국 홍콩특별행정구 국기"></span>
+									<span class="mn_title">홍콩특별행정구 기본법(香港特別行政區基本法)</span>
+								</a>
+							</li>
+						</ul>
+						<a href="#" class="btn_more">최신 법령정보 더 보기</a>
+					</div>
+					<div class="main_notice mn2">
+						<h2>최신 법제동향</h2>
+						<ul class="mn_list">
+							<li>
+								<a href="#">
+									<span class="mn_flag"><img src="https://world.moleg.go.kr/oweb/images/countryFlag/WD_L.png" alt="World 국기"></span>
+									<span class="mn_title">경쟁법(Law on Competition)</span>
+								</a>
+								<li>
+								<a href="#">
+									<span class="mn_flag"><img src="https://world.moleg.go.kr/oweb/images/countryFlag/TW_L.png" alt="대만 국기"></span>
+									<span class="mn_title">근로자 산업재해보험 및 보호에 관한 법(勞工職業災害保險及保護法)</span>
+								</a>
+								<li>
+								<a href="#">
+									<span class="mn_flag"><img src="https://world.moleg.go.kr/oweb/images/countryFlag/RU_L.png" alt="러시아 국기"></span>
+									<span class="mn_title">국가 및 지자체의 감독 수행시 법인 및 개인사업자의 권리 보호에 관한 법(О защите прав юридических лиц и индивидуальных предпринимателей при осуществлении государственного контроля (надзора) и муниципального контроля)</span>
+								</a>
+								<li>
+								<a href="#">
+									<span class="mn_flag"><img src="https://world.moleg.go.kr/oweb/images/countryFlag/PH_L.png" alt="필리핀 국기"></span>
+									<span class="mn_title">경쟁법(Law on Competition)</span>
+								</a>
+								<li>
+								<a href="#">
+									<span class="mn_flag"><img src="https://world.moleg.go.kr/oweb/images/countryFlag/HK_L.png" alt="중국 홍콩특별행정구 국기"></span>
+									<span class="mn_title">홍콩특별행정구 기본법(香港特別行政區基本法)</span>
+								</a>
+							</li>
+						</ul>
+						<a href="#" class="btn_more">최신 법제동향 더 보기</a>
+					</div>
+					<div class="main_notice mn3">
+						<h2>
+							맞춤형 법령정보 
+							<a href="#" class="btn_app">신청</a>
+						</h2>
+						<ul class="mn_list">
+							<li>
+								<a href="#">
+									<span class="mn_icon bg_gray">공지</span>
+									<span class="mn_title">경쟁법(Law on Competition)</span>
+								</a>
+								<li>
+								<a href="#">
+									<span class="mn_icon bg_green">연구중</span>
+									<span class="mn_title">근로자 산업재해보험 및 보호에 관한 법(勞工職業災害保險及保護法)</span>
+								</a>
+								<li>
+								<a href="#">
+									<span class="mn_icon bg_blue">처리완료</span>
+									<span class="mn_title">국가 및 지자체의 감독 수행시 법인 및 개인사업자의 권리 보호에 관한 법(О защите прав юридических лиц и индивидуальных предпринимателей при осуществлении государственного контроля (надзора) и муниципального контроля)</span>
+								</a>
+								<li>
+								<a href="#">
+									<span class="mn_icon bg_red">검토중</span>
+									<span class="mn_title">경쟁법(Law on Competition)</span>
+								</a>
+								<li>
+								<a href="#">
+									<span class="mn_icon bg_purple">연구완료</span>
+									<span class="mn_title">홍콩특별행정구 기본법(香港特別行政區基本法)</span>
+								</a>
+							</li>
+						</ul>
+						<a href="#" class="btn_more">맞춤형 법령정보 더 보기</a>
+					</div>
+				</div>
+				<div class="nt_box2">
+					<div class="main_notice mn4">
+						<h2>공지사항</h2>
+						<ul class="mn_list">
+							<li>
+								<a href="#">
+									<span class="mn_title">경쟁법(Law on Competition)</span>
+								</a>
+								<li>
+								<a href="#">
+									<span class="mn_title">근로자 산업재해보험 및 보호에 관한 법(勞工職業災害保險及保護法)</span>
+								</a>
+								<li>
+								<a href="#">
+									<span class="mn_title">국가 및 지자체의 감독 수행시 법인 및 개인사업자의 권리 보호에 관한 법(О защите прав юридических лиц и индивидуальных предпринимателей при осуществлении государственного контроля (надзора) и муниципального контроля)</span>
+								</a>
+								<li>
+								<a href="#">
+									<span class="mn_title">경쟁법(Law on Competition)</span>
+								</a>
+								<li>
+								<a href="#">
+									<span class="mn_title">홍콩특별행정구 기본법(香港特別行政區基本法)</span>
+								</a>
+							</li>
+						</ul>
+						<a href="#" class="btn_more">공지사항 더 보기</a>
+					</div>
+					<div class="main_notice mn5">
+						<div class="mn_gallery">
+							<ul class="slides">
+								<li>
+									<a href="#"><img src="https://world.moleg.go.kr/filedata/WL/file_upload/2023/02/20230203192942335_0.jpg" alt="세계법제정보센터 법제처 한국법령정보원 해외법령 번역 수요조사 세계법제정보센터 내 [수요조사 게시판]을 통해 참여 가능합니다. 수요조사기간은 2023년 2월 6일 월요일부터 12월 31일 일요일 까지 참여 가능"></a>
+								</li>
+								<li>
+									<a href="#"><img src="https://world.moleg.go.kr/filedata/WL/file_upload/2022/05/20220503183604607_0.jpg" alt="세계법제정보센터 법제처 한국법령정보원 55개국가ㆍ기구의 법령정보를 한눈에 #베트남 노동법전 #독일 연방공해방지법"></a>
+								</li>
+								<li>
+									<a href="#"><img src="https://world.moleg.go.kr/filedata/WL/file_upload/2020/03/20200326172654311_0.jpg" alt="불필요한 서류제출ㆍ중복적 행정절차 여기에 알려주세요"></a>
+								</li>
+								<li>
+									<a href="#"><img src="https://world.moleg.go.kr/filedata/WL/file_upload/2020/03/20200326173053407_0.png" alt="온라인 설문조사 참여하기"></a>
+								</li>
+								<li>
+									<a href="#"><img src="https://world.moleg.go.kr/filedata/WL/file_upload/2021/11/20211119145602265_0.jpg" alt="세계 각국의 주요 법령과 관련 연구보고서, 최신동향 등을 함께 제공해 드립니다."></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a href="#" class="quick-btn" alt="열람한 정보 숨기기"><img src="images/common/quick_new_off.png" alt="열람한 정보 숨기기"></a>
+		<script> 
+			$(document).ready(function(){
+				$(".pop").css("display","none");
+				
+				$(".surveyEvents").click(function(){
+					/* $(".pop").css("display",""); */
+					location.href = '/web/intrcn/surveyEvent1.do';
+				});
+				$(".pop_lf").click(function(){
+					$(".pop").css("display","none");
+				});
+				
+			});
+
+			// 법제정보 상세페이지 이동
+			function fncGoReadLgInfoPage(CTS_SEQ, AST_SEQ) {
+				var url = '/web/wli/lgslInfoReadPage.do?' + "A=A&CTS_SEQ=" + CTS_SEQ + "&AST_SEQ=" + AST_SEQ;
+				location.href = url;
+			}
+			
+			// 설문조사 등록
+			function fncGoWrite(){
+				var form = $("#pollWriteForm");
+				form.attr("action", "/web/main/pollPopupWrite.do");
+				form.submit();
+			}
+		</script>
+		<div class="quick">
+			<div class="quick-cont">
+			  <div class="quick-cont-v1">
+					<p class="tit">내가 열람한 법제정보</p>
+					<div class="quick-cont-v1-c quick-cont-v1-c2">
+						<ul>
+							<li class="mylgsinfo">
+							<a href="/web/wli/lgslInfoReadPage.do?CTS_SEQ=38145&amp;AST_SEQ=1291" onclick="fncGoReadLgInfoPage('38145','1291');return false;">
+							- 홍콩특별행정구 기본법(香港特別行政區基本法)
+							</a></li>
+						
+							<li class="mylgsinfo">
+							<a href="/web/wli/lgslInfoReadPage.do?CTS_SEQ=49402&amp;AST_SEQ=1284" onclick="fncGoReadLgInfoPage('49402','1284');return false;">
+							- 근로자 산업재해보험 및 보호에 관한 법(勞工職業災害保險及保護法)
+							</a></li>
+						
+							<li class="mylgsinfo">
+							<a href="/web/wli/lgslInfoReadPage.do?CTS_SEQ=42235&amp;AST_SEQ=1087" onclick="fncGoReadLgInfoPage('42235','1087');return false;">
+							- 베트남 해양법(Luật Biển Việt Nam)
+							</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- main_container -->
+
+	<script>
+		function pageMove(site){
+			window.open(site);
+		}
+	</script>
+	<div class="footer main_footer">
+		<div class="footer-tp">
+			<div class="footer-tp-cont">
+				<ul>
+					<li><a href="http://world.moleg.go.kr/web/intrcn/userPrivacyPage.do">개인정보보호방침</a></li>
+					<li><a href="http://www.moleg.go.kr/openarea/guide/copyright" title="새창" target="_blank">저작권정책</a></li>
+					<li><a href="http://world.moleg.go.kr/web/intrcn/faqListPage.do" title="새창" target="_blank">자주하는 질문</a></li>
+					<!-- <li><a href="#">이메일수집거부</a></li> -->
+				</ul>
+				<div class="related">
+					<label for="familySite" class="blind">관련사이트 선택</label>
+					<select id="familySite">
+						<!-- <option disabled="disabled">법제처 패밀리 사이트</option>-->
+						<option value="http://www.moleg.go.kr">법제처</option>		
+						<option value="http://www.lawmaking.go.kr/">정부입법지원센터</option>
+						<option value="http://opinion.lawmaking.go.kr/gcom/gcomMain">국민참여입법시스템</option>
+						<option value="http://www.law.go.kr/main.html">국가법령정보센터</option>
+						<option value="http://www.easylaw.go.kr">찾기쉬운 생활법령정보</option>
+						<option value="http://www.moleg.go.kr/child/">어린이 법제처</option>
+						<option value="http://www.moleg.go.kr/lawinfo/easylaw/easylaw">알기 쉬운 법령 만들기</option>
+						<!--<option value="http://unilaw.go.kr">통일법제데이터베이스</option> -->
+					</select>
+					<a href="#" onclick="pageMove($('#familySite').val());" class="search-btn" title="새창">이동</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bt">
+			<div class="footer-bt-lf"><img src="images/common/flogo_new1.png" alt="법제처"></div>
+			<div class="footer-bt-rt">30102 세종특별자치시 도움5로 20 법제처<span>　/　</span>Copyright (C) 1997-2023 Korea Ministry of Government Legislation. All rights reserved.</div>
+			<a href="http://www.kwacc.or.kr/CertificationSite/WA/1435/Detail" class="mark_wa" target="_blank" title="한국웹접근성평가센터 인증현황 바로가기 _새창"><img src="http://world.moleg.go.kr/web/images/common/wa.gif" alt="국가공인 정보통신접근성 품질인증마크"></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

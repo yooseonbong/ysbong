@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HRDX</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
+  
+  <!-- js -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+  <script src="./js/jquery-3.7.1.min.js"></script>
+  <script src="./js/swiper-bundle.min.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <!-- header start -->
+    <header id="header">
+      <div class="headerArea">
+        <!-- header contents -->              
+        <h1 class="logoArea">
+          <a href="M10_m01_t01.html"><img src="./img/Group 63399748.png" alt="IC360" title="CAREER ADVISOR"></a>
+        </h1>
+        <!-- GNB start -->
+        <nav class="gnbArea">
+          <ul class="gnbList">
+            <li class="menuList"><span><a href="M2_m01_2.html">매칭검색</a></span></li>
+            <li class="menuList"><span><a href="M3_m03.html">경력개발</a></span></li>
+            <li class="menuList active"><span><a href="#">육성프로그램</a></span></li>
+            <li class="menuList"><span><a href="M5_m01.html">조직자관리</a></span></li>
+            <li class="menuList"><span><a href="M6_m01.html">인사지원</a></span></li>
+          </ul>
+        </nav>
+        <!-- info start-->
+        <div class="infoWrap">
+          <ul>
+            <li class="analyze"><a href="#"><img src="./img/ic_person.png" alt="사람아이콘" title="내정보 바로가기"><span class="fontZ">gildong.hong@lge.com</span></a></li>
+            <li class="info">
+              <a href="javascript:openModal('alramPopup');">
+                <img src="./img/ic_alarm.png" alt="알람아이콘" title="알림">
+                <i>999</i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>     
+      <!-- GNB end -->
+    </header>
+    <!-- header end -->
+    <!-- section start -->
+    <section>
+      <article>
+        <div class="topContents">
+          <div class="leftContent">
+            <strong class="M4Tit">전체 숙련도</strong>
+            <div class="contentBox">
+              <div class="volume">
+                <div class="volumeGraph">
+                  <div class="volumeStick">
+                    <div class="volumeBtn" style="height:50%;">
+                      그래프 조절
+                    </div>
+                    <div class="volumeInfo vi1" style="top:0%;">
+                      <strong>최대 획득가능 숙련도</strong>
+                      <p><em>총 소요시간</em> <span>16h</span></p>
+                      <p><em>총 과정 수</em> <span>21개</span></p>
+                      <p><em>획득가능 숙련도</em> <span>+4.8Lv</span></p>
+                    </div>
+                    <div class="volumeInfo vi2" style="top:50%;">
+                      <strong>현 숙련도 <span>(3.6)</span></strong>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- volume -->
+            </div>
+          </div>
+          <div class="rightContent">
+            <strong class="M4Tit">업무경험별 숙련도</strong>
+            <div class="contentBox">
+              <div class="titleBox mb08">
+                <h2 class="titCont2 mb00 mr20">직무</h2>
+                <div class="select">
+                  <div class="selectInner w200px">
+                    <button class="selected" title="선택 옵션 열기" type="button">반도체분석</button>
+                    <div class="selectOption scroll" style="display: none;">
+                      <ul>
+                        <li><a href="#">선택1</a></li>
+                        <li><a href="#">선택2</a></li>
+                        <li><a href="#">선택3</a></li>
+                        <li><a href="#">선택4</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="M4LineGraph tac">
+                <img src="./img/Group 63399865.png" alt="최대 획득 가능 숙련도">
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article>
+        <div class="component">
+					<div class="pcGroup">
+						<div class="tab1 col-3 mb20">
+							<ul>
+								<li class="active"><a href="#">전문성 향상 교육</a></li>
+								<li><a href="#">기본역량 강화 교육</a></li>
+								<li><a href="#">관심조직 추천 교육 </a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+        <div class="M4TableSection">
+          <table id="listTable" class="recruit">
+            <colgroup>
+              <col>
+              <col style="width:21%">
+              <col style="width:8%">
+              <col style="width:8%">
+              <col style="width:8%">
+              <col style="width:8%">
+              <col style="width:8%">
+              <col style="width:8%">
+              <col style="width:3%">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>직무</th>
+                <th>업무경험</th>
+                <th>숙련도</th>
+                <th>컨텐츠 수</th>
+                <th>총 교육 시간</th>
+                <th>획득가능 숙련도</th>
+                <th>이수완료 컨텐츠</th>
+                <th>획득완료 컨텐츠</th>
+                <th><span class="downIcon"></span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>개발 관리</td>
+                <td>전사 메모리 및 원재료 통합 현상</td>
+                <td>1.2</td>
+                <td>3</td>
+                <td>2.5시간</td>
+                <td><span class="tableUpIcon">▲</span> 0.13</td>
+                <td>1</td>
+                <td>0.06</td>
+                <td><span class="downIcon"></span></td>
+              </tr>
+              <tr class="item even">
+                <td>개발 관리</td>
+                <td>전사 메모리 및 원재료 통합 현상</td>
+                <td>1.2</td>
+                <td>3</td>
+                <td>2.5시간</td>
+                <td><span class="tableUpIcon">▲</span> 0.13</td>
+                <td>1</td>
+                <td>0.06</td>
+                <td><span class="downIcon"></span></td>
+              </tr>
+              <tr class="rsltTr hide">
+                <td colspan="9">
+                  <div class="tableInnerSection swiperSection swiper">
+                    <div class="swiper-wrapper tableInnerContents">
+                      <div class="swiper-slide innerContent">
+                        <div class="innerImgContent">
+                          <img src="./img/Frame1171276851.png" alt="W 품질 테스터">
+                        </div>
+                        <div class="innerTextContent">
+                          <p class="mainTit"><em class="icoE1 active vat">ON</em> SW 품질 테스터</p>
+                          <div class="eduBtn">
+                            <a href="#" class="button Primary-s black" title="강의 바로가기">강의 바로가기</a>
+                            <p>40분</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide innerContent">
+                        <div class="innerImgContent">
+                        <img src="./img/Frame1171276852.png" alt="이상탐지">
+                        </div>
+                        <div class="innerTextContent">
+                          <p class="mainTit"><em class="icoE1 vat">OFF</em> 이상탐지</p>
+                          <div class="eduBtn">
+                            <a href="#" class="button Primary-s black disabled" title="강의 바로가기" >이수완료</a>
+                            <p>40분</p>
+                          </div>
+                        </div> 
+                      </div>
+                      <div class="swiper-slide innerContent">
+                        <div class="innerImgContent">
+                        <img src="./img/Frame1171276851.png" alt="RNN자연어처리 고급">
+                        </div>
+                        <div class="innerTextContent">
+                          <p class="mainTit"><em class="icoE1 vat">OFF</em> RNN자연어처리 고급</p>
+                          <div class="eduBtn">
+                            <a href="#" class="button Primary-s black" title="강의 바로가기">강의 바로가기</a>
+                            <p>40분</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide innerContent">
+                        <div class="innerImgContent">
+                        <img src="./img/Frame1171276852.png" alt="SW 품질 테스터">
+                        </div>
+                        <div class="innerTextContent">
+                          <p class="mainTit"><em class="icoE1 vat">OFF</em> SW 품질 테스터</p>
+                          <div class="eduBtn">
+                            <a href="#" class="button Primary-s black" title="강의 바로가기">강의 바로가기</a>
+                            <p>40분</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide innerContent">
+                        <div class="innerImgContent">
+                        <img src="./img/Frame1171276851.png" alt="W 품질 테스터">
+                        </div>
+                        <div class="innerTextContent">
+                          <p class="mainTit"><em class="icoE1 active vat">ON</em> SW 품질 테스터</p>
+                          <div class="eduBtn">
+                            <a href="#" class="button Primary-s black" title="강의 바로가기">강의 바로가기</a>
+                            <p>40분</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide innerContent">
+                        <div class="innerImgContent">
+                        <img src="./img/Frame1171276852.png" alt="이상탐지">
+                        </div>
+                        <div class="innerTextContent">
+                          <p class="mainTit"><em class="icoE1 active vat">ON</em> 이상탐지</p>
+                          <div class="eduBtn">
+                            <a href="#" class="button Primary-s black" title="강의 바로가기">강의 바로가기</a>
+                            <p>40분</p>
+                          </div>
+                        </div> 
+                      </div>
+                      <div class="swiper-slide innerContent">
+                        <div class="innerImgContent">
+                        <img src="./img/Frame1171276851.png" alt="RNN자연어처리 고급">
+                        </div>
+                        <div class="innerTextContent">
+                          <p class="mainTit"><em class="icoE1 active vat">ON</em> RNN자연어처리 고급</p>
+                          <div class="eduBtn">
+                            <a href="#" class="button Primary-s black" title="강의 바로가기">강의 바로가기</a>
+                            <p>40분</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide innerContent">
+                        <div class="innerImgContent">
+                        <img src="./img/Frame1171276852.png" alt="SW 품질 테스터">
+                        </div>
+                        <div class="innerTextContent">
+                          <p class="mainTit"><em class="icoE1 active vat">ON</em> SW 품질 테스터</p>
+                          <div class="eduBtn">
+                            <a href="#" class="button Primary-s black" title="강의 바로가기">강의 바로가기</a>
+                            <p>40분</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="buttonstableInner">
+                    <button class="button-prev tableInne-button-prev">이전</button>
+                    <button class="button-next tableInne-button-next">다음</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>개발 관리</td>
+                <td>전사 메모리 및 원재료 통합 현상</td>
+                <td>1.2</td>
+                <td>3</td>
+                <td>2.5시간</td>
+                <td><span class="tableUpIcon">▲</span> 0.13</td>
+                <td>1</td>
+                <td>0.06</td>
+                <td><span class="downIcon"></span></td>
+              </tr>
+              <tr class="even">
+                <td>개발 관리</td>
+                <td>전사 메모리 및 원재료 통합 현상</td>
+                <td>1.2</td>
+                <td>3</td>
+                <td>2.5시간</td>
+                <td><span class="tableUpIcon">▲</span> 0.13</td>
+                <td>1</td>
+                <td>0.06</td>
+                <td><span class="downIcon"></span></td>
+              </tr>
+              <tr class="item round">
+                <td class="first">개발 관리</td>
+                <td>전사 메모리 및 원재료 통합 현상</td>
+                <td>1.2</td>
+                <td>3</td>
+                <td>2.5시간</td>
+                <td><span class="tableDownIcon">▼</span> 0.13</td>
+                <td>1</td>
+                <td>0.06</td>
+                <td class="last"><span class="downIcon"></span></td>
+              </tr>
+              <tr class="rsltTr hide">
+                <td colspan="9">
+                  <div class="tableInnerSection swiperSection swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+                    <div class="swiper-wrapper tableInnerContents" id="swiper-wrapper-519937951ae854e3" aria-live="polite" style="transition-duration: 0ms; transition-delay: 0ms; transform: translate3d(0px, 0px, 0px);">
+                      <div class="swiper-slide innerContent swiper-slide-active" role="group" aria-label="1 / 8" style="margin-right: 12px;">
+                        <div class="innerImgContent">
+                          <img src="./img/Frame1171276851.png" alt="W 품질 테스터">
+                        </div>
+                        <div class="innerTextContent">
+                          <p class="mainTit"><em class="icoE1 active vat">ON</em> SW 품질 테스터</p>
+                          <div class="eduBtn">
+                            <a href="#" class="button Primary-s black" title="강의 바로가기">강의 바로가기</a>
+                            <p>40분</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide innerContent swiper-slide-next" role="group" aria-label="2 / 8" style="margin-right: 12px;">
+                        <div class="innerImgContent">
+                        <img src="./img/Frame1171276852.png" alt="이상탐지">
+                        </div>
+                        <div class="innerTextContent">
+                          <p class="mainTit"><em class="icoE1 vat">OFF</em> 이상탐지</p>
+                          <div class="eduBtn">
+                            <a href="#" class="button Primary-s black disabled" title="강의 바로가기">이수완료</a>
+                            <p>40분</p>
+                          </div>
+                        </div> 
+                      </div>
+                      <div class="swiper-slide innerContent" role="group" aria-label="3 / 8" style="margin-right: 12px;">
+                        <div class="innerImgContent">
+                        <img src="./img/Frame1171276851.png" alt="RNN자연어처리 고급">
+                        </div>
+                        <div class="innerTextContent">
+                          <p class="mainTit"><em class="icoE1 vat">OFF</em> RNN자연어처리 고급</p>
+                          <div class="eduBtn">
+                            <a href="#" class="button Primary-s black" title="강의 바로가기">강의 바로가기</a>
+                            <p>40분</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide innerContent" role="group" aria-label="4 / 8" style="margin-right: 12px;">
+                        <div class="innerImgContent">
+                        <img src="./img/Frame1171276852.png" alt="SW 품질 테스터">
+                        </div>
+                        <div class="innerTextContent">
+                          <p class="mainTit"><em class="icoE1 vat">OFF</em> SW 품질 테스터</p>
+                          <div class="eduBtn">
+                            <a href="#" class="button Primary-s black" title="강의 바로가기">강의 바로가기</a>
+                            <p>40분</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide innerContent" role="group" aria-label="5 / 8" style="margin-right: 12px;">
+                        <div class="innerImgContent">
+                        <img src="./img/Frame1171276851.png" alt="W 품질 테스터">
+                        </div>
+                        <div class="innerTextContent">
+                          <p class="mainTit"><em class="icoE1 active vat">ON</em> SW 품질 테스터</p>
+                          <div class="eduBtn">
+                            <a href="#" class="button Primary-s black" title="강의 바로가기">강의 바로가기</a>
+                            <p>40분</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide innerContent" role="group" aria-label="6 / 8" style="margin-right: 12px;">
+                        <div class="innerImgContent">
+                        <img src="./img/Frame1171276852.png" alt="이상탐지">
+                        </div>
+                        <div class="innerTextContent">
+                          <p class="mainTit"><em class="icoE1 active vat">ON</em> 이상탐지</p>
+                          <div class="eduBtn">
+                            <a href="#" class="button Primary-s black" title="강의 바로가기">강의 바로가기</a>
+                            <p>40분</p>
+                          </div>
+                        </div> 
+                      </div>
+                      <div class="swiper-slide innerContent" role="group" aria-label="7 / 8" style="margin-right: 12px;">
+                        <div class="innerImgContent">
+                        <img src="./img/Frame1171276851.png" alt="RNN자연어처리 고급">
+                        </div>
+                        <div class="innerTextContent">
+                          <p class="mainTit"><em class="icoE1 active vat">ON</em> RNN자연어처리 고급</p>
+                          <div class="eduBtn">
+                            <a href="#" class="button Primary-s black" title="강의 바로가기">강의 바로가기</a>
+                            <p>40분</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide innerContent" role="group" aria-label="8 / 8" style="margin-right: 12px;">
+                        <div class="innerImgContent">
+                        <img src="./img/Frame1171276852.png" alt="SW 품질 테스터">
+                        </div>
+                        <div class="innerTextContent">
+                          <p class="mainTit"><em class="icoE1 active vat">ON</em> SW 품질 테스터</p>
+                          <div class="eduBtn">
+                            <a href="#" class="button Primary-s black" title="강의 바로가기">강의 바로가기</a>
+                            <p>40분</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+                  <div class="buttonstableInner">
+                    <button class="button-prev tableInne-button-prev swiper-button-disabled" tabindex="-1" aria-label="Previous slide" aria-controls="swiper-wrapper-519937951ae854e3" aria-disabled="true" disabled="">이전</button>
+                    <button class="button-next tableInne-button-next" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-519937951ae854e3" aria-disabled="false">다음</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="pagingPart">
+            <a href="#" class="direction first"><span class="prevIcon"></span></a>
+            <a href="#" class="acitve">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">7</a>
+            <a href="#">8</a>
+            <a href="#">9</a>
+            <a href="#">10</a>
+            <a href="#" class="direction last disable"><span class="nextIcon"></span></a>
+          </div>
+        </div>
+      </article>
+      <article>
+        <div class="requestBtn mb10">
+          <ul>
+            <li class="active"><a href="#">받은 요청</a></li>
+            <li><a href="#">보낸 요청</a></li>
+          </ul>
+        </div>
+        <div class="titleBox w100pc">
+          <h2 class="titCont1 mb00">전체 <span class="pl05">(125)</span></h2>
+          <label for="Viewby" class="mr10">View by</label>
+          <div class="select">
+            <div class="selectInner w150px">
+              <button title="선택 옵션 열기" type="button">구분 전체</button>
+              <div class="selectOption scroll" style="display: none;">
+                <ul>
+                  <li><a href="#">선택1</a></li>
+                  <li><a href="#">선택2</a></li>
+                  <li><a href="#">선택3</a></li>
+                  <li><a href="#">선택4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="select ml10">
+            <div class="selectInner w150px">
+              <button title="선택 옵션 열기" type="button">진행사항 전체</button>
+              <div class="selectOption scroll" style="display: none;">
+                <ul>
+                  <li><a href="#">선택1</a></li>
+                  <li><a href="#">선택2</a></li>
+                  <li><a href="#">선택3</a></li>
+                  <li><a href="#">선택4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="M4TableSection">
+          <table id="listTable" class="recruit">
+            <colgroup>
+              <col style="width:3%">
+              <col style="width:5%">
+              <col style="width:10%">
+              <col style="width:20%">
+              <col>
+              <col style="width:7%">
+              <col style="width:7%">
+              <col style="width:6%">
+              <col style="width:6%">
+              <col style="width:3%">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="tac pl00">No.</th>
+                <th>구분 <button class="upDownBtn" type='button'></button></th>
+                <th>발신자</th>
+                <th>관련 업무 경험</th>
+                <th>요청 제목</th>
+                <th>요청일<button class="upDownBtn" type='button'></button></th>
+                <th>완료일<button class="upDownBtn" type='button'></button></th>
+                <th>답변상태<button class="upDownBtn" type='button'></button></th>
+                <th>진행상황<button class="upDownBtn" type='button'></button></th>
+                <th><span class="downIcon"></span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tac pl00">1</td>
+                <td>강의요청</td>
+                <td>수신자/책임/팀명</td>
+                <td>품질경영 센터장 현장점검 운영 외 10건</td>
+                <td>관련 강의 요청드립니다 . </td>
+                <td>2023년 05월</td>
+                <td>2023년 05월</td>
+                <td>답변완료</td>
+                <td>완료</td>
+                <td><span class="downIcon"></span></td>
+              </tr>          
+              <tr class="item even">
+                <td class="tac pl00">2</td>
+                <td>질문하기</td>
+                <td>수신자/책임/팀명</td>
+                <td>협력사 교육 외 4건</td>
+                <td>제가 이번에 인사지원팀으로 이동하려는데 조언 부탁드립니다.</td>
+                <td>2023년 05월</td>
+                <td>2023년 05월</td>
+                <td class="unansweredAnswer">미답변</td>
+                <td>진행중</td>
+                <td><span class="downIcon"></span></td>
+              </tr>
+              <tr class="rsltTr hide">
+                <td colspan="11">
+                  <div class="tableInnerSection">
+                    <div class="tableInnerContents">
+                      <div class="innerContent2">
+                        <div class="innerTextContent dfr bd">
+                          <div class="profileImg"><img src="./img/img.png" alt="사진"></div>
+                          <ul>
+                            <li>관련업무경험
+                              <ul class="careerList scroll">
+                                <li>품질경영 센터장 현장점검 운영</li>
+                                <li>센터 하부조직 업무보고 주관</li>
+                                <li>내/외부 소통의 질 향상</li>
+                                <li>중점 추진과제 이슈 적기 Escalation</li>
+                                <li>LG전자 품질역량 강화 방안 수립</li>
+                                <li>품질경영 센터장 현장점검 운영</li>
+                                <li>센터 하부조직 업무보고 주관</li>
+                                <li>내/외부 소통의 질 향상</li>
+                                <li>중점 추진과제 이슈 적기 Escalation</li>
+                                <li>LG전자 품질역량 강화 방안 수립</li>
+                                <li>품질경영 센터장 현장점검 운영</li>
+                                <li>센터 하부조직 업무보고 주관</li>
+                                <li>내/외부 소통의 질 향상</li>
+                                <li>중점 추진과제 이슈 적기 Escalation</li>
+                                <li>LG전자 품질역량 강화 방안 수립</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="innerContent2">
+                        <div class="innerTextContent dfd bd">
+                          <div class="messagArea scroll">
+                            <div class="messageList">
+                              <ul>
+                                <li>
+                                  <em>홍길동 팀장</em>
+                                  <div class="messageTxt">
+                                    업무지원 요청 드립니다. 현재 OOO 관련 프로젝트를 하려고 하는데요. <br>함께 하실분을 찾고 있습니다. 답변 부탁드립니다.
+                                  </div>
+                                </li>
+                                <li>
+                                  <em>고또치 책임</em>
+                                  <div class="messageTxt">
+                                    네. 연락처 주시면 연락 드리겠습니다. 
+                                  </div>
+                                </li>
+                                <li>
+                                  <em>홍길동 팀장</em>
+                                  <div class="messageTxt">
+                                    감사합니다.
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="textMessage">
+                              <textarea name="" id="" cols="30" rows="10" placeholder="내용을 입력해 주세요." style="resize: none;"></textarea>
+                              <button class="sendMessageBtn" type="button">
+                                <span>메세지 보내기</span>
+                              </button>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="tac pl00">3</td>
+                <td>질문하기</td>
+                <td>수신자/책임/팀명</td>
+                <td>협력사 교육 외 4건</td>
+                <td>제가 이번에 인사지원팀으로 이동하려는데 조언 부탁드립니다.</td>
+                <td>2023년 05월</td>
+                <td>2023년 05월</td>
+                <td>-</td>
+                <td><button>완료</button></td>
+                <td><span class="downIcon"></span></td>
+              </tr>
+              <tr class="even">
+                <td class="tac pl00">4</td>
+                <td>질문하기</td>
+                <td>수신자/책임/팀명</td>
+                <td>협력사 교육 외 4건</td>
+                <td>제가 이번에 인사지원팀으로 이동하려는데 조언 부탁드립니다.</td>
+                <td>2023년 05월</td>
+                <td>2023년 05월</td>
+                <td>-</td>
+                <td>완료</td>
+                <td><span class="downIcon"></span></td>
+              </tr>
+              <tr>
+                <td class="tac pl00">5</td>
+                <td>질문하기</td>
+                <td>수신자/책임/팀명</td>
+                <td>협력사 교육 외 4건</td>
+                <td>제가 이번에 인사지원팀으로 이동하려는데 조언 부탁드립니다.</td>
+                <td>2023년 05월</td>
+                <td>2023년 05월</td>
+                <td>-</td>
+                <td>대기중</td>
+                <td><span class="downIcon"></span></td>
+              </tr>
+              <tr class="even">
+                <td class="tac pl00">6</td>
+                <td>질문하기</td>
+                <td>수신자/책임/팀명</td>
+                <td>협력사 교육 외 4건</td>
+                <td>제가 이번에 인사지원팀으로 이동하려는데 조언 부탁드립니다.</td>
+                <td>2023년 05월</td>
+                <td>2023년 05월</td>
+                <td>-</td>
+                <td>완료</td>
+                <td><span class="downIcon"></span></td>
+              </tr>
+              <tr>
+                <td class="tac pl00">7</td>
+                <td>질문하기</td>
+                <td>수신자/책임/팀명</td>
+                <td>협력사 교육 외 4건</td>
+                <td>제가 이번에 인사지원팀으로 이동하려는데 조언 부탁드립니다.</td>
+                <td>2023년 05월</td>
+                <td>2023년 05월</td>
+                <td>-</td>
+                <td>완료</td>
+                <td><span class="downIcon"></span></td>
+              </tr>
+              <tr class="even item round">
+                <td class="tac pl00 first">8</td>
+                <td>질문하기</td>
+                <td>수신자/책임/팀명</td>
+                <td>협력사 교육 외 4건</td>
+                <td>제가 이번에 인사지원팀으로 이동하려는데 조언 부탁드립니다.</td>
+                <td>2023년 05월</td>
+                <td>2023년 05월</td>
+                <td>-</td>
+                <td>완료</td>
+                <td class="last"><span class="downIcon"></span></td>
+              </tr>
+              <tr class="rsltTr hide">
+                <td colspan="11">
+                  <div class="tableInnerSection">
+                    <div class="tableInnerContents">
+                      <div class="innerContent2">
+                        <div class="innerTextContent dfr bd">
+                          <div class="profileImg"><img src="./img/img.png" alt="사진"></div>
+                          <ul>
+                            <li>관련업무경험
+                              <ul class="careerList scroll">
+                                <li>품질경영 센터장 현장점검 운영</li>
+                                <li>센터 하부조직 업무보고 주관</li>
+                                <li>내/외부 소통의 질 향상</li>
+                                <li>중점 추진과제 이슈 적기 Escalation</li>
+                                <li>LG전자 품질역량 강화 방안 수립</li>
+                                <li>품질경영 센터장 현장점검 운영</li>
+                                <li>센터 하부조직 업무보고 주관</li>
+                                <li>내/외부 소통의 질 향상</li>
+                                <li>중점 추진과제 이슈 적기 Escalation</li>
+                                <li>LG전자 품질역량 강화 방안 수립</li>
+                                <li>품질경영 센터장 현장점검 운영</li>
+                                <li>센터 하부조직 업무보고 주관</li>
+                                <li>내/외부 소통의 질 향상</li>
+                                <li>중점 추진과제 이슈 적기 Escalation</li>
+                                <li>LG전자 품질역량 강화 방안 수립</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="innerContent2">
+                        <div class="innerTextContent dfd bd">
+                          <div class="messagArea scroll">
+                            <div class="messageList">
+                              <ul>
+                                <li>
+                                  <div class="messageTxt tac pt30">
+                                    등록된 메세지가 없습니다.
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="textMessage">
+                              <textarea name="" id="" cols="30" rows="10" placeholder="내용을 입력해 주세요." style="resize: none;"></textarea>
+                              <button class="sendMessageBtn" type="button">
+                                <span>메세지 보내기</span>
+                              </button>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="pagingPart">
+            <a href="#" class="direction first"><span class="prevIcon"></span></a>
+            <a href="#" class="acitve">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">7</a>
+            <a href="#">8</a>
+            <a href="#">9</a>
+            <a href="#">10</a>
+            <a href="#" class="direction last disable"><span class="nextIcon"></span></a>
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- section end -->
+  </div>
+  <script src="/js/style.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+@charset "utf-8";
+html{overflow-y: scroll;}
+html::-webkit-scrollbar{display: none;}
+body{overflow: hidden;}
+
+.analyze:nth-child(1) span{color:#A50034;}
+
+/* Map_m01_p01 */
+section{padding: 20px;}
+section article .middleContents{display: flex;}
+section article .networkArea{width: 100%; height: 830px; background:#E6E1D6; border-radius: 12px; position: relative;}
+.networkTab{box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.30), 0px 0px 6px 0px rgba(0, 0, 0, 0.10); background-color:#fff; border-radius: 5px; position: absolute; right: 20px; top: 20px; z-index:0; }
+.networkTab ul{display:flex;}
+.networkTab ul li button{display:flex; flex-direction: column; align-items: center; justify-content: center; width:58px; height:58px; border-left: 1px solid #E6E1D6; letter-spacing: -1px;}
+.networkTab ul li:first-child button{border-left: none;}
+.networkTab ul li button .on{display:none;}
+.networkTab ul li.active button, .networkTab ul li button:hover{font-weight: 600; color: #d02837;}
+.networkTab ul li.active button .on, .networkTab ul li button:hover .on{display:block;}
+.networkTab ul li.active button .normal, .networkTab ul li button:hover .normal{display:none;}
+.networkViewer{border-radius: 5px;  border: 1px solid #CBC8C2; background: #FFF; position: absolute; right: 20px; bottom: 20px; z-index:0; overflow:hidden;  display: flex; flex-direction: column;}
+.networkViewer button{width: 36px; height:36px; border-top: 1px solid #E6E1D6; display: flex; justify-content: center; align-items: center;}
+.networkViewer button:first-child{border-top: none;}
+
+
+
+section article .tabFoldArea{margin:0 0 0 26px; height: 86vh; overflow-y: auto; width: 442px; position: relative;}
+section article .tabFoldArea .foldBtn{background: url(../img/ic_open.png) no-repeat 50%; padding: 16px; border: 1px solid #CBC8C2; border-radius: 5px; float: right; margin-right: 4px; position: absolute; right: 0; z-index: 50;}
+section article .tabFoldArea > p{color: #000; font-size: 24px; font-weight: 700; line-height: 30px; margin-bottom: 20px;}
+section article .tabFoldArea .detailContents{display: none; margin-right: 4px;}
+section article .tabFoldArea.active{display: block;}
+section article .tabFoldArea .detailContents.active{display: block;}
+section article .tabFoldArea .detailContents .historySection{position: relative;}
+section article .tabFoldArea .detailContents .historySection p{font-size: 24px; font-weight: 700; margin-bottom: 12px;}
+section article .tabFoldArea .detailContents .historySection p.titleDot{padding-right:50px;}
+section article .tabFoldArea .detailContents .historySection .memberProfile{display: flex; gap: 16px;}
+section article .tabFoldArea .detailContents .historySection .memberProfile .profileImg{width:70px; height:70px; border-radius:50px; overflow:hidden;}
+section article .tabFoldArea .detailContents .historySection .profileDetails{display: flex; align-items: flex-start; flex-direction: column; justify-content: center;}
+section article .tabFoldArea .detailContents .historySection .dutyDetails ul{display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0;}
+section article .tabFoldArea .detailContents .historySection .dutyDetails ul li{border: 1px solid #A8A8A8; border-radius: 50px; padding: 8px 16px;}
+section article .tabFoldArea .detailContents .historySection .detailHistory ul li{    font-weight: 600; font-size: 20px; display: flex; flex-direction: row; align-items: baseline; position:relative;}
+section article .tabFoldArea .detailContents .historySection .detailHistory .historyCircle{width: 7px; height: 7px; border-radius: 50%; background-color: #000; display: inline-block; margin-right: 8.5px;}
+section article .tabFoldArea .detailContents .historySection .detailHistory .historyCircle::after{content: ''; clear: both; display: block; width: 1px; height: 100%; background-color: #000; margin-left: 3px; position: absolute;}
+section article .tabFoldArea .detailContents .historySection .detailHistory .lineContents > ul > li:last-child > span::after{content: none !important;}
+section article .tabFoldArea .detailContents .historySection .detailHistory .lineContents > ul > li:nth-child(3) > span::after{height: 80px !important;}
+section article .tabFoldArea .detailContents .historySection .detailHistory .widthLine{width: 100%; height: 1px; background-color: #CBC8C2; margin: 30px 0;}
+section article .tabFoldArea .detailContents .historySection .detailHistory .lineContents .semiTitle{font-size: 20px; font-weight: 700; margin-bottom: 12px;}
+section article .tabFoldArea .detailContents .historySection .detailHistory ul.historySemiText{font-size: 16px;}
+section article .tabFoldArea .detailContents .historySection .detailHistory ul li ul{margin-bottom: 30px;}
+section article .tabFoldArea .detailContents .historySection .detailHistory ul li:last-child ul:last-child{margin-bottom: 0;}
+section article .tabFoldArea .detailContents .historySection .detailHistory ul li ul li{font-weight: 400; font-size: 16px; margin-top: 8px;}
+
+/* Map_m02_p01 */
+.detailContents .historySection .taskFulfill{width: 100%; height: 232px; border: 1px solid #CBC8C2; border-radius: 12px; padding: 20px;}
+.detailContents .historySection .taskFulfill > p{font-size: 16px !important;}
+.detailContents .historySection .requestBtn{font-weight: 600; font-size: 14px; padding: 8.8px 16px; border: 1px solid #CBC8C2; border-radius: 50px; position: absolute; right: 0; top: -4px}
+.detailContents .historySection .checkType .checkmark {top: 50% !important; left: 30% !important; transform: translate(-50%, -50%);}
+.detailContents .historySection .taskPositioning{width: 100%; padding: 20px; border: 1px solid #A8A8A8; border-radius: 12px;}
+.detailContents .historySection .taskPositioning ul > p{font-size: 20px !important;}
+.detailContents .historySection .taskPositioning ul li{margin-top: 12px;}
+.detailContents .historySection .taskPositioning ul li:first-child{margin-top: 0;}
+.detailContents .historySection .taskPositioning ul li.active{color:#A50034;}
+thead tr th{padding-left: 12px !important;}
+tbody tr td {border-bottom: 1px solid #E6E1D6;}
+tbody tr td:first-child {border-bottom: 1px solid #E6E1D6; border-left: 1px solid #CBC8C2;}
+
+.mapFirstTable tr:nth-child(2) td:first-child{border-left: 1px solid #CBC8C2;}
+.mapFirstTable tr:nth-child(3) td:first-child{border-left: 1px solid #CBC8C2;}
+.mapFirstTable tr:nth-child(5) td:first-child{border-left: 1px solid #CBC8C2;}
+
+thead tr th:last-child {border-left: none;}
+tbody tr:last-child td:first-child{border-bottom: 1px solid #CBC8C2;}
+
+/* Map_m03_p01 */
+.mapSecondThead th:first-child{border-right:none ;} 
+.mapSecondThead th:last-child{border-left:1px solid #CBC8C2;}
+.mapSecondTable th{border-left:1px solid #CBC8C2; font-weight: 400; text-align: left; border-bottom: 1px solid #E6E1D6;}
+.proficiencyTable .mapSecondTable tr:last-child th:first-child{border-bottom: 1px solid #CBC8C2; border-radius: 0 0 0 12px;}
+.proficiencyTable .mapSecondTable td {border-left:1px solid #E6E1D6;}
+.proficiencyTable .mapSecondTable td:first-child{border-left:1px solid #E6E1D6;}
+
+.detailContents .historySection .taskImprovement{width: 100%; padding: 20px; border: 1px solid #A8A8A8; border-radius: 12px;}
+.detailContents .historySection .taskImprovement ul li{font-weight: 600; font-size: 16px; margin-bottom: 10px;}
+.detailContents .historySection .taskImprovement ul li:last-child{margin-bottom: 0;}
+.detailContents .historySection .taskImprovement ul li span{font-weight: 400; font-size: 16px;margin: 0px 17px; position: relative;}
+.detailContents .historySection .taskImprovement ul li span::before{content: ''; clear: both; display: block; position: absolute; width: 1px; height: 12px; background-color: #CBC8C2; top: 50%; transform: translateY(-50%); left: -8px;}
+.noHover{pointer-events: none; }
+
+
+.innerTitle {font-size: 20px !important;}

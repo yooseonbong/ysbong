@@ -1,0 +1,760 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0032)https://bwr.moel.go.kr/index.jsp -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+<title>배우리</title>
+<link href="./css/template.css" rel="stylesheet" type="text/css">
+<link href="./css/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css">
+<script src="./js/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="./js/template.js" type="text/javascript"></script>
+<script src="./js/Bawoori_common.js" type="text/javascript"></script>
+<script src="./js/jquery.easing.1.3.js" type="text/javascript"></script>
+<script src="./js/mainvisual.js" type="text/javascript"></script>
+<script src="./js/mainbanner.js" type="text/javascript"></script>
+<script src="./js/jquery.mCustomScrollbar.concat.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+function fnLogin(){
+	
+	var f_uid_txt = document.login.uid_txt.value;
+	var f_pwd_txt = document.login.pwd_txt.value;
+	
+	if(f_uid_txt.length == 0){
+		alert("아이디를 입력해 주세요.");
+		return;
+	}
+	
+	if(f_pwd_txt.length == 0){
+		alert("암호를 입력해 주세요.");
+		return;
+	}
+	
+	var f = document.login;
+	
+	//TODO - imsi hwang 구간암호화 패스
+	//var rsa = new RSAKey();
+	//rsa.setPublic(f.drn.value, f.dre.value);
+	//f.uid.value = linebrk(rsa.encrypt(f.uid_txt.value), 64);
+	//f.pwd.value = linebrk(rsa.encrypt(f.pwd_txt.value), 64);
+	
+	f.uid.value = f.uid_txt.value;
+	f.pwd.value = f.pwd_txt.value;
+	
+	f.uid_txt.value = "";
+	f.pwd_txt.value = "";	
+	
+	f.target = "login_iframe";
+	f.action="/login_Check.do";
+	f.submit();
+}
+function openSearch(){
+	window.open("/Common/Search/Search_IdPw.asp","IdPwSearch","width=450,height=300");
+}
+
+// 엔터 눌렀을시 로그인
+jQuery(document).keydown(function(e){
+	var loginbtn = document.getElementById("loginbtn");
+	if("030036101"==""){
+		if(loginbtn == e.target){
+		}else{
+			if(e.which==13){
+				fnLogin();
+			}
+		}
+	}
+});
+
+jQuery(document).ready(function(){
+	var cnt= 0;
+	var limit = 3 ;	
+	var top = 10;
+	var left =  30;
+	
+	// 공지사항 팝업이 올라오지 않도록 로직 수정 
+	if("030036101" == "사용하지 않"){
+		if ( getCookie( "Notice" ) != "done" ) {
+			
+			var idx = "3847";			
+			if(idx != ""){
+				if(limit >  cnt){
+				var f = document.popupnoticeform;
+				var pop = window.open("about:blank","commnoticepop_" + idx ,'toolbar=no,location=no,menubar=no,scrollbars=yes,resizable=yes,width=680,height=700,top='+top+',left='+ left);
+				f.target ="commnoticepop_" + idx;
+				f.notidx.value = idx;
+				f.types.value = "Y";
+				f.action = "/common/notice/common_notice_r.do";
+				f.submit(); 
+				f.target = "";
+				cnt =  cnt + 1;
+				top= top+20
+				left= left+20
+				}
+			}
+			
+			
+			var idx = "3823";			
+			if(idx != ""){
+				if(limit >  cnt){
+				var f = document.popupnoticeform;
+				var pop = window.open("about:blank","commnoticepop_" + idx ,'toolbar=no,location=no,menubar=no,scrollbars=yes,resizable=yes,width=680,height=700,top='+top+',left='+ left);
+				f.target ="commnoticepop_" + idx;
+				f.notidx.value = idx;
+				f.types.value = "Y";
+				f.action = "/common/notice/common_notice_r.do";
+				f.submit(); 
+				f.target = "";
+				cnt =  cnt + 1;
+				top= top+20
+				left= left+20
+				}
+			}
+			
+			
+		}
+	}
+	
+	
+	// 설문 팝업
+	
+	
+	// 라이브풀 팝업
+	
+	
+});
+
+
+//설문참여
+function Vote_Join(cookie_name){
+	if ( getCookies(cookie_name) != "done" ) {
+		var f = document.liveform;
+		pop = window.open("about:blank","join","width=670,height=700,top=10,left=30,resizable=yes,scrollbars=yes");
+		f.target = "join";
+		f.action = "/main/livepool/livePool_join_W.do";
+		f.submit();
+	}
+}
+//결과보기
+function Vote_Result(cookie_name){
+	if ( getCookies(cookie_name) != "done" ) {
+		var f = document.liveform;
+		pop = window.open("about:blank","Result","width=670,height=700,top=10,left=30,resizable=yes,scrollbars=yes");
+		f.target = "Result";
+		f.action = "/main/livepool/livePool_reslut_L.do";
+		f.submit();
+	}
+}
+
+
+
+function getCookies(name) {
+	var nameOfCookie = name + "=";
+	var x = 0;
+	while ( x <= document.cookie.length )
+	{
+			var y = (x+nameOfCookie.length);
+			if ( document.cookie.substring( x, y ) == nameOfCookie ) {
+					if ( (endOfCookie=document.cookie.indexOf( ";", y )) == -1 )
+							endOfCookie = document.cookie.length;
+					return unescape( document.cookie.substring( y, endOfCookie ) );
+			}
+			x = document.cookie.indexOf( " ", x ) + 1;
+			if ( x == 0 )
+					break;
+	}
+	return "";
+}
+
+
+function openNotice(idx,powerYn){
+	
+	var f = document.noticeform;
+	f.annceClCd.value = "1";
+	if(powerYn == 1){
+		 pop = window.open("about:blank","commnotice",'toolbar=no,location=no,menubar=no,scrollbars=yes,resizable=yes,width=680,height=700,top=10,left=30');
+		 f.target = "commnotice";
+		 f.action = "/common/notice/common_notice_l.do";
+		 f.submit(); 
+	}else if(powerYn == 2){
+		 pop = window.open("about:blank","mainnotice",'toolbar=no,location=no,menubar=no,scrollbars=yes,resizable=yes,width=680,height=700,top=10,left=30');
+		 f.notidx.value = idx
+		 f.target = "mainnotice";
+		 //f.action = "/Main/Main_Notice_r.asp";
+		 f.action = "/common/notice/common_notice_r.do";
+		 f.submit();
+	}else if(powerYn == 3){
+		 pop = window.open("about:blank","commmsg",'toolbar=no,location=no,menubar=no,scrollbars=yes,resizable=yes,width=680,height=483,top=10,left=30');
+		 f.target = "commmsg";
+		 f.action = "/Common/Message/Common_Message_L.asp";
+		 f.submit();
+	} else if(powerYn == 4){
+		 pop = window.open("about:blank","mainnotice",'toolbar=no,location=no,menubar=no,scrollbars=yes,resizable=yes,width=680,height=483,top=10,left=30');
+		 f.notidx.value = idx
+		 f.target = "mainnotice";
+		 f.action = "/Common/Message/Common_Message_R.asp";
+		 f.submit();
+	}
+
+	f.target = "";
+}
+
+function goCousrse(gubun,crsyy,crsidx,coidx,sin){
+	document.sform.gubun.value = gubun;
+	document.sform.crsyy.value = crsyy;
+	document.sform.crsidx.value = crsidx;
+	document.sform.coidx.value = coidx;
+	document.sform.sin.value = sin;
+	course = window.open("","courseD","width=700,height=700,scrollbars=yes");
+	document.sform.target = "courseD"
+	document.sform.action = "/pop/comm_Course_Detail.do"
+	document.sform.submit();
+	course.focus();
+	document.sform.target = "";
+}
+
+
+// 아디창에 포커스
+jQuery(document).ready(function(e){
+	jQuery("#uid_txt").focus();
+});
+
+function goEdu(str){
+	if(str!=""){
+		eval(str);
+	}
+}
+function classroom(educd, eduyy, edudeg, eduname, eduMaster, openflag, website)
+{
+		if(website != ""){
+			var str = "해당과정은 위탁과정입니다.\n외부망에서 아래의 주소로 접속해주세요.\n"+website;
+			alert(str);
+			return;
+		}
+		//eduMaster 과정담당운영자여부 1이면 운영자(and openflag=1)
+		document.eduform.action = "/class/class_frame.do";
+		document.eduform.eduyy.value = eduyy;
+		document.eduform.educd.value = educd;
+		document.eduform.edudeg.value = edudeg;
+		document.eduform.eduname.value = eduname;
+		document.eduform.eduMaster.value = eduMaster;
+		document.eduform.openflag.value = openflag;
+		document.eduform.submit();
+}
+
+// 김동영 추가
+
+function setPgm(url, pgmId){
+	var f = document.pageMove;
+	f.action = url;
+	f.pgmId.value = pgmId;
+	f.submit();
+}
+
+function checkFind(){
+	var f = document.mainSearch;
+	if(f.sch_word.value ==""){
+		alert("검색어를 입력해 주세요.");
+		return;
+	}
+	f.submit();
+}
+function confudserGo(){
+	var confuserpop = "";
+	confuserpop = window.open("","confuserpop","scrollbars=yes,height=620,width=660,resizable=yes");
+	document.infoform.target = "confuserpop";
+	document.infoform.action="/common/pop/comm_user_list.do?gubun=C&textstr=pathconfid";
+	document.infoform.submit();
+	confuserpop.focus();
+	document.infoform.target = "";
+}
+
+function infoGo(){
+	var pathconfusername = jQuery("#pathconfhname").val();
+	jQuery("#pathconfhnameField").text("승인권자 : " + pathconfusername);
+	jQuery.ajax({
+		type : "post",
+		url  : "/ajax/pathconfUserRegist.do",
+		data : jQuery("#infoform").serialize(),
+		success : function(result){
+			var str = decodeURIComponent(result);
+			str = str.replace(/_/gi, " ");
+			alert(str);
+		}, error : function(e){
+			alert(e);
+		}
+	});	
+}
+
+</script>
+</head>
+
+
+
+<body>
+
+<!-- 설문 폼 -->
+<form name="surveyform" method="post">
+	<input type="hidden" name="svid" value="">
+	<input type="hidden" name="eduyy" value="">
+	<input type="hidden" name="educd" value="">
+	<input type="hidden" name="edudeg" value="">
+	<input type="hidden" name="svtype" value="">
+	<input type="hidden" name="testid" value="">
+	<input type="hidden" name="svdeg" value="">
+</form>
+
+<!-- 라이브폴 폼 -->
+<form name="liveform" method="post">
+	<input type="hidden" name="voteid" value="">
+	<input type="hidden" name="votename" value="">
+</form>
+
+<form name="pageMove" method="post">
+	<input type="hidden" name="pgmId" value="">
+	<input type="hidden" name="url" value="">
+</form>
+
+<form name="infoform" id="infoform" method="post">
+	<input type="hidden" id="pathconfhname" name="pathconfhname">
+	<input type="hidden" id="pathconfid" name="pathconfid">
+</form>
+
+<iframe name="login_iframe" style="display:none;" src="./배우리_files/saved_resource.html"></iframe><!-- width="0px" height="0px"  -->
+
+<ul class="skip">
+	<li><a href="#nav">메인메뉴 바로가기</a></li>
+	<li><a href="#main_container">내용 바로가기</a></li>
+</ul>
+<!--whole wrap start-->
+<div class="n_wrap">
+	<!-- header 시작 -->
+	<div id="header_wrap">
+		<div id="header">
+			<h1><a href="#"><img src="./images/h1_logo.png" alt="배우리"></a></h1>
+			<div class="header_srchBox">
+                <form name="h_srch" id="h_srch" method="post" action="serch.html">
+                    <fieldset>
+                        <legend>통합검색박스</legend>
+                        <div class="search">
+                            <label for="search_input">검색어</label>
+							<input type="text" name="search_put" id="search_input" placeholder="검색어를 입력해주세요" title="검색어 입력">
+                            <button class="search_btn" >검색</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+			<div class="h_lnb">
+				<ul class="login_box">
+					<li class="lb1"><a href="#"><span>관리자화면</span></a></li>
+					<li class="lb2"><a href="#"><span>로그아웃</span></a></li>
+				</ul>
+				<div class="fz_box"> 
+					<h2>글자크기</h2>
+					<button class="plus_txt" onclick="#"><span>글자크게</span></button> 
+					<span id="txt_size">O</span> 
+					<button class="minus_txt" onclick="#"><span>글자작게</span></button> 
+				</div>
+			</div>
+			
+		</div><!-- header -->
+		<div class="nav_wrap"> 
+			<nav id="nav"><!-- .menuicon 클릭시 on 클래스 추가 -->
+				<!--메인메뉴-->
+				<ul class="nav">
+					<li> 
+						<a href="#" class="menu_dep1">나의 학습방</a>
+						<div class="dep2_area">
+							<ul>
+								<li><a href="#">강의실가기</a></li>
+								<li><a href="#">동영상강좌</a></li>
+								<li><a href="#">학습실적</a>
+									<div class="dep3_area">
+										<ul>
+											<li><a href="#">승진필요</a></li>
+											<li><a href="#">기간별 학습시간조회</a></li>
+										</ul>
+									</div>
+								</li>
+								<li><a href="#">부서원 학습일정</a></li>
+								<li><a href="#">상시학습비지원신청</a></li>
+							</ul>
+						</div>
+					</li>
+					<li> 
+						<a href="#" class="menu_dep1">자기 개발계획</a>
+						<div class="dep2_area">
+							<ul>
+								<li><a href="#">작성및승인요청</a></li>
+								<li><a href="#">자기개발승인결과</a></li>
+								<li><a href="#">역량진단안내</a>
+									<div class="dep3_area">
+										<ul>
+											<li><a href="#">공동역량</a></li>
+											<li><a href="#">리더쉽역량</a></li>
+										</ul>
+									</div>
+								</li>
+								<li><a href="#">진단결과</a>
+									<div class="dep3_area">
+										<ul>
+											<li><a href="#">결과보기</a></li>
+											<li><a href="#">역량향상도보기</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li> 
+						<a href="#" class="menu_dep1">수강신청</a>
+						<div class="dep2_area">
+							<ul>
+								<li><a href="#">과정검색 및 신청</a></li>
+								<li><a href="#">교육기관 수강신청</a></li>
+								<li><a href="#">수강신청결과 및 취소</a></li>
+							</ul>
+						</div>
+					</li>
+					<li> 
+						<a href="#" class="menu_dep1">학습시간인정신청</a>
+						<div class="dep2_area">
+							<ul>
+								<li><a href="#">자율수강과정</a></li>
+								<li><a href="#">공동학습</a></li>
+								<li><a href="#">지식개발</a></li>
+								<li><a href="#">학습지원</a></li>
+								<li><a href="#">국내외.위탁훈련과정</a></li>
+								<li><a href="#">지정과제연구</a></li>
+								<li><a href="#">봉사활동</a></li>
+								<li><a href="#">학습시간중복등록조회</a></li>
+							</ul>
+						</div>
+					</li>
+					<li> 
+						<a href="#" class="menu_dep1">자료실</a>
+						<div class="dep2_area">
+							<ul>
+								<li><a href="#">교육과정안내
+								<li><a href="#">자체직무과정</a></li>
+								<li><a href="#">타부처교육훈련기관과정</a></li>
+								<li><a href="#">민간교육훈련기관과정</a></li>
+								<li><a href="#">기관별 직장교육훈련</a></li>
+								<li><a href="#">국내외위탁훈련과정</a></li>
+								<li><a href="#">교육자료실</a></li>
+								<li><a href="#">연간교육훈련계획</a></li>
+								<li><a href="#">교육교재</a></li>
+								<li><a href="#">교육관련규정</a></li>
+							</ul>
+						</div>
+					</li>
+					<li> 
+						<a href="#" class="menu_dep1">알림마당</span></a>
+						<div class="dep2_area">
+							<ul>
+								<li><a href="#">공지사항</a></li>
+								<li><a href="#">자주묻는질문</a></li>
+							</ul>
+						</div>
+					</li>
+					<li> 
+						<a href="#" class="menu_dep1">강사학습지원센터</a>
+						<div class="dep2_area">
+							<ul>
+								<li><a href="#">강사중인과정</a></li>
+								<li><a href="#">강의예정과정</a></li>
+								<li><a href="#">강사활동및만족도</a></li>
+								<li><a href="#">강의지원신청</a></li>
+								<li><a href="#">강사게시판</a></li>
+								<li><a href="#">교수법클리닉</a></li>
+								<li><a href="#">강의안자료실</a></li>
+								<li><a href="#">강사현황</a></li>
+							</ul>
+						</div>
+					</li>
+
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<!-- header 끝 -->
+	<!-- main_container 시작 -->
+	<div id="main_container">
+		<div id="visual">
+			<div class="inner">
+				<div class="v_cont">
+					<div class="login_form">
+						<!-- 로그아웃 했을때-->
+						<form id="login" name="login" action="login.html" method="post">
+						<fieldset class="log_out">
+							<legend class="blind">로그인</legend>
+							<h3>회원<b>로그인</b></h3>
+							<p>다우리에서 사용하는 아이디와 비밀번호로 로그인하시기 바랍니다</p>
+							<div class="input_box">
+								<label for="id" id="label_id_area">아이디</label>
+								<input type="text" id="id" name="id" placeholder="아이디를 입력하세요" title="아이디 입력">
+							</div>
+							<div class="input_box">
+								<label for="pw" id="label_pw_area">비밀번호</label>
+								<input type="password" id="pw" name="pw" placeholder="패스워드를 입력하세요" title="비밀번호 입력">
+							</div>
+							<div class="checkbox-radio-custom">
+								<input type="checkbox" id="loginIdSaveChk" title="아이디 저장 체크">
+								<label for="loginIdSaveChk">아이디 저장</label>
+							</div>
+							<input type="submit" title="로그인" alt="로그인" value="로그인" id="loginBtn" class="loginBtn">
+						</fieldset> 
+						</form>
+						<!-- 로그아웃 했을때 -->
+						<!-- 로그인 했을때 -->
+						<!-- <div class="log_in">
+							<div class="login_after">
+								<em><b>홍길동</b>님</em>
+								<span>근로개선지도과</span>
+								<a href="#" class="b_log">로그아웃</a>
+							</div>
+							<div class="login_info">
+								<ul>
+									<li><p>승인권자 : <b>홍길동2</b>님</p> <a href="#" class="b_info">변경하기</a></li>
+									<li><p>교육담당자 : <b>홍길동3</b>님 외 <b>2</b>명</p> <a href="#" class="b_info">+더보기</a></li>
+								</ul>
+								<ul>
+									<li><p>연간기준시간(지정) : <span>0(12)</span></p>  <a href="#" class="b_info">바로가기</a></li>
+									<li><p>현재실적시간(지정) : <span>5(12)</span></p> <a href="#" class="b_info">바로가기</a></li>
+								</ul>
+							</div>
+							<div class="study_cont">
+								<button class="btn_study">학습중인 과정 보기</button>
+								<div class="study_list">
+									<ul>
+										<li><a href="#">신고사건 테마(근로자성판단) 과정</a></li>
+										<li><a href="#">[전문보건]근골격계 질환예방을 위한 유해요인 조사과정</a></li>
+										<li><a href="#">20년 건강한 일터를 위한 성희롱 예방교육</a></li>
+										<li><a href="#">건설현장의 안전 1차</a></li>
+										<li><a href="#">신고사건 테마(근로자성판단) 과정(대구권역 현장교육)</a></li>
+										<li><a href="#">건설현장의 안전  2차</a></li>
+										<li><a href="#">고용업무를 위한 노동법 실무과정 1차</a></li>
+										<li><a href="#">(강원권역 현장교육) 고용업무를 위한 노동법 실무과정</a></li>
+										<li><a href="#">신고사건 테마(근로자성판단) 과정</a></li>
+										<li><a href="#">[전문보건]근골격계 질환예방을 위한 유해요인 조사과정</a></li>
+									</ul>
+								</div>
+							</div>
+						</div> -->
+						<!-- 로그인 했을때 -->
+					</div><!-- login_form -->
+					<div class="service_list">
+						<h3><b>자주찾는</b> 서비스</h3>
+						<ul>
+							<li class="sl1"><a href="#"><span>학습하기</span></a></li>
+							<li class="sl2"><a href="#"><span>수강신청</span></a></li>
+							<li class="sl3"><a href="#"><span>자기개발 계획수립</span></a></li>
+							<li class="sl4"><a href="#"><span>학습시간 인정신청</span></a></li>
+							<li class="sl5"><a href="#"><span>승진필요 학습시간</span></a></li>
+							<li class="sl6"><a href="#"><span>동영상 강좌</span></a></li>
+						</ul>
+					</div><!-- service_list -->
+				</div><!-- v_cont -->
+			</div><!-- inner -->
+		</div><!-- visual -->
+		<div id="main_cont">
+			<div class="banner_box">
+				<div class="faq">
+					<h3>자주묻는 질문</h3>
+					<p>이용중 자주 묻는 질문에 대한 답변</p>
+					<a href="#">바로보기</a>
+				</div>
+				<div class="reference">
+					<h3>교육 자료실</h3>
+					<p>배우리 교육교재 관련 자료실</p>
+					<a href="#">바로보기</a>
+				</div>
+			</div><!-- banner_box -->
+			<div class="info_box">
+				<div class="i_notice">
+					<h3>공지사항</h3>
+					<ul>
+						<li class="n_info"><a href="#">수강신청이 3월 1일 마감됩니다. </a> <em><img src="./images/ico_new.png" alt="new"></em> <span>2020.04.28</span></li>
+						<li class="n_info"><a href="#">시스템 개편 및 절차변경안내</a> <span>2020.04.28</span></li>
+						<li class="n_info"><a href="#">[마감]상반기 교육과정 3월 30일 마감</a> <span>2020.04.28</span></li>
+						<li><a href="#">영어청취(JFKN) 학습 콘텐츠 수요 파악</a> <span>2020.04.28</span></li>
+						<li><a href="#">020년 인재개발계획(자기개발계획 수립 안내)</a> <span>2020.04.28</span></li>
+						<li><a href="#">2020년 3월 21일 배우리 사이트 시스템 점검 2020년 3월 21일 배우리 사이트 시스템 점검 </a> <em><img src="./images/ico_new.png" alt="new"></em><span>2020.04.28</span></li>
+						<li><a href="#">영어청취(JFKN) 학습 콘텐츠 수요 파악</a> <span>2020.04.28</span></li>
+						<li><a href="#">2020년 인재개발계획(자기개발계획 수립 안내)</a> <span>2020.04.28</span></li>
+					</ul>
+					<a href="#" class="b_more">더보기</a>
+				</div><!-- i_notice -->
+				<div class="i_application">
+					<h3><b>수강신청</b> 가능한 과정</h3>
+					<ul>
+						<li>
+							<a href="#">
+								<em class="c_atte1">사이버</em>
+								<strong>[전문보건]근골격계 질환예방을 위한 유해요인 조사과정 근골격계 질환예방을 위한 유해요인 조사과정</strong>
+								<span><b>고용노동 연수원</b> <b>2020.03.02~2020.03.04</b></span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<em class="c_atte2">집합</em>
+								<strong>신고사건 테마(근로자성판단) 과정(대구권역 현장교육)</strong>
+								<span><b>고용노동 연수원</b> <b>2020.03.02~2020.03.04</b></span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<em class="c_atte3">집합 사이버</em>
+								<strong>[전문보건]근골격계 질환예방을 위한 유해요인 조사과정 근골격계 질환예방을 위한 유해요인 조사과정</strong>
+								<span><b>고용노동 연수원</b> <b>2020.03.02~2020.03.04</b></span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<em class="c_atte4">우편</em>
+								<strong>신고사건 테마(근로자성판단) 과정(대구권역 현장교육)</strong>
+								<span><b>고용노동 연수원</b> <b>2020.03.02~2020.03.04</b></span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<em class="c_atte5">집합 우편</em>
+								<strong>신고사건 테마(근로자성판단) 과정(대구권역 현장교육)</strong>
+								<span><b>고용노동 연수원</b> <b>2020.03.02~2020.03.04</b></span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<em class="c_atte6">기타</em>
+								<strong>신고사건 테마(근로자성판단) 과정(대구권역 현장교육)</strong>
+								<span><b>고용노동 연수원</b> <b>2020.03.02~2020.03.04</b></span>
+							</a>
+						</li>
+					</ul>
+					<a href="#" class="b_more">더보기</a>
+				</div><!-- i_application -->
+			</div><!-- info_box -->
+			
+		</div><!-- main_cont -->
+	</div>
+	<!-- main_container 끝 -->
+	<!-- footer 시작 -->
+	<div id="newfooter">
+		<div class="inner">
+			<h1><img src="./images/f_logo.gif" alt="배우리"></h1>
+			<p class="n-address">30117 세종특별자치시 한누리대로 422, 정부세종청사 11동</p>
+			<p class="n-copyright">Copyright(c) 2020 Korea Ministry of Employment and Labor,. All rights reserved.</p>
+		</div>
+	</div>
+	<!-- footer 끝 -->
+</div>
+
+
+	<form name="noticeform" method="post">
+		<input type="hidden" name="notidx">	
+		<input type="hidden" name="bullidx">	
+		<input type="hidden" name="catid">	
+		<input type="hidden" name="clip">	
+		<input type="hidden" name="annceClCd" value="1">
+	</form>
+	
+	<form name="popupnoticeform" method="post">
+		<input type="hidden" name="notidx">	
+		<input type="hidden" name="bullidx">	
+		<input type="hidden" name="catid">	
+		<input type="hidden" name="clip">	
+		<input type="hidden" name="annceClCd" value="1">
+		<input type="hidden" name="types" value="Y">
+	</form>
+
+<form name="sform" method="post">
+	<input type="hidden" name="clip" value="">
+	<input type="hidden" name="reqpath" value="10">
+	<input type="hidden" name="gubun">
+	<input type="hidden" name="crsyy">
+	<input type="hidden" name="crsidx">
+	<input type="hidden" name="coidx">
+	<input type="hidden" name="sin">
+</form>
+<form name="eduform" method="post">
+<input type="hidden" name="eduyy">
+<input type="hidden" name="educd">
+<input type="hidden" name="edudeg">
+<input type="hidden" name="eduname">
+<input type="hidden" name="eduMaster">
+<input type="hidden" name="openflag">
+<input type="hidden" name="clip" value="mcd=3&amp;lcd=1">
+<input type="hidden" name="gubun">
+<input type="hidden" name="crsyy">
+<input type="hidden" name="crsidx">
+<input type="hidden" name="coidx">
+<input type="hidden" name="sin">
+<input type="hidden" name="param">
+</form>
+<iframe src="./배우리_files/sess.html" style="display:none; width:0px; height:0px; border:0px"></iframe>
+<script type="text/javascript">
+/* 아이디 저장 체크박스 쿠키.. */
+jQuery(function(){
+	
+	// 저장된 쿠키값을 가져와서 ID 칸에 넣어준다. 없으면 공백으로 들어감 
+	var userInputId = getCookie("userInputId");
+	jQuery("#uid_txt").val(userInputId);
+	
+	// 그 전에 ID를 저장해서 처음 페이지 로딩 시, 입력 칸에 저장된 ID가 표시된 상태라면
+	if( jQuery("#uid_txt").val() != "" ){ jQuery("#memory").prop("checked",true);	}
+	
+	// 체크박스에 변화가 있다면
+	jQuery("#memory").change(function(){
+		if( jQuery(this).is(":checked") ){
+			var userInputId = jQuery("#uid_txt").val();
+			setCookie("userInputId",userInputId,7);	// 7일동안 쿠키 보관
+		}else{
+			deleteCookie("userInputId");
+		}
+	});
+	
+	// 아이디 저장 체크한 상태에서 ID를 입력하는 경우에도 쿠키 저장
+	jQuery("#uid_txt").keyup(function(){
+		if( jQuery("#memory").is(":checked") ){
+			var userInputId = jQuery("#uid_txt").val();
+			setCookie("userInputId",userInputId,7);	// 7일동안 쿠키 보관
+		}
+	});
+	
+});
+
+function setCookie(cookieName, value, exdays){
+	var exdate = new Date();
+	exdate.setDate(exdate.getDate() + exdays);
+	var cookieValue = escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toGMTString());
+	document.cookie = cookieName + "=" + cookieValue;
+}
+
+function deleteCookie(cookieName){
+	setCookie(cookieName,"",-1);
+}
+
+function getCookie(cookieName){
+	cookieName = cookieName + "=";
+	var cookieData = document.cookie;
+	var start = cookieData.indexOf(cookieName);
+	var cookieValue = "";
+	if( start != -1 ){
+		start += cookieName.length;
+		var end = cookieData.indexOf(';',start);
+		if( end == -1 ) end = cookieData.length;
+		cookieValue = cookieData.substring(start,end);
+	}
+	return unescape(cookieValue);
+}
+</script>
+
+
+
+
+</body>
+</html>

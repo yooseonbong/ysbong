@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1.0,width=device-width">
+<title>주민등록 데이터개방 관리자 시스템</title>
+<script src="./js/jquery-1.12.4.js"></script>
+<script src="./js/jquery-ui.min.js"></script>
+<script src="./js/datepicker-ko.js"></script>
+<script src="./js/layout.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="./css/common.css">
+<link rel="stylesheet" type="text/css" href="./css/layout.css">
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+			<div class="top">
+				<h1><a href="#"><img src="./images/h1_logo.png" alt="주민등록 데이터개방 관리자 시스템"></a></h1>
+				<div class="top_log">
+					<ul>
+						<li class="log_state"><a href="#">사용자관리</a></li>
+						<li class="log_btn"><a href="#">로그아웃</a></li>
+					</ul>
+				</div>
+			</div><!-- top -->
+			<div id="lnb">
+				<ul>
+					<li class="on"><a href="#">서비스 목록 관리</a></li>
+					<li><a href="#">서비스 활용이력 조회</a></li>
+					<li><a href="#">서비스별 활용 통계</a></li>
+					<li><a href="#">이용자별 활용 통계</a></li>
+				</ul>
+			</div>
+		</div><!-- header -->
+		<div id="container">
+			<div class="contents">
+				<div class="article">
+					<div class="searchBox">
+						<form name="" method="" action="">
+							<div class="inputList">
+								<ul>
+									<li class="w100per">
+										<label for="type1" class="w80px">행정구역</label> 
+										<select name="type1" id="type1" class="w100px" title="행정구역 시/도 선택">
+											<option value="전체">서울시</option>
+										</select>
+										<select name="type2" id="type2" class="w100px" title="행정구역 구/시 선택">
+											<option value="전체">종로구</option>
+										</select>
+									</li>
+									<li class="w100per">
+										<label for="type3" class="w80px">조회기간</label> 
+										<select name="type3" id="type3" class="w90px" title="조회 시작 년도 선택">
+											<option value="전체">2022</option>
+										</select>
+										<select name="type4" id="type4" class="w90px" title="조회 시작 월 선택">
+											<option value="전체">01</option>
+										</select> 
+										~ 
+										<select name="type5" id="type5" class="w90px" title="조회 종료 년도 선택">
+											<option value="전체">2022</option>
+										</select>
+										<select name="type6" id="type6" class="w90px" title="조회 종료 월 선택">
+											<option value="전체">08</option>
+										</select> 
+									</li>
+									<li class="w400px">
+										<label for="date1" class="w80px">기간 선택</label> 
+										<span class="dateBox"><input type="text" name="date1" id="date1" class="w90px datepicker" title="시작 기간 선택"></span> ~ <span class="dateBox"><input type="text" name="date2" id="date2" class="w90px datepicker" title="종료 기간 선택"></span>
+									</li>
+									<li class="w500px">
+										<label for="a1" class="w100px">라디오 박스</label> 
+										<div class="radioBox">
+											<label for="a1"><input type="radio" name="search_b" id="a1" title="전체 선택">전체</label>
+											<label for="a2"><input type="radio" name="search_b" id="a2" title="표준용어 연결 선택">표준용어 연결</label>
+											<label for="a3"><input type="radio" name="search_b" id="a3" title="표준용어 연결 선택">표준용어 미연결</label>
+										</div>
+									</li>
+									<li class="w800px">
+										<label for="b1" class="w80px">체크 박스</label> 
+										<div class="radioBox">
+											<label for="b1"><input type="checkbox" name="search_c" id="b1" title="행정규칙의 위임정보는 4가지유형(법령전체, 조문, 패턴문자열, 별표)을 갖고 있음 선택"> 행정규칙의 위임정보는 4가지유형(법령전체, 조문, 패턴문자열, 별표)을 갖고 있음</label>
+										</div>
+									</li>
+									<li class="w800px">
+										<label for="b1" class="w80px">인풋 박스</label> 
+										<input type="text" name="num3" id="num3" class="w350px" title="번호 앞자리 입력">
+									</li>
+								</ul>
+							</div>
+							<button class="btn_join" title="검색"><span>검색</span></button>
+						</form>
+					</div>
+					<div class="resultBox">
+						<div class="result_top">
+							<p class="total">총 <b>4,560</b>건</p>
+						</div>
+						<div class="scroll_result">
+							<div class="bbs_list">
+								<table style="width:1500px;">
+									<caption>행정기관코드, 시도명, 시군구명, 읍면동(행정동)명, 통, 반, 통계년월, 계, 남자, 여자, 거주자, 거주불명자, 재외국민의 출생 등록자수를 확인할 수 있는 표</caption>
+									<colgroup>
+										<col style="width:5%">
+										<col>
+										<col style="width:15%">
+										<col style="width:8%">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">순번</th>
+											<th scope="col"  class="arrow_view">
+												서비스명
+												<span class="bbs_arrow">
+													<a href="#" onclick="return false;" class="bbs_up on">오름차순</a> 
+													<a href="#" onclick="return false;" class="bbs_down">내림차순</a>
+												</span>
+											</th>
+											<th scope="col">서비스기간</th>
+											<th scope="col">사용여부</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="title-wrap">
+													<a href="ppt.8.html" title="법제처, 국가경찰위원회 법적 쟁점에 명확한 견해 밝혀"><span class="t_new">새글</span >국가첨단전략기술과 전문인력을 보호하기 위하여 전략기술보유자의 기술수출 및 해외 인수·합병, 합작투자 등 외국인 투자를 진행하려는 경우 산업통상자원부장관의 승인을 받도록 하고, 전략기술에 대한 보호조치를 할 수 있도록 함.</a>
+												</div>
+											</td>
+											<td>2022.07.01~2022.12.31</td>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="title-wrap">
+													<a href="#" title="2018성공개최평창군위원회 설립 및 지원 조례">2018성공개최평창군위원회 설립 및 지원 조례</a>
+												</div>
+											</td>
+											<td>2022.07.01~2022.12.31</td>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="title-wrap">
+													<a href="ppt.8.html" title="법제처, 국가경찰위원회 법적 쟁점에 명확한 견해 밝혀"><span class="t_new">새글</span >국가첨단전략기술과 전문인력을 보호하기 위하여 전략기술보유자의 기술수출 및 해외 인수·합병, 합작투자 등 외국인 투자를 진행하려는 경우 산업통상자원부장관의 승인을 받도록 하고, 전략기술에 대한 보호조치를 할 수 있도록 함.</a>
+												</div>
+											</td>
+											<td>2022.07.01~2022.12.31</td>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="title-wrap">
+													<a href="#" title="2018성공개최평창군위원회 설립 및 지원 조례">2018성공개최평창군위원회 설립 및 지원 조례</a>
+												</div>
+											</td>
+											<td>2022.07.01~2022.12.31</td>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="title-wrap">
+													<a href="ppt.8.html" title="법제처, 국가경찰위원회 법적 쟁점에 명확한 견해 밝혀"><span class="t_new">새글</span >국가첨단전략기술과 전문인력을 보호하기 위하여 전략기술보유자의 기술수출 및 해외 인수·합병, 합작투자 등 외국인 투자를 진행하려는 경우 산업통상자원부장관의 승인을 받도록 하고, 전략기술에 대한 보호조치를 할 수 있도록 함.</a>
+												</div>
+											</td>
+											<td>2022.07.01~2022.12.31</td>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="title-wrap">
+													<a href="#" title="2018성공개최평창군위원회 설립 및 지원 조례">2018성공개최평창군위원회 설립 및 지원 조례</a>
+												</div>
+											</td>
+											<td>2022.07.01~2022.12.31</td>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="title-wrap">
+													<a href="ppt.8.html" title="법제처, 국가경찰위원회 법적 쟁점에 명확한 견해 밝혀"><span class="t_new">새글</span >국가첨단전략기술과 전문인력을 보호하기 위하여 전략기술보유자의 기술수출 및 해외 인수·합병, 합작투자 등 외국인 투자를 진행하려는 경우 산업통상자원부장관의 승인을 받도록 하고, 전략기술에 대한 보호조치를 할 수 있도록 함.</a>
+												</div>
+											</td>
+											<td>2022.07.01~2022.12.31</td>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="title-wrap">
+													<a href="#" title="2018성공개최평창군위원회 설립 및 지원 조례">2018성공개최평창군위원회 설립 및 지원 조례</a>
+												</div>
+											</td>
+											<td>2022.07.01~2022.12.31</td>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="title-wrap">
+													<a href="ppt.8.html" title="법제처, 국가경찰위원회 법적 쟁점에 명확한 견해 밝혀"><span class="t_new">새글</span >국가첨단전략기술과 전문인력을 보호하기 위하여 전략기술보유자의 기술수출 및 해외 인수·합병, 합작투자 등 외국인 투자를 진행하려는 경우 산업통상자원부장관의 승인을 받도록 하고, 전략기술에 대한 보호조치를 할 수 있도록 함.</a>
+												</div>
+											</td>
+											<td>2022.07.01~2022.12.31</td>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="title-wrap">
+													<a href="#" title="2018성공개최평창군위원회 설립 및 지원 조례">2018성공개최평창군위원회 설립 및 지원 조례</a>
+												</div>
+											</td>
+											<td>2022.07.01~2022.12.31</td>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="title-wrap">
+													<a href="ppt.8.html" title="법제처, 국가경찰위원회 법적 쟁점에 명확한 견해 밝혀"><span class="t_new">새글</span >국가첨단전략기술과 전문인력을 보호하기 위하여 전략기술보유자의 기술수출 및 해외 인수·합병, 합작투자 등 외국인 투자를 진행하려는 경우 산업통상자원부장관의 승인을 받도록 하고, 전략기술에 대한 보호조치를 할 수 있도록 함.</a>
+												</div>
+											</td>
+											<td>2022.07.01~2022.12.31</td>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="title-wrap">
+													<a href="#" title="2018성공개최평창군위원회 설립 및 지원 조례">2018성공개최평창군위원회 설립 및 지원 조례</a>
+												</div>
+											</td>
+											<td>2022.07.01~2022.12.31</td>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="title-wrap">
+													<a href="ppt.8.html" title="법제처, 국가경찰위원회 법적 쟁점에 명확한 견해 밝혀"><span class="t_new">새글</span >국가첨단전략기술과 전문인력을 보호하기 위하여 전략기술보유자의 기술수출 및 해외 인수·합병, 합작투자 등 외국인 투자를 진행하려는 경우 산업통상자원부장관의 승인을 받도록 하고, 전략기술에 대한 보호조치를 할 수 있도록 함.</a>
+												</div>
+											</td>
+											<td>2022.07.01~2022.12.31</td>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="title-wrap">
+													<a href="#" title="2018성공개최평창군위원회 설립 및 지원 조례">2018성공개최평창군위원회 설립 및 지원 조례</a>
+												</div>
+											</td>
+											<td>2022.07.01~2022.12.31</td>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="title-wrap">
+													<a href="ppt.8.html" title="법제처, 국가경찰위원회 법적 쟁점에 명확한 견해 밝혀"><span class="t_new">새글</span >국가첨단전략기술과 전문인력을 보호하기 위하여 전략기술보유자의 기술수출 및 해외 인수·합병, 합작투자 등 외국인 투자를 진행하려는 경우 산업통상자원부장관의 승인을 받도록 하고, 전략기술에 대한 보호조치를 할 수 있도록 함.</a>
+												</div>
+											</td>
+											<td>2022.07.01~2022.12.31</td>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="title-wrap">
+													<a href="#" title="2018성공개최평창군위원회 설립 및 지원 조례">2018성공개최평창군위원회 설립 및 지원 조례</a>
+												</div>
+											</td>
+											<td>2022.07.01~2022.12.31</td>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="title-wrap">
+													<a href="ppt.8.html" title="법제처, 국가경찰위원회 법적 쟁점에 명확한 견해 밝혀"><span class="t_new">새글</span >국가첨단전략기술과 전문인력을 보호하기 위하여 전략기술보유자의 기술수출 및 해외 인수·합병, 합작투자 등 외국인 투자를 진행하려는 경우 산업통상자원부장관의 승인을 받도록 하고, 전략기술에 대한 보호조치를 할 수 있도록 함.</a>
+												</div>
+											</td>
+											<td>2022.07.01~2022.12.31</td>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="title-wrap">
+													<a href="#" title="2018성공개최평창군위원회 설립 및 지원 조례">2018성공개최평창군위원회 설립 및 지원 조례</a>
+												</div>
+											</td>
+											<td>2022.07.01~2022.12.31</td>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="title-wrap">
+													<a href="ppt.8.html" title="법제처, 국가경찰위원회 법적 쟁점에 명확한 견해 밝혀"><span class="t_new">새글</span >국가첨단전략기술과 전문인력을 보호하기 위하여 전략기술보유자의 기술수출 및 해외 인수·합병, 합작투자 등 외국인 투자를 진행하려는 경우 산업통상자원부장관의 승인을 받도록 하고, 전략기술에 대한 보호조치를 할 수 있도록 함.</a>
+												</div>
+											</td>
+											<td>2022.07.01~2022.12.31</td>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="title-wrap">
+													<a href="#" title="2018성공개최평창군위원회 설립 및 지원 조례">2018성공개최평창군위원회 설립 및 지원 조례</a>
+												</div>
+											</td>
+											<td>2022.07.01~2022.12.31</td>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="title-wrap">
+													<a href="ppt.8.html" title="법제처, 국가경찰위원회 법적 쟁점에 명확한 견해 밝혀"><span class="t_new">새글</span >국가첨단전략기술과 전문인력을 보호하기 위하여 전략기술보유자의 기술수출 및 해외 인수·합병, 합작투자 등 외국인 투자를 진행하려는 경우 산업통상자원부장관의 승인을 받도록 하고, 전략기술에 대한 보호조치를 할 수 있도록 함.</a>
+												</div>
+											</td>
+											<td>2022.07.01~2022.12.31</td>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="title-wrap">
+													<a href="#" title="2018성공개최평창군위원회 설립 및 지원 조례">2018성공개최평창군위원회 설립 및 지원 조례</a>
+												</div>
+											</td>
+											<td>2022.07.01~2022.12.31</td>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="title-wrap">
+													<a href="ppt.8.html" title="법제처, 국가경찰위원회 법적 쟁점에 명확한 견해 밝혀"><span class="t_new">새글</span >국가첨단전략기술과 전문인력을 보호하기 위하여 전략기술보유자의 기술수출 및 해외 인수·합병, 합작투자 등 외국인 투자를 진행하려는 경우 산업통상자원부장관의 승인을 받도록 하고, 전략기술에 대한 보호조치를 할 수 있도록 함.</a>
+												</div>
+											</td>
+											<td>2022.07.01~2022.12.31</td>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="title-wrap">
+													<a href="#" title="2018성공개최평창군위원회 설립 및 지원 조례">2018성공개최평창군위원회 설립 및 지원 조례</a>
+												</div>
+											</td>
+											<td>2022.07.01~2022.12.31</td>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="title-wrap">
+													<a href="ppt.8.html" title="법제처, 국가경찰위원회 법적 쟁점에 명확한 견해 밝혀"><span class="t_new">새글</span >국가첨단전략기술과 전문인력을 보호하기 위하여 전략기술보유자의 기술수출 및 해외 인수·합병, 합작투자 등 외국인 투자를 진행하려는 경우 산업통상자원부장관의 승인을 받도록 하고, 전략기술에 대한 보호조치를 할 수 있도록 함.</a>
+												</div>
+											</td>
+											<td>2022.07.01~2022.12.31</td>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="title-wrap">
+													<a href="#" title="2018성공개최평창군위원회 설립 및 지원 조례">2018성공개최평창군위원회 설립 및 지원 조례</a>
+												</div>
+											</td>
+											<td>2022.07.01~2022.12.31</td>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<td colspan="4">내용이 없습니다.</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						
+						<div class="pagination">
+							<a href="#" title="첫페이지로" class="first">첫페이지</a>
+							<a href="#" title="이전페이지로" class="prev">이전</a>
+							<a href="#" class="on">1</a>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a> 
+							<a href="#">6</a>
+							<a href="#">7</a>
+							<a href="#">8</a>
+							<a href="#">9</a>
+							<a href="#">10</a> 
+							<a href="#" title="다음페이지로" class="next">다음</a> 
+							<a href="#" title="마지막페이지로" class="last">마지막페이지</a>
+						</div>
+					</div>
+					<div class="btn-box">
+						<button class="btn bd-blue" onClick="location.href='ppt.9.html'">등록</button>
+					</div>
+				</div><!-- article -->
+			</div><!-- contents -->
+			
+			
+		</div><!-- container -->
+	</div>
+
+</body>
+</html>

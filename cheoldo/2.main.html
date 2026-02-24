@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>철도경찰형사사법업무시스템</title>
+<script src="./js/jquery-1.12.4.js"></script>
+<script src="./js/jquery-ui.min.js"></script>
+<script src="./js/datepicker-ko.js"></script>
+<script src="./js/layout.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/common.css">
+<link rel="stylesheet" type="text/css" href="./css/layout.css">
+<link rel="stylesheet" type="text/css" href="./css/jquery-ui.min.css">
+</head>
+<body>
+	<div id="wrap">
+		<div class="main_wapper">
+			<div id="header" class="main">
+				<div class="top">
+					<h1><a href="http://localhost:8080/cm/main.do"><img src="./images/main_logo.png" alt=""></a></h1>
+					<div class="top_log">
+						<ul>
+							<li><a href="#">SMS</a></li>
+							<li class="fz_box">
+								<button class="plus_txt" onclick="#"><span>글자크게</span></button> 
+								<span id="txt_size">100%</span> 
+								<button class="minus_txt" onclick="#"><span>글자작게</span></button> 
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="main_container">
+				<div id="snb">
+					<div class="top">
+						<form name="logoutForm" id="logoutForm" method="post" action="http://localhost:8080/cm/main.do"></form>
+						<div class="my_info">
+							<p>
+								<em>김태영</em>
+								<span>정보화계 정보화계장 </span>
+							</p>
+						</div>
+						<div class="log_info">
+							<a href="#logoutFunction" onclick="logoutFunction(); return false;" onkeypress="this.onclick;">로그아웃</a>
+							<a href="#userInfoUpd" onclick="userInfoUpd(); return false;" onkeypress="this.onclick;">정보수정</a>
+						</div>
+					</div><!-- top -->
+					<div class="main_lnb">
+						<ul>
+							<!-- 메뉴 동적생성 -->
+							<li class="ml1">
+								 <a href="#fn_menuMove" onclick="fn_menuMove('/my/myView.ajax','내사건','Y','MY')" onkeypress="this.onclick;">내사건</a>
+							</li>  
+							<li class="ml2">
+								<a href="#" onclick="return false;">접수/배당</a>
+								<div class="depth2">
+									<ul>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/jb01/jb01View.ajax','접수/배당 > 임시사건 접수','Y','JB01')" onkeypress="this.onclick;">임시사건 접수</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/jb04/jb04View.ajax','접수/배당 > 사건 배당','Y','JB04')" onkeypress="this.onclick;">사건 배당</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/jb06/jb06View.ajax','접수/배당 > 사건정보 수정','Y','JB06')" onkeypress="this.onclick;">사건정보 수정</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/jb05/jb05View.ajax','접수/배당 > 관리자사건리스트','Y','JB05')" onkeypress="this.onclick;">관리자사건리스트</a>
+										</li>
+									</ul>
+								</div>
+							</li>  
+							<li  class="ml3">
+								<a href="#" onclick="return false;">입건/조사</a>
+								<div class="depth2">
+									<ul>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/ij03/ij03View.ajax','입건/조사 > 출석요구','Y','IJ03')" onkeypress="this.onclick;">출석요구</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/ij04/ij04View.ajax','입건/조사 > 수사서식','Y','IJ04')" onkeypress="this.onclick;">수사서식</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/ij05/ij05View.ajax','입건/조사 > 범죄인지보고','Y','IJ05')" onkeypress="this.onclick;">범죄인지보고</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/ij06/ij06View.ajax','입건/조사 > 지휘건의','Y','IJ06')" onkeypress="this.onclick;">지휘건의</a>
+										</li>
+										<li class="dep3_box">
+											<a href="#" onclick="return false;">체포및영장</a>
+											<div class="depth3" style="display: none;">
+												<ul>
+													<li>
+														<a href="#fn_menuMove" onclick="fn_menuMove('/ij07/ij0701View.ajax','입건/조사 > 체포및영장 > 긴급체포/현행범인체포관리','Y','IJ0701')" onkeypress="this.onclick;">긴급체포/현행범인체포관리</a>
+													</li>
+													<li>
+														<a href="#fn_menuMove" onclick="fn_menuMove('/ij07/ij0702View.ajax','입건/조사 > 체포및영장 > 체포및구속영장관리','Y','IJ0702')" onkeypress="this.onclick;">체포및구속영장관리</a>
+													</li>
+													<li>
+														<a href="#fn_menuMove" onclick="fn_menuMove('/ij07/ij0703View.ajax','입건/조사 > 체포및영장 > 압수수색검증영장관리','Y','IJ0703')" onkeypress="this.onclick;">압수수색검증영장관리</a>
+													</li>
+												</ul>
+											</div> 
+										</li>
+										<li class="dep3_box">
+											<a href="#" onclick="return false;">통신수사</a>
+											<div class="depth3" style="display: none;">
+												<ul>
+													<li>
+														<a href="#fn_menuMove" onclick="fn_menuMove('/ij08/ij0801View.ajax','입건/조사 > 통신수사 > 통신사실확인 허가신청','Y','IJ0801')" onkeypress="this.onclick;">통신사실확인 허가신청</a>
+													</li>
+												</ul>
+											</div> 
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/ij09/ij09View.ajax','입건/조사 > 압수물관리','Y','IJ09')" onkeypress="this.onclick;">압수물관리</a>
+										</li>
+									</ul>
+								</div>
+							</li>  
+							<li  class="ml4">
+								<a href="#" onclick="return false;">송치/종결</a>
+								<div class="depth2">
+									<ul>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/sj01/sj01View.ajax','송치/종결 > 송치관리','Y','SJ01')" onkeypress="this.onclick;">송치관리</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/sj03/sj03View.ajax','송치/종결 > 종결','Y','SJ03')" onkeypress="this.onclick;">종결</a>
+										</li>
+										<li class="dep3_box">
+											<a href="#" onclick="return false;">통계원표</a>
+											<div class="depth3" style="display: none;">
+												<ul>
+													<li>
+														<a href="#fn_menuMove" onclick="fn_menuMove('/sj04/sj0401View.ajax','송치/종결 > 통계원표 > 발생 통계원표','Y','SJ0401')" onkeypress="this.onclick;">발생 통계원표</a>
+													</li>
+													<li>
+														<a href="#fn_menuMove" onclick="fn_menuMove('/sj04/sj0402View.ajax','송치/종결 > 통계원표 > 검거 통계원표','Y','SJ0402')" onkeypress="this.onclick;">검거 통계원표</a>
+													</li>
+													<li>
+														<a href="#fn_menuMove" onclick="fn_menuMove('/sj04/sj0403View.ajax','송치/종결 > 통계원표 > 피의자 통계원표','Y','SJ0403')" onkeypress="this.onclick;">피의자 통계원표</a>
+													</li>
+												</ul>
+											</div> 
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li  class="ml5">
+								<a href="#" onclick="return false;">검색/승인</a>
+								<div class="depth2">
+									<ul>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/gs01/gs0101View.ajax','검색/승인 > 승인관리','Y','GS01')" onkeypress="this.onclick;">승인관리</a>
+										</li>
+									</ul>
+								</div>
+							</li>  
+							<li  class="ml6">
+								<a href="#" onclick="return false;">대장/통계</a>
+								<div class="depth2">
+									<ul>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/dt01/dt01View.ajax','대장/통계 > 범죄사건부','Y','DT01')" onkeypress="this.onclick;">범죄사건부</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/dt02/dt02View.ajax','대장/통계 > 내사사건부','Y','DT02')" onkeypress="this.onclick;">내사사건부</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/dt03/dt03View.ajax','대장/통계 > 긴급/현행범인체포원부','Y','DT03')" onkeypress="this.onclick;">긴급/현행범인체포원부</a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">체포영장신청부</a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">구속영장신청부</a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">체포/구속영장 집행원부</a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">체포/구속인접견부 </a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">체포/구속인교통부</a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">체포/구속인수진부 </a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">체포/구속인물품차입부 </a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">체포/구속인명부</a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">압수수색검증영장신청부</a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">통신제한조치허가신청부 </a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">통신제한조치집행대장</a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">압수부</a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">형사대기피의자명부</a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">내사사건기록철</a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">수사미제사건기록철</a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">처분결과통지서철</a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">검시조서철</a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">기타서류철</a> 
+										</li>
+									</ul>
+								</div>
+							</li>  
+							<li  class="ml7">
+								<a href="#" onclick="return false;">운영관리</a>
+								<div class="depth2">
+									<ul>
+										<li class="dep3_box">
+											<a href="#" onclick="return false;">공통코드관리</a>
+											<div class="depth3" style="display: none;">
+												<ul>
+													<li>
+														<a href="#fn_menuMove" onclick="fn_menuMove('/cm/cmCdView.ajax','운영관리 > 공통코드관리 > 공통코드관리','Y','CM0101')" onkeypress="this.onclick;">공통코드관리</a>
+													</li>
+													<li>
+														<a href="#fn_menuMove" onclick="fn_menuMove('/cm/fomnMngView.ajax','운영관리 > 공통코드관리 > 서식관리','Y','CM0102')" onkeypress="this.onclick;">서식관리</a>
+													</li>
+												</ul>
+											</div> 
+										</li>
+										<li class="dep3_box">
+											<a href="#" onclick="return false;">사용자관리</a>
+											<div class="depth3" style="display: none;">
+												<ul>
+													<li>
+														<a href="#fn_menuMove" onclick="fn_menuMove('/cm/userListView.ajax','운영관리 > 사용자관리 > 사용자관리','Y','CM0201')" onkeypress="this.onclick;">사용자관리</a>
+													</li>
+													<li>
+														<a href="#fn_menuMove" onclick="fn_menuMove('/cm/deptListView.ajax','운영관리 > 사용자관리 > 팀관리','Y','CM0202')" onkeypress="this.onclick;">팀관리</a>
+													</li>
+												</ul>
+											</div> 
+										</li>
+										<li class="dep3_box">
+											<a href="#" onclick="return false;">메뉴및권한관리</a>
+											<div class="depth3" style="display: none;">
+												<ul>
+													<li>
+														<a href="#fn_menuMove" onclick="fn_menuMove('/cm/menuListView.ajax','운영관리 > 메뉴및권한관리 > 메뉴관리','Y','CM0301')" onkeypress="this.onclick;">메뉴관리</a>
+													</li>
+													<li>
+														<a href="#fn_menuMove" onclick="fn_menuMove('/cm/authView.ajax','운영관리 > 메뉴및권한관리 > 권한관리','Y','CM0302')" onkeypress="this.onclick;">권한관리</a>
+													</li>
+													<li>
+														<a href="#fn_menuMove" onclick="fn_menuMove('/cm/menuByAuthView.ajax','운영관리 > 메뉴및권한관리 > 권한별 메뉴관리','Y','CM0303')" onkeypress="this.onclick;">권한별 메뉴관리</a>
+													</li>
+													<li>
+														<a href="#fn_menuMove" onclick="fn_menuMove('/cm/authByUserView.ajax','운영관리 > 메뉴및권한관리 > 사용자 권한관리','Y','CM0304')" onkeypress="this.onclick;">사용자 권한관리</a>
+													</li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</li>  
+							<li  class="ml8">
+								<a href="#" onclick="return false;">템플릿</a>
+								<div class="depth2">
+									<ul>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/tmp/temp01.ajax','템플릿 > 피해자 지원카드','Y','TEMP01')" onkeypress="this.onclick;">피해자 지원카드</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/tmp/temp02.ajax','템플릿 > 이송관리','Y','TEMP02')" onkeypress="this.onclick;">이송관리</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/tmp/temp03.ajax','템플릿 > 이송승인관리','Y','TEMP03')" onkeypress="this.onclick;">이송승인관리</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/tmp/temp04.ajax','템플릿 > 입건처리','Y','TEMP04')" onkeypress="this.onclick;">입건처리</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/tmp/temp05.ajax','템플릿 > 추가 입건 처리','Y','TEMP05')" onkeypress="this.onclick;">추가 입건 처리</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/tmp/temp06.ajax','템플릿 > 입건 취소 요청','Y','TEMP06')" onkeypress="this.onclick;">입건 취소 요청</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/tmp/temp07.ajax','템플릿 > 출석요구','Y','TEMP07')" onkeypress="this.onclick;">출석요구</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/tmp/temp08.ajax','템플릿 > 표준문답사례 보기','Y','TEMP08')" onkeypress="this.onclick;">표준문답사례 보기</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/tmp/temp09.ajax','템플릿 > 표준문답사례 편집','Y','TEMP09')" onkeypress="this.onclick;">표준문답사례 편집</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/tmp/temp10.ajax','템플릿 > 수신처 지정','Y','TEMP10')" onkeypress="this.onclick;">수신처 지정</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/tmp/temp11.ajax','템플릿 > 체포/구속영장 관리','Y','TEMP11')" onkeypress="this.onclick;">체포/구속영장 관리</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/tmp/temp12.ajax','템플릿 > 영장반환 관리','Y','TEMP12')" onkeypress="this.onclick;">영장반환 관리</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/tmp/temp13.ajax','템플릿 > 발생 통계원표 작성','Y','TEMP13')" onkeypress="this.onclick;">발생 통계원표 작성</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/tmp/temp14.ajax','템플릿 > 검거 통계원표 작성','Y','TEMP14')" onkeypress="this.onclick;">검거 통계원표 작성</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/tmp/temp15.ajax','템플릿 > 피의자 통계원표 작성','Y','TEMP15')" onkeypress="this.onclick;">피의자 통계원표 작성</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/temp/temp16.ajax','템플릿 > 압수/수색/검증 영장 정보입력','Y','TEMP16')" onkeypress="this.onclick;">압수/수색/검증 영장 정보입력</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/temp/temp17.ajax','템플릿 > 압수물목록 관리','Y','TEMP17')" onkeypress="this.onclick;">압수물목록 관리</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/temp/temp18.ajax','템플릿 > 압수물 관련 대상자 관리','Y','TEMP18')" onkeypress="this.onclick;">압수물 관련 대상자 관리</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/temp/temp20.ajax','템플릿 > 압수부 등록 승인관리','Y','TEMP20')" onkeypress="this.onclick;">압수부 등록 승인관리</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/temp/temp21.ajax','템플릿 > 압수물 지휘건의','Y','TEMP21')" onkeypress="this.onclick;">압수물 지휘건의</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/temp/temp23.ajax','템플릿 > 기타지휘 건의 정보','Y','TEMP23')" onkeypress="this.onclick;">기타지휘 건의 정보</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/temp/temp24.ajax','템플릿 > 통신사실확인 허가신청 정보','Y','TEMP24')" onkeypress="this.onclick;">통신사실확인 허가신청 정보</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/temp/temp25.ajax','템플릿 > 통신사실 확인자료 제공 요청 정보','Y','TEMP25')" onkeypress="this.onclick;">통신사실 확인자료 제공 요청 정보</a>
+										</li>
+										<li>
+											<a href="#fn_menuMove" onclick="fn_menuMove('/temp/temp26.ajax','템플릿 > 통신사실확인 집행관리','Y','TEMP26')" onkeypress="this.onclick;">통신사실확인 집행관리</a>
+										</li>
+									</ul>
+								</div>
+							</li>  
+						</ul>
+					</div>
+				</div><!-- snb -->
+				<div id="main_contents">
+					<div class="present_list">
+						<div class="bx_present">
+							<h2>나의 사건현황</h2>
+							<ul>
+								<li>
+									<em>임시</em>
+									<a href="#"><b>0</b>건</a>
+								</li>
+								<li>
+									<em>배당</em>
+									<a href="#"><b>2</b>건</a>
+								</li>
+								<li>
+									<em>내사</em>
+									<a href="#"><b>0</b>건</a>
+								</li>
+								<li>
+									<em>범죄인지</em>
+									<a href="#"><b>0</b>건</a>
+								</li>
+								<li>
+									<em>수사</em>
+									<a href="#"><b>0</b>건</a>
+								</li>
+								<li>
+									<em>송치</em>
+									<a href="#"><b>0</b>건</a>
+								</li>
+							</ul>
+						</div>
+						<div class="bx_present">
+							<h2>나의 할일</h2>
+							<ul>
+								<li>
+									<em>결재</em>
+									<a href="#"><b>0</b>건</a>
+								</li>
+								<li>
+									<em>배당</em>
+									<a href="#"><b>2</b>건</a>
+								</li>
+								<li>
+									<em>승인</em>
+									<a href="#"><b>0</b>건</a>
+								</li>
+								<li class="a-b">
+									<em>KCIS처리대기</em>
+									<a href="#"><b>0</b>건</a>
+								</li>
+								<li class="a-b">
+									<em>KCIS수사지휘처리</em>
+									<a href="#"><b>0</b>건</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="banner_list">
+						<ul>
+							<li class="bl1"><a href="#"><span>마이페이지</span></a></li>
+							<li class="bl2"><a href="#"><span>범죄통계</span></a></li>
+							<li class="bl3"><a href="#"><span>공지사항</span></a></li>
+							<li class="bl4"><a href="#"><span>의견게시판</span></a></li>
+							<li class="bl5"><a href="#"><span>업무메뉴얼</span></a></li>
+							<li class="bl6"><a href="#"><span>동영상매뉴얼</span></a></li>
+							<li class="bl7"><a href="#"><span>HELP DESK</span></a></li>
+							<li class="bl_inner">
+								<ul>
+									<li><a href="#">R2C</a></li>
+									<li><a href="#">iRISS</a></li>
+									<li><a href="#">R-FINE</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div><!-- main_contents -->
+			</div><!-- main_container -->
+			<div id="main_footer">
+				<p>철도경찰형사사법업무시스템 내부의 개인정보, 수사자료 등 정보처리 자료를 업무 이외의 목적으로 제공 시, 법에 의해 처벌받으니 유의하시기 바랍니다.</p>
+				<p class="main_copyright">COPYRIGHT@Railway Police, ALL RIGHTS RESERVED.</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="viewport" content="initial-scale=1.0,maximum-scale=1,width=device-width">
+<title>법령정보서비스</title>
+<link rel="shortcut icon" type="text/css" href="https://www.law.go.kr/LSW/images/ico_favorites.ico">
+<link rel="stylesheet" href="./css/common.css">
+<link rel="stylesheet" href="./css/fonts.css">
+<link rel="stylesheet" href="./css/main_2021.css">
+<script src="./js/jquery-1.12.4.js"></script>
+<script src="./js/layout.js"></script>
+</head>
+<body>
+	<div id="skipNav">
+		<a href="#content">본문으로 바로가기</a>
+		<a href="#gnb">주메뉴 바로가기</a>
+	</div>
+	<div id="wrap">
+		<div id="header">
+			<div class="top">
+				<h1><a href="#"><img src="./images/h_logo1.png" alt="방위산업청"></a></h1>
+				<h2><a href="#"><img src="./images/h_logo2.png" alt="법령정보서비스"></a></h2>
+				<div class="top_login">
+					<a href="#">로그인</a>
+				</div>
+			</div>
+			<div id="nav">
+				<ul>
+					<li><a href="#">통합검색</a></li>
+					<li>
+						<a href="#">법령</a>
+						<div class="depth2">
+							<ul>
+								<li>
+									<a href="#">
+										<input type="radio" id="sub15" name="inp_m" checked="checked" onclick="moveSubMenu('/lsSc.do?menuId=1&amp;subMenuId=15&amp;tabMenuId=81'); return false;"> 
+										<label for="sub15" onclick="moveSubMenu('/lsSc.do?menuId=1&amp;subMenuId=15&amp;tabMenuId=81'); return false;" style="cursor: pointer;"><a href="javascript:;" style="cursor: pointer;">현행법령</a></label>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<input type="radio" id="sub17" name="inp_m" onclick="moveSubMenu('/lsSc.do?menuId=1&amp;subMenuId=17&amp;tabMenuId=93'); return false;">
+										<label for="sub17" onclick="moveSubMenu('/lsSc.do?menuId=1&amp;subMenuId=17&amp;tabMenuId=93'); return false;" style="cursor: pointer;"><a href="javascript:;" style="cursor: pointer;">연혁법령</a></label>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="#">행정규칙</a></li>
+					<li><a href="#">청 내부규정</a></li>
+					<li><a href="#">매뉴얼</a></li>
+				</ul>
+			</div>
+		</div><!-- header -->
+		<div id="visualSpot">
+			<div class="inner">
+				<p><span>방위사업청 <b>법령정보서비스</b></span>를 통해 다양한 <em>법령 콘텐츠</em>를 이용하세요</p>
+				<div id="mainSrch">
+					<form id="search" name="search" action="lsAdmRulAstSc.do?tabMenuId=tab5" onsubmit="javascript:saveSearchHistory();" onkeypress="if(event.keyCode==13) return false;"> 
+						<input type="hidden" id="tabMenuId" name="tabMenuId" value="tab5"> 
+						<input type="hidden" id="section" name="section" value=""> 
+						<input type="hidden" id="eventGubun" name="eventGubun" value="060101"> 
+						<div class="inner">
+							<div class="srchTitle" >
+								<a class="srchTitleBtn" href="#" onclick="return false;">청 내부규정</a>
+								<div class="select_list srchTitle_list">
+									<ul> 
+										<li id="searchType0">
+											<a href="#" onclick="#">통합검색</a> 
+										</li> 
+										<li id="searchType1">
+											<a href="#" onclick="">법령</a> 
+										</li> 
+										<li id="searchType2">
+											<a href="#" onclick="">행정규칙</a> 
+										</li> 
+										<li id="searchType3" class="on">
+											<a href="#" onclick="">청 내부규정</a> 
+										</li> 
+										<li id="searchType4">
+											<a href="#" onclick="">매뉴얼</a> 
+										</li> 
+									</ul>
+								</div>
+							</div><!-- srchTitle -->
+							<div class="srchInput">
+								<input type="text" onclick="" onkeyup="" title="검색어 입력" autocomplete="off" value="검색어를 입력하세요" style="-ms-ime-mode: active;">
+							</div><!-- srchInput -->
+							<a href="#" class="srchBtn">검색</a>
+						</div><!-- inner -->
+					</form>
+				</div><!-- mainSrch -->
+			</div>
+		</div><!-- visual-spot -->
+		<div id="main_cont">
+			<div class="contTop">
+				<div class="bordBox">
+					<h3>최신법령</h3>
+					<div class="bordList">
+						<ul>
+							<li><a href="#">대체지역의 편입 및 복무에 관한 법률 대체지역의 편입 및 복무에 관한 법률 대체지역의 편입 및 복무에 관한 법률</a><em>법률</em><span>2021. 10. 15</span></li>
+							<li><a href="#">의약품 등의안전에 관한 총리령</a><em>대통령령</em><span>2021. 10. 15</span></li>
+							<li><a href="#">농어촌정비법 시행규칙 농어촌정비법 시행규칙 농어촌정비법 시행규칙</a><em>농림축산식품부령</em><span>2021. 10. 15</span></li>
+							<li><a href="#">625\ 전사자유해의 발굴등에 관한 법률 </a><em>법률</em><span>2021. 10. 15</span></li>
+						</ul>
+					</div>
+					<a href="#" class="btn_more">더보기</a>
+				</div><!-- bordBox -->
+				<div class="bordBox">
+					<h3>최신행정규칙</h3>
+					<div class="bordList">
+						<ul>
+							<li><a href="#">국가를 당사자로 하는 계약에 관한 법률</a><em>법률</em><span>2021. 10. 15</span></li>
+							<li><a href="#">조달청 기술용역 계약업무 처리규정</a><em>대통령령</em><span>2021. 10. 15</span></li>
+							<li><a href="#">중소기업자간 경쟁제품 및 공사용자재 직접구매 대상품목 지정내역</a><em>농림축산식품부령</em><span>2021. 10. 15</span></li>
+							<li><a href="#">국가를 당사자로 하는 계약에 관한 법률</a><em>법률</em><span>2021. 10. 15</span></li>
+						</ul>
+					</div>
+					<a href="#" class="btn_more">더보기</a>
+				</div><!-- bordBox -->
+			</div><!-- contTop -->
+			<div class="contBot">
+				<div class="bordInfo">
+					<div class="bordList">
+						<ul>
+							<li><a href="#">방산수출초보기업 역량강화를 위한 해외인증교육 참여기업</a><span>2021. 10. 15</span></li>
+							<li><a href="#">기동저지탄 탐색개발 사업 입찰 재공고문 기동저지탄 탐색개발 사업 입찰 재공고문 기동저지탄 탐색개발 사업 입찰 재공고문</a><span>2021. 10. 15</span></li>
+							<li><a href="#">’22년 방산전시회 국고보조금 지원계획 ’22년 방산전시회 국고보조금 지원계획 ’22년 방산전시회 국고보조금 지원계획</a><span>2021. 10. 15</span></li>
+							<li><a href="#">홍보기획전 참가업체·기관 모집 안내</a><span>2021. 10. 15</span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="weekBox">
+					<h3><span>이번주<br> 시행법령</span></h3>
+					<div class="dayTab">
+						<ul>
+							<li class="active">
+								<a href="#" class="sunday">18일</a>
+								<div class="dayCont">
+									<p><b>18</b> <span>2021.10</span></p>
+									<ul >
+										<li><a href="#">법률 <span>0</span></a></li>
+										<li><a href="#">대통령령 <span>22</span></a></li>
+										<li><a href="#">부령 <span>7</span></a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#">19일</a>
+								<div class="dayCont">
+									<p><b>19</b> <span>2021.10</span></p>
+									<ul >
+										<li><a href="#">법률 <span>11</span></a></li>
+										<li><a href="#">대통령령 <span>15</span></a></li>
+										<li><a href="#">부령 <span>27</span></a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#">20일</a>
+								<div class="dayCont">
+									<p><b>20</b> <span>2021.10</span></p>
+									<ul >
+										<li><a href="#">법률 <span>55</span></a></li>
+										<li><a href="#">대통령령 <span>2</span></a></li>
+										<li><a href="#">부령 <span>46</span></a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#">21일</a>
+								<div class="dayCont">
+									<p><b>21</b> <span>2021.10</span></p>
+									<ul >
+										<li><a href="#">법률 <span>6</span></a></li>
+										<li><a href="#">대통령령 <span>9</span></a></li>
+										<li><a href="#">부령 <span>13</span></a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#">22일</a>
+								<div class="dayCont">
+									<p><b>22</b> <span>2021.10</span></p>
+									<ul >
+										<li><a href="#">법률 <span>29</span></a></li>
+										<li><a href="#">대통령령 <span>44</span></a></li>
+										<li><a href="#">부령 <span>82</span></a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#">23일</a>
+								<div class="dayCont">
+									<p><b>23</b> <span>2021.10</span></p>
+									<ul >
+										<li><a href="#">법률 <span>61</span></a></li>
+										<li><a href="#">대통령령 <span>60</span></a></li>
+										<li><a href="#">부령 <span>3</span></a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#" class="saturDay">24일</a>
+								<div class="dayCont">
+									<p><b>24</b> <span>2021.10</span></p>
+									<ul >
+										<li><a href="#">법률 <span>79</span></a></li>
+										<li><a href="#">대통령령 <span>69</span></a></li>
+										<li><a href="#">부령 <span>6</span></a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+						<div class="dayBtn">
+							<a href="#" onclick="return false;" class="week-prev">이전 시행법령 보기</a>
+							<a href="#" onclick="return false;" class="week-next">다음 시행법령 보기</a>
+						</div><!-- dayBtn -->
+						<a class="week_more">전체보기</a>
+					</div><!-- dayList -->
+				</div><!-- weekBox -->
+			</div><!-- contBot -->
+		</div><!-- main_cont -->
+		<div id="footer">
+			<div class="copyright">
+				<p>13809 경기도 과천시 관문로 47 정부과천청사 3동, 4동 대표전화: 1577.1118, 팩스: 02.773.7587</p>
+				<p>Copyright(c) Defense Acquisition Program Administration. All Rights Reserved.</p>
+			</div>
+			<div class="quick">
+				<a href="#" onclick="return false;" class="quick_link" >관련 기관 바로가기</a>
+				<ul class="select_list"> 
+					<li><a href="http://www.assembly.go.kr" target="_blank" title="국회 새창으로 열림">국회</a></li> 
+					<li><a href="http://www.scourt.go.kr" target="_blank" title="대법원 새창으로 열림">대법원</a></li> 
+					<li><a href="http://www.ccourt.go.kr" target="_blank" title="헌법재판소 새창으로 열림">헌법재판소</a></li> 
+					<li><a href="http://gwanbo.mois.go.kr/main.do" target="_blank" title="전자관보 새창으로 열림">전자관보</a></li> 
+					<li><a href="http://www.elis.go.kr" target="_blank" title="자치법규정보시스템 새창으로 열림">자치법규정보시스템</a></li> 
+					<li><a href="https://www.laiis.go.kr/lips/nya/lrn/localRegulationList.do" target="_blank" title="중앙부처 법령 유권해석 새창으로 열림">중앙부처 법령 유권해석</a></li> 
+					<li><a href="http://www.better.go.kr" target="_blank" title="규제정보포털 새창으로 열림">규제정보포털</a></li> 
+					<li><a href="http://likms.assembly.go.kr/law/jsp/law/Main.jsp" target="_blank" title="국회법률정보시스템 새창으로 열림">국회 법률정보시스템</a></li> 
+					<li><a href="http://glaw.scourt.go.kr" target="_blank" title="대법원 종합법률정보시스템">대법원 종합법률정보시스템</a></li> 
+					<li><a href="http://www.acrc.go.kr/acrc/index.do" target="_blank" title="국민권익위원회 새창으로 열림">국민권익위원회</a></li> 
+					<li><a href="http://www.lawmaking.go.kr/" target="_blank" title="정부입법 지원센터 새창으로 열림">정부입법 지원센터</a></li> 
+					<li><a href="http://www.easylaw.go.kr/" target="_blank" title="생활법령정보 새창으로 열림">생활법령정보</a></li> 
+				</ul>
+			</div>
+		</div>
+	</div><!-- wrap -->
+</body>
+</html>

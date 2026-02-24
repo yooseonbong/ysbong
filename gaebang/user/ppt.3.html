@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1.0,width=device-width">
+<title>행정동별 성별 출생등록자수</title>
+<script src="./js/jquery-1.12.4.js"></script>
+<script src="./js/jquery-ui.min.js"></script>
+<script src="./js/datepicker-ko.js"></script>
+<script src="./js/layout.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="./css/common.css">
+<link rel="stylesheet" type="text/css" href="./css/layout.css">
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+			<div class="top">
+				<h1><a href="#"><img src="./images/h1_logo.png" alt="행정안전부"></a></h1>
+				<h2>행정동별 성별 출생등록자수</h2>
+				<div class="top_guide">
+					<a href="#">주민등록 데이터개방 데이터예시</a>
+				</div>
+			</div><!-- top -->
+		</div><!-- header -->
+		<div id="container">
+			<div class="contents">
+				<div class="article">
+					<div class="searchBox">
+						<form name="" method="" action="">
+							<div class="inputList">
+								<ul>
+									<li>
+										<label for="type1" class="w100px">행정구역</label> 
+										<select name="type1" id="type1" title="행정구역 시/도 선택">
+											<option value="전체">서울시</option>
+										</select>
+										<select name="type2" id="type2" title="행정구역 구/시 선택">
+											<option value="전체">종로구</option>
+										</select>
+									</li>
+									<li>
+										<label for="type3" class="w100px">조회기간</label> 
+										<select name="type3" id="type3" title="조회 시작 년도 선택">
+											<option value="전체">2022</option>
+										</select>
+										<select name="type4" id="type4" title="조회 시작 월 선택">
+											<option value="전체">01</option>
+										</select> 
+										<span class="date_taC">~</span>
+										<select name="type5" id="type5" title="조회 종료 년도 선택">
+											<option value="전체">2022</option>
+										</select>
+										<select name="type6" id="type6" title="조회 종료 월 선택">
+											<option value="전체">08</option>
+										</select> 
+									</li>
+									<li>
+										<label for="date1" class="w100px">기간 선택</label> 
+										<span class="dateBox"><input type="text" name="date1" id="date1" class="datepicker" title="시작 기간 선택"></span> 
+										<span class="date_taC">~</span> 
+										<span class="dateBox"><input type="text" name="date2" id="date2" class="datepicker" title="종료 기간 선택"></span>
+									</li>
+									<li>
+										<label for="a1" class="w100px">라디오 박스</label> 
+										<div class="radioBox">
+											<label for="a1"><input type="radio" name="search_b" id="a1" title="전체 선택">전체</label>
+											<label for="a2"><input type="radio" name="search_b" id="a2" title="표준용어 연결 선택">표준용어 연결</label>
+											<label for="a3"><input type="radio" name="search_b" id="a3" title="표준용어 연결 선택">표준용어 미연결</label>
+										</div>
+									</li>
+									<li>
+										<label for="b1" class="w100px">체크 박스</label> 
+										<div class="radioBox">
+											<label for="b1"><input type="checkbox" name="search_c" id="b1" title="행정규칙의 위임정보는 4가지유형(법령전체, 조문, 패턴문자열, 별표)을 갖고 있음 선택"> 행정규칙의 위임정보는 4가지유형(법령전체, 조문, 패턴문자열, 별표)을 갖고 있음</label>
+										</div>
+									</li>
+								</ul>
+								<button class="btn_join" title="검색"><span>검색</span></button>
+							</div>
+							
+						</form>
+					</div>
+					<div class="infoBox">
+						<p>검색에 관련된 <b>설명문구</b>가 이곳에 들어갑니다 (#666666)</p>
+						<div class="info_list">
+							<ul>
+								<li>설명문구가 리스트일경우</li>
+								<li>설명 <b>강조문구</b>가 들어경우</li>
+								<li>스페인의 국영TV 생방송 뉴스 도중 우연찮게 한 관광객의 가방을 노린 절도 장면이 포착돼 현지 경찰이 절도범을 체포하는 데 성공했다고 BBC가 18일(현지시간) 보도했다. 스페인의 국영방송 TVE는 바르셀로나 해변을 찾은 관광객과 인터뷰를 진행하고 있었다. </li>
+							</ul>
+						</div>
+					</div>
+					<div class="resultBox">
+						<div class="scroll_result">
+							<div class="bbs_list" >
+								<table style="width:2000px;">
+									<caption>행정기관코드, 시도명, 시군구명, 읍면동(행정동)명, 통, 반, 통계년월, 계, 남자, 여자, 거주자, 거주불명자, 재외국민의 출생 등록자수를 확인할 수 있는 표</caption>
+									<colgroup>
+										<col width="auto">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">행정기관코드</th>
+											<th scope="col">시도명</th>
+											<th scope="col">시군구명</th>
+											<th scope="col">읍면동(행정동)명</th>
+											<th scope="col">통</th>
+											<th scope="col">반</th>
+											<th scope="col">통계년월</th>
+											<th scope="col">계</th>
+											<th scope="col">남자</th>
+											<th scope="col">여자</th>
+											<th scope="col">거주자</th>
+											<th scope="col">거주불명자</th>
+											<th scope="col">재외국민</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1111051500</td>
+											<td>서울</td>
+											<td>종로구</td>
+											<td>청운효자동</td>
+											<td>1</td>
+											<td>1</td>
+											<td>2022.08</td>
+											<td>11700</td>
+											<td>5400</td>
+											<td>6300</td>
+											<td>1000</td>
+											<td>500</td>
+											<td>200</td>
+										</tr>
+										<tr>
+											<td>1111051500</td>
+											<td>서울</td>
+											<td>종로구</td>
+											<td>청운효자동</td>
+											<td>1</td>
+											<td>1</td>
+											<td>2022.08</td>
+											<td>11700</td>
+											<td>5400</td>
+											<td>6300</td>
+											<td>1000</td>
+											<td>500</td>
+											<td>200</td>
+										</tr>
+										<tr>
+											<td>1111051500</td>
+											<td>서울</td>
+											<td>종로구</td>
+											<td>청운효자동</td>
+											<td>1</td>
+											<td>1</td>
+											<td>2022.08</td>
+											<td>11700</td>
+											<td>5400</td>
+											<td>6300</td>
+											<td>1000</td>
+											<td>500</td>
+											<td>200</td>
+										</tr>
+										<tr>
+											<td>1111051500</td>
+											<td>서울</td>
+											<td>종로구</td>
+											<td>청운효자동</td>
+											<td>1</td>
+											<td>1</td>
+											<td>2022.08</td>
+											<td>11700</td>
+											<td>5400</td>
+											<td>6300</td>
+											<td>1000</td>
+											<td>500</td>
+											<td>200</td>
+										</tr>
+										<tr>
+											<td>1111051500</td>
+											<td>서울</td>
+											<td>종로구</td>
+											<td>청운효자동</td>
+											<td>1</td>
+											<td>1</td>
+											<td>2022.08</td>
+											<td>11700</td>
+											<td>5400</td>
+											<td>6300</td>
+											<td>1000</td>
+											<td>500</td>
+											<td>200</td>
+										</tr>
+										<tr>
+											<td>1111051500</td>
+											<td>서울</td>
+											<td>종로구</td>
+											<td>청운효자동</td>
+											<td>1</td>
+											<td>1</td>
+											<td>2022.08</td>
+											<td>11700</td>
+											<td>5400</td>
+											<td>6300</td>
+											<td>1000</td>
+											<td>500</td>
+											<td>200</td>
+										</tr>
+										<tr>
+											<td>1111051500</td>
+											<td>서울</td>
+											<td>종로구</td>
+											<td>청운효자동</td>
+											<td>1</td>
+											<td>1</td>
+											<td>2022.08</td>
+											<td>11700</td>
+											<td>5400</td>
+											<td>6300</td>
+											<td>1000</td>
+											<td>500</td>
+											<td>200</td>
+										</tr>
+										<tr>
+											<td>1111051500</td>
+											<td>서울</td>
+											<td>종로구</td>
+											<td>청운효자동</td>
+											<td>1</td>
+											<td>1</td>
+											<td>2022.08</td>
+											<td>11700</td>
+											<td>5400</td>
+											<td>6300</td>
+											<td>1000</td>
+											<td>500</td>
+											<td>200</td>
+										</tr>
+										<tr>
+											<td>1111051500</td>
+											<td>서울</td>
+											<td>종로구</td>
+											<td>청운효자동</td>
+											<td>1</td>
+											<td>1</td>
+											<td>2022.08</td>
+											<td>11700</td>
+											<td>5400</td>
+											<td>6300</td>
+											<td>1000</td>
+											<td>500</td>
+											<td>200</td>
+										</tr>
+										<tr>
+											<td>1111051500</td>
+											<td>서울</td>
+											<td>종로구</td>
+											<td>청운효자동</td>
+											<td>1</td>
+											<td>1</td>
+											<td>2022.08</td>
+											<td>11700</td>
+											<td>5400</td>
+											<td>6300</td>
+											<td>1000</td>
+											<td>500</td>
+											<td>200</td>
+										</tr>
+										<tr>
+											<td>1111051500</td>
+											<td>서울</td>
+											<td>종로구</td>
+											<td>청운효자동</td>
+											<td>1</td>
+											<td>1</td>
+											<td>2022.08</td>
+											<td>11700</td>
+											<td>5400</td>
+											<td>6300</td>
+											<td>1000</td>
+											<td>500</td>
+											<td>200</td>
+										</tr>
+										<tr>
+											<td>1111051500</td>
+											<td>서울</td>
+											<td>종로구</td>
+											<td>청운효자동</td>
+											<td>1</td>
+											<td>1</td>
+											<td>2022.08</td>
+											<td>11700</td>
+											<td>5400</td>
+											<td>6300</td>
+											<td>1000</td>
+											<td>500</td>
+											<td>200</td>
+										</tr>
+										<tr>
+											<td>1111051500</td>
+											<td>서울</td>
+											<td>종로구</td>
+											<td>청운효자동</td>
+											<td>1</td>
+											<td>1</td>
+											<td>2022.08</td>
+											<td>11700</td>
+											<td>5400</td>
+											<td>6300</td>
+											<td>1000</td>
+											<td>500</td>
+											<td>200</td>
+										</tr>
+										<tr>
+											<td colspan="13">내용이 없습니다.</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						
+						<div class="pagination">
+							<a href="#" title="첫페이지로" class="first">첫페이지</a>
+							<a href="#" title="이전페이지로" class="prev">이전</a>
+							<a href="#" class="on">1</a>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a> 
+							<a href="#">6</a>
+							<a href="#">7</a>
+							<a href="#">8</a>
+							<a href="#">9</a>
+							<a href="#">10</a> 
+							<a href="#" title="다음페이지로" class="next">다음</a> 
+							<a href="#" title="마지막페이지로" class="last">마지막페이지</a>
+						</div>
+					</div>
+				</div><!-- article -->
+			</div><!-- contents -->
+			
+			
+		</div><!-- container -->
+	</div>
+
+</body>
+</html>

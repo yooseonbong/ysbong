@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HRDX</title>
+  
+  <!-- css -->
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
+  
+  <!-- js -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+  <script src="./js/jquery-3.7.1.min.js"></script>
+  <script src="./js/swiper-bundle.min.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <!-- header start -->
+    <header id="header">
+      <div class="headerArea">
+        <!-- header contents -->              
+        <h1 class="logoArea">
+          <a href="M10_m01_t01.html"><img src="./img/Group 63399748.png" alt="IC360" title="CAREER ADVISOR"></a>
+        </h1>
+        <!-- GNB start -->
+        <nav class="gnbArea">
+          <ul class="gnbList">
+            <li class="menuList"><span><a href="M2_m01_2.html">매칭검색</a></span></li>
+            <li class="menuList"><span><a href="M3_m03.html">경력개발</a></span></li>
+            <li class="menuList"><span><a href="#">육성프로그램</a></span></li>
+            <li class="menuList"><span><a href="M5_m01.html">조직자관리</a></span></li>
+            <li class="menuList active"><span><a href="M6_m01.html">인사지원</a></span></li>
+          </ul>
+        </nav>
+        <!-- info start-->
+        <div class="infoWrap">
+          <ul>
+            <li class="analyze"><a href="#"><img src="./img/ic_person.png" alt="사람아이콘" title="내정보 바로가기"><span class="fontZ">gildong.hong@lge.com</span></a></li>
+            <li class="info">
+              <a href="javascript:openModal('alramPopup');">
+                <img src="./img/ic_alarm.png" alt="알람아이콘" title="알림">
+                <i>999</i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>     
+      <!-- GNB end -->
+    </header>
+    <!-- header end -->
+    <!-- section start -->
+    <section>
+      <article id="subContainer">
+        <div class="tab1 tac">
+          <ul>
+            <li><a href="M6_m01.html">인사이동</a></li>
+            <li class="active"><a href="M6_m02.html">인재Pool</a></li>
+          </ul>
+        </div>
+        <h2 class="titCont1">인재풀 리스트</h2>
+        <div class="contArea">
+          <div class="contBx w100pc">
+            <div class="radius officerArea mb30">
+              <div class="officerLeft w431px">
+                <div class="matching mb28">
+                  <div class="matchingInfo">
+                    <div class="tit dotTitle w390px mb00">
+                      <strong class="mb00">공급이슈 사전 대응을 위한 반도체 동향</strong>
+                    </div>
+                  </div>
+                </div>
+                <div class="radius bgYb pdv3 mb12 h168px w390px">
+                  <h4 class="titCont3">필수 조건</h4>
+                  <div class="list2 scroll scroll1">
+                    <ul>
+                      <li>북미지역 반도체 칩셋 통합구매계약 진행</li>
+                      <li>해외검증조직 SW자동화검증확대 지원</li>
+                      <li>해외검증조직 SW자동화검증확대 지원</li>
+                      <li>해외검증조직 SW자동화검증확대 지원</li>
+                      <li>해외검증조직 SW자동화검증확대 지원</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="radius bgYb pdv3 h168px w390px">
+                  <h4 class="titCont3">선택 조건</h4>
+                  <div class="list2 scroll scroll1">
+                    <ul>
+                      <li>Big•Big Supplier에 대한 전략적 협업</li>
+                      <li>Big•Big Supplier에 대한 전략적 협업</li>
+                      <li>Big•Big Supplier에 대한 전략적 협업</li>
+                      <li>Big•Big Supplier에 대한 전략적 협업</li>
+                      <li>Big•Big Supplier에 대한 전략적 협업</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="officerRight">
+                <div class="titleBox w100pc mb30">
+                  <p class="infoTxt pt10">* 비교할 사람의 체크박스 선택 후 인재비교 버튼을 클릭 하세요. (최대 5명까지 선택 가능)</p>
+                  <div class="matchingBtn mlAuto"> 
+                    <a href="javascript:openModal('officerComparison');" class="button Primary-s black ml05" title="인재비교">인재비교</a> 
+                  </div>
+                </div>
+                <div class="matchResult administ adpool scroll">
+                  <div class="matching active">
+                    <div class="man w60 ml30"><img src="./img/test5.png" alt="이력서 사진" title="사원"></div>
+                    <div class="matchingInfo ml10">
+                      <div class="tit dotTitle w220px mb00">
+                        <strong class="mb12"><a href="javascript:openModal('officerView');">홍길동 <b>책임</b></a></strong>
+                        <span class="fzDark teamGroup mb10">VS반도체개발/구매팀</span>
+                        <span class="fzThin">구매 8년/LGE 12년</span>
+                        <span>숙련도 3.2/경험수 42</span>
+                      </div>
+                    </div>
+                    <div class="matchingSelect">
+                      <label class="checkType" title="선택"><input type="checkbox" id="test5" name="test2" title="홍길동 선택" checked><span class="checkmark"></span></label>
+                    </div>
+                  </div>
+                  <div class="matching">
+                    <div class="man w60 ml30"><img src="./img/test5.png" alt="이력서 사진" title="사원"></div>
+                    <div class="matchingInfo ml10">
+                      <div class="tit dotTitle w220px mb00">
+                        <strong class="mb12"><a href="javascript:openModal('officerView');">홍길동 <b>책임</b></a></strong>
+                        <span class="fzDark teamGroup mb10">VS반도체개발<br>/구매팀</span>
+                        <span class="fzThin">구매 8년/LGE 12년</span>
+                        <span>숙련도 3.2/경험수 42</span>
+                      </div>
+                    </div>
+                    <div class="matchingSelect">
+                      <label class="checkType" title="선택"><input type="checkbox" id="test5" name="test2" title="홍길동 선택"><span class="checkmark"></span></label>
+                    </div>
+                  </div>
+                  <div class="matching">
+                    <div class="man w60 ml30"><img src="./img/test5.png" alt="이력서 사진" title="사원"></div>
+                    <div class="matchingInfo ml10">
+                      <div class="tit dotTitle w220px mb00">
+                        <strong class="mb12"><a href="javascript:openModal('officerView');">홍길동 <b>책임</b></a></strong>
+                        <span class="fzDark teamGroup mb10">VS반도체개발<br>/구매팀</span>
+                        <span class="fzThin">구매 8년/LGE 12년</span>
+                        <span>숙련도 3.2/경험수 42</span>
+                      </div>
+                    </div>
+                    <div class="matchingSelect">
+                      <label class="checkType" title="선택"><input type="checkbox" id="test5" name="test2" title="홍길동 선택"><span class="checkmark"></span></label>
+                    </div>
+                  </div>
+                  <div class="matching">
+                    <div class="man w60 ml30"><img src="./img/test5.png" alt="이력서 사진" title="사원"></div>
+                    <div class="matchingInfo ml10">
+                      <div class="tit dotTitle w220px mb00">
+                        <strong class="mb12"><a href="javascript:openModal('officerView');">홍길동 <b>책임</b></a></strong>
+                        <span class="fzDark teamGroup mb10">VS반도체개발<br>/구매팀</span>
+                        <span class="fzThin">구매 8년/LGE 12년</span>
+                        <span>숙련도 3.2/경험수 42</span>
+                      </div>
+                    </div>
+                    <div class="matchingSelect">
+                      <label class="checkType" title="선택"><input type="checkbox" id="test5" name="test2" title="홍길동 선택"><span class="checkmark"></span></label>
+                    </div>
+                  </div>
+                  <div class="matching">
+                    <div class="man w60 ml30"><img src="./img/test5.png" alt="이력서 사진" title="사원"></div>
+                    <div class="matchingInfo ml10">
+                      <div class="tit dotTitle w220px mb00">
+                        <strong class="mb12"><a href="javascript:openModal('officerView');">홍길동 <b>책임</b></a></strong>
+                        <span class="fzDark teamGroup mb10">VS반도체개발<br>/구매팀</span>
+                        <span class="fzThin">구매 8년/LGE 12년</span>
+                        <span>숙련도 3.2/경험수 42</span>
+                      </div>
+                    </div>
+                    <div class="matchingSelect">
+                      <label class="checkType" title="선택"><input type="checkbox" id="test5" name="test2" title="홍길동 선택"><span class="checkmark"></span></label>
+                    </div>
+                  </div>
+                  <div class="matching">
+                    <div class="man w60 ml30"><img src="./img/test5.png" alt="이력서 사진" title="사원"></div>
+                    <div class="matchingInfo ml10">
+                      <div class="tit dotTitle w220px mb00">
+                        <strong class="mb12"><a href="javascript:openModal('officerView');">홍길동 <b>책임</b></a></strong>
+                        <span class="fzDark teamGroup mb10">VS반도체개발<br>/구매팀</span>
+                        <span class="fzThin">구매 8년/LGE 12년</span>
+                        <span>숙련도 3.2/경험수 42</span>
+                      </div>
+                    </div>
+                    <div class="matchingSelect">
+                      <label class="checkType" title="선택"><input type="checkbox" id="test5" name="test2" title="홍길동 선택"><span class="checkmark"></span></label>
+                    </div>
+                  </div>
+                  <div class="matching">
+                    <div class="man w60 ml30"><img src="./img/test5.png" alt="이력서 사진" title="사원"></div>
+                    <div class="matchingInfo ml10">
+                      <div class="tit dotTitle w220px mb00">
+                        <strong class="mb12"><a href="javascript:openModal('officerView');">홍길동 <b>책임</b></a></strong>
+                        <span class="fzDark teamGroup mb10">VS반도체개발<br>/구매팀</span>
+                        <span class="fzThin">구매 8년/LGE 12년</span>
+                        <span>숙련도 3.2/경험수 42</span>
+                      </div>
+                    </div>
+                    <div class="matchingSelect">
+                      <label class="checkType" title="선택"><input type="checkbox" id="test5" name="test2" title="홍길동 선택"><span class="checkmark"></span></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="radius officerArea">
+              <div class="officerLeft w431px">
+                <div class="matching mb28">
+                  <div class="matchingInfo">
+                    <div class="tit dotTitle w390px mb00">
+                      <strong class="mb00">통신장비/모바일/VS 서비스 NETWORK 구축/운영</strong>
+                    </div>
+                  </div>
+                </div>
+                <div class="radius bgYb pdv3 mb12 h168px w390px">
+                  <h4 class="titCont3">필수 조건</h4>
+                  <div class="list2 scroll scroll1">
+                    <ul>
+                      <li>북미지역 반도체 칩셋 통합구매계약 진행</li>
+                      <li>해외검증조직 SW자동화검증확대 지원</li>
+                      <li>해외검증조직 SW자동화검증확대 지원</li>
+                      <li>해외검증조직 SW자동화검증확대 지원</li>
+                      <li>해외검증조직 SW자동화검증확대 지원</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="radius bgYb pdv3 h168px w390px">
+                  <h4 class="titCont3">선택 조건</h4>
+                  <div class="list2 scroll scroll1">
+                    <ul>
+                      <li>Big•Big Supplier에 대한 전략적 협업</li>
+                      <li>Big•Big Supplier에 대한 전략적 협업</li>
+                      <li>Big•Big Supplier에 대한 전략적 협업</li>
+                      <li>Big•Big Supplier에 대한 전략적 협업</li>
+                      <li>Big•Big Supplier에 대한 전략적 협업</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="officerRight">
+                <div class="titleBox w100pc mb30">
+                  <p class="infoTxt pt10">* 비교할 사람의 체크박스 선택 후 인재비교 버튼을 클릭 하세요. (최대 5명까지 선택 가능)</p>
+                  <div class="matchingBtn mlAuto"> 
+                      <a href="#" class="button Primary-s black ml05" title="인재비교">인재비교</a>
+                  </div>
+                </div>
+                <div class="matchResult administ scroll">
+                  <div class="matching">
+                    <div class="man w60 ml30"><img src="./img/test5.png" alt="이력서 사진" title="사원"></div>
+                    <div class="matchingInfo ml10">
+                      <div class="tit dotTitle w220px mb00">
+                        <strong class="mb12"><a href="javascript:openModal('officerView');">홍길동 <b>책임</b></a></strong>
+                        <span class="fzDark teamGroup mb10">VS반도체개발<br>/구매팀</span>
+                        <span class="fzThin">구매 8년/LGE 12년</span>
+                        <span>숙련도 3.2/경험수 42</span>
+                      </div>
+                    </div>
+                    <div class="matchingSelect">
+                      <label class="checkType" title="선택"><input type="checkbox" id="test5" name="test2" title="홍길동 선택"><span class="checkmark"></span></label>
+                    </div>
+                  </div>
+                  <div class="matching">
+                    <div class="man w60 ml30"><img src="./img/test5.png" alt="이력서 사진" title="사원"></div>
+                    <div class="matchingInfo ml10">
+                      <div class="tit dotTitle w220px mb00">
+                        <strong class="mb12"><a href="javascript:openModal('officerView');">홍길동 <b>책임</b></a></strong>
+                        <span class="fzDark teamGroup mb10">VS반도체개발<br>/구매팀</span>
+                        <span class="fzThin">구매 8년/LGE 12년</span>
+                        <span>숙련도 3.2/경험수 42</span>
+                      </div>
+                    </div>
+                    <div class="matchingSelect">
+                      <label class="checkType" title="선택"><input type="checkbox" id="test5" name="test2" title="홍길동 선택"><span class="checkmark"></span></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <div class="modalBg"></div>
+    <!-- 매칭 인재 상세 -->
+    <div class="modalContents officerView w700px"> 
+      <h2 class="title mb30">매칭 인재 상세</h2>
+      <div class="popArticle">
+        <div class="officerViewCont">
+          <div class="radius officerArea">
+            <div class="officerLeft w50pc pd0">
+              <div class="matching mb00 pd20 pb10">
+                <div class="man w96"><img src="./img/test3.jpg" alt="이력서 사진" title="사원"></div>
+                <div class="matchingInfo ml20">
+                  <div class="tit dotTitle w145px mb00">
+                    <strong class="mb12"><a href="javascript:openModal('officerView');">홍길동 <b>책임</b></a></strong>
+                    <span class="fzDark teamGroup mb10">VS반도체개발<br>/구매팀</span>
+                  </div>
+                </div>
+              </div>
+              <div class="matching mb00 pb00">
+                <div class="matchingInfo ml20">
+                  <div class="tit mb00">
+                    <span class="fzThin">구매 8년/LGE 12년</span>
+                  </div>
+                </div>
+              </div>
+              <div class="stickyThaed">
+                <table>
+                  <colgroup>
+                    <col>
+                    <col style="width:80px">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>개인업무경험</th>
+                      <th>숙련도</th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+              <div class="stickyTbody scroll">
+                <table>
+                  <colgroup>
+                    <col>
+                    <col style="width:66px">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <td><p>품질경영 센터장 현장점검 운영</p></td>
+                      <td>4.2</td>
+                    </tr>
+                    <tr class="item even">
+                      <td><p>센터 하부조직 업무보고 주관</p></td>
+                      <td>1.1</td>
+                    </tr>
+                    <tr>
+                      <td><p>품질경영 센터장 현장점검 운영</p></td>
+                      <td>4.2</td>
+                    </tr>
+                    <tr class="item even">
+                      <td><p>센터 하부조직 업무보고 주관</p></td>
+                      <td>1.1</td>
+                    </tr>
+                    <tr>
+                      <td><p>품질경영 센터장 현장점검 운영</p></td>
+                      <td>4.2</td>
+                    </tr>
+                    <tr class="item even">
+                      <td><p>센터 하부조직 업무보고 주관</p></td>
+                      <td>1.1</td>
+                    </tr>
+                    <tr>
+                      <td><p>품질경영 센터장 현장점검 운영</p></td>
+                      <td>4.2</td>
+                    </tr>
+                    <tr class="item even">
+                      <td><p>센터 하부조직 업무보고 주관</p></td>
+                      <td>1.1</td>
+                    </tr>
+                    <tr>
+                      <td><p>품질경영 센터장 현장점검 운영</p></td>
+                      <td>4.2</td>
+                    </tr>
+                    <tr>
+                      <td><p>품질경영 센터장 현장점검 운영</p></td>
+                      <td>4.2</td>
+                    </tr>
+                    <tr class="item even">
+                      <td><p>센터 하부조직 업무보고 주관</p></td>
+                      <td>1.1</td>
+                    </tr>
+                    <tr>
+                      <td><p>품질경영 센터장 현장점검 운영</p></td>
+                      <td>4.2</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div><!-- officerLeft -->
+            <div class="officerRight pd0 pt20 pb20">
+              <div class="list3 pl20 pr20 pt00">
+                <ul>
+                  <li><em>학력/전공/학위</em><p>한국대학교/기계공학/ Bachelor</p></li>
+                  <li><em>자격증</em><p>OO자격증</p></li>
+                  <li><em>인재 POOL</em><p>EIP (’18.02 ~ ’20.03)</p>
+                    <p>GLP (’20.04 ~ )</p></li>
+                </ul>
+              </div>
+              <div class="list3 pl20 pr20 mb12">
+                <ul>
+                  <li>
+                    <em>3개년 성과</em>
+                    <p>
+                      <span>A <b>2022</b></span>
+                      <span>A <b>2021</b></span>
+                      <span>S <b>2020</b></span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div class="titCont3 mb20 ml20">조직발령이력</div>
+              <div class="infohisCont2 pl20 scroll">
+                <div class="infohis4">
+                  <ul>
+                    <li>
+                        <b>구매/SCM경영센터 <em>(3년)</em></b> <span>23.10</span>
+                    </li>
+                    <li>
+                        <b>PDP오듈생산기술실 <em>(3년)</em></b> <span>20.07</span>
+                    </li>
+                    <li>
+                        <b>PDP오듈생산기술실 <em>(3년)</em></b> <span>18.07</span>
+                    </li>
+                    <li>
+                        <b>전략구매팀 <em>(3년)</em></b> <span>16.06</span>
+                    </li>
+                    <li>
+                        <b>구매/SCM경영센터 <em>(3년)</em></b> <span>23.10</span>
+                    </li>
+                    <li>
+                        <b>PDP오듈생산기술실 <em>(3년)</em></b> <span>20.07</span>
+                    </li>
+                    <li>
+                        <b>PDP오듈생산기술실 <em>(3년)</em></b> <span>18.07</span>
+                    </li>
+                    <li>
+                        <b>전략구매팀 <em>(3년)</em></b> <span>16.06</span>
+                    </li>
+                    <li>
+                        <b>구매/SCM경영센터 <em>(3년)</em></b> <span>23.10</span>
+                    </li>
+                    <li>
+                        <b>PDP오듈생산기술실 <em>(3년)</em></b> 
+                        <span>16.06</span>
+                    </li>
+                    <li>
+                        <b>PDP오듈생산기술실 <em>(3년)</em></b> <span>18.07</span>
+                    </li>
+                    <li>
+                        <b>전략구매팀 <em>(3년)</em></b> <span>16.06</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div><!-- officerRight -->
+          </div>
+        </div>
+      </div>
+      <a href="javascript:;" class="close closePop" title="팝업 닫기">닫기</a>
+    </div>
+    <!-- 매칭 인재 상세 -->
+    <!-- 인재 비교하기 -->
+    <div class="modalContents officerComparison"> 
+      <h2 class="title mb30">인재 비교하기</h2>
+      <div class="popArticle">
+        <div class="officerCont"> 
+          <div class="comparisonList col3"> <!-- 3인 이하일 때는 col2 -->
+            <ul class="swiper-wrapper">
+              <li class="radius officerArea swiper-slide">
+                <div class="matching mb00 pd20 pb10">
+                  <div class="man w96"><img src="./img/test3.jpg" alt="이력서 사진" title="사원"></div>
+                  <div class="matchingInfo ml20">
+                    <div class="tit dotTitle w145px mb00">
+                      <strong class="mb12"><a href="javascript:openModal('officerView');">홍길동 <b>책임</b></a></strong>
+                      <span class="fzDark teamGroup mb10">VS반도체개발<br>/구매팀</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="matching mb00 pb10">
+                  <div class="matchingInfo ml20">
+                    <div class="tit mb00">
+                      <span class="fzThin">구매 8년/LGE 12년</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="iconStateBox pl20 pr20">
+                  <em class="iconState1 icsta1-2">
+                    Call
+                    <div class="icView1Pop" style="display: none;">
+                      <p>2023.11.11</p>
+                    </div>
+                  </em>
+                  <em class="iconState1 icsta1-3">
+                    Tap
+                    <div class="icView1Pop">
+                      <p>2023.11.11</p>
+                    </div>
+                  </em>
+                  <em class="iconState1 icsta1-4">
+                    Matched
+                    <div class="icView1Pop" style="display: none;">
+                      <p>2023.11.11</p>
+                    </div>
+                  </em>
+                </div>
+                <div class="list3 pl20 pr20 pt00">
+                  <ul>
+                    <li><em>학력/전공/학위</em><p>한국대학교/기계공학/ Bachelor</p></li>
+                    <li><em>자격증</em><p>OO자격증</p></li>
+                  </ul>
+                </div>
+                <div class="list3 bbNone pl20 pr20 mb8">
+                  <ul>
+                    <li>
+                      <em>3개년 성과</em>
+                      <p>
+                        <span>A <b>2022</b></span>
+                        <span>A <b>2021</b></span>
+                        <span>S <b>2020</b></span>
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="stickyThaed">
+                  <table class=" scroll">
+                    <colgroup>
+                      <col>
+                      <col style="width:80px">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>개인업무경험</th>
+                        <th>숙련도</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+                <div class="stickyTbody comparison scroll">
+                  <table>
+                    <colgroup>
+                      <col>
+                      <col style="width:66px">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td>4.2</td>
+                      </tr>
+                      <tr class="item even">
+                        <td><p>센터 하부조직 업무보고 주관</p></td>
+                        <td>1.1</td>
+                      </tr>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td>4.2</td>
+                      </tr>
+                      <tr class="item even">
+                        <td><p>센터 하부조직 업무보고 주관</p></td>
+                        <td>1.1</td>
+                      </tr>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td>4.2</td>
+                      </tr>
+                      <tr class="item even">
+                        <td><p>센터 하부조직 업무보고 주관</p></td>
+                        <td>1.1</td>
+                      </tr>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td>4.2</td>
+                      </tr>
+                      <tr class="item even">
+                        <td><p>센터 하부조직 업무보고 주관</p></td>
+                        <td>1.1</td>
+                      </tr>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td>4.2</td>
+                      </tr>
+                      <tr class="item even">
+                        <td><p>센터 하부조직 업무보고 주관</p></td>
+                        <td>1.1</td>
+                      </tr>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td>4.2</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+              <li class="radius officerArea swiper-slide">
+                <div class="matching mb00 pd20 pb10">
+                  <div class="man w96"><img src="./img/test3.jpg" alt="이력서 사진" title="사원"></div>
+                  <div class="matchingInfo ml20">
+                    <div class="tit dotTitle w145px mb00">
+                      <strong class="mb12"><a href="javascript:openModal('officerView');">홍길동 <b>책임</b></a></strong>
+                      <span class="fzDark teamGroup mb10">VS반도체개발<br>/구매팀</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="matching mb00 pb10">
+                  <div class="matchingInfo ml20">
+                    <div class="tit mb00">
+                      <span class="fzThin">구매 8년/LGE 12년</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="iconStateBox pl20 pr20">
+                  <em class="iconState1 icsta1-2">
+                    Call
+                    <div class="icView1Pop" style="display: none;">
+                      <p>2023.11.11</p>
+                    </div>
+                  </em>
+                  <em class="iconState1 icsta1-3">
+                    Tap
+                    <div class="icView1Pop">
+                      <p>2023.11.11</p>
+                    </div>
+                  </em>
+                  <em class="iconState1 icsta1-4">
+                    Matched
+                    <div class="icView1Pop" style="display: none;">
+                      <p>2023.11.11</p>
+                    </div>
+                  </em>
+                </div>
+                <div class="list3 pl20 pr20 pt00">
+                  <ul>
+                    <li><em>학력/전공/학위</em><p>한국대학교/기계공학/ Bachelor</p></li>
+                    <li><em>자격증</em><p>OO자격증</p></li>
+                  </ul>
+                </div>
+                <div class="list3 bbNone pl20 pr20 mb8">
+                  <ul>
+                    <li>
+                      <em>3개년 성과</em>
+                      <p>
+                        <span>A <b>2022</b></span>
+                        <span>A <b>2021</b></span>
+                        <span>S <b>2020</b></span>
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="stickyThaed">
+                  <table class=" scroll">
+                    <colgroup>
+                      <col>
+                      <col style="width:80px">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th class="tac">개인업무경험</th>
+                        <th class="tac pl00">숙련도</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+                <div class="stickyTbody comparison scroll">
+                  <table>
+                    <colgroup>
+                      <col>
+                      <col style="width:66px">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td class="tac pl00">4.2</td>
+                      </tr>
+                      <tr class="item even">
+                        <td><p>센터 하부조직 업무보고 주관</p></td>
+                        <td class="tac pl00">1.1</td>
+                      </tr>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td class="tac pl00">4.2</td>
+                      </tr>
+                      <tr class="item even">
+                        <td><p>센터 하부조직 업무보고 주관</p></td>
+                        <td class="tac pl00">1.1</td>
+                      </tr>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td class="tac pl00">4.2</td>
+                      </tr>
+                      <tr class="item even">
+                        <td><p>센터 하부조직 업무보고 주관</p></td>
+                        <td class="tac pl00">1.1</td>
+                      </tr>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td class="tac pl00">4.2</td>
+                      </tr>
+                      <tr class="item even">
+                        <td><p>센터 하부조직 업무보고 주관</p></td>
+                        <td class="tac pl00">1.1</td>
+                      </tr>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td class="tac pl00">4.2</td>
+                      </tr>
+                      <tr class="item even">
+                        <td><p>센터 하부조직 업무보고 주관</p></td>
+                        <td class="tac pl00">1.1</td>
+                      </tr>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td class="tac pl00">4.2</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+              <li class="radius officerArea swiper-slide">
+                <div class="matching mb00 pd20 pb10">
+                  <div class="man w96"><img src="./img/test3.jpg" alt="이력서 사진" title="사원"></div>
+                  <div class="matchingInfo ml20">
+                    <div class="tit dotTitle w145px mb00">
+                      <strong class="mb12"><a href="javascript:openModal('officerView');">홍길동 <b>책임</b></a></strong>
+                      <span class="fzDark teamGroup mb10">VS반도체개발<br>/구매팀</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="matching mb00 pb10">
+                  <div class="matchingInfo ml20">
+                    <div class="tit mb00">
+                      <span class="fzThin">구매 8년/LGE 12년</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="iconStateBox pl20 pr20">
+                  <em class="iconState1 icsta1-2">
+                    Call
+                    <div class="icView1Pop" style="display: none;">
+                      <p>2023.11.11</p>
+                    </div>
+                  </em>
+                  <em class="iconState1 icsta1-3">
+                    Tap
+                    <div class="icView1Pop">
+                      <p>2023.11.11</p>
+                    </div>
+                  </em>
+                  <em class="iconState1 icsta1-4">
+                    Matched
+                    <div class="icView1Pop" style="display: none;">
+                      <p>2023.11.11</p>
+                    </div>
+                  </em>
+                </div>
+                <div class="list3 pl20 pr20 pt00">
+                  <ul>
+                    <li><em>학력/전공/학위</em><p>한국대학교/기계공학/ Bachelor</p></li>
+                    <li><em>자격증</em><p>OO자격증</p></li>
+                  </ul>
+                </div>
+                <div class="list3 bbNone pl20 pr20 mb8">
+                  <ul>
+                    <li>
+                      <em>3개년 성과</em>
+                      <p>
+                        <span>A <b>2022</b></span>
+                        <span>A <b>2021</b></span>
+                        <span>S <b>2020</b></span>
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="stickyThaed">
+                  <table class=" scroll">
+                    <colgroup>
+                      <col>
+                      <col style="width:80px">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>개인업무경험</th>
+                        <th>숙련도</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+                <div class="stickyTbody comparison scroll">
+                  <table>
+                    <colgroup>
+                      <col>
+                      <col style="width:66px">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td>4.2</td>
+                      </tr>
+                      <tr class="item even">
+                        <td><p>센터 하부조직 업무보고 주관</p></td>
+                        <td>1.1</td>
+                      </tr>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td>4.2</td>
+                      </tr>
+                      <tr class="item even">
+                        <td><p>센터 하부조직 업무보고 주관</p></td>
+                        <td>1.1</td>
+                      </tr>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td>4.2</td>
+                      </tr>
+                      <tr class="item even">
+                        <td><p>센터 하부조직 업무보고 주관</p></td>
+                        <td>1.1</td>
+                      </tr>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td>4.2</td>
+                      </tr>
+                      <tr class="item even">
+                        <td><p>센터 하부조직 업무보고 주관</p></td>
+                        <td>1.1</td>
+                      </tr>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td>4.2</td>
+                      </tr>
+                      <tr class="item even">
+                        <td><p>센터 하부조직 업무보고 주관</p></td>
+                        <td>1.1</td>
+                      </tr>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td>4.2</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+              <li class="radius officerArea swiper-slide">
+                <div class="matching mb00 pd20 pb10">
+                  <div class="man w96"><img src="./img/test3.jpg" alt="이력서 사진" title="사원"></div>
+                  <div class="matchingInfo ml20">
+                    <div class="tit dotTitle w145px mb00">
+                      <strong class="mb12"><a href="javascript:openModal('officerView');">홍길동 <b>책임</b></a></strong>
+                      <span class="fzDark teamGroup mb10">VS반도체개발<br>/구매팀</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="matching mb00 pb10">
+                  <div class="matchingInfo ml20">
+                    <div class="tit mb00">
+                      <span class="fzThin">구매 8년/LGE 12년</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="iconStateBox pl20 pr20">
+                  <em class="iconState1 icsta1-2">
+                    Call
+                    <div class="icView1Pop" style="display: none;">
+                      <p>2023.11.11</p>
+                    </div>
+                  </em>
+                  <em class="iconState1 icsta1-3">
+                    Tap
+                    <div class="icView1Pop">
+                      <p>2023.11.11</p>
+                    </div>
+                  </em>
+                  <em class="iconState1 icsta1-4">
+                    Matched
+                    <div class="icView1Pop" style="display: none;">
+                      <p>2023.11.11</p>
+                    </div>
+                  </em>
+                </div>
+                <div class="list3 pl20 pr20 pt00">
+                  <ul>
+                    <li><em>학력/전공/학위</em><p>한국대학교/기계공학/ Bachelor</p></li>
+                    <li><em>자격증</em><p>OO자격증</p></li>
+                  </ul>
+                </div>
+                <div class="list3 bbNone pl20 pr20 mb8">
+                  <ul>
+                    <li>
+                      <em>3개년 성과</em>
+                      <p>
+                        <span>A <b>2022</b></span>
+                        <span>A <b>2021</b></span>
+                        <span>S <b>2020</b></span>
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="stickyThaed">
+                  <table class=" scroll">
+                    <colgroup>
+                      <col>
+                      <col style="width:80px">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>개인업무경험</th>
+                        <th>숙련도</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+                <div class="stickyTbody comparison scroll">
+                  <table>
+                    <colgroup>
+                      <col>
+                      <col style="width:66px">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td>4.2</td>
+                      </tr>
+                      <tr class="item even">
+                        <td><p>센터 하부조직 업무보고 주관</p></td>
+                        <td>1.1</td>
+                      </tr>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td>4.2</td>
+                      </tr>
+                      <tr class="item even">
+                        <td><p>센터 하부조직 업무보고 주관</p></td>
+                        <td>1.1</td>
+                      </tr>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td>4.2</td>
+                      </tr>
+                      <tr class="item even">
+                        <td><p>센터 하부조직 업무보고 주관</p></td>
+                        <td>1.1</td>
+                      </tr>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td>4.2</td>
+                      </tr>
+                      <tr class="item even">
+                        <td><p>센터 하부조직 업무보고 주관</p></td>
+                        <td>1.1</td>
+                      </tr>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td>4.2</td>
+                      </tr>
+                      <tr class="item even">
+                        <td><p>센터 하부조직 업무보고 주관</p></td>
+                        <td>1.1</td>
+                      </tr>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td>4.2</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+              <li class="radius officerArea swiper-slide">
+                <div class="matching mb00 pd20 pb10">
+                  <div class="man w96"><img src="./img/test3.jpg" alt="이력서 사진" title="사원"></div>
+                  <div class="matchingInfo ml20">
+                    <div class="tit dotTitle w145px mb00">
+                      <strong class="mb12"><a href="javascript:openModal('officerView');">홍길동 <b>책임</b></a></strong>
+                      <span class="fzDark teamGroup mb10">VS반도체개발<br>/구매팀</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="matching mb00 pb10">
+                  <div class="matchingInfo ml20">
+                    <div class="tit mb00">
+                      <span class="fzThin">구매 8년/LGE 12년</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="iconStateBox pl20 pr20">
+                  <em class="iconState1 icsta1-2">
+                    Call
+                    <div class="icView1Pop" style="display: none;">
+                      <p>2023.11.11</p>
+                    </div>
+                  </em>
+                  <em class="iconState1 icsta1-3">
+                    Tap
+                    <div class="icView1Pop">
+                      <p>2023.11.11</p>
+                    </div>
+                  </em>
+                  <em class="iconState1 icsta1-4">
+                    Matched
+                    <div class="icView1Pop" style="display: none;">
+                      <p>2023.11.11</p>
+                    </div>
+                  </em>
+                </div>
+                <div class="list3 pl20 pr20 pt00">
+                  <ul>
+                    <li><em>학력/전공/학위</em><p>한국대학교/기계공학/ Bachelor</p></li>
+                    <li><em>자격증</em><p>OO자격증</p></li>
+                  </ul>
+                </div>
+                <div class="list3 bbNone pl20 pr20 mb8">
+                  <ul>
+                    <li>
+                      <em>3개년 성과</em>
+                      <p>
+                        <span>A <b>2022</b></span>
+                        <span>A <b>2021</b></span>
+                        <span>S <b>2020</b></span>
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="stickyThaed">
+                  <table class=" scroll">
+                    <colgroup>
+                      <col>
+                      <col style="width:80px">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>개인업무경험</th>
+                        <th>숙련도</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+                <div class="stickyTbody comparison scroll">
+                  <table>
+                    <colgroup>
+                      <col>
+                      <col style="width:66px">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td>4.2</td>
+                      </tr>
+                      <tr class="item even">
+                        <td><p>센터 하부조직 업무보고 주관</p></td>
+                        <td>1.1</td>
+                      </tr>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td>4.2</td>
+                      </tr>
+                      <tr class="item even">
+                        <td><p>센터 하부조직 업무보고 주관</p></td>
+                        <td>1.1</td>
+                      </tr>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td>4.2</td>
+                      </tr>
+                      <tr class="item even">
+                        <td><p>센터 하부조직 업무보고 주관</p></td>
+                        <td>1.1</td>
+                      </tr>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td>4.2</td>
+                      </tr>
+                      <tr class="item even">
+                        <td><p>센터 하부조직 업무보고 주관</p></td>
+                        <td>1.1</td>
+                      </tr>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td>4.2</td>
+                      </tr>
+                      <tr class="item even">
+                        <td><p>센터 하부조직 업무보고 주관</p></td>
+                        <td>1.1</td>
+                      </tr>
+                      <tr>
+                        <td><p>품질경영 센터장 현장점검 운영</p></td>
+                        <td>4.2</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </div>
+      <a href="javascript:;" class="close closePop" title="팝업 닫기">닫기</a>
+    </div>
+    <!-- 인재 비교하기 -->
+  </div> <!-- wrap end -->
+  <!-- alramPopup -->
+  <div class="modalContents alramPopup w420px">
+    <div class="alramPopupContents stickyTbody bodyScroll scroll ofy border3">
+      <div class="alramContentSPart">
+        <div class="contentsSection active">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀 [Call sign] HE 반도체 구매팀 [Call sign] HE 반도체 구매팀 [Call sign] HE 반도체 구매팀 [Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+      <div class="alramContentSPart">
+        <div class="contentsSection">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+      <div class="alramContentSPart">
+        <div class="contentsSection">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+      <div class="alramContentSPart">
+        <div class="contentsSection">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+      <div class="alramContentSPart">
+        <div class="contentsSection active">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+      <div class="alramContentSPart">
+        <div class="contentsSection active">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="alramContentSBottom">
+      <button>더보기 <span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
+        <path d="M0.577148 6H12.5771" stroke="black"/>
+        <path d="M6.57715 0L6.57715 12" stroke="black"/>
+        </svg></span></button>
+    </div>
+  </div>  
+  <!-- alramPopup --> 
+<script type="text/javascript" src="./js/main.js"></script> 
+<script type="text/javascript" src="./js/style.js"></script> 
+<!-- <script type="text/javascript" src="./js/sample.js"></script>  -->
+</body>
+</html>

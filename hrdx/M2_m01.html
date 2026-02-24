@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HRDX</title>
+  
+  <!-- css -->
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
+  
+  <!-- js -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+  <script src="./js/jquery-3.7.1.min.js"></script>
+  <script src="./js/swiper-bundle.min.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <!-- header start -->
+    <header id="header">
+      <div class="headerArea">
+        <!-- header contents -->              
+        <h1 class="logoArea">
+          <a href="M10_m01_t01.html"><img src="./img/Group 63399748.png" alt="IC360" title="CAREER ADVISOR"></a>
+        </h1>
+        <!-- GNB start -->
+        <nav class="gnbArea">
+          <ul class="gnbList">
+            <li class="menuList active"><span><a href="M2_m01_2.html">매칭검색</a></span></li>
+            <li class="menuList"><span><a href="M3_m03.html">경력개발</a></span></li>
+            <li class="menuList"><span><a href="#">육성프로그램</a></span></li>
+            <li class="menuList"><span><a href="M5_m01.html">조직자관리</a></span></li>
+            <li class="menuList"><span><a href="M6_m01.html">인사지원</a></span></li>
+          </ul>
+        </nav>
+        <!-- info start-->
+        <div class="infoWrap">
+          <ul>
+            <li class="analyze"><a href="#"><img src="./img/ic_person.png" alt="사람아이콘" title="내정보 바로가기"><span class="fontZ">gildong.hong@lge.com</span></a></li>
+            <li class="info">
+              <a href="javascript:openModal('alramPopup');">
+                <img src="./img/ic_alarm.png" alt="알람아이콘" title="알림">
+                <i>999</i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>     
+      <!-- GNB end -->
+    </header>
+    <!-- header end -->
+
+    <!-- section start -->
+    <section>
+      <article id="subContainer">
+        <div class="tab1 tac">
+          <ul>
+            <li class="active"><a href="M2_m01_2.html">조직검색</a></li>
+            <li><a href="M2_m02.html">인재검색</a></li>
+          </ul>
+        </div>
+        <div class="contArea">
+          <div class="contBx w100pc">
+            <div class="radius pdv1">
+              <div class="contSrh">
+                <div class="switchbox mb00">
+                  <div class="srhRadio mb20">
+                    <label class="radioType" title="선택">
+                        <input type="radio" class="col-3" id="test1" name="test1" title="나의 업무경험 기준" checked=""><span class="checkmark"></span>
+                        나의 업무경험 기준
+                    </label>
+                    <label class="radioType ml20" title="선택">
+                        <input type="radio" class="col-2" id="test1" name="test1" title="조직/직무 기준" ><span class="checkmark"></span>
+                        조직/직무 기준
+                    </label>
+                  </div>
+                  <p class="infoTxt">* 나의 업무경험기반으로 매칭 조직을 검색합니다.</p>
+                </div>
+              </div>
+              <div class="keywordCont">
+                <div class="keywordContInner col-3">
+                  <div class="keyList">
+                    <h2 class="titCont1">나의 업무경험 List <span>(5)</span></h2>
+                    <div class="keyListInner">
+                      <div class="keyListBtn scroll">
+                        <ul>
+                          <li>반도체 시황 분석 및 본사 연계 MI 활동강화</li>
+                          <li class="shadow">반도체 추진 검토</li>
+                          <li class="shadow">반도체 선행 개발</li>
+                          <li>반도체 시장 MI을 위해 분기별로 시너지 기반 구매</li>
+                          <li>MPA 체결수1건</li>
+                          <li>반도체 공정 및 원가분석</li>
+                          <li>반도체 시황 분석</li>
+                          <li>반도체 MI와 전사 시너지 기반 구매</li>
+                          <li>반도체 추진 검토</li>
+                          <li>반도체 선행 개발</li>
+                          <li class="shadow">반도체 시장 MI을 위해 분기별로 시너지 기반 구매</li>
+                          <li>MPA 체결수1건</li>
+                          <li>반도체 공정 및 원가분석</li>
+                          <li class="shadow">반도체 시황 분석</li>
+                          <li>반도체 MI와 전사 시너지 기반 구매</li>
+                          <li>반도체 시황 분석 및 본사 연계 MI 활동강화</li>
+                          <li class="shadow">반도체 추진 검토</li>
+                          <li class="shadow">반도체 선행 개발</li>
+                          <li>반도체 시장 MI을 위해 분기별로 시너지 기반 구매</li>
+                          <li>MPA 체결수1건</li>
+                          <li>반도체 공정 및 원가분석</li>
+                          <li>반도체 시황 분석</li>
+                          <li>반도체 MI와 전사 시너지 기반 구매</li>
+                          <li>반도체 추진 검토</li>
+                          <li>반도체 선행 개발</li>
+                          <li  class="shadow">반도체 시장 MI을 위해 분기별로 시너지 기반 구매</li>
+                          <li>MPA 체결수1건</li>
+                          <li>반도체 공정 및 원가분석</li>
+                          <li class="shadow">반도체 시황 분석</li>
+                          <li>반도체 MI와 전사 시너지 기반 구매</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <i>다음</i>
+                  </div>
+                  <div class="keyList" >
+                    <h2 class="titCont1">필수 조건 <span>(2)</span></h2>
+                    <div class="keyListInner delClose">
+                      <div class="keyListBtn scroll">
+                        <ul>
+                          <li>반도체 추진 검토 <button class="btn_del" title="삭제">삭제</button></li>
+                          <li>반도체 선행 개발 <button class="btn_del" title="삭제">삭제</button></li>
+                          <li>반도체 시장 MI을 위해 분기별로 시너지 기반 구매 <button class="btn_del" title="삭제">삭제</button></li>
+                          <li>MPA 체결수1건 <button class="btn_del" title="삭제">삭제</button></li>
+                          <li>반도체 공정 및 원가분석 <button class="btn_del" title="삭제">삭제</button></li>
+                          <li>반도체 시황 분석 <button class="btn_del" title="삭제">삭제</button></li>
+                          <li>반도체 MI와 전사 시너지 기반 구매 <button class="btn_del" title="삭제">삭제</button></li>
+                          <li>반도체 시황 분석 및 본사 연계 MI 활동강화 <button class="btn_del" title="삭제">삭제</button></li>
+                          <li>반도체 추진 검토 <button class="btn_del" title="삭제">삭제</button></li>
+                          <li>반도체 선행 개발 <button class="btn_del" title="삭제">삭제</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="keyList">
+                    <h2 class="titCont1">선택 조건 <span>(5)</span></h2>
+                    <div class="keyListInner delClose">
+                      <div class="keyListBtn scroll">
+                        <ul>
+                          <li>반도체 MI와 전사 시너지 기반 구매 <button class="btn_del" title="삭제">삭제</button></li>
+                          <li>반도체 시황 분석 및 본사 연계 MI 활동강화 <button class="btn_del" title="삭제">삭제</button></li>
+                          <li>반도체 추진 검토 <button class="btn_del" title="삭제">삭제</button></li>
+                          <li>반도체 선행 개발 <button class="btn_del" title="삭제">삭제</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="drop">반도체 시장 MI을 위해 분기별로 시너지 기반 구매 반도체 시장 MI을 위해 분기별로 시너지 기반 구매</div>
+                </div>
+                <div class="keywordBtn">
+                  <a href="#" class="button Primary black" title="초기화">초기화</a>
+                  <a href="#" class="button Primary red ml05" title="매칭 조직 찾기">매칭 조직 찾기</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contArea2">
+          <div class="titleBox w100pc">
+            <h2 class="titCont1 mb00">매칭조직</h2>
+            <span class="infoTxt bookmark icoTxt ml30"><i title="관심조직저장">관심조직저장</i><b>관심조직저장 :</b> 관심조직으로 저장하시면 커리어비저닝 화면에서 보다 상세정보를 확인하실 수 있습니다. </span>
+            <label for="Viewby" class="mr10">View by</label>
+            <div class="select">
+              <div class="selectInner w150px">
+                <button class="selected" title="직종 저장 옵션 열기">All</button>
+                <div class="selectOption scroll" style="display: none;" id="Viewby">
+                  <ul>
+                    <li><a href="#">All</a></li>
+                    <li><a href="#">로테이션대상</a></li>
+                    <li><a href="#">CDP상 이동합의</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div> 
+          </div>
+          <div class="matchResult">
+            <!-- <div class="noMatching tac pd50">매칭된 조직이 없습니다.</div> -->
+            <div class="matching">
+              <div class="matchingInfo pl10">
+                <div class="tit dotTitle w450px">
+                  <em>HE사업본부</em>
+                  <strong>HE 반도체 구매팀</strong>
+                  <span>원가분석담당</span>
+                </div>
+                <div class="list1 w450px">
+                  <ul>
+                    <li>SW자동화 시험법 개발</li>
+                    <li>개발단계 품질확보위한 SW신뢰성시험법 개발</li>
+                    <li>해외검증조직 SW자동화검증확대 지원</li>
+                    <li>SW자동화 시험법 개발</li>
+                    <li>Cluster 언어 검증 자동화 확대</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="matchingBtn">
+                <a href="#" class="mbookMark" title="저장">
+                  저장
+                </a>
+              </div>
+            </div>
+            <div class="matching">
+              <div class="matchingInfo pl10">
+                <div class="tit dotTitle w450px">
+                  <em>HE사업본부</em>
+                  <strong>HE 반도체 구매팀</strong>
+                  <span>원가분석담당</span>
+                </div>
+                <div class="list1 w450px">
+                  <ul>
+                    <li>SW자동화 시험법 개발</li>
+                    <li>개발단계 품질확보위한 SW신뢰성시험법 개발</li>
+                    <li>해외검증조직 SW자동화검증확대 지원</li>
+                    <li>SW자동화 시험법 개발</li>
+                    <li>Cluster 언어 검증 자동화 확대</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="matchingBtn">
+                <a href="#" class="mbookMark active" title="해제">
+                  해제
+                </a>
+              </div>
+            </div>
+            <div class="matching">
+              <div class="matchingInfo pl10">
+                <div class="tit dotTitle w450px">
+                  <em>HE사업본부</em>
+                  <strong>HE 반도체 구매팀</strong>
+                  <span>원가분석담당</span>
+                </div>
+                <div class="list1 w450px">
+                  <ul>
+                    <li>SW자동화 시험법 개발</li>
+                    <li>개발단계 품질확보위한 SW신뢰성시험법 개발</li>
+                    <li>해외검증조직 SW자동화검증확대 지원</li>
+                    <li>SW자동화 시험법 개발</li>
+                    <li>Cluster 언어 검증 자동화 확대</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="matchingBtn">
+                <a  href="#" class="mbookMark" title="저장">
+                  저장
+                </a>
+              </div>
+            </div>
+            <div class="matching">
+              <div class="matchingInfo pl10">
+                <div class="tit dotTitle w450px">
+                  <em>HE사업본부</em>
+                  <strong>HE 반도체 구매팀</strong>
+                  <span>원가분석담당</span>
+                </div>
+                <div class="list1 w450px">
+                  <ul>
+                    <li>SW자동화 시험법 개발</li>
+                    <li>개발단계 품질확보위한 SW신뢰성시험법 개발</li>
+                    <li>해외검증조직 SW자동화검증확대 지원</li>
+                    <li>SW자동화 시험법 개발</li>
+                    <li>Cluster 언어 검증 자동화 확대</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="matchingBtn">
+                <a  href="#" class="mbookMark" title="저장">
+                    저장
+                </a>
+              </div>
+            </div>
+            <div class="matching">
+              <div class="matchingInfo pl10">
+                <div class="tit dotTitle w450px">
+                  <em>HE사업본부</em>
+                  <strong>HE 반도체 구매팀</strong>
+                  <span>원가분석담당</span>
+                </div>
+                <div class="list1 w450px">
+                  <ul>
+                    <li>SW자동화 시험법 개발</li>
+                    <li>개발단계 품질확보위한 SW신뢰성시험법 개발</li>
+                    <li>해외검증조직 SW자동화검증확대 지원</li>
+                    <li>SW자동화 시험법 개발</li>
+                    <li>Cluster 언어 검증 자동화 확대</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="matchingBtn">
+                <a  href="#" class="mbookMark" title="저장">
+                  저장
+                </a>
+              </div>
+            </div>
+            <div class="matching">
+              <div class="matchingInfo pl10">
+                <div class="tit dotTitle w450px">
+                  <em>HE사업본부</em>
+                  <strong>HE 반도체 구매팀</strong>
+                  <span>원가분석담당</span>
+                </div>
+                <div class="list1 w450px">
+                  <ul>
+                    <li>SW자동화 시험법 개발</li>
+                    <li>개발단계 품질확보위한 SW신뢰성시험법 개발</li>
+                    <li>해외검증조직 SW자동화검증확대 지원</li>
+                    <li>SW자동화 시험법 개발</li>
+                    <li>Cluster 언어 검증 자동화 확대</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="matchingBtn">
+                <a href="#" class="mbookMark" title="저장">
+                  저장
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </div><!-- wrap end -->
+
+  <!-- alramPopup -->
+  <div class="modalContents alramPopup w420px">
+    <div class="alramPopupContents stickyTbody bodyScroll scroll ofy border3">
+      <div class="alramContentSPart">
+        <div class="contentsSection active">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀 [Call sign] HE 반도체 구매팀 [Call sign] HE 반도체 구매팀 [Call sign] HE 반도체 구매팀 [Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+      <div class="alramContentSPart">
+        <div class="contentsSection">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+      <div class="alramContentSPart">
+        <div class="contentsSection">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+      <div class="alramContentSPart">
+        <div class="contentsSection">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+      <div class="alramContentSPart">
+        <div class="contentsSection active">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+      <div class="alramContentSPart">
+        <div class="contentsSection active">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="alramContentSBottom">
+      <button>더보기 <span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
+        <path d="M0.577148 6H12.5771" stroke="black"/>
+        <path d="M6.57715 0L6.57715 12" stroke="black"/>
+        </svg></span></button>
+    </div>
+  </div>  
+  <!-- alramPopup --> 
+<script type="text/javascript" src="./js/main.js"></script> 
+<script type="text/javascript" src="./js/style.js"></script> 
+<!-- <script type="text/javascript" src="./js/sample.js"></script>  -->
+</body>
+</html>

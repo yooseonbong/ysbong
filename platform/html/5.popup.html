@@ -1,0 +1,289 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="apple-touch-icon" sizes="57x57" href="../images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+<link rel="manifest" href="../images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="../images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<title>이통사 신원확인 시스템 관리자</title>
+<script src="../js/jquery-3.7.1.min.js"></script>
+<script src="../js/jquery-ui.js"></script>
+<script src="../js/jquery.ui.monthpicker.js"></script>
+<script src="../js/ui.js"></script>
+
+
+<link rel="stylesheet" href="../css/jquery-ui.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/style.css"> 
+
+</head>
+<body>
+<div id="mis-wrap">
+	<header class="mis-header">
+		<h1><a href="#" title="메인으로"><b>MIS Admin Portal</b><span>Mobile Identification System</span></a></h1>
+		<div class="min-head">
+			<h2 class="mis-m9">스케줄 관리</h2>
+			<div class="mis-utill">
+				<ul>
+					<li><b>홍길동 (user01@email.com)</b> 님</li>
+					<li>Orange Mobile</li>
+					<li class="mis-utill-btn">
+						<a href="#">권한01 (+4)</a>
+						<div class="mis-utill-box">
+							<em>보유권한</em>
+							<ul>
+								<li>- 권한01</li>
+								<li>- 권한02</li>
+								<li>- 권한03</li>
+								<li>- 권한04</li>
+							</ul>
+						</div>
+					</li>
+					<li>승인권자</li>
+					<li class="mis-utill-btn mis-utill-more">
+						<a>더보기</a>
+						<div class="mis-utill-box">
+							<a href="#"><em>로그아웃</em></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div class="mis-container">
+		<div class="mis-aside">
+			<ul>
+				<li class="mis-a1"><a href="#" title="신원 확인 이력 페이지 이동"><span>신원 확인 이력</span></a></li>
+				<li class="mis-a2"><a href="#" title="정산 페이지 이동"><span>정산</span></a></li>
+				<li class="mis-a3"><a href="#" title="통계 페이지 이동"><span>통계</span></a></li>
+				<li class="mis-a4 dep2">
+					<a href="#" title="고객 지원 페이지 이동"><span>고객 지원</span></a>
+					<ul>
+						<li><a href="#"><span>1:1 문의</span></a></li>
+						<li><a href="#"><span>FAQ 관리</span></a></li>
+					</ul>
+				</li>
+				<li class="mis-a5 dep2">
+					<a href="#" title="사업 관리 페이지 이동"><span>사업 관리</span></a>
+					<ul>
+						<li><a href="#"><span>사업자 관리</span></a></li>
+						<li><a href="#"><span>사용자 관리</span></a></li>
+						<li><a href="#"><span>Custom UI 관리</span></a></li>
+					</ul>
+				</li>
+				<li class="mis-a6 dep2">
+					<a href="#" title="환경 관리 페이지 이동"><span>환경 관리</span></a>
+					<ul>
+						<li><a href="#"><span>관리자 관리</span></a></li>
+						<li><a href="#"><span>권한 관리</span></a></li>
+						<li><a href="#"><span>감사 로그</span></a></li>
+					</ul>
+				</li>
+				<li class="mis-a7 dep2 active">
+					<a href="#" title="시스템 운영 관리 페이지 이동"><span>시스템 운영 관리</span></a>
+					<ul>
+						<li><a href="#"><span>코드관리</span></a></li>
+						<li><a href="#"><span>작업관리</span></a></li>
+						<li class="active"><a href="#"><span>스케줄 관리</span></a></li>
+						<li><a href="#"><span>알림 대상자 설정</span></a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<section class="mis-content">
+			<div class="aticle">
+				<div class="mis-search-box">
+					<div class="mis-search-inner">
+						<label for="sel5">
+							<div class="mis-search-btn">
+								<button class="btn-save" aria-haspopup="dialog" data-popup="popup1">등록</button>
+							</div>
+						</label>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer class="mis-footer">
+		<p>MIS Admin Portal Ⓒ 2025 Dayside All Rights Reserved.</p>
+	</footer>
+	<div class="wrap-layer-popup popup-open" data-popup="popup1" role="dialog" aria-hidden="false">
+		<div class="inner-layer-popup">
+			<div class="wrap-layer-popup-title" tabindex="0">
+				<h2>스케줄 정보 등록</h2>
+			</div>
+			<div class="layer-popup-contents w730">
+				<div class="mis-cont"> 
+					<div class="mis-write">
+						<table>
+							<caption>스케줄 정보 등록</caption>
+							<colgroup>
+								<col style="width:15%;">
+								<col style="width:35%;">
+								<col style="width:15%;">
+								<col style="width:35%;">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">스케줄명</th>
+									<td>
+										<span class="jm-input">
+											<input type="text" class="jm-input-inner" id="inp1" name="inp1" value="" title="스케줄명 입력">
+											<button class="jm-input-btn" title="제목 삭제" tabindex="-1">삭제</button>
+										</span>
+									</td>
+									<th scope="row">스케줄ID</th>
+									<td>
+										<span class="jm-input">
+											<input type="text" class="jm-input-inner" id="inp2" name="inp2" value="" title="스케줄ID 입력">
+											<button class="jm-input-btn" title="제목 삭제" tabindex="-1">삭제</button>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" rowspan="2">실행 시간</th>
+									<td colspan="3">
+										<div class="w100">
+											<div class="select">
+												<div class="selected">
+													<button class="selected-value" title="매시">매시</button>
+													<div class="arrow"></div>
+												</div>
+												<ul>
+													<li><a href="#" class="option" title="매시1">매시1</a></li>
+													<li><a href="#" class="option" title="매시2">매시2</a></li>
+												</ul>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="3">
+										<div class="mis-selct-cont">
+											<div class="w108 jm_mr6">
+												<div class="select">
+													<div class="selected">
+														<button class="selected-value" title="00분">00분</button>
+														<div class="arrow"></div>
+													</div>
+													<ul>
+														<li><a href="#" class="option" title="01분">01분</a></li>
+														<li><a href="#" class="option" title="02분">02분</a></li>
+													</ul>
+												</div>
+											</div>
+											~
+											<div class="w108 jm_ml6">
+												<div class="select">
+													<div class="selected">
+														<button class="selected-value" title="00분">00분</button>
+														<div class="arrow"></div>
+													</div>
+													<ul>
+														<li><a href="#" class="option" title="01분">01분</a></li>
+														<li><a href="#" class="option" title="02분">02분</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">반복 주기</th>
+									<td colspan="3">
+										<div class="w100">
+											<div class="select">
+												<div class="selected">
+													<button class="selected-value" title="매시">매시</button>
+													<div class="arrow"></div>
+												</div>
+												<ul>
+													<li><a href="#" class="option" title="매시1">매시1</a></li>
+													<li><a href="#" class="option" title="매시2">매시2</a></li>
+												</ul>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">시작</th>
+									<td>
+										<div class="datepicker ">
+											<input type="text" class="datepicker-day" id="datepicker-day1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+										</div>
+									</td>
+									<th scope="row">종료</th>
+									<td>
+										<div class="mis-selct-cont">
+											<div class="input_box">
+												<input type="radio" name="check-day2" id="check3" title="사용 선택">
+												<label for="check3"></label>
+											</div>
+											<div class="datepicker">
+												<input type="text" class="datepicker-day" id="datepicker-day2" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">사용 여부</th>
+									<td colspan="3">
+										<div class="jm-input jm-iia-check">
+											<span class="input_box">
+												<input type="radio" name="check" id="check1" title="사용 선택">
+												<label for="check1">사용</label>
+											</span>
+											<span class="input_box">
+												<input type="radio" name="check" id="check2" title="미사용 선택" checked>
+												<label for="check2">미사용</label>
+											</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="jm-bot-btn col2">
+				<button class="b-primary1" aria-haspopup="dialog" data-popup="popup2">확인</button>
+				<button class="b-primary2" popup-close="popup1">취소</button>
+			</div>
+			<button class="popup-close-all modal-close btn-layer-close" popup-close="popup2" popup-close-all="true">닫기</button>
+		</div>
+	</div>
+	<div class="wrap-layer-popup" data-popup="popup2" role="dialog" aria-hidden="true">
+		<div class="inner-layer-popup">
+			<div class="wrap-layer-popup-title" tabindex="0">
+				<h2></h2>
+			</div>
+			<div class="layer-popup-contents">
+				<p class="layer-popup-info">
+					오류 알림 메시지
+				</p>
+			</div>
+			<div class="jm-bot-btn">
+				<button class="b-primary1 modal-close btn-layer-close" popup-close="popup2">확인</button>
+			</div>
+		</div>
+	</div>
+	<div class="popup-dimmed"></div>
+</div>
+</body>
+</html>

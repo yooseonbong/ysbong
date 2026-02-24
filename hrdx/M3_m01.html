@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HRDX</title>
+  
+  <!-- css -->
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
+  
+  <!-- js -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+  <script src="./js/jquery-3.7.1.min.js"></script>
+  <script src="./js/swiper-bundle.min.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <!-- header start -->
+    <header id="header">
+      <div class="headerArea">
+        <!-- header contents -->              
+        <h1 class="logoArea">
+          <a href="M10_m01_t01.html"><img src="./img/Group 63399748.png" alt="IC360" title="CAREER ADVISOR"></a>
+        </h1>
+        <!-- GNB start -->
+        <nav class="gnbArea">
+          <ul class="gnbList">
+            <li class="menuList"><span><a href="M2_m01_2.html">매칭검색</a></span></li>
+            <li class="menuList active"><span><a href="M3_m03.html">경력개발</a></span></li>
+            <li class="menuList"><span><a href="#">육성프로그램</a></span></li>
+            <li class="menuList"><span><a href="M5_m01.html">조직자관리</a></span></li>
+            <li class="menuList"><span><a href="M6_m01.html">인사지원</a></span></li>
+          </ul>
+        </nav>
+        <!-- info start-->
+        <div class="infoWrap">
+          <ul>
+            <li class="analyze"><a href="#"><img src="./img/ic_person.png" alt="사람아이콘" title="내정보 바로가기"><span class="fontZ">gildong.hong@lge.com</span></a></li>
+            <li class="info">
+              <a href="javascript:openModal('alramPopup');">
+                <img src="./img/ic_alarm.png" alt="알람아이콘" title="알림">
+                <i>999</i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>     
+      <!-- GNB end -->
+    </header>
+    <!-- header end -->
+    <!-- section start -->
+    <section>
+      <article id="subContainer">
+        <div class="tab1 tac">
+          <ul>
+            <li><a href="M3_m03.html">AI추천조직</a></li> 
+            <li class="active"><a href="M3_m01.html">관심 조직</a></li>
+            <li><a href="M3_m02.html">진행조직</a></li>
+          </ul>
+        </div>
+        <div class="contArea mb0">
+          <div class="radius subNaiv2 bgY">
+            <div class="subNaiv2Iinner scroll">
+              <div class="matching naviMatch active">
+                <div class="graph3" style="border:1px solid #ddd;">graph</div>
+                <div class="matchingInfo ml30">
+                  <div class="tit mb14">
+                    <em>HE사업본부</em>
+                    <strong>HE 반도체 구매팀</strong>
+                    <span>원가분석담당</span>
+                  </div>
+                  <em class="iconState1 icsta1-4">Mark</em>
+                </div>
+                <div class="matchingBtn">
+                  <a href="#" class="close" title="닫기">
+                    닫기
+                  </a>
+                </div>
+              </div>
+              <div class="matching naviMatch">
+                <div class="graph3" style="border:1px solid #ddd;">graph</div>
+                <div class="matchingInfo ml30">
+                  <div class="tit mb14">
+                    <em>HE사업본부</em>
+                    <strong>HE 반도체 구매팀</strong>
+                    <span>원가분석담당</span>
+                  </div>
+                  <em class="iconState1 icsta1-2">Call</em>
+                </div>
+                <div class="matchingBtn">
+                  <a href="#" class="close" title="닫기">
+                    닫기
+                  </a>
+                </div>
+              </div>
+              <div class="matching naviMatch">
+                <div class="graph3" style="border:1px solid #ddd;">graph</div>
+                <div class="matchingInfo ml30">
+                  <div class="tit mb14">
+                    <em>HE사업본부</em>
+                    <strong>HE 반도체 구매팀</strong>
+                    <span>원가분석담당</span>
+                  </div>
+                  <em class="iconState1 icsta1-4">Mark</em>
+                </div>
+                <div class="matchingBtn">
+                  <a href="#" class="close" title="닫기">
+                      닫기
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contArea2 w1236px ml30 por">
+            <div class="iconStateBox2 pAb ">
+              <a href="javascript:openModal('markedPick');" class="iconState2 icsta2-1">Marked<span>2</span></a>
+              <a href="javascript:openModal('callPick');" class="iconState2 icsta2-2">Call<span>7</span></a>
+              <a href="javascript:openModal('tapPick');" class="iconState2 icsta2-3">Tap<span>0</span></a>
+              <a href="#" class="iconState2 icsta2-4">Matched<span>8</span></a>
+            </div>
+            <div class="radius2 w100pc mb30">
+              <div class="groupNotice">
+                <p class="icNotice"><img src="./img/ic_pont_28.png" alt="확성기" title="확성기"> <b>HE 반토체 구매팀의 ‘원가분석 담당’</b> 포지션에 Tap Sign 하시겠습니까?</p>
+                <a href="javascript:openModal('tapSign');" class="button Primary-s black" title="Tap Sign">Tap Sign</a>
+                <span class="infoTxt ml30">* Tap Sign 버튼을 누르면 인사이동 검토가 진행됩니다.</span>
+              </div>
+            </div>
+            <div class="contArea3 mb10">
+              <div class="contBx w612px">
+                <div class="radius">
+                  <h2 class="titCont2">담당업무</h2>
+                  <div class="list2 scroll h130px">
+                    <ul>
+                      <li>SW자동화 시험법 개발</li>
+                      <li>개발단계 품질확보위한 SW신뢰성시험법 개발</li>
+                      <li>해외검증조직 SW자동화검증확대 지원</li>
+                      <li>SW자동화 시험법 개발</li>
+                      <li>Cluster 언어 검증 자동화 확대</li>
+                    </ul>
+                  </div>
+                </div>
+              </div> 
+              <div class="contBx w612px">
+                <div class="radius">
+                  <h2 class="titCont2">필요 업무 경험</h2>
+                  <div class="list2 scroll h130px">
+                    <ul>
+                      <li>SW자동화 시험법 개발</li>
+                    </ul>
+                  </div>
+                </div>
+              </div> 
+            </div>
+            <div class="contArea3">
+              <div class="contBx w612px">
+                <div class="radius">
+                  <h2 class="titCont2">추천업무</h2>
+                  <div class="list2 scroll h130px">
+                    <ul>
+                      <li>B2B 서비스 전략/프로세스 수립 및 GLOBAL 셋업</li>
+                      <li>솔라제품 지역별 서비스 프로세스 구축</li>
+                      <li>시장 품질 (고객 CDR) 모니터링 및 개선</li>
+                      <li>법인 서비스 채널 구축 및 서비스 관리</li>
+                      <li>통신장비/모바일/VS 서비스 NETWORK 구축/운영</li>
+                      <li>시장 품질 모니터링 및 개선</li>
+                      <li>품질 비용 실적 모니터링 및 개선활동</li>
+                      <li>시장불량률개선 활동</li>
+                      <li>신모델 초기 품질 관리 및 안정화</li>
+                      <li>Global CDR 분석 및 개선 Rolling</li>
+                    </ul>
+                  </div>
+                </div>
+              </div> 
+              <div class="contBx w612px">
+                <div class="radius">
+                  <h2 class="titCont2">관심업무</h2>
+                  <div class="list2 scroll h130px">
+                    <ul>
+                      <li>반도체 공정 및 원가분석</li>
+                      <li>반도체 부품(Memory, PMIC, IC류)가격</li>
+                      <li>반도체 원가분석을 위한 지표설정</li>
+                      <li>반도체 원자재 수급 동향 분석</li>
+                      <li> 공급이슈 사전 대응을 위한 반도체 동향 보고</li>
+                    </ul>
+                  </div>
+                </div>
+              </div> 
+            </div>
+            <div class="contArea">
+              <div class="contBx w612px">
+                <div class="titleBox">
+                  <h2 class="titCont1 mb00">추천교육 </h2>
+                  <span class="infoTxt ml20">* 교육을 이수하시면 매칭율이 상승합니다.</span>
+                </div>
+                <div class="radius">
+                  <div class="educationList">
+                    <h3 class="eLogo mb12"><a href="#"><img src="./img/lg_logo1.png" alt="LG"></a></h3>
+                    <div class="eList scroll">
+                      <ul>
+                        <li>
+                          <em class="icoE1 active">ON</em>
+                          <a href="#" class="title"><span>구매협상 실무과정</span></a>
+                          <i class="icoE2 iey">매칭율+2%</i>  
+                        </li>
+                        <li>
+                          <em class="icoE1">OFF</em>
+                          <a href="#" class="title"><span>Prediction accuracy for optimized Procurement</span></a>
+                          <i class="icoE2 iey">매칭율+2%</i> 
+                          <i class="icoE2 ieo">조직책임자 추천과정</i> 
+                        </li>
+                        <li>
+                          <em class="icoE1">OFF</em>
+                          <a href="#" class="title"><span>반도체 공급 예측시스템 교육</span></a>
+                          <i class="icoE2 ieo">조직책임자 추천과정</i> 
+                        </li>
+                        <li>
+                          <em class="icoE1 active">ON</em>
+                          <a href="#" class="title"><span>구매협상 실무과정</span></a>
+                          <i class="icoE2 iey">매칭율+2%</i>  
+                        </li>
+                        <li>
+                          <em class="icoE1">OFF</em>
+                          <a href="#" class="title"><span>Prediction accuracy for optimized Procurement</span></a>
+                          <i class="icoE2 iey">매칭율+2%</i> 
+                          <i class="icoE2 ieo">조직책임자 추천과정</i> 
+                        </li>
+                        <li>
+                          <em class="icoE1">OFF</em>
+                          <a href="#" class="title"><span>반도체 공급 예측시스템 교육</span></a>
+                          <i class="icoE2 ieo">조직책임자 추천과정</i> 
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="eBtn"><a href="#" class="button Primary-s black blank" target="_blank" title="새창열림">러닝넷 접속 <img src="./img/ic_href.png"></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="contBx pt40 w612px">
+                <div class="radius">
+                  <div class="educationList">
+                    <h3 class="eLogo mb12"><a href="#"><img src="./img/li_logo1.png" alt="LG"></a></h3>
+                    <div class="eList scroll">
+                      <ul>
+                        <li>
+                          <em class="icoE1">OFF</em>
+                          <a href="#" class="title"><span>구매협상 실무과정</span></a>
+                          <i class="icoE2 iey">매칭율+2%</i>  
+                        </li>
+                        <li>
+                          <em class="icoE1 active">ON</em>
+                          <a href="#" class="title"><span>Prediction accuracy for optimized Procurement Prediction accuracy </span></a>
+                          <i class="icoE2 iey">매칭율+2%</i> 
+                          <i class="icoE2 ieo">조직책임자 추천과정</i> 
+                        </li>
+                        <li>
+                          <em class="icoE1">OFF</em>
+                          <a href="#" class="title"><span>반도체 공급 예측시스템 교육</span></a>
+                          <i class="icoE2 ieo">조직책임자 추천과정</i> 
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="eBtn"><a href="#" class="button Primary-s black blank" target="_blank" title="새창열림" >Linked-in 접속 <img src="./img/ic_href.png"></a></div>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <div class="modalBg"></div>
+    <!-- 나를 Mark한 조직 -->
+    <div class="modalContents markedPick w1000px"> 
+      <h2 class="title mb30">나를 Mark한 조직</h2>
+      <div class="popArticle">
+        <div class="MarkPickCont">
+          <div class="stickyThaed2">
+            <table>
+              <colgroup>
+                <col style="width:200px">
+                <col style="width:390px">
+                <col style="width:130px">
+                <col>
+                <col style="width:144px">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th class="fixedHeader">조직명</th>
+                  <th class="fixedHeader">담당업무</th>
+                  <th class="fixedHeader">Mark한 날짜</th>
+                  <th class="fixedHeader">매칭율</th>
+                  <th class="fixedHeader">관심조직으로 저장</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="stickyTbody2 ">
+            <div class="stickyInner scroll">
+              <table>
+                <colgroup>
+                  <col style="width:200px">
+                  <col style="width:390px">
+                  <col style="width:130px">
+                  <col>
+                  <col style="width:130px">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td><div class="txtDot"> 반도체 구매팀 SW 테스트 자동화</div></td>
+                    <td><a href="#" class="txtDot">통신장비/모바일/VS 서비스 NETWORK 구축/운영 반도체 원자재 수급 동향 분석</a></td>
+                    <td>2023.08.16</td>
+                    <td>72%</td>
+                    <td class="tac pl00"><a href="#" class="button Primary-s black" title="저장">저장</a></td>
+                  </tr>
+                  <tr class="item even">
+                    <td>H&A기구구매실</td>
+                    <td>개발단계 품질확보위한 SW신뢰성시험법 개발</td>
+                    <td>1.2</td>
+                    <td>3</td>
+                    <td class="tac pl00"><a href="#" class="button Primary-s black" title="저장">저장</a></td>
+                  </tr>
+                  <tr>
+                    <td><p class="txtDot">TC설계/검증자동화팀 제품 시장품질 분석</p></td>
+                    <td>목표 재료비 구매센터 직속 Task</td>
+                    <td>2023.08.16</td>
+                    <td>72%</td>
+                    <td class="tac pl00"><a href="#" class="button Primary-s black" title="저장">저장</a></td>
+                  </tr>
+                  <tr class="item even">
+                    <td>개발 관리</td>
+                    <td><span class="txtDot">공급이슈 사전 대응을 위한 반도체 동향 보고 해외검증조직 SW자동화검증확대 지원</span>
+                    </td>
+                    <td>1.2</td>
+                    <td>3</td>
+                    <td class="tac pl00"><a href="#" class="button Primary-s black" title="저장">저장</a></td>
+                  </tr>
+                  <tr>
+                    <td>TC설계/검증자동화팀</td>
+                    <td>도입 부품 양산 Launching</td>
+                    <td>2023.08.16</td>
+                    <td>72%</td>
+                    <td class="tac pl00"><a href="#" class="button Primary-s black" title="저장">저장</a></td>
+                  </tr>
+                  <tr class="item even">
+                    <td>HE품질기획/진단팀</td>
+                    <td>Global CDR 분석 및 개선 Rolling</td>
+                    <td>1.2</td>
+                    <td>3</td>
+                    <td class="tac pl00"><a href="#" class="button Primary-s black" title="저장">저장</a></td>
+                  </tr>
+                  <tr>
+                    <td>HE시장품질관리팀</td>
+                    <td>B2B 서비스 전략/프로세스 수립 및 GLOBAL 셋업</td>
+                    <td>2023.08.16</td>
+                    <td>72%</td>
+                    <td class="tac pl00"><a href="#" class="button Primary-s black" title="저장">저장</a></td>
+                  </tr>
+                  <tr>
+                    <td>HE 반도체 구매팀</td>
+                    <td>통신장비/모바일/VS 서비스 NETWORK 구축/운영</td>
+                    <td>2023.08.16</td>
+                    <td>72%</td>
+                    <td class="tac pl00"><a href="#" class="button Primary-s black" title="저장">저장</a></td>
+                  </tr>
+                  <tr class="item even">
+                    <td>H&A기구구매실</td>
+                    <td>개발단계 품질확보위한 SW신뢰성시험법 개발</td>
+                    <td>1.2</td>
+                    <td>3</td>
+                    <td class="tac pl00"><a href="#" class="button Primary-s black" title="저장">저장</a></td>
+                  </tr>
+                  <tr>
+                    <td>TC설계/검증자동화팀</td>
+                    <td>목표 재료비 구매센터 직속 Task</td>
+                    <td>2023.08.16</td>
+                    <td>72%</td>
+                    <td class="tac pl00"><a href="#" class="button Primary-s black" title="저장">저장</a></td>
+                  </tr>
+                  <tr class="item even">
+                    <td>개발 관리</td>
+                    <td>공급이슈 사전 대응을 위한 반도체 동향 보고</td>
+                    <td>1.2</td>
+                    <td>3</td>
+                    <td class="tac pl00"><a href="#" class="button Primary-s black" title="저장">저장</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popBotBtn">
+        <button class="button Primary-m black closePop w140px" title="확인">확인</button>
+      </div>
+      <a href="javascript:;" class="close closePop" title="팝업 닫기">닫기</a>
+    </div>
+    <!-- 나를 Mark한 조직 -->
+    <!-- 나에게 Call sing한 조직 -->
+    <div class="modalContents callPick w1000px"> 
+      <h2 class="title mb30">나에게 Call sing한 조직</h2>
+      <div class="popArticle">
+        <div class="MarkPickCont">
+          <div class="stickyThaed2">
+            <table>
+              <colgroup>
+                <col style="width:200px">
+                <col style="width:390px">
+                <col style="width:130px">
+                <col>
+                <col style="width:144px">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th class="fixedHeader">조직명</th>
+                  <th class="fixedHeader">담당업무</th>
+                  <th class="fixedHeader">Call Sign한 날짜</th>
+                  <th class="fixedHeader">매칭율</th>
+                  <th class="fixedHeader">Tap Sign</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="stickyTbody2 ">
+            <div class="stickyInner scroll">
+              <table>
+                <colgroup>
+                  <col style="width:200px">
+                  <col style="width:390px">
+                  <col style="width:130px">
+                  <col>
+                  <col style="width:130px">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td><div class="txtDot"> 반도체 구매팀 SW 테스트 자동화</div></td>
+                    <td><a href="#" class="txtDot">통신장비/모바일/VS 서비스 NETWORK 구축/운영 반도체 원자재 수급 동향 분석</a></td>
+                    <td>2023.08.16</td>
+                    <td>72%</td>
+                    <td class="tac pl00"><a href="javascript:openModal('tapSign');" class="button Primary-s black closePop" title="Tap Sign">Tap Sign</a></td>
+                  </tr>
+                  <tr class="item even">
+                    <td>H&A기구구매실</td>
+                    <td>개발단계 품질확보위한 SW신뢰성시험법 개발</td>
+                    <td>1.2</td>
+                    <td>3</td>
+                    <td class="tac pl00"><a href="javascript:openModal('tapSign');" class="button Primary-s black closePop" title="Tap Sign">Tap Sign</a></td>
+                  </tr>
+                  <tr>
+                    <td><p class="txtDot">TC설계/검증자동화팀 제품 시장품질 분석</p></td>
+                    <td>목표 재료비 구매센터 직속 Task</td>
+                    <td>2023.08.16</td>
+                    <td>72%</td>
+                    <td class="tac pl00"><a href="javascript:openModal('tapSign');" class="button Primary-s black closePop" title="Tap Sign">Tap Sign</a></td>
+                  </tr>
+                  <tr class="item even">
+                    <td>개발 관리</td>
+                    <td><span class="txtDot">공급이슈 사전 대응을 위한 반도체 동향 보고 해외검증조직 SW자동화검증확대 지원</span>
+                    </td>
+                    <td>1.2</td>
+                    <td>3</td>
+                    <td class="tac pl00"><a href="javascript:openModal('tapSign');" class="button Primary-s black closePop" title="Tap Sign">Tap Sign</a></td>
+                  </tr>
+                  <tr>
+                    <td>TC설계/검증자동화팀</td>
+                    <td>도입 부품 양산 Launching</td>
+                    <td>2023.08.16</td>
+                    <td>72%</td>
+                    <td class="tac pl00"><a href="javascript:openModal('tapSign');" class="button Primary-s black closePop" title="Tap Sign">Tap Sign</a></td>
+                  </tr>
+                  <tr class="item even">
+                    <td>HE품질기획/진단팀</td>
+                    <td>Global CDR 분석 및 개선 Rolling</td>
+                    <td>1.2</td>
+                    <td>3</td>
+                    <td class="tac pl00"><a href="javascript:openModal('tapSign');" class="button Primary-s black closePop" title="Tap Sign">Tap Sign</a></td>
+                  </tr>
+                  <tr>
+                    <td>HE시장품질관리팀</td>
+                    <td>B2B 서비스 전략/프로세스 수립 및 GLOBAL 셋업</td>
+                    <td>2023.08.16</td>
+                    <td>72%</td>
+                    <td class="tac pl00"><a href="javascript:openModal('tapSign');" class="button Primary-s black closePop" title="Tap Sign">Tap Sign</a></td>
+                  </tr>
+                  <tr>
+                    <td>HE 반도체 구매팀</td>
+                    <td>통신장비/모바일/VS 서비스 NETWORK 구축/운영</td>
+                    <td>2023.08.16</td>
+                    <td>72%</td>
+                    <td class="tac pl00"><a href="javascript:openModal('tapSign');" class="button Primary-s black closePop" title="Tap Sign">Tap Sign</a></td>
+                  </tr>
+                  <tr class="item even">
+                    <td>H&A기구구매실</td>
+                    <td>개발단계 품질확보위한 SW신뢰성시험법 개발</td>
+                    <td>1.2</td>
+                    <td>3</td>
+                    <td class="tac pl00"><a href="javascript:openModal('tapSign');" class="button Primary-s black closePop" title="Tap Sign">Tap Sign</a></td>
+                  </tr>
+                  <tr>
+                    <td>TC설계/검증자동화팀</td>
+                    <td>목표 재료비 구매센터 직속 Task</td>
+                    <td>2023.08.16</td>
+                    <td>72%</td>
+                    <td class="tac pl00"><a href="javascript:openModal('tapSign');" class="button Primary-s black closePop" title="Tap Sign">Tap Sign</a></td>
+                  </tr>
+                  <tr class="item even">
+                    <td>개발 관리</td>
+                    <td>공급이슈 사전 대응을 위한 반도체 동향 보고</td>
+                    <td>1.2</td>
+                    <td>3</td>
+                    <td class="tac pl00"><a href="javascript:openModal('tapSign');" class="button Primary-s black closePop" title="Tap Sign">Tap Sign</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popBotBtn">
+        <button class="button Primary-m black closePop w140px" title="확인">확인</button>
+      </div>
+      <a href="javascript:;" class="close closePop" title="팝업 닫기">닫기</a>
+    </div>
+    <!-- 나에게 Call sing한 조직 -->
+    <!-- 내가 Tap sign한 조직 -->
+    <div class="modalContents tapPick w1000px"> 
+      <h2 class="title mb30">내가 Tap sign한 조직</h2>
+      <div class="popArticle">
+        <div class="MarkPickCont">
+          <div class="stickyThaed2">
+            <table>
+              <colgroup>
+                <col style="width:200px">
+                <col style="width:390px">
+                <col style="width:130px">
+                <col>
+                <col style="width:144px">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th class="fixedHeader">조직명</th>
+                  <th class="fixedHeader">담당업무</th>
+                  <th class="fixedHeader">Tap sing한 날짜</th>
+                  <th class="fixedHeader">매칭율</th>
+                  <th class="fixedHeader">진행상태</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="stickyTbody2 ">
+            <div class="stickyInner scroll">
+              <table>
+                <colgroup>
+                  <col style="width:200px">
+                  <col style="width:390px">
+                  <col style="width:130px">
+                  <col>
+                  <col style="width:130px">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td><div class="txtDot"> 반도체 구매팀 SW 테스트 자동화</div></td>
+                    <td><a href="#" class="txtDot">통신장비/모바일/VS 서비스 NETWORK 구축/운영 반도체 원자재 수급 동향 분석</a></td>
+                    <td>2023.08.16</td>
+                    <td>72%</td>
+                    <td>Tap Sign</td>
+                  </tr>
+                  <tr class="item even">
+                    <td>H&A기구구매실</td>
+                    <td>개발단계 품질확보위한 SW신뢰성시험법 개발</td>
+                    <td>1.2</td>
+                    <td>3</td>
+                    <td>인사확인</td>
+                  </tr>
+                  <tr>
+                    <td><p class="txtDot">TC설계/검증자동화팀 제품 시장품질 분석</p></td>
+                    <td>목표 재료비 구매센터 직속 Task</td>
+                    <td>2023.08.16</td>
+                    <td>72%</td>
+                    <td>인사확인</td>
+                  </tr>
+                  <tr class="item even">
+                    <td>개발 관리</td>
+                    <td><span class="txtDot">공급이슈 사전 대응을 위한 반도체 동향 보고 해외검증조직 SW자동화검증확대 지원</span>
+                    </td>
+                    <td>1.2</td>
+                    <td>3</td>
+                    <td>Tap Sign</td>
+                  </tr>
+                  <tr>
+                    <td>TC설계/검증자동화팀</td>
+                    <td>도입 부품 양산 Launching</td>
+                    <td>2023.08.16</td>
+                    <td>72%</td>
+                    <td>Tap Sign</td>
+                  </tr>
+                  <tr class="item even">
+                    <td>HE품질기획/진단팀</td>
+                    <td>Global CDR 분석 및 개선 Rolling</td>
+                    <td>1.2</td>
+                    <td>3</td>
+                    <td>Tap Sign</td>
+                  </tr>
+                  <tr>
+                    <td>HE시장품질관리팀</td>
+                    <td>B2B 서비스 전략/프로세스 수립 및 GLOBAL 셋업</td>
+                    <td>2023.08.16</td>
+                    <td>72%</td>
+                    <td>Matched</td>
+                  </tr>
+                  <tr>
+                    <td>HE 반도체 구매팀</td>
+                    <td>통신장비/모바일/VS 서비스 NETWORK 구축/운영</td>
+                    <td>2023.08.16</td>
+                    <td>72%</td>
+                    <td>Tap Sign</td>
+                  </tr>
+                  <tr class="item even">
+                    <td>H&A기구구매실</td>
+                    <td>개발단계 품질확보위한 SW신뢰성시험법 개발</td>
+                    <td>1.2</td>
+                    <td>3</td>
+                    <td>Tap Sign</td>
+                  </tr>
+                  <tr>
+                    <td>TC설계/검증자동화팀</td>
+                    <td>목표 재료비 구매센터 직속 Task</td>
+                    <td>2023.08.16</td>
+                    <td>72%</td>
+                    <td>Tap Sign</td>
+                  </tr>
+                  <tr class="item even">
+                    <td>개발 관리</td>
+                    <td>공급이슈 사전 대응을 위한 반도체 동향 보고</td>
+                    <td>1.2</td>
+                    <td>3</td>
+                    <td>이동검토</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popBotBtn">
+        <button class="button Primary-m black closePop w140px" title="확인">확인</button>
+      </div>
+      <a href="javascript:;" class="close closePop" title="팝업 닫기">닫기</a>
+    </div>
+    <!-- 내가 Tap sign한 조직 -->
+    <!-- Tap Sign 보내기 -->
+    <div class="modalContents tapSign w420px"> 
+      <h2 class="title mb30">Tab Sign 전송</h2>
+      <div class="popArticle">
+        <div class="tapSignCont">
+          <div class="viewField mb20">
+            <div class="fieldTr">
+              <div class="fieldTd w100pc">
+                <label for="type" class="mb00">
+                  제목
+                </label>
+                <div class="viewTxt">
+                  HE반도체 구매팀에 조직이동 희망합니다.
+                </div>  
+              </div>
+            </div>   
+          </div>
+          <div class="inputField">
+            <div class="fieldTr">
+              <div class="fieldTd w100pc">
+                <label for="type">
+                    내용입력
+                </label>
+                <textarea id="" cols="30" rows="4 " title="입력" placeholder="내용을 입력하세요"></textarea>  
+              </div>
+            </div>   
+          </div>
+        </div>
+      </div>
+      <div class="popBotBtn">
+        <button class="button Primary-m black closePop w140px" title="취소">취소</button>
+        <button class="button Primary-m red w140px" title="전송">전송</button>
+      </div>
+      <a href="javascript:;" class="close closePop" title="팝업 닫기">닫기</a>
+    </div>
+    <!-- Tap Sign 보내기 -->
+  </div><!-- wrap end -->
+  <!-- alramPopup -->
+  <div class="modalContents alramPopup w420px">
+    <div class="alramPopupContents stickyTbody bodyScroll scroll ofy border3">
+      <div class="alramContentSPart">
+        <div class="contentsSection active">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀 [Call sign] HE 반도체 구매팀 [Call sign] HE 반도체 구매팀 [Call sign] HE 반도체 구매팀 [Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+      <div class="alramContentSPart">
+        <div class="contentsSection">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+      <div class="alramContentSPart">
+        <div class="contentsSection">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+      <div class="alramContentSPart">
+        <div class="contentsSection">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+      <div class="alramContentSPart">
+        <div class="contentsSection active">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+      <div class="alramContentSPart">
+        <div class="contentsSection active">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="alramContentSBottom">
+      <button>더보기 <span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
+        <path d="M0.577148 6H12.5771" stroke="black"/>
+        <path d="M6.57715 0L6.57715 12" stroke="black"/>
+        </svg></span></button>
+    </div>
+  </div>  
+  <!-- alramPopup --> 
+<script type="text/javascript" src="./js/main.js"></script> 
+<script type="text/javascript" src="./js/style.js"></script> 
+<!-- <script type="text/javascript" src="./js/sample.js"></script>  -->
+</body>
+</html>

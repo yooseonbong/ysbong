@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRDX</title>
+    
+    <!-- css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/network.css"> <!--단비꺼야-->
+    <link rel="stylesheet" href="./css/style.css"> <!--선봉꺼야-->
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
+    
+    <!-- js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <!-- header start -->
+    <header id="header">
+      <div class="headerArea">
+        <!-- header contents -->
+        <h1 class="logoArea">
+          <a href="M10_m01_t01.html"><img src="./img/Group 63399748.png" alt="IC360" title="CAREER ADVISOR"></a>
+        </h1>
+        <!-- GNB start -->
+        <nav class="gnbArea">
+          <ul class="gnbList">
+            <li class="menuList"><span><a href="M2_m01_2.html">매칭검색</a></span></li>
+            <li class="menuList"><span><a href="M3_m03.html">경력개발</a></span></li>
+            <li class="menuList"><span><a href="M4_m01.html">육성프로그램</a></span></li>
+            <li class="menuList"><span><a href="M5_m01.html">조직자관리</a></span></li>
+            <li class="menuList"><span><a href="M6_m01.html">인사지원</a></span></li>
+          </ul>
+        </nav>
+        <!-- info start-->
+        <div class="infoWrap">
+          <ul>
+            <li class="analyze"><a href="Map_m01_p01.html"><img src="./img/ic_map_red.png" alt="업무경험아이콘" title="업무경험 바로가기"><span>업무경험 Map</span></a></li>
+            <li class="info"><a href="javascript:openModal('alramPopup');"><img src="./img/ic_alarm.png" alt="알람아이콘" title="알림"><i>999</i></a></li>
+          </ul>
+        </div>
+      </div>     
+      <!-- GNB end -->
+    </header>
+    <!-- header end -->
+    <!-- section start -->
+    <section>
+      <article>
+        <div class="middleContents">
+          <div class="networkArea">
+            <div class="networkTab">
+              <ul>
+                <li class="active">
+                  <button>
+                    <span>
+                      <img src="./img/user_on.png" alt="조직">
+                    </span> 
+                    <em>조직</em>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <span>
+                      <img src="./img/work_off.png" alt="업무경험">
+                    </span> 
+                    <em>업무경험</em>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <span>
+                      <img src="./img/users_off.png" alt="개인">
+                    </span> 
+                    <em>개인</em>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="networkViewer">
+              <button><img src="./img/plus.png" alt="확대" title="확대"></button>
+              <button><img src="./img/minus.png" alt="축소" title="축소"></button>
+            </div>
+          </div>
+          <div class="tabFoldArea scroll active">
+            <button class="foldBtn"></button>
+            <div class="detailContents active">
+              <div class="historySection">
+                <p>직무이력</p>
+                <div class="memberProfile">
+                  <div class="profileImg"><img src="./img/Rectangle4931.png" alt="이력 사진"></div>
+                  <div class="profileDetails">
+                    <p class="profileName">홍길동 책임</p>
+                    <span class="profileYear">LGE 13년차</span>
+                  </div>
+                </div>
+                <div class="dutyDetails">
+                  <ul>
+                    <li>구매/SCM경영센터</li>
+                    <li>전략구매담당</li>
+                    <li>구매/DX혁신 Task</li>
+                  </ul>
+                </div>
+                <div class="detailHistory">
+                  <div class="lineContents">
+                    <ul>
+                      <li><span class="historyCircle"></span>
+                        <ul>입사
+                          <li>00.01.09</li>
+                        </ul>
+                      </li>
+                      <li><span class="historyCircle"></span>
+                        <ul>광학 (5년 R&D)
+                          <li>DDM 영상제품연구소(2년)</li>
+                          <li>HE Display O/S NA그룹 (3년)</li>
+                        </ul>
+                      </li>
+                      <li><span class="historyCircle"></span>
+                        <ul>구매 (8년 Non R&D)
+                          <li>동반성장기획팀 (4년)</li>
+                          <li>MC Solution 구매팀 (3년)</li>
+                          <li>구매/DX혁신Task (1년)</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="widthLine"></div>
+                </div>
+                <div class="detailHistory">
+                  <div class="lineContents">
+                    <p class="semiTitle">개인 업무 경험 스킬셋</p>
+                    <ul>
+                      <li><span class="historyCircle"></span>
+                        <ul class="historySemiText">GP품목 설비 및 장비구매시 세부견적 활용
+                          <li>00.01.09</li>
+                        </ul>
+                      </li>
+                      <li><span class="historyCircle"></span>
+                        <ul class="historySemiText">LCD, Camera, Battery 미착재고 최소화
+                          <li>2020.08 ~ 2023.06</li>
+                        </ul>
+                      </li>
+                      <li><span class="historyCircle"></span>
+                        <ul class="historySemiText">반도체 및 회로부품 재고최적화 Index
+                          <li>2020.08 ~ 2023.06</li>
+                        </ul>
+                      </li>
+                      <li><span class="historyCircle"></span>
+                        <ul class="historySemiText">반도체/회로자재 insolcent inventory cost
+                          <li>2020.08 ~ 2023.06</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>  
+    <!-- alramPopup -->
+  <div class="modalContents alramPopup w420px">
+    <div class="alramPopupContents stickyTbody bodyScroll scroll ofy border3">
+      <div class="alramContentSPart">
+        <div class="contentsSection active">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀 [Call sign] HE 반도체 구매팀 [Call sign] HE 반도체 구매팀 [Call sign] HE 반도체 구매팀 [Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+      <div class="alramContentSPart">
+        <div class="contentsSection">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+      <div class="alramContentSPart">
+        <div class="contentsSection">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+      <div class="alramContentSPart">
+        <div class="contentsSection">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+      <div class="alramContentSPart">
+        <div class="contentsSection active">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+      <div class="alramContentSPart">
+        <div class="contentsSection active">
+          <div class="popupTextCnt"><p><a href="#">[Call sign] HE 반도체 구매팀</a><span>2023.10.04 11:26</span></p></div>
+          <button>
+            이동 <span class="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 8.5H8.00011V7.5H16.0001H16.5001V8V16H15.5001V9.20703L8.35359 16.3536L7.64648 15.6464L14.7929 8.5Z" fill="black"/>
+            </svg></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="alramContentSBottom">
+      <button>더보기 <span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
+        <path d="M0.577148 6H12.5771" stroke="black"/>
+        <path d="M6.57715 0L6.57715 12" stroke="black"/>
+        </svg></span></button>
+    </div>
+  </div>  
+  <!-- alramPopup -->
+<script type="text/javascript" src="./js/main.js"></script> 
+<script type="text/javascript" src="./js/style.js"></script> 
+<!-- <script type="text/javascript" src="/js/sample.js"></script>  -->
+</body>
+</html>

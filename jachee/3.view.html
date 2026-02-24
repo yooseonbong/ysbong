@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="viewport" content="initial-scale=1.0,maximum-scale=1,width=device-width">
+<title>자치법규 관리자</title>
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script src="./js/jquery-ui.min.js"></script>
+<script src="./js/datepicker-ko.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/layout.js"></script>
+
+<link rel="stylesheet" href="./css/jquery-ui.min.css">
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/fonts.css">
+<link rel="stylesheet" href="./css/common.css">
+<link rel="stylesheet" href="./css/layout.css">
+
+</head>
+<body>
+<div id="wrap">
+	<div id="header" class="header">
+		<h1><a href="#">자치법규 관리자 페이지</a></h1>
+		<button class="btn_log">로그아웃</button>
+	</div>
+	<div id="container">
+		<div id="snb">
+			<ul>
+				<li>
+					<a href="#">메뉴 관리</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#">메뉴등록</a></li>
+							<li><a href="#">메뉴 조회</a></li>
+							<li><a href="#">메뉴 이용현황</a></li>
+							<li><a href="#">URL 등록</a></li>
+							<li><a href="#">URL 조회</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="on">
+					<a href="#">사용자 관리</a>
+					<div class="depth2">
+						<ul>
+							<li class="on"><a href="#">사용자등록</a></li>
+							<li><a href="#">사용자 조회</a></li>
+							<li><a href="#">사용자 그룹 등록</a></li>
+							<li><a href="#">사용자 그룹 조회</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#">공통코드 관리</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#">코드유형정보 등록</a></li>
+							<li><a href="#">코드유형정보 조회</a></li>
+							<li><a href="#">유형정보 등록</a></li>
+							<li><a href="#">유형정보 조회</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="contents">
+			<h2 class="page_title">사용자 상세정보 조회</h2>
+			<div class="article">
+				<div class="bbs_write">
+					<table>
+						<caption>"용자 상세정보 조회" 의 내용입니다.</caption>
+						<colgroup>
+							<col style="width:15%;">
+							<col >
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row"><label for="id">사용자아이디</label></th>
+								<td><input type="text" id="id" name="id" class="w80per" title="사용자아이디 입력"></td>
+							</tr>
+							<tr>
+								<th scope="row"><label for="name">사용자명</label></th>
+								<td><input type="text" id="name" name="name" class="w20per" title="사용자명 입력"> <input type="text" id="name2" name="name2" class="w60per" title="사용자명 입력"></td>
+							</tr>
+							<tr>
+								<th scope="row"><label for="li1">특기사항</label></th>
+								<td>
+									<select name="li1" id="li1" class="w10per" title="특기사항 선택">
+										<option value="전체">전체</option>
+									</select>
+									<input type="text" id="li2" name="li2" class="w20per" title="특기사항 입력"> 
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"><label for="groupID">사용자 그룹아이디</label></th>
+								<td>
+									<label for="groupID"><input type="radio"  id="groupID" name="groupID1" title="공유재산 관리 조례 개정 선택"> 공유재산 관리 조례 개정</label>
+									<label for="groupID2"><input type="radio"  id="groupID2" name="groupID1" title="주민조례청구 및 대표자 증명서 선택"> 주민조례청구 및 대표자 증명서</label>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"><label for="groupName">사용자 그룹명</label></th>
+								<td>
+									<label for="groupName"><input type="checkbox"  id="groupName" name="groupName1" title="선택선택1 선택"> 선택선택1</label>
+									<label for="groupName2"><input type="checkbox"  id="groupName2" name="groupName1" title="선택선택2 선택"> 선택선택2</label>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"><label for="filename">등록자 아이디</label></th>
+								<td>
+									<span id="filebox" class="writeFile"> 
+										<input class="upload-name w30per" value="파일검색" disabled="disabled" title="기관로고 입력"> 
+										<label for="filename" class="btn btn_file_serch">파일찾기</label> 
+										<input type="file" id="filename" name="filename" class="upload-hidden"> 
+									</span>
+									
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"><label for="date1">등록일자</label></th>
+								<td>
+									<input type="text" name="date1" id="date1" class="w10per" title="등록일자 시작일 선택"/>
+									~ 
+									<input type="text" name="date2" id="date2" class="w10per" title="등록일자 마감일 선택">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"><label for="password">비밀번호</label></th>
+								<td>
+									<input type="password" id="password" class="w20per" name="registration" title="비밀번호 입력">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"><label for="etc">기타</label></th>
+								<td>
+									<textarea name="etc" id="etc" cols="30" rows="5" class="w100per"></textarea>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"><label for="etc">청구제목</label></th>
+								<td>
+									행안안전부 자치법규 담당
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="btn_box">
+					<a href="#" class="btn btn_white">수정</a>
+					<a href="#" class="btn btn_white">삭제</a>
+					<a href="#" class="btn btn_white">목록</a>
+					<a href="#" class="btn btn_navy" onclick="javascript_:window.open('pop_password.html','pop', 'menubar=no,status=no,scrollbars=no,resizable=no ,width=550,height=500,top=0,left=0');" title="새창열림">비밀번호변경(새창)</a>
+					<a href="#" class="btn btn_navy" data-toggle="modal" data-target="#layer-password">비밀번호변경(레이어)</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 레이어 팝업 -->
+	<div class="modal fade" id="layer-password" tabindex="-1" role="dialog" aria-labelledby="layer-password" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered w600px" role="document">
+			<div class="modal-content">
+				<div id="pop_wrap">
+					<div class="header layerHead">
+						<h1><a href="#">비밀번호변경(관리자, 팝업)</a></h1>
+						<button class="btn_pop_close" data-dismiss="modal">닫기</button>
+					</div>
+					<div id="pop_cont">
+						<div class="bbs_write">
+							<form id="view" name="view" target="_blank" action="view.html" method="POST">
+							<table>
+								<caption>"용자 상세정보 조회" 의 내용입니다.</caption>
+								<colgroup>
+									<col style="width:30%;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row"><label for="id2">사용자아이디</label></th>
+										<td><input type="text" id="id2" name="id2" class="w100per" title="사용자아이디 입력"></td>
+									</tr>
+									<tr>
+										<th scope="row"><label for="password1">비밀번호</label></th>
+										<td>
+											<input type="password" id="password1" name="password1" class="w100per" title="비밀번호 입력">
+											<p class="info_txt blue">* 8~16자 영문 대 소문자, 숫자, 특수문자를 사용하세요.</p>
+											<span class="info_txt blue blod">* 8~16자 영문 대 소문자, 숫자, 특수문자를 사용하세요.</span>
+											<p class="info_txt red">* 8~16자 영문 대 소문자, 숫자, 특수문자를 사용하세요.</p>
+											<p class="info_txt red blod">* 8~16자 영문 대 소문자, 숫자, 특수문자를 사용하세요.</p>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row"><label for="password2">비밀번호 확인</label></th>
+										<td>
+											<input type="password" id="password2" name="password2" class="w100per" title="비밀번호 확인 입력">
+											<p class="info_txt blue">* 비밀번호가 일치하지 않습니다.</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							</form>
+						</div>
+						<div class="btn_box">
+							<a href="#" class="btn btn_navy" >수정</a>
+							<a href="#" class="btn btn_white" data-dismiss="modal">닫기</a>
+							
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+</body>
+</html>
