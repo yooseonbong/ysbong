@@ -215,6 +215,9 @@ section.career .career-inner .career-cont .career-swiper-btn button.swiper-butto
   opacity: 0.5;
 }
 
+section.skill {
+  padding-bottom: 40px;
+}
 section.skill .skill-inner h3 {
   display: inline-block;
   font-size: 18px;
